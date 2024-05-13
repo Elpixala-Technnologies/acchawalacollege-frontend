@@ -48,7 +48,7 @@ export default function CounsellingPackages() {
       <h1 className="title1 text-center">Counselling Packages</h1>
       <div className="w-full relative">
         <div
-          className="w-full max-w-[1440px] mx-auto p-5 flex gap-4 overflow-x-hidden relative"
+          className="w-full max-w-[1440px] mx-auto py-14 flex gap-6 overflow-x-hidden relative"
           ref={scrollContainerRef}
           onScroll={handleScroll}
         >
