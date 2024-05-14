@@ -7,7 +7,7 @@ import TextWithLineBreak from "@/utils/TextWithLineBreack";
 import Link from "next/link";
 export default function PackageCard({ data }: any) {
   return (
-    <div className={`relative min-w-[400px] max-w-[450x] rounded-lg border-2 ${data.styling.border} overflow-hidden gap-1 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500`}>
+    <div className={`relative min-w-[400px] max-w-[450x] rounded-lg border-2 ${data.styling.border} overflow-hidden gap-1 hover:scale-105 hover:translate-y-4  transition-all duration-300 hover:shadow-lg hover:shadow-blue-500`}>
       {data.isPopular && (
         <div className="absolute top-[2.5rem] right-[8.5rem] w-full text-center py-1 bg-red-800 text-white -rotate-45">Most Popular</div>
       )}

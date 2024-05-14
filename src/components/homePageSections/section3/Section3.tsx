@@ -7,15 +7,15 @@ import TextWithLineBreak from "@/utils/TextWithLineBreack";
 
 export default function Section3() {
   return (
-    <section className="w-full mx-auto">
+    <section className="w-full mx-auto my-5">
       <div className="relative">
         <Image
           src={section3Bg}
           alt="bg"
-          className="w-full h-full object-cover"
+          className="w-full h-full min-h-[500px] object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full flex-center flex-col text-white gap-5">
-          <h1 className="text-4xl text-center">
+          <h1 className="text-[2vw] max-md:text-xl text-center text-wrap">
             <TextWithLineBreak text={section3.title} />
           </h1>
           <p className="font-light">
