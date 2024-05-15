@@ -9,6 +9,8 @@ import Image from "next/image";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlinePerson } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
+import { DownArrow, Logo } from "@/asset";
+import HeaderOptions from "./NavbarOptions";
 
 export default function Header() {
   const [isSideMenuOpen, setSideMenu] = useState(false);
@@ -40,69 +42,94 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full bg-black text-white ">
-      <nav
-        id="nav-menu"
-        className={`w-full flex flex-wrap md:justify-between ${
-          isNavFixed ? "fixed top-0 left-0 min-w-full z-50 bg-black " : ""
-        }`}
-      >
-        <div className="w-full max-w-[1320px] mx-auto flex items-center">
-          {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
-          <div className="w-full hidden md:flex justify-between items-center transition-all">
-            {/* left Side  */}
-            {/* <Image
-              src={logo}
-              alt="logo"
-              width={120}
-              height={120}
-              className="object-cover w-24 h-24"
-            /> */}
-            AcchaWalaCollage
-            {/* center side  */}
-            <div className="flex items-center gap-10">
-              <div className="flex items-center gap-7 transition-all">
-                {navItems.map((d, i) => (
-                  <div key={i} className="relative group transition-all">
-                    <SingleNavItem label={d.label} link={d.link} />
-                  </div>
-                ))}
-              </div>
-              <div className="hidden md:flex gap-7 text-white text-3xl">
-                <Link href={"/"}>
-                  <FaRegQuestionCircle className="text-2xl hover:text-primary" />
-                </Link>
-                <div className="relative group">
-              <FaRegCircleUser className="text-2xl hover:text-primary cursor-pointer group" />
-            <div className="absolute z-10 top-6 right-0 hidden group-hover:block bg-white border text-zinc-600 text-sm border-gray-200 rounded-md py-1 w-max">
-              <Link href={"/profile"}  className="flex item-center gap-x-2 px-3 py-1 hover:bg-gray-100 cursor-pointer">
-              <MdOutlinePerson className="mt-0.5" /> Profile
+    <header className="w-full bg-[#EBF3FA] text-[#012148] ">
+      <nav className="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-between bg-[#EBF3FA] shadow-lg lg:flex-wrap lg:justify-start">
+        <div className="flex gap-2 bg-secondary items-center md:max-w-screen-xl md:mx-auto px-8 md:px-4 h-[89px]">
+          <div className="flex-1 flex gap-8 items-center">
+            <div className="block md:hidden">
+            </div>
+            <div className="logo">
+              <Link href={"/"}>
+                <Image
+                  src={Logo}
+                  width={218}
+                  height={56}
+                  alt="Logo"
+                  className="max-md:hidden"
+                />
               </Link>
-              <div className="flex item-center gap-x-2 px-3 py-1 hover:bg-gray-100 cursor-pointer">
-              <IoLogOutOutline className="mt-0.5" /> Logout
+            </div>
+            <div className="flex-1">
+              <HeaderOptions />
+            </div>
+              <span>Latest Updates</span>
+              <span>More</span>
+          </div>
+          <div className="pr-6">
+            <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-[#2095F2] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Sign up</button>
+            <button type="button" className="text-white bg-[#2095F2] hover:bg-[#2095F2] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Login </button>
+          </div>
+          {/* <div className="flex gap-8 max-md:hidden">
+            <div className="flex gap-2 items-center text-primary">
+              <div>
+                <Image
+                  src={Logo}
+                  width={30}
+                  height={30}
+                  alt="login logo"
+                />
+              </div>
+              <div className="text-sm text-primary">
+                login or <br />
+                Create account
               </div>
             </div>
-          </div>
+            <div>
+              <div className="text-xs">country</div>
+              <div className="flex gap-1">
+                <Image
+                  src={Logo}
+                  width={24}
+                  height={24}
+                  alt={"countryFlag"}
+                />
+                <Image
+                  src={DownArrow}
+                  width={14}
+                  height={14}
+                  alt={"approvedBy"}
+                />
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* hamburger menu */}
-        <div className="text-4xl md:hidden flex justify-between w-full items-center py-5">
-          {/* <Image
-            src={TalentLogo}
-            alt="logo"
-            width={120}
-            height={120}
-            className="object-cover w-24 h-24"
-          /> */}
-          AcchaWalaCollage
-          <div className="flex gap-7 text-white text-3xl">
-            <BsFillPatchQuestionFill />
-            <FaUserCircle />
-            <FiMenu onClick={openSideMenu} className="cursor-pointer" />
-          </div>
+            <div>
+              <div className="text-xs">Language</div>
+              <div className="flex gap-1 text-sm">
+                ENG
+                <Image
+                  src={DownArrow}
+                  width={14}
+                  height={14}
+                  alt={"approvedBy"}
+                />
+              </div>
+            </div>
+          </div> */}
+          {/* <div className="block md:hidden">
+            <div className="flex gap-6 text-white text-sm">
+              <div className="flex flex-col gap-2 items-center">
+                <Image src={DownArrow} width={20} height={20} alt="" />
+                Ask
+              </div>
+              <div className="flex flex-col  gap-2 items-center">
+                <Image src={DownArrow} width={20} height={20} alt="" />
+                Search
+              </div>
+              <div className="flex flex-col gap-2  items-center">
+                <Image src={DownArrow} width={20} height={20} alt="" />
+                Login
+              </div>
+            </div>
+          </div> */}
         </div>
       </nav>
     </header>
@@ -125,6 +152,8 @@ function MobileNav({ closeSideMenu }: any) {
               key={i}
               label={d.label}
               link={d.link}
+              icon={d.icon}
+
               closeSideMenu={closeSideMenu}
             />
           ))}
@@ -141,8 +170,6 @@ function SingleNavItem({ label, link, closeSideMenu, logo }: any) {
         onClick={closeSideMenu}
         className="group text-lg font-normal py-6 px-2 transition-all duration-500 flex flex-col"
       >
-        {/* Render the logo if it's provided */}
-        {/* { <Image width={2000} height={2000} src={logo} alt={label} className="w-10 h-10  bg-white" />} */}
         {label}
         <div className="bg-amber-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
       </div>
@@ -154,21 +181,27 @@ export const navItems = [
   {
     label: "Colleges",
     link: "/colleges",
+    icon: "../../asset/icons/DownArrow.svg"
   },
   {
     label: "Exams",
     link: "/exams",
+    icon: "../../asset/icons/DownArrow.svg"
   },
   {
     label: "Courses",
     link: "/courses",
+    icon: "../../asset/icons/DownArrow.svg"
+
   },
   {
     label: "News",
     link: "/news",
+    icon: "../../asset/icons/DownArrow.svg"
   },
   {
     label: "More",
     link: "/more",
+    icon: "../../asset/icons/DownArrow.svg"
   },
 ];
