@@ -5,7 +5,6 @@ import { section3 } from "@/data/homePage";
 import Link from "next/link";
 import TextWithLineBreak from "@/utils/TextWithLineBreack";
 import Button from "@/components/button/button";
-import Section4 from "../section4/Section4";
 import AdmissionsCard from "@/components/cards/AdmissionsCard";
 import CounsellingSessionsCard from "@/components/cards/CounsellingCard";
 import FulfilledDreamsCard from "@/components/cards/FulfilledDreamCard";
