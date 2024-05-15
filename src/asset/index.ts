@@ -1,7 +1,9 @@
 // Home
 import section3Bg  from "./home/section3-bg.png";
 import p1  from "./icons/p1.png";
+// college 
 import c1 from "./collages/c1.jpg";
+import c2 from "./collages/c2.jpg";
 // blogs 
 import b1 from "./blogs/b1.png";
 import b2 from "./blogs/b2.jpg";
@@ -27,7 +29,7 @@ export {
 
     p1,
 
-    c1,
+    c1,c2,
 
     b1,b2,b3,
 
