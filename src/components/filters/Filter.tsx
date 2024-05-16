@@ -10,26 +10,35 @@ export default function Filter({
 }: any) {
   const [open, setOpen] = useState(true);
   const [showAll, setShowAll] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleOpen = () => setOpen(!open);
   const handleViewMore = () => setShowAll(!showAll);
 
-  function handleSortAvgFeePerYear(data: any){
+  function handleSortAvgFeePerYear(data: any) {
     // sort operation
   }
+
+   // Function to handle search input change
+   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
-    <div className="w-full border-b  border-zinc-500 pb-5 mb-5">
+    <div
+      className={`w-full ${title === "EXAM ACCEPTED" ? "" : "border-b"}  mb-5 border-zinc-500 pb-5`}
+    >
       {/* Title with open/close list button  */}
       <div
-        className="flex items-center justify-between cursor-pointer"
+        className="flex cursor-pointer items-center justify-between"
         onClick={handleOpen}
       >
-        <span className="text-blue-500 font-bold uppercase">{title}</span>{" "}
+        <span className="font-bold uppercase text-blue-500">{title}</span>{" "}
         <span className="font-light">
           {open ? (
             <IoIosArrowDown className="transition-all duration-300" />
           ) : (
-            <IoIosArrowDown className="transition-all duration-300 -rotate-180" />
+            <IoIosArrowDown className="-rotate-180 transition-all duration-300" />
           )}
         </span>
       </div>
@@ -41,15 +50,16 @@ export default function Filter({
             title !== "AVG FEE PER YEAR" &&
             title !== "PROGRAM TYPE" &&
             title !== "COLLEGE TYPE" &&
-            title !== "GENDER ACCEPTED" &&          
-            (
+            title !== "GENDER ACCEPTED" && (
               <div className="searchBar relative">
                 <input
                   type="text"
-                  className="border border-zinc-500 shadow-md p-2 pl-4 text-sm w-full my-2 rounded outline-none"
+                  className="my-2 w-full rounded border border-zinc-500 p-2 pl-4 text-sm shadow-md outline-none"
                   placeholder={`Search ${title.toLowerCase()}`}
+                  value={searchQuery}
+                  onChange={handleSearchChange}
                 />
-                <IoIosSearch className="absolute top-1/2 -translate-y-1/2 right-4 text-gray-500" />
+                <IoIosSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
               </div>
             )}
           {/* END Search Bar  */}
@@ -58,31 +68,37 @@ export default function Filter({
             {title === "STREAM" && (
               <>
                 {filteredDataArray
+                  .reduce((uniqueStreams: string[], filter: any) => {
+                    if (!uniqueStreams.includes(filter.stream)) {
+                      uniqueStreams.push(filter.stream);
+                    }
+                    return uniqueStreams;
+                  }, [])
                   .slice(0, showAll ? filteredDataArray.length : 2)
-                  .map((filter: any) => (
+                  .map((stream: string) => (
                     <div
-                      key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      key={stream}
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
-                        id={filter.id}
-                        name={filter.stream}
-                        checked={checked === filter.stream}
+                        id={stream}
+                        name={stream}
+                        checked={checked.includes(stream)}
                         className="cursor-pointer"
-                        onChange={() => handleFilter(filter.stream)}
+                        onChange={() => handleFilter(stream)}
                       />
                       <label
-                        htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        htmlFor={stream}
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
-                        {filter.stream}
+                        {stream}
                       </label>
                     </div>
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -99,10 +115,10 @@ export default function Filter({
                 <input
                   type="range"
                   min="1"
-                  max="96" // 8 years * 12 months/year = 96 months               
+                  max="96" // 8 years * 12 months/year = 96 months
                   value={checked}
                   onChange={(e) => handleFilter(parseInt(e.target.value))}
-                  className="cursor-pointer w-full appearance-none bg-gray-200 h-1 rounded-lg outline-none"
+                  className="h-1 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 outline-none"
                   style={{
                     cursor: "pointer",
                     background: `linear-gradient(to right, rgb(59 130 246) ${checked}%, rgb(229 231 235) ${checked}%)`,
@@ -122,7 +138,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="radio"
@@ -134,7 +150,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.avgFeePerYear}
                       </label>
@@ -142,28 +158,28 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
                   </p>
                 )}
                 {/* MIN / Max Button  */}
-                <div className="flex gap-1 mt-2">
+                <div className="mt-2 flex flex-wrap gap-1">
                   <button
-                    className="[flex:1]  border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded"
+                    className="rounded  border border-blue-500 px-4 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
                     onClick={() => handleSortAvgFeePerYear("min")}
                   >
                     ₹ Min
                   </button>
                   <button
-                    className="[flex:1] border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded"
-                    onClick={()=> handleSortAvgFeePerYear("max")}
+                    className="rounded border border-blue-500 px-4 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
+                    onClick={() => handleSortAvgFeePerYear("max")}
                   >
                     ₹ Max
                   </button>
                   <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded"
+                    className="rounded bg-blue-500 px-4 py-2 text-white"
                     onClick={() => handleSortAvgFeePerYear("go")}
                   >
                     Go
@@ -179,7 +195,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="radio"
@@ -191,7 +207,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.state}
                       </label>
@@ -199,7 +215,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -215,7 +231,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="radio"
@@ -227,7 +243,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.city}
                       </label>
@@ -235,7 +251,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -251,7 +267,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -263,7 +279,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.course}
                       </label>
@@ -271,7 +287,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -287,7 +303,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="radio"
@@ -299,7 +315,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.programType}
                       </label>
@@ -307,7 +323,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -323,7 +339,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -335,7 +351,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.collegeType}
                       </label>
@@ -343,7 +359,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -359,7 +375,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -371,7 +387,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.collegeCategory}
                       </label>
@@ -379,7 +395,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -395,7 +411,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -407,7 +423,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.affiliation}
                       </label>
@@ -415,7 +431,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -431,7 +447,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -443,7 +459,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.gender}
                       </label>
@@ -451,7 +467,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -467,7 +483,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="radio"
@@ -479,7 +495,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.ranking}
                       </label>
@@ -487,7 +503,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All
@@ -503,7 +519,7 @@ export default function Filter({
                   .map((filter: any) => (
                     <div
                       key={filter.id}
-                      className="flex gap-1 items-center my-2 cursor-pointer"
+                      className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
                         type="checkbox"
@@ -515,7 +531,7 @@ export default function Filter({
                       />
                       <label
                         htmlFor={filter.id}
-                        className="text-base font-medium text-secondary-text hover:text-primary"
+                        className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.exam}
                       </label>
@@ -523,7 +539,7 @@ export default function Filter({
                   ))}
                 {!showAll && filteredDataArray.length > 2 && (
                   <p
-                    className="text-right text-blue-500 font-medium cursor-pointer"
+                    className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
                   >
                     See All

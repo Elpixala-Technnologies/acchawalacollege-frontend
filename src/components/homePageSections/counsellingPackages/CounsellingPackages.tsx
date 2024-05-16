@@ -44,11 +44,11 @@ export default function CounsellingPackages() {
   // }, []);
 
   return (
-    <section className="w-full my-10">
+    <section className="my-10 w-full">
       <h1 className="title1 text-center">Counselling Packages</h1>
-      <div className="w-full relative">
+      <div className="relative w-full">
         <div
-          className="w-full max-w-[1440px] mx-auto py-14 flex justify-center gap-6 overflow-x-hidden relative"
+          className="relative mx-auto flex w-full max-w-[1440px] justify-center gap-6 overflow-x-hidden py-14"
           // ref={scrollContainerRef}
           // onScroll={handleScroll}
         >

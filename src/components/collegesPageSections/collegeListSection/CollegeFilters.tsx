@@ -1,11 +1,11 @@
 "use client";
 import Filter from "@/components/filters/Filter";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 
-export default function CollegeFilters({ allColleges }: any) {
+export default function CollegeFilters({ allColleges, mobileFilter }: any) {
   // Filter Checked
-  const [StreamFilter, setStreamFilter] = useState<string>("");
+  const [StreamFilter, setStreamFilter] = useState<string[]>([]);
   const [courseDurationFilter, setCourseDurationFilter] = useState<string>("");
   const [avgFeePerYearFilter, setAvgFeePerYearFilter] = useState<string>("");
   const [StateFilter, setStateFilter] = useState<string>("");
@@ -37,45 +37,32 @@ export default function CollegeFilters({ allColleges }: any) {
 
   // Set initial state for filteredDataArrays
   // Note: Remove this and uncomment above const while connecting to backend
-  const [filteredStreamData, setFilteredStreamData] = useState<any>(
-    allColleges
-  );
+  const [filteredStreamData, setFilteredStreamData] =
+    useState<any>(allColleges);
   const [filteredCourseDurationData, setFilteredCourseDurationData] =
     useState<any>(allColleges);
   const [filteredAvgFeePerYearData, setFilteredAvgFeePerYearData] =
     useState<any>(allColleges);
-  const [filteredStateData, setFilteredStateData] = useState<any>(
-    allColleges
-  );
-  const [filteredCityData, setFilteredCityData] = useState<any>(
-    allColleges
-  );
-  const [filteredCourseData, setFilteredCourseData] = useState<any>(
-    allColleges
-  );
-  const [filteredProgramTypeData, setFilteredProgramTypeData] = useState<any>(
-    allColleges
-  );
-  const [filteredCollegeTypeData, setFilteredCollegeTypeData] = useState<any>(
-    allColleges
-  );
+  const [filteredStateData, setFilteredStateData] = useState<any>(allColleges);
+  const [filteredCityData, setFilteredCityData] = useState<any>(allColleges);
+  const [filteredCourseData, setFilteredCourseData] =
+    useState<any>(allColleges);
+  const [filteredProgramTypeData, setFilteredProgramTypeData] =
+    useState<any>(allColleges);
+  const [filteredCollegeTypeData, setFilteredCollegeTypeData] =
+    useState<any>(allColleges);
   const [filteredCollegeCategoryData, setFilteredCollegeCategoryData] =
     useState<any>(allColleges);
-  const [filteredAffiliationData, setFilteredAffiliationData] = useState<any>(
-    allColleges
-  );
-  const [filteredGenderData, setFilteredGenderData] = useState<any>(
-    allColleges
-  );
-  const [filteredRankingData, setFilteredRankingData] = useState<any>(
-    allColleges
-  );
-  const [filteredExamData, setFilteredExamData] = useState<any>(
-    allColleges
-  );
+  const [filteredAffiliationData, setFilteredAffiliationData] =
+    useState<any>(allColleges);
+  const [filteredGenderData, setFilteredGenderData] =
+    useState<any>(allColleges);
+  const [filteredRankingData, setFilteredRankingData] =
+    useState<any>(allColleges);
+  const [filteredExamData, setFilteredExamData] = useState<any>(allColleges);
 
   const [SelectedFilter, setSelectedFilter] = useState({
-    stream: "",
+    stream: [] as string[],
     courseDuration: "",
     state: "",
     city: "",
@@ -91,11 +78,16 @@ export default function CollegeFilters({ allColleges }: any) {
   });
 
   // handleFilter functions
-  const handleStreamFilter = (data: any) => {
-    setStreamFilter(data);
+  const handleStreamFilter = (data: string) => {
+    // Toggle the selection
+    const updatedSelection = StreamFilter.includes(data)
+      ? StreamFilter.filter((item) => item !== data)
+      : [...StreamFilter, data];
+
+    setStreamFilter(updatedSelection);
     setSelectedFilter((prevData) => ({
       ...prevData,
-      stream: data,
+      stream: updatedSelection,
     }));
   };
 
@@ -198,10 +190,10 @@ export default function CollegeFilters({ allColleges }: any) {
   // function to remove filters from selected filter
   const handleUnselectFilter = (filter?: string, name?: string) => {
     if (filter === "stream") {
-      setStreamFilter("");
+      setStreamFilter([]);
       setSelectedFilter((prevData) => ({
         ...prevData,
-        stream: "",
+        stream: [],
       }));
     } else if (filter === "state") {
       setStateFilter("");
@@ -278,50 +270,64 @@ export default function CollegeFilters({ allColleges }: any) {
     }
   };
 
+
   return (
-    <aside className="[flex:2] px-3">
-      <h1 className="font-medium mb-10">Showing {allColleges.length} Colleges</h1>
-      <div className="w-full border-2 border-zinc-300 rounded p-5">
-        <h2 className="font-medium mb-5">Find colleges</h2>
-        {/* shows filter by options  */}
-        <div className="flex items-center gap-1 flex-wrap">
-          {Object.values(SelectedFilter).some((value) => value !== "") && (
-            <span className="text-xs font-bold">Filters Applied : </span>
-          )}
-          {Object.entries(SelectedFilter).map(([key, value]) => {
-            if (key === "courseDuration") {
-              const duration =
-                typeof value === "string" ? parseInt(value) : value;
+<aside className={`${mobileFilter ? "block" : "hidden"} max-md:hidden  px-3 [flex:2] md:max-w-[432px]`}>
+      <h1 className="mb-10 font-medium">
+        Showing {allColleges.length} Colleges
+      </h1>
+      <div className="w-full rounded border-2 border-zinc-300 p-5 pb-0">
+        <h2 className="mb-5 font-medium">Find colleges</h2>
+        {/* Selected filters display */}
+        <div className="flex flex-wrap items-center gap-1">
+          {Object.values(SelectedFilter).some(
+            (value) =>
+              value !== "" && (!Array.isArray(value) || value.length !== 0),
+          ) && <span className="text-xs font-bold">Filters Applied : </span>}
+          {Object.entries(SelectedFilter).map(
+            ([key, value]: [string, string | string[]]) => {
+              if (Array.isArray(value)) {
+                // If the value is an array, join its elements with commas
+                value = value.join(" , ");
+              } else if (key === "courseDuration") {
+                const duration: any =
+                  typeof value === "string" ? parseInt(value) : value;
+                return (
+                  value !== "" && (
+                    <div
+                      key={key}
+                      className="flex w-max items-center gap-1 rounded-md border border-blue-500 px-2 py-1 text-xs"
+                    >
+                      <span>
+                        {Math.floor(duration / 12)} years {duration % 12} months
+                      </span>
+                      <button
+                        onClick={() =>
+                          handleUnselectFilter(key, value as string)
+                        }
+                      >
+                        <MdClose />
+                      </button>
+                    </div>
+                  )
+                );
+              }
               return (
-                value !== "" && (
+                value !== "" &&
+                (!Array.isArray(value) || value.length !== 0) && (
                   <div
                     key={key}
-                    className="w-max px-2 py-1 border border-blue-500 rounded-md text-xs flex gap-1 items-center"
+                    className="flex w-max items-center gap-1 rounded-md border border-blue-500 px-2 py-1 text-xs"
                   >
-                    <span>
-                      {Math.floor(duration / 12)} years {duration % 12} months
-                    </span>
-                    <span onClick={() => handleUnselectFilter(key, value)}>
+                    <span className="max-w-[150px] text-wrap">{value}</span>
+                    <button onClick={() => handleUnselectFilter(key, value)}>
                       <MdClose />
-                    </span>
+                    </button>
                   </div>
                 )
               );
-            }
-            return (
-              value !== "" && (
-                <div
-                  key={key}
-                  className="w-max px-2 py-1 border border-blue-500 rounded-md text-xs flex gap-1 items-center"
-                >
-                  <span>{value}</span>
-                  <span onClick={() => handleUnselectFilter(key, value)}>
-                    <MdClose />
-                  </span>
-                </div>
-              )
-            );
-          })}
+            },
+          )}
         </div>
         {/*END  shows filter by options  */}
 
