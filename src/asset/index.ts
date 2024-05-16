@@ -10,8 +10,14 @@ import Landing3  from "./home/Landing3.png";
 import Student  from "./icons/Student.svg";
 import Certificate  from "./icons/Certificate.svg";
 import GraduationCap  from "./icons/GraduationCap.svg";
+import TestimonialsImage from "./home/testimonial-Bcakground.png";
+import TestimonialIcons from "./icons/testimoinal-icon.svg";
+import Partner1 from "./icons/partner1.svg";
+import Partner2 from "./icons/Partner2.svg";
 
 export {
+    TestimonialIcons,
+    TestimonialsImage,
     section3Bg,
     Logo,
     DownArrow,
@@ -22,5 +28,7 @@ export {
     Student,
     Certificate,
     GraduationCap,
-    p1
+    p1,
+    Partner1,
+    Partner2
 }

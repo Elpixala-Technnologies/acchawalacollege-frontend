@@ -33,16 +33,8 @@ export default function Header() {
     };
   }, []);
 
-  function openSideMenu() {
-    setSideMenu(true);
-  }
-
-  function closeSideMenu() {
-    setSideMenu(false);
-  }
-
   return (
-    <header className="w-full bg-[#EBF3FA] text-[#012148] ">
+    <header className="w-full bg-[#EBF3FA] text-[#012148] mb-20">
       <nav className="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-between bg-[#EBF3FA] shadow-lg lg:flex-wrap lg:justify-start">
         <div className="flex gap-2 bg-secondary items-center md:max-w-screen-xl md:mx-auto px-8 md:px-4 h-[89px]">
           <div className="flex-1 flex gap-8 items-center">
