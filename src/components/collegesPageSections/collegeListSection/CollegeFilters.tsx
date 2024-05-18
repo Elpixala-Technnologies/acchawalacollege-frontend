@@ -272,7 +272,7 @@ export default function CollegeFilters({ allColleges, mobileFilter }: any) {
 
 
   return (
-<aside className={`${mobileFilter ? "block" : "hidden"} max-md:hidden  px-3 [flex:2] md:max-w-[432px]`}>
+<aside className={`px-3 [flex:2] md:max-w-[432px]`}>
       <h1 className="mb-10 font-medium">
         Showing {allColleges.length} Colleges
       </h1>

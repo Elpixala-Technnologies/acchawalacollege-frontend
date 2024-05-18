@@ -37,25 +37,25 @@ body::-webkit-scrollbar-track {
     @apply flex items-center justify-center;
   }
   .button1 {
-    @apply rounded border border-blue-500 bg-blue-500 px-4  py-2 font-semibold hover:bg-white hover:text-blue-500;
+    @apply flex-center rounded-lg  bg-blue-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-950;
   }
   .button2 {
-    @apply rounded border border-blue-500 px-8 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white;
+    @apply flex-center rounded-lg border border-blue-900 bg-white px-5 py-2 text-sm font-medium text-blue-900 hover:bg-gray-100;
   }
-  .button3  {
+  .button3 {
     @apply flex justify-center gap-2 rounded-lg border border-zinc-500 px-4  py-2 text-black hover:bg-zinc-200;
   }
   .cardButton1 {
-    @apply flex w-full justify-center gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-xl font-medium text-black hover:bg-zinc-200;
+    @apply flex w-full justify-center gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-lg font-medium text-black hover:bg-zinc-200;
   }
   .cardButton2 {
-    @apply flex w-full  justify-center gap-2 rounded-md border  bg-gradient-to-r from-blue-500   to-blue-900 px-4 py-2  text-xl text-white hover:from-blue-900 hover:to-blue-500;
+    @apply flex w-full  justify-center gap-2 rounded-md border  bg-gradient-to-r from-blue-500   to-blue-900 px-4 py-2  text-lg text-white hover:from-blue-900 hover:to-blue-500;
     span {
       @apply mt-[2px] text-xl;
     }
   }
   .title1 {
-    @apply text-3xl;
+    @apply text-3xl font-semibold;
   }
   .icon-text {
     @apply flex gap-2;
@@ -79,6 +79,48 @@ body::-webkit-scrollbar-track {
     stroke: #2095f2 !important;
     width: 20px;
     height: 20px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+      display: none;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+}
+.testimonials{
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: -20%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    color: #2095f2 !important;
+    fill: #2095f2 !important;
+    stroke: #2095f2 !important;
+    width: 15px;
+    height: 15px;
     z-index: 999999999;
   }
   .swiper-button-prev::after {
@@ -164,7 +206,7 @@ body::-webkit-scrollbar-track {
   background: #555; /* Color of the scrollbar on hover */
 }
 
-.-top-10 {
+/* .-top-10 {
   top: 7.5rem;
 }
 
@@ -173,4 +215,4 @@ body::-webkit-scrollbar-track {
 }
 .landing-2 {
   padding: 198px;
-}
+} */

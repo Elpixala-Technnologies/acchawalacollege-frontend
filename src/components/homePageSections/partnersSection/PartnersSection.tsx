@@ -4,6 +4,7 @@ import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
 import { s1, s2, s3, s4, s5, s6, s7, s8, s9, s10 } from "@/asset";
+import Wrapper from "@/components/Wrapper";
 
 export default function PartnersSection() {
   const images = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10];
@@ -45,27 +46,31 @@ export default function PartnersSection() {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <section className="relative w-full max-w-[1440px] mx-auto overflow-x-hidden py-8">
-        <h1 className="w-full text-center title1 font-semibold mb-5">Our Knowledge Partners</h1>
-      <div className="h-full w-20 absolute top-0 left-0 bg-gradient-to-r from-white to-transparent z-10"></div>
-      <div className="h-full w-20 absolute top-0 right-0 bg-gradient-to-r from-transparent to-white z-10"></div>
-      <motion.div
-        className=" flex gap-4 max-w-[1440px] mx-auto"
-        style={{ x: xTranslation }}
-        ref={ref}
-        onHoverStart={() => {
-          setMustFinish(true);
-          setDuration(SLOW_DURATION);
-        }}
-        onHoverEnd={() => {
-          setMustFinish(true);
-          setDuration(FAST_DURATION);
-        }}
-      >
-        {[...images, ...images].map((item, idx) => (
-          <PartnersCard image={item} key={idx} />
-        ))}
-      </motion.div>
+    <section className="mx-auto my-5 w-full bg-white">
+      <Wrapper className="relative overflow-x-hidden py-8">
+        <h1 className="title1 mb-5 w-full text-center font-semibold">
+          Our Knowledge Partners
+        </h1>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-white"></div>
+        <motion.div
+          className=" mx-auto flex max-w-[1440px] gap-4"
+          style={{ x: xTranslation }}
+          ref={ref}
+          onHoverStart={() => {
+            setMustFinish(true);
+            setDuration(SLOW_DURATION);
+          }}
+          onHoverEnd={() => {
+            setMustFinish(true);
+            setDuration(FAST_DURATION);
+          }}
+        >
+          {[...images, ...images].map((item, idx) => (
+            <PartnersCard image={item} key={idx} />
+          ))}
+        </motion.div>
+      </Wrapper>
     </section>
   );
 }

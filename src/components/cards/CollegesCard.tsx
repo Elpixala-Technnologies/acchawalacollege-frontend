@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function CollegesCard() {
   const swiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 30,
     pagination: {
       clickable: true,
       // dynamicBullets: true,

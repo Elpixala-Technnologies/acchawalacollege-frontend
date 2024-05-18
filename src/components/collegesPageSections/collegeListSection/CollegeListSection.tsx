@@ -9,7 +9,7 @@ import CollegeFilteredCard from "@/components/cards/CollegeFilteredCard";
 import TopCollegesScroll from "./TopCollegesScroll";
 import CollegesCard from "@/components/cards/CollegesCard";
 export default function CollegeListSection() {
-  const [MobileFilter, setMobileFilter] = useState(true);
+  const [MobileFilter, setMobileFilter] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
   const [filteredData, setFilteredData] = useState<any>(dummyCollegeDataArray);
 
