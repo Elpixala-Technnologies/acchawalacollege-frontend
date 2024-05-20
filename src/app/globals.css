@@ -2,32 +2,217 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap");
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* ::-webkit-scrollbar {
+  width: 0.4rem;
 }
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  height: 90px;
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f4f4f4;
+  font-family: Poppins, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .button1 {
+    @apply flex-center rounded-lg  bg-blue-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-950;
+  }
+  .button2 {
+    @apply flex-center rounded-lg border border-blue-900 bg-white px-5 py-2 text-sm font-medium text-blue-900 hover:bg-gray-100;
+  }
+  .button3 {
+    @apply flex justify-center gap-2 rounded-lg border border-zinc-500 px-4  py-2 text-black hover:bg-zinc-200;
+  }
+  .cardButton1 {
+    @apply flex w-full justify-center gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-lg font-medium text-black hover:bg-zinc-200;
+  }
+  .cardButton2 {
+    @apply flex w-full  justify-center gap-2 rounded-md border  bg-gradient-to-r from-blue-500   to-blue-900 px-4 py-2  text-lg text-white hover:from-blue-900 hover:to-blue-500;
+    span {
+      @apply mt-[2px] text-xl;
+    }
+  }
+  .title1 {
+    @apply text-3xl font-semibold;
+  }
+  .icon-text {
+    @apply flex gap-2;
+    span {
+      @apply mt-[2px] text-xl text-red-500;
+    }
   }
 }
+
+.topColleges {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    color: #2095f2 !important;
+    fill: #2095f2 !important;
+    stroke: #2095f2 !important;
+    width: 20px;
+    height: 20px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+      display: none;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+}
+.testimonials{
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: -20%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    color: #2095f2 !important;
+    fill: #2095f2 !important;
+    stroke: #2095f2 !important;
+    width: 15px;
+    height: 15px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+      display: none;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox 64+ */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Edge */
+}
+
+/* THin scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar on hover */
+}
+
+* {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Color of the scrollbar and track */
+}
+
+*::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar on hover */
+}
+
+/* .-top-10 {
+  top: 7.5rem;
+}
+
+.landing-1 {
+  padding: 198px;
+}
+.landing-2 {
+  padding: 198px;
+} */
