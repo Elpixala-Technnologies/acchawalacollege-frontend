@@ -8,6 +8,14 @@ import {
   GraduationCap,
   user1,
   testimonialBg,
+  section6Bg,
+  
+  co1,
+  co2,
+  co3,
+  au1,
+  au2,
+  au3,
 } from "@/asset";
 import { CiCalendar, CiStar } from "react-icons/ci";
 import { FaUniversity } from "react-icons/fa";
@@ -56,7 +64,7 @@ export const section2 = {
   },
 };
 
-export const section3 = {
+export const section6 = {
   title:
     "Embark on Your Career Journey Today! Connect \n with Our Expert Counseling Team Now.",
   text1: "Navigate the Path to Success with Our Support",
@@ -64,6 +72,7 @@ export const section3 = {
     text: "Schedule  Counselling",
     href: "#",
   },
+  bgImg: section6Bg,
 };
 
 export const topColleges = {
@@ -74,6 +83,7 @@ export const topColleges = {
   colleges: [
     {
       id: 1,
+      stream: "MBA",
       collegeName: "upGrad Tech",
       icon: <FaUniversity />,
       img: c1,
@@ -104,6 +114,7 @@ export const topColleges = {
     },
     {
       id: 2,
+      stream: "MBA",
       collegeName: "upGrad Tech",
       icon: <FaUniversity />,
       img: c1,
@@ -134,6 +145,7 @@ export const topColleges = {
     },
     {
       id: 3,
+      stream: "MBA",
       collegeName: "upGrad Tech",
       icon: <FaUniversity />,
       img: c1,
@@ -164,6 +176,7 @@ export const topColleges = {
     },
     {
       id: 4,
+      stream: "MBA",
       collegeName: "upGrad Tech",
       icon: <FaUniversity />,
       img: c1,
@@ -195,6 +208,126 @@ export const topColleges = {
   ],
 };
 
+export const topCourses = {
+  title: {
+    t1: "Discover",
+    t2: "Top Courses",
+  },
+  courses: [
+    {
+      id: 1,
+      stream: "MBA",
+
+      bg: co1,
+      teacherAvatar: user1,
+      teacherName: "Dr. Pankaj Kumar",
+      teacherRole: "Teacher",
+      designation: "MBA Specialist and Director of Admission",
+
+      title: "Acchawala",
+      stars: 4.5,
+      courseDetails: {
+        noOfAvailableCourses: "13",
+        courseTime: "2 hours",
+        duration: "15 months",
+        coursesPrice: {
+          fullTime: "20000",
+          partTime: "10000",
+        },
+      },
+      summery:
+        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+      button: {
+        text: "Learn More",
+        href: "#",
+      },
+    },
+    {
+      id: 2,
+      stream: "MBA",
+
+      bg: co2,
+      teacherAvatar: au2,
+      teacherName: "Andrew Garfield",
+      teacherRole: "Teacher",
+      designation: "MBA Specialist and Director of Admission",
+
+      title: "Acchawala",
+      stars: 4.5,
+      courseDetails: {
+        noOfAvailableCourses: "13",
+        courseTime: "2 hours",
+        duration: "15 months",
+        coursesPrice: {
+          fullTime: "20000",
+          partTime: "10000",
+        },
+      },
+      summery:
+        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+      button: {
+        text: "Learn More",
+        href: "#",
+      },
+    },
+    {
+      id: 3,
+      stream: "MBA",
+
+      bg: co3,
+      teacherAvatar: au3,
+      teacherName: "Andrew Garfield",
+      teacherRole: "Teacher",
+      designation: "MBA Specialist and Director of Admission",
+
+      title: "Acchawala",
+      stars: 4.5,
+      courseDetails: {
+        noOfAvailableCourses: "13",
+        courseTime: "2 hours",
+        duration: "15 months",
+        coursesPrice: {
+          fullTime: "20000",
+          partTime: "10000",
+        },
+      },
+      summery:
+        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+      button: {
+        text: "Learn More",
+        href: "#",
+      },
+    },
+    {
+      id: 4,
+      stream: "MBA",
+
+      bg: co1,
+      teacherAvatar: au1,
+      teacherName: "Andrew Garfield",
+      teacherRole: "Teacher",
+      designation: "MBA Specialist and Director of Admission",
+
+      title: "Acchawala",
+      stars: 4.5,
+      courseDetails: {
+        noOfAvailableCourses: "13",
+        courseTime: "2 hours",
+        duration: "15 months",
+        coursesPrice: {
+          fullTime: "20000",
+          partTime: "10000",
+        },
+      },
+      summery:
+        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+      button: {
+        text: "Learn More",
+        href: "#",
+      },
+    },
+  ],
+};
 export const BlogsAndOthers = {
   filterBy: [
     {

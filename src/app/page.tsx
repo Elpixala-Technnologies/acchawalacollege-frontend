@@ -5,6 +5,8 @@ import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOth
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
 import Section2 from "@/components/homePageSections/section2/Section2";
 import Testimonials from "@/components/homePageSections/testimonials/Testimonials";
+import Section6 from "@/components/homePageSections/section6/Section6";
+import TopCourses from "@/components/homePageSections/topCourses/TopCourses";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <Section2 />
       <PartnersSection />
       <TopColleges />
+      <TopCourses />
       <CounsellingPackages />
+      <Section6 />
       <BlogAndOthersFilterSection />
       <Testimonials />
     </>
