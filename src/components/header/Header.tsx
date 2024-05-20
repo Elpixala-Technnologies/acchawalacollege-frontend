@@ -127,6 +127,7 @@ export default function Header() {
   );
 }
 
+// mobile nav 
 function MobileNav({ closeSideMenu }: any) {
   return (
     <nav className="text-black z-10 fixed left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/60 md:hidden">
