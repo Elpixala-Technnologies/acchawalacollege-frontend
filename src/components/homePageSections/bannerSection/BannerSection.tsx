@@ -30,7 +30,7 @@ export default function BannerSection() {
             />
             <button
               type="submit"
-              className="flex-center h-full rounded-md bg-blue-500 p-5 text-white shadow"
+              className="banner-search-button"
             >
               <CiSearch className="text-2xl text-white" />
             </button>
