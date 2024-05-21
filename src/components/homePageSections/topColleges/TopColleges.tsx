@@ -6,14 +6,14 @@ import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 export default function TopColleges() {
   return (
-    <section className="w-full max-w-[1440px] mx-auto px-5 my-5">
-      <Wrapper className="flex justify-between mb-3">
-        <h1 className="title1">
-          <span>{topColleges.title.t1}</span>{" "}
+    <section className="mx-auto my-5 w-full max-w-[1440px] px-5">
+      <Wrapper className="mb-3 flex justify-between">
+        <h1 className="title1 md:ml-8">
+          <span className="font-normal">{topColleges.title.t1}</span>{" "}
           <span className="font-semibold">{topColleges.title.t2}</span>
         </h1>
         {/* filter Button  */}
-        <button className="button3">
+        <button className="button3 h-max md:mr-8">
           <LuListFilter className="mt-1" /> Filter
         </button>
       </Wrapper>
@@ -22,7 +22,9 @@ export default function TopColleges() {
         <CollegesCard />
       </Wrapper>
       <Wrapper className="flex-center p-5">
-      <Link href={"#"} className="font-medium w-max" >View All</Link>
+        <Link href={"#"} className="w-max font-medium">
+          View All
+        </Link>
       </Wrapper>
     </section>
   );

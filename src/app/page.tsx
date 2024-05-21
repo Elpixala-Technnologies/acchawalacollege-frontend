@@ -7,7 +7,9 @@ import PartnersSection from "@/components/homePageSections/partnersSection/Partn
 import Section2 from "@/components/homePageSections/section2/Section2";
 import Testimonials from "@/components/homePageSections/testimonials/Testimonials";
 import { useEffect, useState } from 'react';
-import { fetchColleges, College } from '../utils/api';
+import { fetchColleges, College } from '../utils/api';import Section6 from "@/components/homePageSections/section6/Section6";
+import TopCourses from "@/components/homePageSections/topCourses/TopCourses";
+
 export default function Home() {
 
   const [colleges, setColleges] = useState<College[]>([]);
@@ -31,7 +33,9 @@ export default function Home() {
       <Section2 />
       <PartnersSection />
       <TopColleges />
+      <TopCourses />
       <CounsellingPackages />
+      <Section6 />
       <BlogAndOthersFilterSection />
       <Testimonials />
     </>

@@ -1,5 +1,4 @@
 import { c2 } from "@/asset";
-import { link } from "fs";
 
 export const dummyCollegeDataArray = [
   {
