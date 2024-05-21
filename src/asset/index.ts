@@ -1,11 +1,20 @@
 // logo
-import Logo from "./logo/Logo.png";
+import logo from "./logo/Logo.png";
 
 // Home
 import p1 from "./icons/p1.png";
+import section6Bg from "./home/section6-bg.png";
 // college 
 import c1 from "./collages/c1.jpg";
 import c2 from "./collages/c2.jpg";
+//courses
+import co1 from "./courses/co1.png";
+import co2 from "./courses/co2.jpg";
+import co3 from "./courses/co3.png";
+import au1 from "./courses/au1.png";
+import au2 from "./courses/au2.png";
+import au3 from "./courses/au3.png";
+
 // blogs 
 import b1 from "./blogs/b1.png";
 import b2 from "./blogs/b2.jpg";
@@ -38,7 +47,9 @@ import quoteIcon from "./testimonial/quoteIcon.png";
 
 
 export {
-    Logo,
+    logo,
+
+    section6Bg,
 
     Landing1, Landing2, Landing3,
 
@@ -47,6 +58,8 @@ export {
     p1,
 
     c1, c2,
+
+    co1, co2, co3, au1, au2, au3,
 
     b1, b2, b3,
 

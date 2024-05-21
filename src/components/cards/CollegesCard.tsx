@@ -31,10 +31,10 @@ export default function CollegesCard() {
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 3,
@@ -76,7 +76,7 @@ export const CollegesCardContent = function CollegesCard({ college }: any) {
       <div className="p-5">
         <p className="font-semibold text-blue-950">{college?.text1}</p>
         <h4 className="mb-10 text-2xl font-medium">
-          MBA from {college?.collegeName}
+        {college?.stream} from {college?.collegeName}
         </h4>
         <p className="icon-text">
           <span>{college?.degreeType?.icon}</span>
