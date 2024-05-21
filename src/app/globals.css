@@ -36,28 +36,31 @@ body::-webkit-scrollbar-track {
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .banner-search-button{
+    @apply flex-center h-full rounded-md bg-blue-500 p-5 text-white shadow active:scale-90 transition-all duration-300;
+  }
   .button1 {
-    @apply flex-center rounded-lg  bg-blue-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-950;
+    @apply flex-center rounded-lg  bg-blue-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-950 active:scale-90 transition-all duration-300;
   }
   .button2 {
-    @apply flex-center rounded-lg border border-blue-900 bg-white px-5 py-2 text-sm font-medium text-blue-900 hover:bg-gray-100;
+    @apply flex-center rounded-lg border border-blue-900 bg-white px-5 py-2 text-sm font-medium text-blue-900 hover:bg-gray-100 active:scale-90 transition-all duration-300;
   }
   .button3 {
-    @apply flex justify-center gap-2 rounded-lg border border-zinc-500 px-4  py-2 text-black hover:bg-zinc-200;
+    @apply flex justify-center gap-2 rounded-lg border border-zinc-500 px-4  py-2 text-black hover:bg-zinc-200 active:scale-90 transition-all duration-300;
   }
   /* Sign Up / Sign In  Button */
-  .button4{
-    @apply flex-center  bg-blue-500 px-8 py-2.5  font-medium text-white hover:bg-blue-600
+  .button4 {
+    @apply flex-center  bg-blue-500 px-8 py-2.5  font-medium text-white hover:bg-blue-600 active:scale-90 transition-all duration-300;
   }
-  .button5{
-    @apply flex-center rounded border border-blue-500 bg-white px-5 py-2 font-medium text-blue-500 hover:bg-gray-100;
+  .button5 {
+    @apply flex-center rounded border border-blue-500 bg-white px-5 py-2 font-medium text-blue-500 hover:bg-gray-100 active:scale-90 transition-all duration-300;
   }
-    /* END Sign Up / Sign In  Button */
+  /* END Sign Up / Sign In  Button */
   .cardButton1 {
-    @apply flex-center w-full  gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-lg font-medium text-black hover:bg-zinc-200;
+    @apply flex-center w-full  gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-lg font-medium text-black hover:bg-zinc-200 active:scale-90 transition-all duration-300;
   }
   .cardButton2 {
-    @apply flex-center w-full  gap-2 rounded-md border  bg-gradient-to-r from-blue-500   to-blue-900 px-4 py-2  text-lg text-white hover:from-blue-900 hover:to-blue-500;
+    @apply flex-center w-full  gap-2 rounded-md border  bg-gradient-to-r from-blue-500   to-blue-900 px-4 py-2  text-lg text-white hover:from-blue-900 hover:to-blue-500 active:scale-90 transition-all duration-300;
     span {
       @apply mt-[2px] text-xl;
     }
@@ -70,6 +73,9 @@ body::-webkit-scrollbar-track {
     span {
       @apply mt-[2px] text-xl text-red-500;
     }
+  }
+  .social-icon {
+    @apply flex-center rounded-full bg-blue-950 p-2 hover:bg-blue-500 active:scale-90 transition-all duration-300;
   }
 }
 
@@ -115,7 +121,7 @@ body::-webkit-scrollbar-track {
     }
   }
 }
-.testimonials{
+.testimonials {
   .swiper-button-next,
   .swiper-button-prev {
     position: absolute;
