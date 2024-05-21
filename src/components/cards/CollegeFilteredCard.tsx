@@ -11,7 +11,8 @@ import { TbCoinRupee, TbTransactionRupee } from "react-icons/tb";
 
 export default function CollegeFilteredCard({ college }: any) {
   return (
-    <div className="mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="relative mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <Tag />
       {/* Div 1 */}
       <div className="flex gap-y-2 p-5 max-md:flex-wrap">
         <Image
@@ -106,9 +107,9 @@ export default function CollegeFilteredCard({ college }: any) {
       </div>
       {/* Div 2  */}
       <div className="flex flex-wrap justify-between gap-y-2 border-t-2 border-black p-5">
-        <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-blue-600 text-sm">
+        <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-sm text-blue-600">
           {college.navbar.map((item: string, index: number) => (
-            <React.Fragment  key={index}>
+            <React.Fragment key={index}>
               <Link href="#">
                 <li key={index} className="cursor-pointer hover:underline">
                   {item}
@@ -119,14 +120,24 @@ export default function CollegeFilteredCard({ college }: any) {
           ))}
         </ul>
         <div className="flex gap-x-2">
-          <button className="rounded-lg border-2 border-blue-700 bg-blue-700 hover:bg-white hover:text-blue-500 px-4 py-2  text-white">
+          <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
             {college.button1.text}
           </button>
-          <button className="rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:text-white px-2 py-2 text-blue-500">
+          <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white">
             {college.button2.text}
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Tag() {
+  return (
+    <div className="flex-center absolute right-5 top-0 flex-col text-center font-bold text-white">
+      <p className="bg-blue-950 p-[8px]">#1</p>
+      <p className="rounded bg-blue-950 px-[9px] z-10">NIRF</p>
+      <div className="h-0 w-0 border-[18px] border-b-transparent border-l-blue-950 border-r-blue-950 border-t-blue-950 -translate-y-2"></div>
     </div>
   );
 }

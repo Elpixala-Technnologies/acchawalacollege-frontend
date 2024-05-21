@@ -167,13 +167,13 @@ export default function Filter({
                 {/* MIN / Max Button  */}
                 <div className="mt-2 flex flex-wrap gap-1">
                   <button
-                    className="rounded  border border-blue-500 px-4 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
+                    className="rounded  border border-blue-500 px-3 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
                     onClick={() => handleSortAvgFeePerYear("min")}
                   >
                     ₹ Min
                   </button>
                   <button
-                    className="rounded border border-blue-500 px-4 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
+                    className="rounded border border-blue-500 px-3 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
                     onClick={() => handleSortAvgFeePerYear("max")}
                   >
                     ₹ Max
