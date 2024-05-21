@@ -1,4 +1,3 @@
-import Wrapper from "@/components/Wrapper";
 import { section2 } from "@/data/homePage";
 import Image from "next/image";
 import React from "react";

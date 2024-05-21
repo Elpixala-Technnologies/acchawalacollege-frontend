@@ -8,6 +8,7 @@ import { MdOutlineSort } from "react-icons/md";
 import CollegeFilteredCard from "@/components/cards/CollegeFilteredCard";
 import TopCollegesScroll from "./TopCollegesScroll";
 import CollegesCard from "@/components/cards/CollegesCard";
+import Wrapper from "@/components/Wrapper";
 export default function CollegeListSection() {
   const [MobileFilter, setMobileFilter] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
@@ -18,7 +19,7 @@ export default function CollegeListSection() {
   }
 
   const handleMobileFilter = () => {
-    setMobileFilter(pre => !pre);
+    setMobileFilter((pre) => !pre);
   };
 
   const handleFilterOptionClick = (option: any) => {
@@ -37,17 +38,17 @@ export default function CollegeListSection() {
 
   return (
     <section id="collegeList" className="my-5 w-full pb-5">
-      <div className="mx-auto flex  w-full max-w-[1440px] flex-col px-4 md:flex-row">
+      <Wrapper className=" flex flex-col md:flex-row">
         {/* Aside College Filter Section  */}
         <CollegeFilters allColleges={dummyCollegeDataArray} />
         {/* main College Search and List Section  */}
-        <main className="flex w-full flex-col p-5 pt-0 md:max-w-[1008px] md:[flex:8]">
+        <main className="flex w-full flex-col p-5 pt-0  md:[flex:8] md:min-w-[550px]">
           {/* Search and Sort Section  */}
           <div className="relative mb-4 flex items-stretch gap-4 max-md:flex-col">
-            <div className="text-primary-text  focus-within:border-secondary-text flex h-12 flex-1 items-center rounded-md border-2 border-zinc-300 bg-white px-2 shadow-md max-md:mt-5">
+            <div className="text-primary-text focus-within:border-secondary-text flex h-12 flex-1 items-center rounded-md border-2 border-zinc-300 bg-white px-2 shadow-md max-md:mt-5">
               <RiSearchLine className="text-blue-500" />
               <input
-                className="w-full pl-5 focus:outline-none"
+                className="w-full pl-5 max-md:p-3 focus:outline-none"
                 type="text"
                 placeholder="Search Colleges Name"
                 onChange={handleSearch}
@@ -67,7 +68,11 @@ export default function CollegeListSection() {
           </div>
           {/* College List Section  */}
           {filteredData.slice(0, 3).map((college: any) => (
-            <CollegeFilteredCard mobileFilter={MobileFilter} key={college.id} college={college} />
+            <CollegeFilteredCard
+              mobileFilter={MobileFilter}
+              key={college.id}
+              college={college}
+            />
           ))}
           {/* Top Colleges Section  */}
           <TopCollegesScroll />
@@ -76,7 +81,7 @@ export default function CollegeListSection() {
             <CollegeFilteredCard key={college.id} college={college} />
           ))}
         </main>
-      </div>
+      </Wrapper>
     </section>
   );
 }

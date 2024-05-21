@@ -35,10 +35,12 @@ import Landing1 from "./home/Landing1.png";
 import Landing2 from "./home/Landing2.png";
 import Landing3 from "./home/Landing3.png";
 
-// section 2 icon
+// icons
 import Student from "./icons/Student.svg";
 import Certificate from "./icons/Certificate.svg";
 import GraduationCap from "./icons/GraduationCap.svg";
+import building from "./icons/building.svg";
+import community from "./icons/community.svg";
 
 // Testimonial
 import user1 from "./testimonial/user1.png";
@@ -53,7 +55,7 @@ export {
 
     Landing1, Landing2, Landing3,
 
-    Student, Certificate, GraduationCap,
+    Student, Certificate, GraduationCap, building, community,
 
     p1,
 

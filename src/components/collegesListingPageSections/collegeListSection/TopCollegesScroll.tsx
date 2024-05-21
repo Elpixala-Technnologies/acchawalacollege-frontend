@@ -45,7 +45,7 @@ export default function TopCollegesScroll() {
   }, []);
 
   return (
-    <div className="relative w-full my-5 bg-blue-200 rounded-lg pb-6">
+    <div className="relative my-5 bg-blue-200 rounded-lg pb-6 max-w-[1035px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <h1 className="title1 p-6">
         <span>{topColleges.title.t1}</span>{" "}
         <span className="font-semibold text-blue-500">
