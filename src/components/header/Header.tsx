@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-20 flex h-20 w-full items-center justify-between bg-indigo-100 transition-transform duration-300 md:h-20 ${show}`}
+      className={`sticky top-0 z-50 flex h-20 w-full items-center justify-between bg-indigo-100 transition-transform duration-300 md:h-20 ${show}`}
     >
       <Wrapper className="hidden h-20 items-center justify-between md:flex">
         {/* Logo with Link */}
