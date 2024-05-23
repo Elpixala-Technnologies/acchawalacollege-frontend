@@ -8,6 +8,12 @@ import section6Bg from "./home/section6-bg.png";
 import c1 from "./collages/c1.jpg";
 import c2 from "./collages/c2.jpg";
 import collegeLogo from "./collages/collegeLogo.png";
+import c3 from "./collages/c3.jpg";
+import c4 from "./collages/c4.jpg";
+import c5 from "./collages/c5.jpg";
+import c6 from "./collages/c6.jpg";
+import c7 from "./collages/c7.jpg";
+import c8 from "./collages/c8.jpg";
 //courses
 import co1 from "./courses/co1.png";
 import co2 from "./courses/co2.jpg";
@@ -57,6 +63,8 @@ import user1 from "./testimonial/user1.png";
 import testimonialBg from "./testimonial/testimonialBg.png";
 import quoteIcon from "./testimonial/quoteIcon.png";
 
+import questionImg from "./questionImg.svg"
+
 
 export {
     logo,
@@ -70,7 +78,7 @@ export {
 
     p1,
 
-    c1, c2,collegeLogo,
+    c1, c2,collegeLogo, c3, c4, c5, c6, c7, c8,
 
     co1, co2, co3, au1, au2, au3,
 
@@ -80,5 +88,7 @@ export {
 
     user1, testimonialBg, quoteIcon,
 
-    comp1, comp2, comp3, comp4, comp5
+    comp1, comp2, comp3, comp4, comp5,
+
+    questionImg
 }

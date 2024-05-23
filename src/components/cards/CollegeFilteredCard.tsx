@@ -45,7 +45,11 @@ export default function CollegeFilteredCard({ college }: any) {
             </div>
           </div>
           {/* Line 2  */}
-          <h1 className=" mb-3 text-wrap text-xl font-bold">{college.name}</h1>
+          <Link href={`/colleges/${college.slug}`}>
+            <h1 className=" mb-3 text-wrap text-xl font-bold hover:text-blue-500">
+              {college.name}
+            </h1>
+          </Link>
           {/* Line 3 */}
           <div className="mb-3 flex flex-wrap gap-x-6">
             {/* item 1 */}
@@ -94,13 +98,16 @@ export default function CollegeFilteredCard({ college }: any) {
           {/* Line 4  */}
           <div className="flex gap-x-1 text-zinc-600">
             <p className="line-clamp-2 text-wrap text-sm [flex:11]">
-              {college.desc}{" "}
-              <span>
-                <Link href={college.link}>Read More</Link>
+              <span className="line-clamp-2">{college.desc}</span>
+              <span className="text-blue-500 hover:underline">
+                <Link href={`/colleges/{college.slug}`}>Read More</Link>
               </span>
             </p>
             <div className="flex items-center gap-x-1 text-3xl [flex:1]">
-              <CiHeart /> <span className="font-thin">|</span> <CiMobile1 />
+              <CiHeart /> <span className="font-thin">|</span>{" "}
+              <Link href={`/colleges/{college.slug}`}>
+                <CiMobile1 />
+              </Link>
             </div>
           </div>
         </div>
@@ -120,12 +127,16 @@ export default function CollegeFilteredCard({ college }: any) {
           ))}
         </ul>
         <div className="flex gap-x-2">
-          <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
-            {college.button1.text}
-          </button>
-          <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white">
-            {college.button2.text}
-          </button>
+          <Link href="#">
+            <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
+              {college.button1.text}
+            </button>
+          </Link>
+          <Link href="#">
+            <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white">
+              {college.button2.text}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -136,8 +147,8 @@ function Tag() {
   return (
     <div className="flex-center absolute right-5 top-0 flex-col text-center font-bold text-white">
       <p className="bg-blue-950 p-[8px]">#1</p>
-      <p className="rounded bg-blue-950 px-[9px] z-10">NIRF</p>
-      <div className="h-0 w-0 border-[18px] border-b-transparent border-l-blue-950 border-r-blue-950 border-t-blue-950 -translate-y-2"></div>
+      <p className="z-10 rounded bg-blue-950 px-[9px]">NIRF</p>
+      <div className="h-0 w-0 -translate-y-2 border-[18px] border-b-transparent border-l-blue-950 border-r-blue-950 border-t-blue-950"></div>
     </div>
   );
 }

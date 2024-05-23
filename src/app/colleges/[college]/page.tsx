@@ -5,6 +5,8 @@ import Section3 from "@/components/collegeDetailsPageSections/section3/Section3"
 import { collegeDetails } from "@/data/collegeDetail";
 import React from "react";
 import TopColleges from "@/components/homePageSections/topColleges/TopColleges";
+import Section10 from "@/components/collegeDetailsPageSections/Section10";
+import AreYouConfused from "@/components/AreYouConfused";
 
 export default function CollegeDetails() {
   return (
@@ -14,12 +16,18 @@ export default function CollegeDetails() {
       <Section3 collegeDetails={collegeDetails} />
       <HighlightsSlider collegeDetails={collegeDetails} />
       <InformationSection data={collegeDetails?.placement} />
+      <InformationSection data={collegeDetails?.topRecruiters} />
       <InformationSection data={collegeDetails?.coursesAndAdmission} />
       <InformationSection data={collegeDetails?.coursesAndEligibilityCriteria} />
       <InformationSection data={collegeDetails?.cutOff} />
+      <Section10 data={collegeDetails?.brochureSection} />
+      <InformationSection data={collegeDetails?.reviews} />
       <TopColleges />
       <InformationSection data={collegeDetails?.campusFacilities} />
-      <InformationSection data={collegeDetails?.topRecruiters} />
+      <InformationSection data={collegeDetails?.photoGallery} />
+      <InformationSection data={collegeDetails?.videoGallery} />
+      <InformationSection data={collegeDetails?.faqs} />
+      <AreYouConfused />
     </main>
   );
 }
