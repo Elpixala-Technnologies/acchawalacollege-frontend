@@ -1,5 +1,4 @@
 import { logo } from "@/asset";
-import { Copyright } from "@mui/icons-material";
 
 export const header = {
   logo: logo,
