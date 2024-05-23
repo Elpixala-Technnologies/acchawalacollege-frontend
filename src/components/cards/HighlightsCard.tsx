@@ -14,7 +14,6 @@ import { MdCastForEducation } from "react-icons/md";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 
 export default function HighlightsCard({ collegeDetails }: any) {
-  console.log(collegeDetails, "p");
   const swiperOptions = {
     slidesPerView: 2,
     spaceBetween: 20,

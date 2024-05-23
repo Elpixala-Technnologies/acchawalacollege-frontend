@@ -1,21 +1,30 @@
+"use client";
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import CollegeDetailsCardSlider from "../cards/CollegeDetailsCardSlider";
-import PartnersCard from "../cards/PartnersCard";
 import CompaniesScrollSlideShow from "./CompaniesScrollSlideShow";
+import ReviewsSlider from "../cards/ReviewsSlider";
+import { IoIosArrowDown } from "react-icons/io";
+import YoutubeVideo from "../youtubeVideo";
 
 export default function InformationSection({ data }: any) {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (id: any) => {
+    setOpenFaq(openFaq === id ? null : id);
+  };
+
   return (
     <section className="w-full bg-white">
       <Wrapper className="flex flex-col gap-y-5 border-b border-zinc-400 p-5 md:p-10">
         {/* Title  */}
         {data?.title && (
           <h1 className="title2">
-            {data?.title.t1 && <span>{data?.title.t1}</span>}
-            {data?.title.t2 && <span>{data?.title.t2}</span>}
-            {data?.title.t3 && <span>{data?.title.t3}</span>}
+            {data?.title.t1 && <span>{data?.title.t1}</span>}{" "}
+            {data?.title.t2 && <span>{data?.title.t2}</span>}{" "}
+            {data?.title.t3 && <span>{data?.title.t3}</span>}{" "}
           </h1>
         )}
         {/* Author  */}
@@ -49,12 +58,14 @@ export default function InformationSection({ data }: any) {
         )}
         {/* Read More  */}
         {data?.readMoreLink && (
-          <Link
-            href={data?.readMoreLink}
-            className="text-right font-medium hover:text-blue-500"
-          >
-            Read More
-          </Link>
+          <p className="w-full text-right">
+            <Link
+              href={data?.readMoreLink}
+              className="w-min text-nowrap font-medium hover:text-blue-500 hover:underline"
+            >
+              Read More
+            </Link>
+          </p>
         )}
         {/* buttons  */}
         {data?.button && (
@@ -93,7 +104,7 @@ export default function InformationSection({ data }: any) {
         )}
         {/* Courses  */}
         {data?.courses && (
-          <div className="md:grid-col-2 grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-3">
+          <div className="md:grid-col-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data?.courses.length > 0 &&
               data?.courses?.map((course: any, i: number) => (
                 <React.Fragment key={i}>
@@ -103,8 +114,71 @@ export default function InformationSection({ data }: any) {
           </div>
         )}
         {/* Top Recruiters  */}
-        {data?.companyLogos &&(
+        {data?.companyLogos && (
           <CompaniesScrollSlideShow image={data?.companyLogos} />
+        )}
+        {/* Reviews  */}
+        {data?.individualReviews && (
+          <div className="HighlightsSlider relative w-full">
+            <ReviewsSlider reviews={data?.individualReviews} />
+          </div>
+        )}
+        {/* Photo Gallery  */}
+        {data?.photos && (
+          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            {data?.photos?.map((d: any, i: number) => (
+              <Image
+                key={i}
+                src={d}
+                alt="gallery"
+                className="h-full max-h-[200px] w-full flex-wrap rounded-lg object-cover"
+              />
+            ))}
+          </div>
+        )}
+        {/* Video Gallery  */}
+        {data?.videos && (
+          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            {data?.videos?.map((d: any, i: number) => (
+              <YoutubeVideo
+                videoId={d?.videoId}
+                width={"100%"}
+                height={"200"}
+                key={i}
+              />
+            ))}
+          </div>
+        )}
+        {/* FAQs  */}
+        {data?.faqsQuestionsAndAnswers && (
+          <div className="flex flex-col gap-4">
+            {data?.faqsQuestionsAndAnswers.map((faq: any, index: number) => (
+              <div key={faq.id} className="mb-4 border-b border-zinc-300 pb-2">
+                <button
+                  onClick={() => toggleFaq(faq.id)}
+                  className="flex w-full items-center justify-between text-left"
+                >
+                  <span className="font-medium">{faq?.question}</span>
+                  <IoIosArrowDown
+                    className={`transform text-xl transition-transform ${
+                      openFaq === faq.id || (index === 0 && openFaq === null)
+                        ? "rotate-180"
+                        : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`mt-2 transition-all duration-300 ease-in-out ${
+                    openFaq === faq?.id || (index === 0 && openFaq === null)
+                      ? "max-h-96"
+                      : "max-h-0 overflow-hidden"
+                  }`}
+                >
+                  <p className="text-zinc-500">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </Wrapper>
     </section>

@@ -5,7 +5,7 @@ export const dummyCollegeDataArray = [
     id: 1,
     img: c2,
     name: "IIT Madras - Indian Institute of Technology ",
-    link: "#",
+    slug: "/iit-madras",
     stream: "Engineering",
     duration: "4 years",
     avgFeePerYear: "1-3",
