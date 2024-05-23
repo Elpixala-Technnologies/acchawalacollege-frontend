@@ -7,6 +7,7 @@ import section6Bg from "./home/section6-bg.png";
 // college 
 import c1 from "./collages/c1.jpg";
 import c2 from "./collages/c2.jpg";
+import collegeLogo from "./collages/collegeLogo.png";
 //courses
 import co1 from "./courses/co1.png";
 import co2 from "./courses/co2.jpg";
@@ -41,6 +42,15 @@ import Certificate from "./icons/Certificate.svg";
 import GraduationCap from "./icons/GraduationCap.svg";
 import building from "./icons/building.svg";
 import community from "./icons/community.svg";
+// companies
+import comp1 from "./companies/comp1.png";
+import comp2 from "./companies/comp2.svg";
+import comp3 from "./companies/comp3.svg";
+import comp4 from "./companies/comp4.svg";
+import comp5 from "./companies/comp5.svg";
+// facilities
+import academicZone from "./icons/academicZone.svg"
+import auditorium from "./icons/auditorium.svg"
 
 // Testimonial
 import user1 from "./testimonial/user1.png";
@@ -56,10 +66,11 @@ export {
     Landing1, Landing2, Landing3,
 
     Student, Certificate, GraduationCap, building, community,
+    academicZone, auditorium,
 
     p1,
 
-    c1, c2,
+    c1, c2,collegeLogo,
 
     co1, co2, co3, au1, au2, au3,
 
@@ -68,4 +79,6 @@ export {
     s1, s2, s3, s4, s5, s6, s7, s8, s9, s10,
 
     user1, testimonialBg, quoteIcon,
+
+    comp1, comp2, comp3, comp4, comp5
 }
