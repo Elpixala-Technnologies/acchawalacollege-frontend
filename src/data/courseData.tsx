@@ -8,6 +8,9 @@ import {
   courseBg1,
   courseBg2,
   courseBg3,
+  video1,
+  video2,
+  video3,
   user1,
   coursesBanner,
   coursesBanner1,
@@ -17,6 +20,7 @@ import {
   comp4,
   comp5,
   testimonialBg,
+  collegeLogo,
 } from "@/asset";
 
 export const courseListingPage = {
@@ -49,22 +53,22 @@ export const courseListingPage = {
     },
     about: {
       section1: {
-        title: "Fully Online",
+        title: "Fully \nOnline",
         text: "Berpedoman dan berakhlak mulia sesuai dengan ajaran Nabi Muhammad SAW",
         isHighlights: false,
       },
       section2: {
-        title: "5m+ Worldwide Learners",
+        title: "5m+ Worldwide \nLearners",
         text: "Berpedoman dan berakhlak mulia sesuai dengan ajaran Nabi Muhammad SAW",
         isHighlights: false,
       },
       section3: {
-        title: "80% Positive Career Impact",
+        title: "80% Positive \nCareer Impact",
         text: "Berpedoman dan berakhlak mulia sesuai dengan ajaran Nabi Muhammad SAW",
         isHighlights: true,
       },
       section4: {
-        title: "15m+ Learning Hours",
+        title: "15m+ Learning \nHours",
         text: "Berpedoman dan berakhlak mulia sesuai dengan ajaran Nabi Muhammad SAW",
         isHighlights: false,
       },
@@ -86,7 +90,7 @@ export const courseListingPage = {
           designation: "MBA Specialist and Director of Admission",
 
           title: "Acchawala",
-          stars: 4.5,
+          rating: 4.5,
           courseDetails: {
             noOfAvailableCourses: "13",
             courseTime: "2 hours",
@@ -114,7 +118,7 @@ export const courseListingPage = {
           designation: "MBA Specialist and Director of Admission",
 
           title: "Acchawala",
-          stars: 4.5,
+          rating: 4.5,
           courseDetails: {
             noOfAvailableCourses: "13",
             courseTime: "2 hours",
@@ -142,7 +146,7 @@ export const courseListingPage = {
           designation: "MBA Specialist and Director of Admission",
 
           title: "Acchawala",
-          stars: 4.5,
+          rating: 4.5,
           courseDetails: {
             noOfAvailableCourses: "13",
             courseTime: "2 hours",
@@ -170,7 +174,7 @@ export const courseListingPage = {
           designation: "MBA Specialist and Director of Admission",
 
           title: "Acchawala",
-          stars: 4.5,
+          rating: 4.5,
           courseDetails: {
             noOfAvailableCourses: "13",
             courseTime: "2 hours",
@@ -205,7 +209,11 @@ export const courseListingPage = {
       companyLogos: [comp1, comp2, comp3, comp4, comp5],
     },
     testimonial: {
-      title: "What Our Students Say About Us",
+      title: {
+        t1: "What Our",
+        t2: "Student Say",
+        t3: "About Us",
+      },
       text: "Discover Success Stories from Our Satisfied Students",
       bg: testimonialBg,
       card: [
@@ -254,13 +262,350 @@ export const courseListingPage = {
           avatar: au3,
           collegeName: "B.tech, IIT Delhi",
           rating: 4.5,
-          comment: "I was overwhelmed with options until I came across this website. The personalized counseling helped me narrow down my choices and make informed decisions.",
+          comment:
+            "I was overwhelmed with options until I came across this website. The personalized counseling helped me narrow down my choices and make informed decisions.",
           button: {
             text: "Watch their Story",
             href: "#",
           },
-        }
+        },
+      ],
+    },
+    videos: {
+      title1: "MBA Videos",
+      title2: {
+        t1: "You Might",
+        t2: "Like To",
+        t3: "Watch",
+      },
+      thumbnails: [
+        {
+          id: 1,
+          title: "Online MBA with Deakin University and acchaWalaCollege",
+          img: video1,
+          button: {
+            text: "",
+            href: "#",
+          },
+          timeLength: "2:30",
+          noOfViews: "1.5K",
+        },
+        {
+          id: 2,
+          title: "Online MBA with Deakin University and acchaWalaCollege",
+          img: video2,
+          button: {
+            text: "",
+            href: "#",
+          },
+          timeLength: "2:30",
+          noOfViews: "1.5K",
+        },
+        {
+          id: 3,
+          title: "Online MBA with Deakin University and acchaWalaCollege",
+          img: video3,
+          button: {
+            text: "",
+            href: "#",
+          },
+          timeLength: "2:30",
+          noOfViews: "1.5K",
+        },
+      ],
+    },
+    featuredPrograms: {
+      title1: "Featured MBA Programs",
+      title2: {
+        t2: "Free",
+        t3: "Masterclasses",
+      },
+      card: [
+        {
+          id: 1,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 2,
+          bg: courseBg2,
+          teacher: {
+            avatar: au2,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 3,
+          bg: courseBg3,
+          teacher: {
+            avatar: au3,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 4,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+      ],
+    },
+    freePrograms: {
+      title1: "Free Programs Related to MBA",
+      title2: {
+        t2: "Start Learning",
+        t3: "For Free",
+      },
+      freeProgramsCard: [
+        {
+          id: 1,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Teacher",
+          },
+          tag: "Free Course",
+          title: "Advantages of MBA worldwide",
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Start Learning",
+            href: "#",
+          },
+          noOfCourses: "13",
+          courseTime: "2 hours",
+          duration: "15 months",
+          rating: 4.5,
+        },
+        {
+          id: 2,
+          bg: courseBg2,
+          teacher: {
+            avatar: au2,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Teacher",
+          },
+          tag: "Free Course",
+          title: "Advantages of MBA worldwide",
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Start Learning",
+            href: "#",
+          },
+          noOfCourses: "13",
+          courseTime: "2 hours",
+          duration: "15 months",
+          rating: 4.5,
+        },
+        {
+          id: 3,
+          bg: courseBg3,
+          teacher: {
+            avatar: au3,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Teacher",
+          },
+          tag: "Free Course",
+          title: "Advantages of MBA worldwide",
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Start Learning",
+            href: "#",
+          },
+          noOfCourses: "13",
+          courseTime: "2 Hours",
+          duration: "15 Months",
+          rating: 4.5,
+        },
+        {
+          id: 4,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Teacher",
+          },
+          tag: "Free Course",
+          title: "Advantages of MBA worldwide",
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Start Learning",
+            href: "#",
+          },
+          noOfCourses: "13",
+          courseTime: "2 Hours",
+          duration: "15 Months",
+          rating: 4.5,
+        },
       ],
     },
   },
 };
+
+export const courseDetailsPage = {
+bTech:{
+  homeBanner: {
+    title: "B.Tech Engineering Technology at IIT Madras",
+    courseType:"offline",
+    collegeDetails:{
+      collegeLogo: collegeLogo,
+      CollegeName: "IIT Madras - Indian Institute of Technology ",
+      location: {
+        state: "Tamil Nadu",
+        city: "Chennai",
+        affiliation: "AICTE",
+      },
+    },
+    duration: "48 Months",
+    fees: "500000",
+    lastUpdate: "Nov 17, 2023 14:25 IST",
+    button1: {
+      text: "Register Now",
+      href: "#",
+    },
+    button2: {
+      text: "Download Brochure",
+      href: "#",
+    },
+  },
+  overview: {
+    title: "Overview",
+    article:"",
+    note:"",
+  },
+  courseDetails:{
+    title: "Course Details",
+    article: "",
+    note:"",
+  },
+  programmeOfferings:{
+    title: "Programme Offerings",
+    list: ["UGC approved", "Online classes on weekends", "Expert Faculty", "Mock test", "Placements", "Case Studies", "Scholarships", "project work", "access to online lab and remote lab."]
+  },
+  eligibilityCriteria:{
+    title: "Eligibility Criteria",
+    article: "",
+    note:"",
+  },
+  admissionDetails:{
+    title: "Admission Details",
+    article: "",
+    note:"",
+  },
+  applicationDetails:{
+    title: "Application Details",
+    article: "",
+    note:"",
+  }, 
+  syllabus:{
+    title: "The Syllabus",
+    article: "",
+    semesters: ["","","","","","","",""]
+  },
+  evaluationProcess:{
+    title: "Evaluation Process",
+    article: "",
+    note:"",
+  },
+  faqs: {
+    title: "Frequently Asked Questions",
+    faqsQuestionsAndAnswers: [
+      {
+        id: 1,
+        question: "When was the University Established?",
+        answer:
+          "The Indian Institute of Technology, Madras was established in 1961. The institute was founded by the erstwhile Prime Minister, Shri. Venkatesh Iyengar.",
+      },
+      {
+        id: 2,
+        question: "Is the University a Private or Government University",
+        answer:
+          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+      },
+      {
+        id: 3,
+        question: "What is the University Affiliation?",
+        answer:
+          "The Indian Institute of Technology, Madras is affiliated to the University of Madras. The institute is governed by the Government of India. The institute has a status of Government.",
+      },
+      {
+        id: 4,
+        question: "How good is the University",
+        answer:
+          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+      },
+      {
+        id: 5,
+        question: "What courses does the University Offer?",
+        answer:
+          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+      },
+    ],
+  },
+}
+}

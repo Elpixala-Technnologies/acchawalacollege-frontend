@@ -49,12 +49,14 @@ export default function ReviewsSlider({ reviews }: any) {
                 <p className="flex-center gap-x-1">
                   {h?.rating} <FaStar className="mb-[1px]" />
                 </p>
-               {h?.basedOn && <p className="text-xs">
-                  <span className="text-zinc-500">Based on{" "}</span>
-                  <span className="font-medium underline">
-                    {h?.basedOn} reviews
-                  </span>
-                </p>}
+                {h?.basedOn && (
+                  <p className="text-xs">
+                    <span className="text-zinc-500">Based on </span>
+                    <span className="font-medium underline">
+                      {h?.basedOn} reviews
+                    </span>
+                  </p>
+                )}
               </SwiperSlide>
             ),
         )}

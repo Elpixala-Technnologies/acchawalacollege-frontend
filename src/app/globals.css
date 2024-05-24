@@ -185,6 +185,35 @@ body::-webkit-scrollbar-track {
   }
 }
 
+.testimonials1{
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    width: 20px;
+    height: 20px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+}
+
 .HighlightsSlider{
   .swiper-button-next,
   .swiper-button-prev {

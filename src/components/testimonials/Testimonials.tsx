@@ -4,8 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { quoteIcon } from "@/asset";
 import TextWithLineBreak from "@/utils/TextWithLineBreack";
-import TestimonialSlider from "./TestimonialSlider";
-import CollegesCard from "@/components/cards/CollegesCard";
+import TestimonialSlider from "../cards/TestimonialSlider";
 
 export default function Testimonials() {
   return (

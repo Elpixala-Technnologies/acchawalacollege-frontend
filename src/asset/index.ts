@@ -26,6 +26,9 @@ import courseBg2 from "./courses/courseBg2.png";
 import courseBg3 from "./courses/courseBg3.png";
 import coursesBanner from "./courses/coursesBanner.png";
 import coursesBanner1 from "./courses/coursesBanner1.svg";
+import video1 from "./courses/video1.png";
+import video2 from "./courses/video2.png";
+import video3 from "./courses/video3.png";
 
 // blogs 
 import b1 from "./blogs/b1.png";
@@ -70,6 +73,12 @@ import quoteIcon from "./testimonial/quoteIcon.png";
 
 import questionImg from "./questionImg.svg"
 
+// Exams
+import examBg1 from "./exams/examBg1.png";
+import examBg2 from "./exams/examBg2.png";
+import examBg3 from "./exams/examBg3.png";
+import examBg4 from "./exams/examBg4.png";
+
 
 export {
     logo,
@@ -85,7 +94,7 @@ export {
 
     c1, c2, collegeLogo, c3, c4, c5, c6, c7, c8,
 
-    co1, co2, co3, au1, au2, au3, courseBg1, courseBg2, courseBg3, coursesBanner, coursesBanner1,
+    co1, co2, co3, au1, au2, au3, courseBg1, courseBg2, courseBg3, coursesBanner, coursesBanner1, video1, video2, video3,
 
     b1, b2, b3,
 
@@ -96,4 +105,6 @@ export {
     comp1, comp2, comp3, comp4, comp5,
 
     questionImg,
+
+    examBg1, examBg2, examBg3, examBg4
 }
