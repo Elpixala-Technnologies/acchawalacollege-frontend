@@ -5,7 +5,7 @@ import Section3 from "@/components/collegeDetailsPageSections/section3/Section3"
 import { collegeDetails } from "@/data/collegeDetail";
 import React from "react";
 import TopColleges from "@/components/homePageSections/topColleges/TopColleges";
-import Section10 from "@/components/collegeDetailsPageSections/Section10";
+import Section10 from "@/components/Section10";
 import AreYouConfused from "@/components/AreYouConfused";
 
 export default function CollegeDetails() {
@@ -18,7 +18,9 @@ export default function CollegeDetails() {
       <InformationSection data={collegeDetails?.placement} />
       <InformationSection data={collegeDetails?.topRecruiters} />
       <InformationSection data={collegeDetails?.coursesAndAdmission} />
-      <InformationSection data={collegeDetails?.coursesAndEligibilityCriteria} />
+      <InformationSection
+        data={collegeDetails?.coursesAndEligibilityCriteria}
+      />
       <InformationSection data={collegeDetails?.cutOff} />
       <Section10 data={collegeDetails?.brochureSection} />
       <InformationSection data={collegeDetails?.reviews} />

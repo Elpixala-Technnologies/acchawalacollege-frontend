@@ -12,7 +12,7 @@ export default function BlogAndOthersFilterSection() {
   };
 
   return (
-    <section className="w-full max-w-[1440px] mx-auto p-5 my-5">
+    <section className="w-full max-w-[1440px] mx-auto p-5 my-16">
       <div className="flex gap-5 justify-center flex-wrap mb-10">
         {/* Filter Titles  */}
         {BlogsAndOthers.filterBy.map((item: any) => (

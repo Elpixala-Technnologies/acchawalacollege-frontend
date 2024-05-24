@@ -8,7 +8,7 @@ import Section2 from "@/components/homePageSections/section2/Section2";
 import { useEffect, useState } from 'react';
 import { fetchColleges, College } from '../utils/api';import Section6 from "@/components/homePageSections/section6/Section6";
 import TopCourses from "@/components/homePageSections/topCourses/TopCourses";
-import Testimonials from "@/components/homePageSections/testimonials/testimonials";
+import Testimonials from "@/components/testimonials/Testimonials";
 
 export default function Home() {
 

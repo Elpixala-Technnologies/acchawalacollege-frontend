@@ -52,7 +52,7 @@ export default function CoursesCard() {
         {topCourses.courses.map((course: any, index: number) => (
           <SwiperSlide
             key={index}
-            className="my-12 w-full overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-2xl"
+            className="mb-12 w-full overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-2xl"
           >
             <CoursesCardContent course={course} />
           </SwiperSlide>
