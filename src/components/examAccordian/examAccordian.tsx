@@ -25,13 +25,13 @@ export default function ExamAccordian({
         <>
             <div className="">
                 <div
-                    className={`flex justify-between border-b border-b-primary-text-light ${Open ? "border-b border-b-primary-text-light" : ""
+                    className={`flex justify-between border-b border-b-primary-text-light font-bold ${Open ? "border-b border-b-primary-text-light" : ""
                         } items-center ${titlePrimary ? "px-5 py-4" : "p-2"}`}
                     onClick={handleOpenAccordion}
                 >
                     <p
                         className={`flex-1 ${titlePrimary
-                            ? "text-primary text-[25px] font-semibold"
+                            ? "text-primary text-[25px] font-bold"
                             : "text-secondary text-base"
                             }`}
                     >
