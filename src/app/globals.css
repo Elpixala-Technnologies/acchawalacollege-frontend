@@ -74,8 +74,17 @@ body::-webkit-scrollbar-track {
       @apply mt-[2px] text-xl;
     }
   }
+  .examCardButton2 {
+    @apply flex-center w-full  gap-2 rounded-md border  bg-gradient-to-r from-blue-950   to-blue-900 px-4 py-2  text-lg text-white transition-all duration-300 hover:from-blue-900 hover:to-blue-500 active:scale-90;
+    span {
+      @apply mt-[2px] text-xl;
+    }
+  }
   .title1 {
     @apply text-3xl font-semibold max-md:text-2xl;
+  }
+  .examTitle {
+    @apply text-3xl max-md:text-2xl;
   }
   .title2 {
     @apply text-3xl font-semibold max-md:text-2xl;
@@ -321,3 +330,7 @@ body::-webkit-scrollbar-track {
   background-color: rgba(23, 37, 84, 1);
 }
 
+.exam-card{
+    padding-left: 1.25rem;
+    padding-right: 8.25rem;
+}

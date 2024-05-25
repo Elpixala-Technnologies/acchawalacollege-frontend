@@ -57,6 +57,18 @@ import user1 from "./testimonial/user1.png";
 import testimonialBg from "./testimonial/testimonialBg.png";
 import quoteIcon from "./testimonial/quoteIcon.png";
 
+// Exams
+import exam from "./exams/exam.png";
+import examBg1 from "./exams/examBg1.png";
+import examBg2 from "./exams/examBg2.png";
+import examBg3 from "./exams/examBg3.png";
+import examBg4 from "./exams/examBg4.png";
+import UpcomingExams1 from "./exams/UpcomingExams1.png";
+import UpcomingExams2 from "./exams/UpcomingExams2.png";
+import AskIcon from "./exams/ask.svg";
+import Heart from "./exams/heart.svg";
+import HappyStudents from "./exams/HappyStudents.png";
+
 
 export {
     logo,
@@ -80,5 +92,7 @@ export {
 
     user1, testimonialBg, quoteIcon,
 
-    comp1, comp2, comp3, comp4, comp5
+    comp1, comp2, comp3, comp4, comp5,
+    exam,  examBg1, examBg2, examBg3, examBg4, UpcomingExams1, UpcomingExams2, AskIcon, Heart, HappyStudents
+
 }
