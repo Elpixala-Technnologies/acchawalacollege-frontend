@@ -68,6 +68,7 @@ import UpcomingExams2 from "./exams/UpcomingExams2.png";
 import AskIcon from "./exams/ask.svg";
 import Heart from "./exams/heart.svg";
 import HappyStudents from "./exams/HappyStudents.png";
+import ExamNews from "./exams/exam.png";
 
 
 export {
@@ -93,6 +94,6 @@ export {
     user1, testimonialBg, quoteIcon,
 
     comp1, comp2, comp3, comp4, comp5,
-    exam,  examBg1, examBg2, examBg3, examBg4, UpcomingExams1, UpcomingExams2, AskIcon, Heart, HappyStudents
+    exam,  examBg1, examBg2, examBg3, examBg4, UpcomingExams1, UpcomingExams2, AskIcon, Heart, HappyStudents, ExamNews
 
 }

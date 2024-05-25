@@ -12,17 +12,25 @@ export const examDetails = {
     ExamPattern: "Offline",
     Registration: "Online",
     Updated: "Nov 17, 2023 14:25 IS",
-    overview: {
-        button: {
-            button1: { text: "Register Now", link: "#" },
-            button2: { text: "Download Brochure", link: "#" },
-        },
+    button1: {
+        text: "Register Now",
+        link: "#",
     },
+    button2: {
+        text: "Download Brochure",
+        link: "#",
+    },
+    // overview: {
+    //     button: {
+    //         button1: { text: "Register Now", link: "#" },
+    //         button2: { text: "Download Brochure", link: "#" },
+    //     },
+    // },
 
 };
 
 export const Navbar = {
-    Overview:"Overview",
-    
+    Overview: "Overview",
+
 
 };

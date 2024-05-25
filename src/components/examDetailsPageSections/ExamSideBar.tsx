@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TabComponent from "../tab/tab";
-import { UpcomingExams1 } from "@/asset";
+import { ExamNews, UpcomingExams1 } from "@/asset";
+import { RiCalendar2Fill } from "react-icons/ri";
 TabComponent
 export default function ExamSideBarComponent() {
     let FeatureNews = () => {
@@ -35,7 +36,7 @@ export default function ExamSideBarComponent() {
                             className={`flex gap-2 ${index < 4 ? "border-b border-b-primary-text-light" : ""
                                 } pb-2`}
                         >
-                            <Image src={UpcomingExams1} width={80} height={80} alt="" className="rounded-md" />
+                            <Image src={ExamNews} width={80} height={80} alt="" className="rounded-md" />
                             <div className="text-sm leading-5">
                                 <span className="font-semibold">GATE 2024</span>
                                 <p>Registration Window Extended to Nov 10 at consortium ofnlus...</p>
@@ -56,10 +57,13 @@ export default function ExamSideBarComponent() {
                             className={`flex gap-2 ${index < 4 ? "border-b border-b-primary-text-light" : ""
                                 } pb-2`}
                         >
-                            <Image src={UpcomingExams1} width={80} height={80} alt="" className="rounded-md" />
+                            <Image src={ExamNews} width={80} height={80} alt="" className="rounded-md" />
                             <div className="text-sm leading-5">
-                                <span className="font-semibold">GATE 2024</span>
+                                <span className="font-semibold">AEEE 2024 CSAP Re..</span>
                                 <p>Registration Window Extended to Nov 10 at consortium ofnlus...</p>
+                                {/* <div className="flex flex-col gap-2">
+                                    <span className="font-semibold">{`May 21, 2024`}</span><RiCalendar2Fill />
+                                </div> */}
                             </div>
                         </div>
                     );
@@ -90,7 +94,7 @@ export default function ExamSideBarComponent() {
         <>
             <div className="w-[300px]">
                 <TabComponent tabs={NewsTab} />
-                {/* <TabComponent tabs={ExamsNotificationsTab} /> */}
+                <TabComponent tabs={ExamsNotificationsTab} />
             </div>
         </>
     );
