@@ -90,13 +90,13 @@ export default function HeroExamSection({ examDetails }: any) {
       <section className="heroSection navbar-PageInfo-responsive">
         <div className="relative h-60">
           <section className="relative w-full ">
-            <Image
+            {/* <Image
               src={examDetails?.examLogo}
               alt="collegeImg"
               className="mx-auto h-[280px] w-full max-w-screen-2xl object-cover"
-            />
-            <div className="absolute left-0 top-0 h-full w-full bg-black/50">
-              <Wrapper className="p-10 text-white">
+            /> */}
+            <div className="absolute left-0 top-0 h-full w-full">
+              <Wrapper className="p-10">
                 <div className="my-auto flex items-center gap-x-6">
                   <div className="min-h-20 min-w-20 md:h-40 md:w-40 rounded-full bg-white p-2 md:p-5">
                     <Image
@@ -140,147 +140,53 @@ export default function HeroExamSection({ examDetails }: any) {
                   </div>
                   <div className="flex items-center  text-[15px]">
                     <div className="p-2 rounded-full">
-                      <Image src={AskIcon} alt="" />
+                      <Image className="" src={AskIcon} alt="" />
                     </div>
                     Ask
                   </div>
-                  <button className="rounded-lg border-2 border-blue-950 bg-blue-950 px-4 py-2 text-white hover:bg-white  hover:text-blue-500"> 
-                     {examDetails.button1.text}
+                  <button className="rounded-lg border-2 border-blue-950 bg-blue-950 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
+                    {examDetails.button1.text}
                   </button>
                   <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-[#165BAE] hover:bg-blue-700 hover:text-white">
                     {examDetails.button2.text}
                   </button>
                 </div>
               </Wrapper>
+              <div className="border-b border-b-primary-text-light">
+              </div>
             </div>
           </section>
-          {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
-          {/* <div className="absolute inset-0 text-white flex flex-col gap-4 max-w-screen-xl mx-auto px-4 my-2">
-          <div>
-            <Breadcrumb items={breadcrumbItems} />
-          </div>
-          <div className="flex gap-4">
-            <div className="p-[10px] bg-white rounded h-max">
-              <Image
-                width={100}
-                height={100}
-                alt=""
-                src={examDetails?.examLogo}
-              />
-            </div>
-            <div className="flex flex-col flex-1 gap-1">
-              <div className="flex gap-4 pt-4 items-center">
-                <h1 className="font-bold text-3xl">{examDetails?.examName}</h1>
-              </div>
-              <div className="flex max-md:flex-col gap-x-6">
-                <p className="flex items-center gap-x-1 font-thin">
-                  <CiCalendar /> Exam Date :
-                  {examDetails?.ExamDates}
-                </p>
-                <p className="flex items-center gap-x-1 font-thin">
-                  ApplicationForm :
-                  {examDetails?.ApplicationForm}
-                </p>
-              </div>
-              <div className="flex max-md:flex-col gap-x-6">
-                <p className="flex items-center gap-x-1 font-thin">
-                  <CiCalendar /> ExamPattern :
-                  {examDetails?.ExamPattern}
-                </p>
-                <p className="flex items-center gap-x-1 font-thin">
-                  Registration :
-                  {examDetails?.Registration}
-                </p>
-              </div>
-              <div className="flex max-md:flex-col gap-x-6">
-                <p className="flex items-center gap-x-1 font-thin">
-                  <CiClock1 /> Updated :
-                  {examDetails?.Updated}
-                </p>
-              </div>
-              <div className="flex gap-4 justify-end">
-                <div className="flex gap-2 items-center text-[15px]">
-                  <div className="bg-white p-[6px] rounded-full">
-                    <Image src={Heart} width={10} height={10} alt="" />
-                  </div>
-                  Save
-                </div>
-                <div className="flex items-center  text-[15px]">
-                  <div className="p-2 rounded-full">
-                    <Image src={AskIcon} alt="" />
-                  </div>
-                  Ask
-                </div>
-                <div>
-                  <Button
-                    text="Register Now"
-                    showHover={false}
-                    outline
-                    outlineColor="border-white"
-                    textColor="text-white"
-                    paddingX="px-[10px]"
-                    paddingY="py-[10px]"
-                    filledColor = "bg-[#012148]"
-                    width="w-36"
-                    align="text-center"
-                  />
-                </div>
-                <div>
-                  <Button
-                    text="Brochure"
-                    showHover={false}
-                    outline
-                    outlineColor="border-white"
-                    textColor="text-white"
-                    paddingX="px-[10px]"
-                    paddingY="py-[10px]"
-                    width="w-36"
-                    align="text-center"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
         </div>
-
-        <div className="flex justify-center max-w-screen-xl mx-auto flex-col pt-6">
-          <div className="infoOption flex items-center max-w-screen-xl mr-2">
-            <div className="sticky-nav-wrapper w-full flex items-center justify-center">
-              <div className=" bg-white flex border-b border-b-primary-light w-full rounded-lg">
-                <div className="sm:max-w-screen-xl lg:mx-auto px-1 py-1 w-full justify-center shadow-md shadow-gray-600 rounded-lg mt-5">
-                  <NavbarSlider
-                    buttonBorderColor="border-primary-text"
-                    buttonTextColor="text-primary-text"
-                    showPagination={false}
-                    slidesDesktop={5}
-                    slidesTablet={5}
-                    slidesMobile={3}
-                    slides={tabs?.map((tab: any, index: number) => (
-                      <div
-                        key={tab.name}
-                        onClick={() => handleTab(tab.value)}
-                        className={`text-nowrap hover:text-orange-400 hover:border-b-2 hover:border-orange-400 text-sm flex justify-center items-center w-max h-full text-center cursor-pointer font-semibold text-lg`}
-                      >
-                        {tab?.name}
-                      </div>
-                    ))}
-                  />
+        <br />
+        <section>
+          <div className="flex justify-center max-w-screen-xl mx-auto flex-col pt-6">
+            <div className="infoOption flex items-center max-w-screen-xl mr-2">
+              <div className="sticky-nav-wrapper w-full flex items-center justify-center">
+                <div className=" bg-white flex border-b border-b-primary-light w-full rounded-lg">
+                  <div className="sm:max-w-screen-xl lg:mx-auto px-1 py-1 w-full justify-center shadow-md shadow-gray-600 rounded-lg mt-5">
+                    <NavbarSlider
+                      buttonBorderColor="border-primary-text"
+                      buttonTextColor="text-primary-text"
+                      showPagination={false}
+                      slidesDesktop={5}
+                      slidesTablet={5}
+                      slidesMobile={3}
+                      slides={tabs?.map((tab: any, index: number) => (
+                        <div
+                          key={tab.name}
+                          onClick={() => handleTab(tab.value)}
+                          className={`text-nowrap hover:text-orange-400 hover:border-b-2 hover:border-orange-400 text-sm flex justify-center items-center w-max h-full text-center cursor-pointer font-semibold text-lg`}
+                        >
+                          {tab?.name}
+                        </div>
+                      ))}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+            <ExamOverviewComponent />
           </div>
-          {/* <p className="text-lg mt-5 flex items-center gap-2">
-          <FaRegClock className="text-2xl" />
-          <span>Updated at </span>
-          <ExamOverview/>
-          {formatDate(college?.updatedAt!)}
-        </p> */}
-          {/* <CollegeTab data={TabData} /> */}
-          <ExamOverviewComponent />
-        </div>
-        <section className="mainSection max-w-screen-xl mx-auto">
-          {/* <div>{getTabData()}</div> */}
         </section>
       </section>
     </>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Breadcrumb({
   items,
-  textColor = "text-white",
+  textColor = "text-black",
 }: {
   items: any;
   textColor?: string;

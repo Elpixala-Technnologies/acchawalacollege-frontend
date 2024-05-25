@@ -7,7 +7,7 @@ import Wrapper from "@/components/Wrapper";
 
 export default function BannerSection({ data }: any) {
   return (
-    <section className="my-5 w-full bg-blue-100">
+    <section className="w-full bg-blue-100">
       <Wrapper className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Left Side of Banner */}
         <div className="flex flex-col justify-end md:pb-20">

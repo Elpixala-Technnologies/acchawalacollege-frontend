@@ -6,7 +6,7 @@ export default function ImageCard({
     title,
     children,
     noOverlay = false,
-    rounded = "rounded-lg",
+    rounded = "",
     containerHeight = "h-72",
 }: {
     imagePath?: any;
@@ -17,7 +17,7 @@ export default function ImageCard({
     containerHeight?: string;
 }) {
     return (
-        <div className={`relative ${rounded} overflow-hidden ${containerHeight}`}>
+        <div className={`relative ${title} ${rounded} overflow-hidden ${containerHeight}`}>
             <Image
                 src={imagePath}
                 objectFit="fill"
