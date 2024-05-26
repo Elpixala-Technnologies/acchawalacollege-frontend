@@ -32,7 +32,7 @@ export default function ExamAccordian({
                     <p
                         className={`flex-1 ${titlePrimary
                             ? "text-primary text-[25px] font-bold"
-                            : "text-secondary text-base"
+                            : "text-black text-base"
                             }`}
                     >
                         {title}

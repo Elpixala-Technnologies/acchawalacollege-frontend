@@ -7,7 +7,7 @@ import NavbarSlider from "@/components/navbar-carousal";
 import Image from "next/image";
 import router, { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { CiCalendar, CiClock1, CiFlag1, CiLocationOn } from "react-icons/ci";
+import { CiCalendar, CiCircleQuestion, CiClock1, CiFlag1, CiHeart, CiLocationOn } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { useSearchParams } from "next/navigation";
 import ExamOverviewComponent from "../examOverview/ExamOverviewSection";
@@ -134,13 +134,13 @@ export default function HeroExamSection({ examDetails }: any) {
                 <div className="flex gap-4 justify-end pt-4">
                   <div className="flex gap-2 items-center text-[15px]">
                     <div className="bg-white p-[6px] rounded-full">
-                      <Image src={Heart} width={10} height={10} alt="" />
+                      <CiHeart />
                     </div>
                     Save
                   </div>
                   <div className="flex items-center  text-[15px]">
                     <div className="p-2 rounded-full">
-                      <Image className="" src={AskIcon} alt="" />
+                      <CiCircleQuestion />
                     </div>
                     Ask
                   </div>

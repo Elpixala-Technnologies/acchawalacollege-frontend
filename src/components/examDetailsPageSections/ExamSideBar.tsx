@@ -1,11 +1,12 @@
 import Image from "next/image";
 import TabComponent from "../tab/tab";
-import { ExamNews, ExamQuestions, UpcomingExams1 } from "@/asset";
+import { ExamNews, ExamQuestions, NewsLetter, UpcomingExams1 } from "@/asset";
 import { RiCalendar2Fill } from "react-icons/ri";
 import ExamAccordian from "../examAccordian/examAccordian";
 import { examsOverviewData } from "@/data/examOverviewData";
 import Wrapper from "../Wrapper";
 import Link from "next/link";
+import NewsLetterCard from "../cards/newsletterCard";
 TabComponent
 export default function ExamSideBarComponent() {
     let FeatureNews = () => {
@@ -145,6 +146,7 @@ export default function ExamSideBarComponent() {
         <>
             <div className="w-[300px]">
                 <TabComponent tabs={NewsTab} />
+                <NewsLetterCard />
                 <TabComponent tabs={ExamsNotificationsTab} />
                 <TabComponent tabs={ExamsSyllabusTab} />
             </div>

@@ -7,6 +7,7 @@ import ExamBanner from "../ExamBanner";
 import ExamAdmissionCard from "@/components/cards/examAdmissionCard";
 import { examDateSession1table, examDatetable, examQualifyingMarkstable, examsOverviewData, highlighttable } from "@/data/examOverviewData";
 import ExamAccordian from "@/components/examAccordian/examAccordian";
+import CollegePredictorCard from "@/components/cards/CollegePredictorCard";
 
 const ExamOverviewSection = () => {
   return (
@@ -86,12 +87,11 @@ const ExamOverviewSection = () => {
               </h6>
               <Table table={examDatetable}></Table>
             </div>
-
+            <div className="gap-4">
+              <ExamAdmissionCard />
+              <ExamAdmissionCard />
+            </div>
             <div className="flex flex-col gap-5">
-              <div>
-                {`The JEE Advanced Cut off for 2024 will be disclosed simultaneously with the release of the IIT JEE results. In the preceding year, the JEE Advanced Cut off for Common Rank List (CRL) stood at 23.89% in aggregate and 6.83% in each subject. Meanwhile, the JEE Advanced Cut off for Other Backward Classes (OBC) was 21.50% in aggregate and 6.15% in each subject. JoSAA will announce the IIT JEE Cut off ranks on the official website – josaa.admissions.nic.in, coinciding with the JEE Advanced qualifying percentiles. These cut off ranks specify the minimum ranks required by candidates for securing admission to the IITs. Attaining a score of 80 or more is considered commendable in JEE Advanced 2024. However, aspiring for an All India Rank (AIR) 1 necessitates aiming for a score exceeding 320 marks in IIT JEE. In the previous year (2023), the JEE Advanced Cut off for IIT Bombay was 67 for Computer Science and Engineering (CSE), 481 for Electrical Engineering, 1736 for Mechanical Engineering, and 4371 for Civil Engineering. Based on the data from the previous year, students aiming for a rank below 1000 should target a score of 170 marks or higher.`}
-              </div>
-
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
                   {examsOverviewData?.jEEMainsExamQualifyingMarks?.title?.heading}
@@ -111,6 +111,10 @@ const ExamOverviewSection = () => {
                 </h6>
                 {examsOverviewData?.answerKey?.title?.description}
               </div>
+              <div className="gap-4">
+                <ExamAdmissionCard />
+                <ExamAdmissionCard />
+              </div>
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
                   {examsOverviewData?.mainResult?.title?.heading}
@@ -118,8 +122,25 @@ const ExamOverviewSection = () => {
                 {examsOverviewData?.mainResult?.title?.description}
               </div>
               <div>
-                <ExamAdmissionCard />
+                <CollegePredictorCard />
               </div>
+              <div>
+                <h6 className="text-primary text-[25px] font-semibold">
+                  {examsOverviewData?.answerKey?.title?.heading}
+                </h6>
+                {examsOverviewData?.answerKey?.title?.description}
+              </div>
+              <div>
+                <h6 className="text-primary text-[25px] font-semibold">
+                  {examsOverviewData?.examResponseSheet?.title?.heading}
+                </h6>
+                {examsOverviewData?.examResponseSheet?.title?.description}
+              </div>
+                <div className="text-blue-950 font-bold">{examsOverviewData?.examResponseSheet?.title?.heading1}</div>
+                <p>{examsOverviewData?.examResponseSheet?.title?.description1}</p>
+                <p>{examsOverviewData?.examResponseSheet?.title?.description2}</p>
+                <p>{examsOverviewData?.examResponseSheet?.title?.description3}</p>
+                <p>{examsOverviewData?.examResponseSheet?.title?.description4}</p>
             </div>
 
             <div>

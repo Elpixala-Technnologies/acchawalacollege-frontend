@@ -120,6 +120,18 @@ export const examsOverviewData = {
             description4: "Lorem Ipsum is simply dummy text.",
 
         },
+    },
+
+    examResponseSheet: {
+        title: {
+            heading: "JEE Main 2024 Response Sheet",
+            description: "NTA has released the JEE Main response sheet 2024 on the official website. The response sheet has been released along with the preliminary key. JEE Main response sheet 2024 comprises the answers marked by the candidates. The candidate can use their response sheets to verify their answers using the JEE Main answer key. Applicants have to provide login details to download the response sheet.",
+            heading1: "How to download JEE Main Response Sheet 2024:",
+            description1: "Visit the JEE Main official website, jeemain.nta.nic.in 2024",
+            description2: "Click on the link to JEE Main response sheet 2024.",
+            description3: "Candidates have to provide the application number and password.",
+            description4: "Download the pdf and save it for reference.",
+        },
     }
 
 };
