@@ -14,7 +14,13 @@ export default function TimelineList({ data }: any) {
         {data?.map((item: any, index: number) => (
           <div
             key={item.id}
-            className="chat-bubble relative rounded-lg border border-zinc-300 p-5 pb-4"
+            className={`
+            ${
+              isOpen === item.id || (index === 0 && isOpen === null)
+                ? "chat-bubble-active shadow-lg"
+                : "chat-bubble"
+            }
+            relative rounded-lg border border-zinc-300 p-5 pb-4`}
           >
             <button
               onClick={() => toggle(item.id)}

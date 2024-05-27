@@ -3,7 +3,6 @@ import Wrapper from "@/components/Wrapper";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Content from "./Content";
-import AsideSection from "./AsideSection";
 import Faqs from "@/components/faqs/Faqs";
 
 export default function CourseDetail({ data, faqs }: any) {
@@ -20,8 +19,6 @@ export default function CourseDetail({ data, faqs }: any) {
           onSelect={handleSelect}
           selectedIndex={selectedIndex}
         />
-        <div className="my-5 flex flex-col space-x-4 md:flex-row">
-          <div className="flex w-full flex-col md:min-w-[550px] md:[flex:8]">
             <Content courseDetails={data} selectedIndex={selectedIndex} />
             <div className="my-5 rounded-lg border border-zinc-300 p-5">
               {/* Title  */}
@@ -32,9 +29,6 @@ export default function CourseDetail({ data, faqs }: any) {
               )}
               <Faqs data={faqs?.faqsQuestionsAndAnswers} />
             </div>
-          </div>
-          <AsideSection />
-        </div>
       </Wrapper>
     </section>
   );
