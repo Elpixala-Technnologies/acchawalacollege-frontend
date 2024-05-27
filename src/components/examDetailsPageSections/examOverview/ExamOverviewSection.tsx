@@ -18,43 +18,112 @@ const ExamOverviewSection = () => {
             <div className="flex flex-col gap-5">
               <div>
                 {/* <div className="border border-primary-text-light rounded-md gap-4"> */}
-                  <div className="p-4">
-                    <div>
-                      <span className="font-semibold">{examsOverviewData?.section1?.title?.heading}</span>
-                      {examsOverviewData?.section1?.title?.description}
-                    </div>
-                    <br />
-                    <Separator />
-                    <div className="flex flex-col pt-4 gap-2 ">
-                      <div>
-                        <span className="font-semibold">{examsOverviewData?.section2?.title?.heading1} </span> {examsOverviewData?.section2?.title?.description1}
-                      </div>
-                      <div>
-                        <span className="font-semibold">{examsOverviewData?.section2?.title?.heading2}</span>{examsOverviewData?.section2?.title?.description2}
-                      </div>
-                      <div>
-                        <span className="font-semibold">{examsOverviewData?.section2?.title?.heading3}</span>{examsOverviewData?.section2?.title?.description3}
-                      </div>
-                      <div>
-                        <span className="font-semibold">{examsOverviewData?.section2?.title?.heading4}</span>{examsOverviewData?.section2?.title?.description4}
-                      </div>
-                    </div>
+                <div className="p-4">
+                  <div className="flex gap-x-2 py-2">
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.heading1 }}
+                    />
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <div
+                        className="dangerouslySetInnerHTMLStyle text-justify"
+                        dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.description1 }}
+                      />
+                    </p>
                   </div>
-                  <div className="p-4 bg-[#BAE1FF]">
-                    <span className="font-semibold text-xl">{examsOverviewData?.section3?.title?.heading1}</span>
-                    <div className="flex flex-col gap-2 p-2 font-[#5A5695]">
-                      <p>{examsOverviewData?.section3?.title?.description1}</p>
-                      <p>{examsOverviewData?.section3?.title?.description2}</p>
-                      <p>{examsOverviewData?.section3?.title?.description3}</p>
-                      <p>{examsOverviewData?.section3?.title?.description4}</p>
-                      <p>{examsOverviewData?.section3?.title?.description5}</p>
-                      <p>{examsOverviewData?.section3?.title?.description6}</p>
-                      <p>{examsOverviewData?.section3?.title?.description7}</p>
-                      <p>{examsOverviewData?.section3?.title?.description8}</p>
-                      <p>{examsOverviewData?.section3?.title?.description9}</p>
-                      <p>{examsOverviewData?.section3?.title?.description10}</p>
-                    </div>
+                  <div className="flex gap-x-2 py-2">
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.heading2 }}
+                    />
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <div
+                        className="dangerouslySetInnerHTMLStyle text-justify"
+                        dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.description2 }}
+                      />
+                    </p>
                   </div>
+                  <div className="flex gap-x-2 py-2">
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.heading3 }}
+                    />
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <div
+                        className="dangerouslySetInnerHTMLStyle text-justify"
+                        dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.description3 }}
+                      />
+                    </p>
+                  </div>
+                  <div className="flex gap-x-2 py-2">
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.heading4 }}
+                    />
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <div
+                        className="dangerouslySetInnerHTMLStyle text-justify"
+                        dangerouslySetInnerHTML={{ __html: examsOverviewData?.section2?.description4 }}
+                      />
+                    </p>
+                  </div>
+                  <br />
+                  <Separator />
+                  <div className="flex flex-col pt-4 gap-2 ">
+                  </div>
+                </div>
+                <div className="p-4 bg-[#BAE1FF]">
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.heading }}
+                  />
+                  <div className="flex flex-col gap-2 p-2 font-[#5A5695]">
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description1 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description2 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description2 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description3 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description4 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description5 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description6 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description7 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description8 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description9 }}
+                    />
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.section3?.description10 }}
+                    />
+                  </div>
+                </div>
                 {/* </div> */}
               </div>
               <div className="border border-primary-text-light gap-4 bg-[#012148]">
@@ -62,21 +131,33 @@ const ExamOverviewSection = () => {
                   imagePath={examsOverviewData?.section4?.img}
                   containerHeight="h-96" />
                 <h1 className="text-white p-3 my-3">
-                  {examsOverviewData?.section4?.title?.heading1}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.section4?.title }}
+                  />
                 </h1>
               </div>
               <div className="flex flex-col gap-4">
                 <h6 className="text-primary text-[25px] font-semibold ">
-                  {examsOverviewData?.table1?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.table1?.title }}
+                  />
                 </h6>
                 <Table table={highlighttable}></Table>
               </div>
               <div className="flex flex-col gap-4">
                 <h6 className="text-primary text-[25px] font-semibold ">
-                  {examsOverviewData?.jeeExamDate?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.jeeExamDate?.heading }}
+                  />
                 </h6>
                 <div>
-                  {examsOverviewData?.jeeExamDate?.title?.description}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.jeeExamDate?.description }}
+                  />
                 </div>
               </div>
             </div>
@@ -94,22 +175,34 @@ const ExamOverviewSection = () => {
             <div className="flex flex-col gap-5">
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.jEEMainsExamQualifyingMarks?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.jEEMainsExamQualifyingMarks?.heading }}
+                  />
                 </h6>
               </div>
               <Table table={examQualifyingMarkstable}></Table>
 
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.examDateSession1table?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.examDateSession1table?.heading }}
+                  />
                 </h6>
               </div>
               <Table table={examDateSession1table}></Table>
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.answerKey?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.answerKey?.heading }}
+                  />
                 </h6>
-                {examsOverviewData?.answerKey?.title?.description}
+                <div
+                  className="dangerouslySetInnerHTMLStyle text-justify"
+                  dangerouslySetInnerHTML={{ __html: examsOverviewData?.answerKey?.description }}
+                />
               </div>
               <div className="gap-4">
                 <ExamAdmissionCard />
@@ -117,51 +210,90 @@ const ExamOverviewSection = () => {
               </div>
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.mainResult?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.mainResult?.heading }}
+                  />
                 </h6>
-                {examsOverviewData?.mainResult?.title?.description}
+                <div
+                  className="dangerouslySetInnerHTMLStyle text-justify"
+                  dangerouslySetInnerHTML={{ __html: examsOverviewData?.mainResult?.description }}
+                />
               </div>
               <div>
                 <CollegePredictorCard />
               </div>
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.answerKey?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.answerKey?.heading }}
+                  />
                 </h6>
-                {examsOverviewData?.answerKey?.title?.description}
+                <div
+                  className="dangerouslySetInnerHTMLStyle text-justify"
+                  dangerouslySetInnerHTML={{ __html: examsOverviewData?.answerKey?.description }}
+                />
               </div>
               <div>
                 <h6 className="text-primary text-[25px] font-semibold">
-                  {examsOverviewData?.examResponseSheet?.title?.heading}
+                  <div
+                    className="dangerouslySetInnerHTMLStyle text-justify"
+                    dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.heading1 }}
+                  />
                 </h6>
-                {examsOverviewData?.examResponseSheet?.title?.description}
+                <div
+                  className="dangerouslySetInnerHTMLStyle text-justify"
+                  dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.description1 }}
+                />
               </div>
-                <div className="text-blue-950 font-bold">{examsOverviewData?.examResponseSheet?.title?.heading1}</div>
-                <p>{examsOverviewData?.examResponseSheet?.title?.description1}</p>
-                <p>{examsOverviewData?.examResponseSheet?.title?.description2}</p>
-                <p>{examsOverviewData?.examResponseSheet?.title?.description3}</p>
-                <p>{examsOverviewData?.examResponseSheet?.title?.description4}</p>
+              <div className="text-blue-950 font-bold">
+                <div
+                  className="dangerouslySetInnerHTMLStyle text-justify"
+                  dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.heading2 }}
+                />
+              </div>
+              <div
+                className="dangerouslySetInnerHTMLStyle text-justify"
+                dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.description2 }}
+              />
+              <div
+                className="dangerouslySetInnerHTMLStyle text-justify"
+                dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.description3 }}
+              />
+              <div
+                className="dangerouslySetInnerHTMLStyle text-justify"
+                dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.description4 }}
+              />
+              <div
+                className="dangerouslySetInnerHTMLStyle text-justify"
+                dangerouslySetInnerHTML={{ __html: examsOverviewData?.examResponseSheet?.description5 }}
+              />
             </div>
 
             <div>
               <div className="text-[#165BAE] rounded-md">
                 <div className="flex justify-between px-5 py-4 items-center">
                   <p className={"text-primary text-[25px] font-semibold"}>
-                    {examsOverviewData?.frequentlyAskedQuestions?.title?.mainTitle}
+                    <div
+                      className="dangerouslySetInnerHTMLStyle text-justify"
+                      dangerouslySetInnerHTML={{ __html: examsOverviewData?.frequentlyAskedQuestions?.title }}
+                    />
+                    {/* {examsOverviewData?.frequentlyAskedQuestions?.title?.mainTitle} */}
                   </p>
                 </div>
                 <div className="p-6 flex flex-col gap-4 text-sm">
-                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.title?.heading1}>
-                    {examsOverviewData?.frequentlyAskedQuestions?.title?.description1}
+                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.heading1}>
+                    {examsOverviewData?.frequentlyAskedQuestions?.description1}
                   </ExamAccordian>
-                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.title?.heading2}>
-                    {examsOverviewData?.frequentlyAskedQuestions?.title?.description2}
+                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.heading2}>
+                    {examsOverviewData?.frequentlyAskedQuestions?.description2}
                   </ExamAccordian>
-                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.title?.heading3}>
-                    {examsOverviewData?.frequentlyAskedQuestions?.title?.description3}
+                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.heading3}>
+                    {examsOverviewData?.frequentlyAskedQuestions?.description3}
                   </ExamAccordian>
-                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.title?.heading4}>
-                    {examsOverviewData?.frequentlyAskedQuestions?.title?.description4}
+                  <ExamAccordian title={examsOverviewData?.frequentlyAskedQuestions?.heading4}>
+                    {examsOverviewData?.frequentlyAskedQuestions?.description4}
                   </ExamAccordian>
                 </div>
                 <ExamBanner />
