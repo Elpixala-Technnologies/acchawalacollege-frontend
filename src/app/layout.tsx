@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import {global} from "@/data/globalData"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-poppins">
-        <Header />
+        <Header header={global?.header} />
         {children}
-        <Footer />
+        <Footer footer={global?.footer} />
       </body>
     </html>
   );

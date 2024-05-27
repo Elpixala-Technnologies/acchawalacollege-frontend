@@ -1,7 +1,7 @@
 import Wrapper from "@/components/Wrapper";
 import CoursesCard1 from "@/components/cards/CoursesCard1";
 import CoursesCard2 from "@/components/cards/CoursesCard2";
-import TextWithLineBreak from "@/utils/TextWithLineBreack";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import Image from "next/image";
 import React from "react";
 import { CiClock2, CiPlay1 } from "react-icons/ci";

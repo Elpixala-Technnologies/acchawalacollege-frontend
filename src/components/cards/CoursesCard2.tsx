@@ -14,7 +14,7 @@ import { FaRegCalendarAlt, FaRegClock, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { formatRupee } from "@/utils/fotmatRupee";
-import TextWithLineBreak from "@/utils/TextWithLineBreack";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
 export default function CoursesCard2({ data }: any) {
   const swiperOptions = {
@@ -89,7 +89,9 @@ function CoursesCardContent({ data }: any) {
             </p>
           </div>
         </div>
-        <p className="absolute bottom-2 right-2 p-1.5 rounded-md bg-red-600 text-xs text-white">{data.tag}</p>
+        <p className="absolute bottom-2 right-2 rounded-md bg-red-600 p-1.5 text-xs text-white">
+          {data.tag}
+        </p>
       </div>
       <div className="p-5">
         {/* line 1  */}

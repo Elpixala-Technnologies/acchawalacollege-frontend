@@ -1,18 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import CollegeFilters from "./CollegeFilters";
-import { dummyCollegeDataArray } from "@/data/collegeData";
 import { RiSearchLine } from "react-icons/ri";
 import SortButton from "@/components/sortButton/SortButton";
 import { MdOutlineSort } from "react-icons/md";
 import CollegeFilteredCard from "@/components/cards/CollegeFilteredCard";
-import TopCollegesScroll from "./TopCollegesScroll";
-import CollegesCard from "@/components/cards/CollegesCard";
+import TopCollegesScroll from "../../topColleges/TopCollegesScroll";
 import Wrapper from "@/components/Wrapper";
-export default function CollegeListSection() {
+export default function CollegeListSection({data, topColleges}:any) {
   const [MobileFilter, setMobileFilter] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
-  const [filteredData, setFilteredData] = useState<any>(dummyCollegeDataArray);
+  const [filteredData, setFilteredData] = useState<any>(data);
 
   function handleSearch() {
     // search operation
@@ -24,14 +22,14 @@ export default function CollegeListSection() {
 
   const handleFilterOptionClick = (option: any) => {
     if (option === "a-z") {
-      const sortedData: any = [...dummyCollegeDataArray].sort(
+      const sortedData: any = [...data].sort(
         (a: any, b: any) => {
           return a?.name.localeCompare(b?.name);
         },
       );
       setFilteredData(sortedData.slice(0, displayCount));
     } else if (option === "reset") {
-      const resetArray: any = [...dummyCollegeDataArray].slice(0, displayCount);
+      const resetArray: any = [...data].slice(0, displayCount);
       setFilteredData(resetArray);
     }
   };
@@ -40,7 +38,7 @@ export default function CollegeListSection() {
     <section id="collegeList" className="my-5 w-full pb-5">
       <Wrapper className="flex flex-col md:flex-row">
         {/* Aside College Filter Section  */}
-        <CollegeFilters allColleges={dummyCollegeDataArray} />
+        <CollegeFilters allColleges={data} />
         {/* main College Search and List Section  */}
         <main className="flex w-full flex-col p-5 pt-0  md:[flex:8] md:min-w-[550px]">
           {/* Search and Sort Section  */}
@@ -75,7 +73,7 @@ export default function CollegeListSection() {
             />
           ))}
           {/* Top Colleges Section  */}
-          <TopCollegesScroll />
+          <TopCollegesScroll data={topColleges} />
           {/* Next College List Section  */}
           {filteredData.slice(3).map((college: any) => (
             <CollegeFilteredCard key={college.id} college={college} />

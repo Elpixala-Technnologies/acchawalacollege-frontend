@@ -6,12 +6,11 @@ import Menu from "./Menu";
 import MenuMobile from "./MenuMobile";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
-import { header } from "@/data/globalData";
 import Image from "next/image";
 // import { fetchDataFromApi } from "@/utils/api";
 // import { useSelector } from "react-redux";
 
-const Header: React.FC = () => {
+const Header = ({header}:any) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [show, setShow] = useState<string>("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState<number>(0);
@@ -58,7 +57,7 @@ const Header: React.FC = () => {
     >
       <Wrapper className="hidden h-20 items-center justify-between md:flex">
         {/* Logo with Link */}
-        <Link href={header?.href}>
+        <Link href={header?.href || "/"}>
           <Image
             src={header?.logo}
             alt="logo"

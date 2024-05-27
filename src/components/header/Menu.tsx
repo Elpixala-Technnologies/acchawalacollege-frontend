@@ -8,7 +8,7 @@ const Menu = ({ navItemsArray }: any) => {
       {navItemsArray?.map((item: any) => (
         <li key={item?.id} className="group relative transition-all">
           <Link
-            href={item?.href ?? "#"}
+            href={item?.href || "#"}
             className="flex cursor-pointer items-center"
           >
             <span className="font px-1 py-4 transition-all duration-500 hover:text-blue-500">
@@ -24,7 +24,7 @@ const Menu = ({ navItemsArray }: any) => {
               {item.subNav.map((nav: any) => (
                 <Link
                   key={nav.id}
-                  href={nav.href ?? "#"}
+                  href={nav.href || "#"}
                   className="hover:bg-blue-500 flex cursor-pointer items-center py-1 pl-2 pr-8  hover:text-white"
                 >
                   {/* item */}

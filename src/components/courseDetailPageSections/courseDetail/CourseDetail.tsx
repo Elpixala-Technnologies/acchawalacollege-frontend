@@ -20,7 +20,7 @@ export default function CourseDetail({ data, faqs }: any) {
           selectedIndex={selectedIndex}
         />
             <Content courseDetails={data} selectedIndex={selectedIndex} />
-            <div className="my-5 rounded-lg border border-zinc-300 p-5">
+            <div className="my-5 p-5">
               {/* Title  */}
               {faqs?.title && (
                 <h1 className="mb-5 text-blue-950 text-2xl font-medium">

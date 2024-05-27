@@ -200,13 +200,13 @@ export const courseListingPage = {
         "Embark on Your Career Journey Today! Find \nThe Best Course To Take You To The Next Level",
       text: "Navigate the Path to Success with Our Support",
       button: {
-        text: "Browse Coourses",
+        text: "Browse Courses",
         href: "#",
       },
     },
     partners: {
       title: "Our Knowledge Partners",
-      companyLogos: [comp1, comp2, comp3, comp4, comp5],
+      images: [comp1, comp2, comp3, comp4, comp5],
     },
     testimonial: {
       title: {
@@ -536,7 +536,7 @@ export const courseDetailsPage = {
     courseDetails: [
       {
         title: "Overview",
-        article: "This is an overview of the course.",
+        article: `<p>This is an overview of the course.</p><p class='note'>Disclaimer: Data for total fees has been calculated based on all years/semesters as provided by the college.</p> <p>The actual fees may vary.</p><p>This is an overview of the course.</p>`,
         note: "This course is designed to provide comprehensive knowledge.",
       },
       {
