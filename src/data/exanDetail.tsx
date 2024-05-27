@@ -1,11 +1,12 @@
 import {
+    ExamBanner,
     collegeLogo,
     exam,
 } from "@/asset";
 
 export const examDetails = {
     examLogo: exam,
-    examImg: [exam],
+    examImg: ExamBanner,
     examName: "Joint Entrance Exam Advanced (JEE Advanced) ",
     ExamDates: "12 July 2024",
     ApplicationForm: "12 May 2024",

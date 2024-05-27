@@ -17,8 +17,8 @@ const ExamOverviewSection = () => {
           <div className="flex-1 flex flex-col gap-4">
             <div className="flex flex-col gap-5">
               <div>
-                <div className="border border-primary-text-light rounded-md gap-4">
-                  <div className="p-6">
+                {/* <div className="border border-primary-text-light rounded-md gap-4"> */}
+                  <div className="p-4">
                     <div>
                       <span className="font-semibold">{examsOverviewData?.section1?.title?.heading}</span>
                       {examsOverviewData?.section1?.title?.description}
@@ -55,7 +55,7 @@ const ExamOverviewSection = () => {
                       <p>{examsOverviewData?.section3?.title?.description10}</p>
                     </div>
                   </div>
-                </div>
+                {/* </div> */}
               </div>
               <div className="border border-primary-text-light gap-4 bg-[#012148]">
                 <ImageCard
@@ -168,9 +168,9 @@ const ExamOverviewSection = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <ExamSideBarComponent />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

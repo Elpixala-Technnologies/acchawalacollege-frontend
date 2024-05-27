@@ -1,4 +1,4 @@
-import { ExamPaper, UpcomingExams1, UpcomingExams2, exam } from "@/asset";
+import { ExamBanner, ExamPaper, UpcomingExams1, UpcomingExams2, exam } from "@/asset";
 import { CiCalendar, CiStar } from "react-icons/ci";
 import { FaUniversity } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";

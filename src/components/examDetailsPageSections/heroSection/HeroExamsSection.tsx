@@ -95,7 +95,7 @@ export default function HeroExamSection({ examDetails }: any) {
               alt="collegeImg"
               className="mx-auto h-[280px] w-full max-w-screen-2xl object-cover"
             /> */}
-            <div className="absolute left-0 top-0 h-full w-full">
+            {/* <div className="absolute left-0 top-0 h-full w-full">
               <Wrapper className="p-10">
                 <div className="my-auto flex items-center gap-x-6">
                   <div className="min-h-20 min-w-20 md:h-40 md:w-40 rounded-full bg-white p-2 md:p-5">
@@ -154,6 +154,83 @@ export default function HeroExamSection({ examDetails }: any) {
               </Wrapper>
               <div className="border-b border-b-primary-text-light">
               </div>
+            </div> */}
+            <Image
+              src={examDetails?.examImg}
+              alt="collegeImg"
+              className="mx-auto h-[310px] w-full object-cover"
+            />
+            <div className="absolute left-0 top-0 h-full w-full">
+              <Wrapper className="p-10 text-white">
+                <div className="my-auto flex items-center gap-x-6 border-b border-white pb-5">
+                  <div className="min-h-20 min-w-20 md:h-40 md:w-40 bg-white p-2 md:p-5">
+                    <Image
+                      src={examDetails?.examLogo}
+                      alt="collegeLogo"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h1 className="wh md:text-3xl text-2xl font-bold text-wrap">
+                      {examDetails?.examName}
+                    </h1>
+                    <div>
+                      <div className="flex max-md:flex-col gap-x-6">
+                        <p className="flex items-center gap-x-1 font-thin">
+                          <CiCalendar /> Exam Date :
+                          {examDetails?.ExamDates}
+                        </p>
+                        <p className="flex items-center gap-x-1 font-thin">
+                          ApplicationForm :
+                          {examDetails?.ApplicationForm}
+                        </p>
+                      </div>
+                      <div className="flex max-md:flex-col gap-x-6">
+                        <p className="flex items-center gap-x-1 font-thin">
+                          <CiCalendar /> ExamPattern :
+                          {examDetails?.ExamPattern}
+                        </p>
+                        <p className="flex items-center gap-x-1 font-thin">
+                          Registration :
+                          {examDetails?.Registration}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* <div className="flex gap-x-6 py-5">
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <CiHeart />
+                      Save
+                    </p>
+                    <p className="flex items-center gap-x-1 font-thin">
+                      <CiCircleQuestion />
+                      Ask
+                    </p>
+                  </div> */}
+                </div>
+                {/* <div className="flex gap-4 pt-4">
+                  <div className="flex gap-2 items-center text-[15px]">
+                    <div className="p-[6px] rounded-full">
+                      <CiHeart />
+                    </div>
+                    Save
+                  </div>
+                  <div className="flex items-center  text-[15px]">
+                    <div className="p-2 rounded-full">
+                      <CiCircleQuestion />
+                    </div>
+                    Ask
+                  </div>
+                </div> */}
+                <div className="flex gap-4 justify-end pt-2">
+                  <button className="rounded-lg border-2 border-blue-950 bg-blue-950 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
+                    {examDetails.button1.text}
+                  </button>
+                  <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-[#165BAE] hover:bg-blue-700 hover:text-white">
+                    {examDetails.button2.text}
+                  </button>
+                </div>
+              </Wrapper>
             </div>
           </section>
         </div>

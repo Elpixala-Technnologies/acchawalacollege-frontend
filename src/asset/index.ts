@@ -72,6 +72,7 @@ import ExamNews from "./exams/exam.png";
 import ExamQuestions from "./exams/ExamQuestions.png";
 import NewsLetter from "./exams/News.png";
 import ExamPaper from "./exams/ExamPaper.png";
+import ExamBanner from "./exams/ExamBackground.png";
 
 
 export {
@@ -97,6 +98,6 @@ export {
     user1, testimonialBg, quoteIcon,
 
     comp1, comp2, comp3, comp4, comp5,
-    exam,  examBg1, examBg2, examBg3, examBg4, UpcomingExams1, UpcomingExams2, AskIcon, Heart, HappyStudents, ExamNews, ExamQuestions, NewsLetter, ExamPaper
+    exam,  examBg1, examBg2, examBg3, examBg4, UpcomingExams1, UpcomingExams2, AskIcon, Heart, HappyStudents, ExamNews, ExamQuestions, NewsLetter, ExamPaper, ExamBanner
 
 }

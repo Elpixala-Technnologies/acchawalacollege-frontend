@@ -64,6 +64,10 @@ body::-webkit-scrollbar-track {
     @apply flex-center rounded border border-blue-950 bg-white px-5 py-2 text-sm font-medium text-blue-950 transition-all duration-300 hover:bg-gray-100 active:scale-90;
   }
 
+  .examButton {
+    @apply flex-center rounded border border-blue-950 bg-blue-950 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-blue-950 active:scale-90;
+  }
+
   /* END Sign Up / Sign In  Button */
   .cardButton1 {
     @apply flex-center w-full  gap-2 rounded-lg border border-zinc-500 px-4 py-2  text-lg font-medium text-black transition-all duration-300 hover:bg-zinc-200 active:scale-90;
