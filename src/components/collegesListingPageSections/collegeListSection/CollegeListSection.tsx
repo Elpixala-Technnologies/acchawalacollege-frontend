@@ -38,7 +38,7 @@ export default function CollegeListSection() {
 
   return (
     <section id="collegeList" className="my-5 w-full pb-5">
-      <Wrapper className=" flex flex-col md:flex-row">
+      <Wrapper className="flex flex-col md:flex-row">
         {/* Aside College Filter Section  */}
         <CollegeFilters allColleges={dummyCollegeDataArray} />
         {/* main College Search and List Section  */}

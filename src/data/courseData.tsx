@@ -508,104 +508,158 @@ export const courseListingPage = {
 };
 
 export const courseDetailsPage = {
-bTech:{
-  homeBanner: {
-    title: "B.Tech Engineering Technology at IIT Madras",
-    courseType:"offline",
-    collegeDetails:{
-      collegeLogo: collegeLogo,
-      CollegeName: "IIT Madras - Indian Institute of Technology ",
-      location: {
-        state: "Tamil Nadu",
-        city: "Chennai",
+  bTech: {
+    homeBanner: {
+      title: "B.Tech Engineering Technology at IIT Madras",
+      courseType: "offline",
+      collegeDetails: {
+        collegeLogo: collegeLogo,
+        CollegeName: "IIT Madras - Indian Institute of Technology ",
+        location: {
+          state: "Tamil Nadu",
+          city: "Chennai",
+        },
         affiliation: "AICTE",
       },
+      duration: "48 Months",
+      fees: "500000",
+      lastUpdate: "Nov 17, 2023 14:25 IST",
+      button1: {
+        text: "Register Now",
+        href: "#",
+      },
+      button2: {
+        text: "Download Brochure",
+        href: "#",
+      },
     },
-    duration: "48 Months",
-    fees: "500000",
-    lastUpdate: "Nov 17, 2023 14:25 IST",
-    button1: {
-      text: "Register Now",
-      href: "#",
-    },
-    button2: {
-      text: "Download Brochure",
-      href: "#",
-    },
-  },
-  overview: {
-    title: "Overview",
-    article:"",
-    note:"",
-  },
-  courseDetails:{
-    title: "Course Details",
-    article: "",
-    note:"",
-  },
-  programmeOfferings:{
-    title: "Programme Offerings",
-    list: ["UGC approved", "Online classes on weekends", "Expert Faculty", "Mock test", "Placements", "Case Studies", "Scholarships", "project work", "access to online lab and remote lab."]
-  },
-  eligibilityCriteria:{
-    title: "Eligibility Criteria",
-    article: "",
-    note:"",
-  },
-  admissionDetails:{
-    title: "Admission Details",
-    article: "",
-    note:"",
-  },
-  applicationDetails:{
-    title: "Application Details",
-    article: "",
-    note:"",
-  }, 
-  syllabus:{
-    title: "The Syllabus",
-    article: "",
-    semesters: ["","","","","","","",""]
-  },
-  evaluationProcess:{
-    title: "Evaluation Process",
-    article: "",
-    note:"",
-  },
-  faqs: {
-    title: "Frequently Asked Questions",
-    faqsQuestionsAndAnswers: [
+    courseDetails: [
       {
-        id: 1,
-        question: "When was the University Established?",
-        answer:
-          "The Indian Institute of Technology, Madras was established in 1961. The institute was founded by the erstwhile Prime Minister, Shri. Venkatesh Iyengar.",
+        title: "Overview",
+        article: "This is an overview of the course.",
+        note: "This course is designed to provide comprehensive knowledge.",
       },
       {
-        id: 2,
-        question: "Is the University a Private or Government University",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        title: "Course Details",
+        article: "These are the details of the course.",
+        note: "Detailed curriculum and syllabus are included.",
       },
       {
-        id: 3,
-        question: "What is the University Affiliation?",
-        answer:
-          "The Indian Institute of Technology, Madras is affiliated to the University of Madras. The institute is governed by the Government of India. The institute has a status of Government.",
+        title: "Programme Offerings",
+        article: "These are the details of the course.",
+        list: [
+          "UGC approved",
+          "Online classes on weekends",
+          "Expert Faculty",
+          "Mock test",
+          "Placements",
+          "Case Studies",
+          "Scholarships",
+          "Project work",
+          "Access to online lab and remote lab.",
+        ],
       },
       {
-        id: 4,
-        question: "How good is the University",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        title: "Eligibility Criteria",
+        article: "Eligibility criteria for the course.",
+        note: "Please ensure you meet the criteria before applying.",
       },
       {
-        id: 5,
-        question: "What courses does the University Offer?",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        title: "Admission Details",
+        article: "Details about the admission process.",
+        note: "Follow the steps outlined for a smooth admission process.",
+      },
+      {
+        title: "Application Details",
+        article: "How to apply for the course.",
+        note: "Submit your application before the deadline.",
+      },
+
+      {
+        title: "The Syllabus",
+        article: "",
+        semesters: [{
+          id: 1,
+          title: "Semester 1",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id: 2,
+          title: "Semester 2",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:3,
+          title: "Semester 3",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:4,
+          title: "Semester 4",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:5,
+          title: "Semester 5",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:6,
+          title: "Semester 6",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:7,
+          title: "Semester 7",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+        {
+          id:8,
+          title: "Semester 8",
+          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
+        },
+      ],
+      },
+      {
+        title: "Evaluation Process",
+        article: "",
+        note: "",
       },
     ],
+    faqs: {
+      title: "Frequently Asked Questions",
+      faqsQuestionsAndAnswers: [
+        {
+          id: 1,
+          question: "When was the University Established?",
+          answer:
+            "The Indian Institute of Technology, Madras was established in 1961. The institute was founded by the erstwhile Prime Minister, Shri. Venkatesh Iyengar.",
+        },
+        {
+          id: 2,
+          question: "Is the University a Private or Government University",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 3,
+          question: "What is the University Affiliation?",
+          answer:
+            "The Indian Institute of Technology, Madras is affiliated to the University of Madras. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 4,
+          question: "How good is the University",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 5,
+          question: "What courses does the University Offer?",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+      ],
+    },
   },
-}
-}
+};

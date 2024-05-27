@@ -2,20 +2,14 @@
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import CollegeDetailsCardSlider from "../cards/CollegeDetailsCardSlider";
 import CompaniesScrollSlideShow from "./CompaniesScrollSlideShow";
 import ReviewsSlider from "../cards/ReviewsSlider";
-import { IoIosArrowDown } from "react-icons/io";
 import YoutubeVideo from "../youtubeVideo";
+import Faqs from "../faqs/Faqs";
 
 export default function InformationSection({ data }: any) {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const toggleFaq = (id: any) => {
-    setOpenFaq(openFaq === id ? null : id);
-  };
-
   return (
     <section className="w-full bg-white">
       <Wrapper className="flex flex-col gap-y-5 border-b border-zinc-400 p-5 md:p-10">
@@ -151,34 +145,7 @@ export default function InformationSection({ data }: any) {
         )}
         {/* FAQs  */}
         {data?.faqsQuestionsAndAnswers && (
-          <div className="flex flex-col gap-4">
-            {data?.faqsQuestionsAndAnswers.map((faq: any, index: number) => (
-              <div key={faq.id} className="mb-4 border-b border-zinc-300 pb-2">
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="flex w-full items-center justify-between text-left"
-                >
-                  <span className="font-medium">{faq?.question}</span>
-                  <IoIosArrowDown
-                    className={`transform text-xl transition-transform ${
-                      openFaq === faq.id || (index === 0 && openFaq === null)
-                        ? "rotate-180"
-                        : ""
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`mt-2 transition-all duration-300 ease-in-out ${
-                    openFaq === faq?.id || (index === 0 && openFaq === null)
-                      ? "max-h-96"
-                      : "max-h-0 overflow-hidden"
-                  }`}
-                >
-                  <p className="text-zinc-500">{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Faqs data={data?.faqsQuestionsAndAnswers} />
         )}
       </Wrapper>
     </section>
