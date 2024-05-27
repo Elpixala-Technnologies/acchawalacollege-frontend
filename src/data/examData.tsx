@@ -1,4 +1,4 @@
-import { UpcomingExams1, UpcomingExams2, exam } from "@/asset";
+import { ExamPaper, UpcomingExams1, UpcomingExams2, exam } from "@/asset";
 import { CiCalendar, CiStar } from "react-icons/ci";
 import { FaUniversity } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
@@ -301,6 +301,39 @@ export const topExams = {
     },
   ],
 };
+
+export const previousYearSection = {
+  title: {
+    t1: "Top JEE Main",
+    t2: "Previous Year Paper",
+  },
+  examPreviousYearPaper: [
+    {
+      id: 1,
+      img: ExamPaper,
+      examPaperName1: "JEE Main 2024 Mathematics",
+      examPaperName2: "Question Paper April 8 Shift 1",
+    },
+    {
+      id: 2,
+      img: ExamPaper,
+      examPaperName1: "JEE Main 2024 Chemistry",
+      examPaperName2: "Question Paper April 8 Shift 1",
+    },
+    {
+      id: 3,
+      img: ExamPaper,
+      examPaperName1: "JEE Main 2024 Physics",
+      examPaperName2: "Question Paper April 8 Shift 1",
+    },
+    {
+      id: 4,
+      img: ExamPaper,
+      examPaperName1: "JEE Main 2024 Biology",
+      examPaperName2: "Question Paper April 8 Shift 1",
+    },
+  ]
+}
 // export const bannerSection = {
 //   title: {
 //     t1: "Top Engineering Colleges",

@@ -11,6 +11,7 @@ import ExamFilters from "./ExamFilters";
 import ExamFilteredCard from "@/components/cards/ExamFilteredCard";
 import { dummyExamDataArray } from "@/data/examData";
 import TopExamScroll from "./TopExamsScroll";
+import TopPreviousYearPaperScroll from "./TopPreviousYearPaperScroll";
 // import ExamFilteredCard from "../../cards/ExamFilteredCard";
 
 export default function ExamListSection() {
@@ -85,6 +86,8 @@ export default function ExamListSection() {
           {filteredData.slice(3).map((exam: any) => (
             <ExamFilteredCard key={exam.id} exam={exam} />
           ))}
+          {/* Top Exam Previous Year Paper  Section  */}
+          <TopPreviousYearPaperScroll />
         </main>
       </Wrapper>
     </section>
