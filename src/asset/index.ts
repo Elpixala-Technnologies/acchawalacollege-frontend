@@ -80,6 +80,14 @@ import examBg2 from "./exams/examBg2.png";
 import examBg3 from "./exams/examBg3.png";
 import examBg4 from "./exams/examBg4.png";
 
+// Study Abroad 
+import AbroadLanding1 from "./studyAbroad/AbroadLanding1.png";
+import AbroadLanding2 from "./studyAbroad/AbroadLanding2.png";
+import AbroadLanding3 from "./studyAbroad/AbroadLanding3.png";
+import SuccessStories1 from "./studyAbroad/SuccessStories1.png";
+import SuccessStories2 from "./studyAbroad/SuccessStories2.png";
+import SuccessStories3 from "./studyAbroad/SuccessStories3.png";
+
 
 export {
     logo,
@@ -107,5 +115,7 @@ export {
 
     questionImg,
 
-    examBg1, examBg2, examBg3, examBg4
+    examBg1, examBg2, examBg3, examBg4,
+
+    AbroadLanding1, AbroadLanding2, AbroadLanding3, SuccessStories1, SuccessStories2, SuccessStories3
 }
