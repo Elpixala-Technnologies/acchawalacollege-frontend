@@ -10,18 +10,19 @@ import Testimonials1 from "@/components/testimonials/Testimonials1";
 import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection";
 import AreYouConfused from "@/components/AreYouConfused";
 import InformationSection from "@/components/coursesListingPageSections/informationSection/InformationSection";
+import { global } from "@/data/globalData";
 
 export default function coursesListing() {
   return (
     <section className="w-full bg-white">
       <HeroSection data={courseListingPage?.MBA?.homeBanner} />
       <Section10 data={courseListingPage?.MBA?.brochureSection} />
-      <AboutCardSection data={courseListingPage?.MBA?.about} />
-      <TopCourses />
+      <AboutCardSection data={courseListingPage?.MBA?.about} /> 
+      <TopCourses data={global?.topCourses} />
       <BannerSection data={courseListingPage?.MBA?.bannerSection} />
-      <PartnersSection />
+      <PartnersSection data={courseListingPage?.MBA?.partners} />
       <Testimonials1 data={courseListingPage?.MBA?.testimonial} />
-      <BlogAndOthersFilterSection />
+      <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
       <InformationSection data={courseListingPage?.MBA?.videos} />
       <InformationSection data={courseListingPage?.MBA?.featuredPrograms} />
       <InformationSection data={courseListingPage?.MBA?.freePrograms} />

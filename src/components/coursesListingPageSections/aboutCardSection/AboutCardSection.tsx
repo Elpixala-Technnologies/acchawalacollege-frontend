@@ -1,5 +1,5 @@
 import Wrapper from "@/components/Wrapper";
-import TextWithLineBreak from "@/utils/TextWithLineBreack";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import React from "react";
 import { FaComputer, FaEarthAmericas } from "react-icons/fa6";
 import { LuAlarmClock } from "react-icons/lu";
@@ -24,7 +24,6 @@ export default function AboutCardSection({ data }: any) {
       title: data.section3.title,
       text: data.section3.text,
       isHighlights: data?.section3?.isHighlights,
-      
     },
     {
       icon: <LuAlarmClock />,
@@ -46,12 +45,18 @@ export default function AboutCardSection({ data }: any) {
 
 function Card({ content }: any) {
   return (
-    <div className={`${!!content?.isHighlights ? "bg-blue-700 text-white " : "bg-white text-zinc-700"}  w-full border flex flex-col gap-3 border-zinc-100 p-5 md:p-10 shadow-md rounded-lg`}>
-      <div className="text-white bg-blue-700 rounded p-3 text-4xl w-max border border-white">
-      {content?.icon}
+    <div
+      className={`${!!content?.isHighlights ? "bg-blue-700 text-white " : "bg-white text-zinc-700"}  flex w-full flex-col gap-3 rounded-lg border border-zinc-100 p-5 shadow-md md:p-10`}
+    >
+      <div className="w-max rounded border border-white bg-blue-700 p-3 text-4xl text-white">
+        {content?.icon}
       </div>
-      <h3 className="text-xl font-medium"><TextWithLineBreak text={content?.title} /></h3>
-      <p className="text-sm"><TextWithLineBreak text={content?.text} /></p>
+      <h3 className="text-xl font-medium">
+        <TextWithLineBreak text={content?.title} />
+      </h3>
+      <p className="text-sm">
+        <TextWithLineBreak text={content?.text} />
+      </p>
     </div>
   );
 }

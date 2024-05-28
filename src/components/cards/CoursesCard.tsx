@@ -7,15 +7,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import { useEffect, useState } from "react";
-import { topCourses } from "@/data/homePage";
 import Image from "next/image";
 import { FaRegCalendarAlt, FaRegClock, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { formatRupee } from "@/utils/fotmatRupee";
 
-export default function CoursesCard() {
+export default function CoursesCard({data}:any) {
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -49,7 +47,7 @@ export default function CoursesCard() {
   return (
     <>
       <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
-        {topCourses.courses.map((course: any, index: number) => (
+        {data.map((course: any, index: number) => (
           <SwiperSlide
             key={index}
             className="mb-12 w-full overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-2xl"

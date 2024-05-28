@@ -9,524 +9,316 @@ import {
   user1,
   testimonialBg,
   section6Bg,
-  
   co1,
   co2,
   co3,
   au1,
   au2,
   au3,
+  s1,
+  s2,
+  s3,
+  s4,
+  s5,
+  s6,
+  s7,
+  s8,
+  s9,
+  s10,
+  p1,
+  Landing1, Landing2, Landing3, banner2
 } from "@/asset";
 import { CiCalendar, CiStar } from "react-icons/ci";
 import { FaUniversity } from "react-icons/fa";
-import { Landing1, Landing2, Landing3 } from "@/asset";
 import {
   MdDescription,
   MdOutlineFileDownload,
   MdOutlineHomeRepairService,
 } from "react-icons/md";
+import { TbRuler2Off } from "react-icons/tb";
 
-export const homeBanner = {
-  title: {
-    t1: "Best Education",
-    t2: "Counselling Platform",
-    t3: "in The World",
-  },
-  text1: "Search your career opportunities across 27000+ Colleges",
-  button1: {
-    text: "Explore Colleges",
-    href: "#",
-  },
-  button2: {
-    text: "Schedule Counselling",
-    href: "#",
-  },
-  img: [Landing1, Landing2, Landing3],
-  text2: "Get 30% off on every 1st month",
-  text3: "Expert Counsellors",
-};
 
-export const section2 = {
-  card1: {
-    icon: Certificate,
-    title: "2,300+",
-    text: "Admissions done",
-  },
-  card2: {
-    icon: Student,
-    title: "6,200+",
-    text: "Fulfilled dreams",
-  },
-  card3: {
-    icon: GraduationCap,
-    title: "5,100+",
-    text: "Counselling sessions ",
-  },
-};
-
-export const section6 = {
-  title:
-    "Embark on Your Career Journey Today! Connect \n with Our Expert Counseling Team Now.",
-  text1: "Navigate the Path to Success with Our Support",
-  button: {
-    text: "Schedule  Counselling",
-    href: "#",
-  },
-  bgImg: section6Bg,
-};
-
-export const topColleges = {
-  title: {
-    t1: "Discover",
-    t2: "Top Colleges",
-  },
-  colleges: [
-    {
-      id: 1,
-      stream: "MBA",
-      collegeName: "upGrad Tech",
-      icon: <FaUniversity />,
-      img: c1,
-      title: "Upgrad",
-      text1: "Dual Specialisation",
-      degreeType: {
-        name: "Masters Degree",
-        icon: <CiStar />,
-      },
-      duration: {
-        name: "15 Months",
-        icon: <CiCalendar />,
-      },
-      noOfSpecializations: {
-        no: 13,
-        icon: <MdOutlineHomeRepairService />,
-      },
-      button1: {
-        icon: "",
-        text: "View Program",
-        href: "#",
-      },
-      button2: {
-        icon: <MdOutlineFileDownload />,
-        text: "Syllabus",
-        href: "#",
-      },
+export const home = {
+  homeBanner: {
+    title: {
+      t1: "Best Education",
+      t2: "Counselling Platform",
+      t3: "in The World",
     },
-    {
-      id: 2,
-      stream: "MBA",
-      collegeName: "upGrad Tech",
-      icon: <FaUniversity />,
-      img: c1,
-      title: "Upgrad",
-      text1: "Dual Specialisation",
-      degreeType: {
-        name: "Masters Degree",
-        icon: <CiStar />,
-      },
-      duration: {
-        name: "15 Months",
-        icon: <CiCalendar />,
-      },
-      noOfSpecializations: {
-        no: 13,
-        icon: <MdOutlineHomeRepairService />,
-      },
-      button1: {
-        icon: "",
-        text: "View Program",
-        href: "#",
-      },
-      button2: {
-        icon: <MdOutlineFileDownload />,
-        text: "Syllabus",
-        href: "#",
-      },
+    text1: "Search your career opportunities across 27000+ Colleges",
+    button1: {
+      text: "Explore Colleges",
+      href: "#",
     },
-    {
-      id: 3,
-      stream: "MBA",
-      collegeName: "upGrad Tech",
-      icon: <FaUniversity />,
-      img: c1,
-      title: "Upgrad",
-      text1: "Dual Specialisation",
-      degreeType: {
-        name: "Masters Degree",
-        icon: <CiStar />,
-      },
-      duration: {
-        name: "15 Months",
-        icon: <CiCalendar />,
-      },
-      noOfSpecializations: {
-        no: 13,
-        icon: <MdOutlineHomeRepairService />,
-      },
-      button1: {
-        icon: "",
-        text: "View Program",
-        href: "#",
-      },
-      button2: {
-        icon: <MdOutlineFileDownload />,
-        text: "Syllabus",
-        href: "#",
-      },
+    button2: {
+      text: "Schedule Counselling",
+      href: "#",
     },
-    {
-      id: 4,
-      stream: "MBA",
-      collegeName: "upGrad Tech",
-      icon: <FaUniversity />,
-      img: c1,
-      title: "Upgrad",
-      text1: "Dual Specialisation",
-      degreeType: {
-        name: "Masters Degree",
-        icon: <CiStar />,
-      },
-      duration: {
-        name: "15 Months",
-        icon: <CiCalendar />,
-      },
-      noOfSpecializations: {
-        no: 13,
-        icon: <MdOutlineHomeRepairService />,
-      },
-      button1: {
-        icon: "",
-        text: "View Program",
-        href: "#",
-      },
-      button2: {
-        icon: <MdOutlineFileDownload />,
-        text: "Syllabus",
-        href: "#",
-      },
-    },
-  ],
-};
-
-export const topCourses = {
-  title: {
-    t1: "Discover",
-    t2: "Top Courses",
+    img: [Landing1, Landing2, Landing3],
+    text2: "Get 30% off on every 1st month",
+    text3: "Expert Counsellors",
   },
-  courses: [
-    {
-      id: 1,
-      stream: "MBA",
-
-      bg: co1,
-      teacherAvatar: user1,
-      teacherName: "Dr. Pankaj Kumar",
-      teacherRole: "Teacher",
-      designation: "MBA Specialist and Director of Admission",
-
-      title: "Acchawala",
-      stars: 4.5,
-      courseDetails: {
-        noOfAvailableCourses: "13",
-        courseTime: "2 hours",
-        duration: "15 months",
-        coursesPrice: {
-          fullTime: "20000",
-          partTime: "10000",
+  section2: {
+    card1: {
+      icon: Certificate,
+      title: "2,300+",
+      text: "Admissions done",
+    },
+    card2: {
+      icon: Student,
+      title: "6,200+",
+      text: "Fulfilled dreams",
+    },
+    card3: {
+      icon: GraduationCap,
+      title: "5,100+",
+      text: "Counselling sessions ",
+    },
+  },
+  partners: {
+    title: "Our Knowledge Partners",
+    images: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10],
+  },
+  CounsellingPackages: {
+    title: "Counselling Packages",
+    CounsellingPackagesCards: [
+      {
+        id: 1,
+        icon: p1,
+        PackageName: "Silver Package",
+        isPopular: false,
+        price: 11000,
+        text1: "Essential guidance to kickstart \nyour journey",
+        list: [
+          {
+            isInclude: true,
+            text: "Personal Counsellor",
+          },
+          {
+            isInclude: true,
+            text: "Admission Procedure",
+          },
+          {
+            isInclude: true,
+            text: "Lowest Package Seats",
+          },
+          {
+            isInclude: true,
+            text: "Budget Based Counselling",
+          },
+          {
+            isInclude: true,
+            text: "Detailed College Description",
+          },
+          {
+            isInclude: false,
+            text: "Premium College Counseling",
+          },
+          {
+            isInclude: false,
+            text: "24x7 Availability via Messaging",
+          },
+          {
+            isInclude: false,
+            text: "24x7 Availability via Calling",
+          },
+          {
+            isInclude: false,
+            text: "MCI/NTA Updates",
+          },
+          {
+            isInclude: false,
+            text: "College Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Score Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Management Quota Counseling",
+          },
+          {
+            isInclude: false,
+            text: "Fees Negotiation",
+          },
+        ],
+        button: {
+          text: "Get Started",
+          href: "#",
+        },
+        styling: {
+          border: "border-zinc-300",
+          tagBg: "from-zinc-400 to-white",
         },
       },
-      summery:
-        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
-      button: {
-        text: "Learn More",
-        href: "#",
-      },
-    },
-    {
-      id: 2,
-      stream: "MBA",
-
-      bg: co2,
-      teacherAvatar: au2,
-      teacherName: "Andrew Garfield",
-      teacherRole: "Teacher",
-      designation: "MBA Specialist and Director of Admission",
-
-      title: "Acchawala",
-      stars: 4.5,
-      courseDetails: {
-        noOfAvailableCourses: "13",
-        courseTime: "2 hours",
-        duration: "15 months",
-        coursesPrice: {
-          fullTime: "20000",
-          partTime: "10000",
+      {
+        id: 2,
+        icon: p1,
+        PackageName: "Gold Package",
+        isPopular: TbRuler2Off,
+        price: 25000,
+        text1: "Comprehensive support tailored \nto your ambitions",
+        list: [
+          {
+            isInclude: true,
+            text: "Personal Counsellor",
+          },
+          {
+            isInclude: true,
+            text: "Admission Procedure",
+          },
+          {
+            isInclude: true,
+            text: "Lowest Package Seats",
+          },
+          {
+            isInclude: true,
+            text: "Budget Based Counselling",
+          },
+          {
+            isInclude: true,
+            text: "Detailed College Description",
+          },
+          {
+            isInclude: true,
+            text: "Premium College Counseling",
+          },
+          {
+            isInclude: true,
+            text: "24x7 Availability via Messaging",
+          },
+          {
+            isInclude: false,
+            text: "24x7 Availability via Calling",
+          },
+          {
+            isInclude: false,
+            text: "MCI/NTA Updates",
+          },
+          {
+            isInclude: false,
+            text: "College Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Score Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Management Quota Counseling",
+          },
+          {
+            isInclude: false,
+            text: "Fees Negotiation",
+          },
+        ],
+        button: {
+          text: "Get Started",
+          href: "#",
+        },
+        styling: {
+          border: "border-orange-300",
+          tagBg: "from-orange-400 to-white",
         },
       },
-      summery:
-        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
-      button: {
-        text: "Learn More",
-        href: "#",
-      },
-    },
-    {
-      id: 3,
-      stream: "MBA",
-
-      bg: co3,
-      teacherAvatar: au3,
-      teacherName: "Andrew Garfield",
-      teacherRole: "Teacher",
-      designation: "MBA Specialist and Director of Admission",
-
-      title: "Acchawala",
-      stars: 4.5,
-      courseDetails: {
-        noOfAvailableCourses: "13",
-        courseTime: "2 hours",
-        duration: "15 months",
-        coursesPrice: {
-          fullTime: "20000",
-          partTime: "10000",
+      {
+        id: 3,
+        icon: p1,
+        PackageName: "Diamond Package",
+        isPopular: false,
+        price: 55000,
+        text1: "Unmatched assistance for your \nacademic aspirations",
+        list: [
+          {
+            isInclude: true,
+            text: "Personal Counsellor",
+          },
+          {
+            isInclude: true,
+            text: "Admission Procedure",
+          },
+          {
+            isInclude: true,
+            text: "Lowest Package Seats",
+          },
+          {
+            isInclude: true,
+            text: "Budget Based Counselling",
+          },
+          {
+            isInclude: true,
+            text: "Detailed College Description",
+          },
+          {
+            isInclude: true,
+            text: "Premium College Counseling",
+          },
+          {
+            isInclude: true,
+            text: "24x7 Availability via Messaging",
+          },
+          {
+            isInclude: false,
+            text: "24x7 Availability via Calling",
+          },
+          {
+            isInclude: false,
+            text: "MCI/NTA Updates",
+          },
+          {
+            isInclude: false,
+            text: "College Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Score Based Analysis",
+          },
+          {
+            isInclude: false,
+            text: "Management Quota Counseling",
+          },
+          {
+            isInclude: false,
+            text: "Fees Negotiation",
+          },
+        ],
+        button: {
+          text: "Get Started",
+          href: "#",
+        },
+        styling: {
+          border: "border-orange-300",
+          tagBg: "from-orange-400 to-white",
         },
       },
-      summery:
-        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
-      button: {
-        text: "Learn More",
-        href: "#",
-      },
-    },
-    {
-      id: 4,
-      stream: "MBA",
-
-      bg: co1,
-      teacherAvatar: au1,
-      teacherName: "Andrew Garfield",
-      teacherRole: "Teacher",
-      designation: "MBA Specialist and Director of Admission",
-
-      title: "Acchawala",
-      stars: 4.5,
-      courseDetails: {
-        noOfAvailableCourses: "13",
-        courseTime: "2 hours",
-        duration: "15 months",
-        coursesPrice: {
-          fullTime: "20000",
-          partTime: "10000",
-        },
-      },
-      summery:
-        "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
-      button: {
-        text: "Learn More",
-        href: "#",
-      },
-    },
-  ],
-};
-export const BlogsAndOthers = {
-  filterBy: [
-    {
-      id: 1,
-      category: "articles",
-    },
-    {
-      id: 2,
-      category: "blog",
-    },
-    {
-      id: 3,
-      category: "news",
-    },
-    {
-      id: 4,
-      category: "boards",
-    },
-  ],
-  cardsContent: [
-    {
-      id: 1,
-      img: b1,
-      tag: "Study abroad",
-      category: ["all", "articles"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 2,
-      img: b2,
-      tag: "Study abroad",
-      category: ["all", "articles"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 3,
-      img: b3,
-      tag: "Study abroad",
-      category: ["all", "articles"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 4,
-      img: b2,
-      tag: "Study abroad",
-      category: ["all", "blog"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 5,
-      img: b3,
-      tag: "Study abroad",
-      category: ["all", "blog"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 6,
-      img: b3,
-      tag: "Study abroad",
-      category: ["all", "news"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-    {
-      id: 7,
-      img: b3,
-      tag: "Study abroad",
-      category: ["all", "boards"],
-      date: "June 28, 2024",
-      shares: "1K Shares",
-      author: {
-        name: "Joanna Wllick",
-        avatar: b1,
-      },
-      title: "Integration of AI on this Acchawala College",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Cursus maecenas pretium lectus sit ut ullamcorper massa. Id adipiscing faucibus dictum vitae. Pellentesque urna a pretium sed. Volutpat sem habitant faucibus pharetra dui.",
-      button: {
-        label: "View Post",
-        href: "#",
-      },
-    },
-  ],
-};
-
-export const testimonialsSection = {
-  title: {
-    t1: "Student",
-    t2: "Testimonials",
+    ],
   },
-  text1: "Discover Success Stories \nfrom Our Satisfied Students",
-  bgImg: testimonialBg,
-  testimonials: [
-    {
-      id: "1",
-      userName: "Pankaj",
-      userAvatar: user1,
-      college: "MBA, IIM Ahmedabad",
-      comment:
-        "Thanks to the guidance I received from this platform, I not only found the perfect college but also gained invaluable insights into the admission process. Highly recommended!",
-      storyVideoLink: "#",
+  banner1 : {
+    title:
+      "Embark on Your Career Journey Today! Connect \n with Our Expert Counseling Team Now.",
+    text1: "Navigate the Path to Success with Our Support",
+    button: {
+      text: "Schedule  Counselling",
+      href: "#",
     },
-    {
-      id: "2",
-      userName: "Aman Sherawat",
-      userAvatar: user1,
-      college: "B.tech, IIT Delhi",
-      comment:
-        "I was overwhelmed with options until I came across this website. The personalized counseling helped me narrow down my choices and make informed decisions.",
-      storyVideoLink: "#",
+    bgImg: section6Bg,
+  },
+  banner2 : {
+    title:{
+      t1:"End-to-End",
+      t2:"Counselling",
+      t3:"Simplified"
     },
-    {
-      id: "3",
-      userName: "Karan Gill",
-      userAvatar: user1,
-      college: "B.tech, IIT Delhi",
-      comment:
-        "I was overwhelmed with options until I came across this website. The personalized counseling helped me narrow down my choices and make informed decisions.",
-      storyVideoLink: "#",
-    },
-    {
-      id: "4",
-      userName: "Aman Gill",
-      userAvatar: user1,
-      college: "B.tech, IIT Delhi",
-      comment:
-        "I was overwhelmed with options until I came across this website. The personalized counseling helped me narrow down my choices and make informed decisions.",
-      storyVideoLink: "#",
-    },
-  ],
+    text:"Get help for your search, shortlist, application, preparation, admission and \nplacement requirements!",
+    steps:[
+      "Fill The Acchawalacollege End to End Form",
+      "Our Expert Counsellor will Contact you",
+      "Select The Right Counselling Package",
+      "Shortlist Colleges And Fill Application Forms",
+      "Upload Documents & Pay Fee",
+      "Confirm Admission and Claim Gift"
+    ],
+    bg:banner2,
+  }
 };

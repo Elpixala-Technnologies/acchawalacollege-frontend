@@ -1,4 +1,4 @@
-import TextWithLineBreak from "@/utils/TextWithLineBreack";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import Image from "next/image";
 import React from "react";
 import TestimonialsSlider1 from "../cards/TestimonialsSlider1";

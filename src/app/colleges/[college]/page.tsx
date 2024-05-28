@@ -3,8 +3,9 @@ import InformationSection from "@/components/collegeDetailsPageSections/Informat
 import HighlightsSlider from "@/components/collegeDetailsPageSections/highlightsSlider/HighlightsSlider";
 import Section3 from "@/components/collegeDetailsPageSections/section3/Section3";
 import { collegeDetails } from "@/data/collegeDetail";
+import { global } from "@/data/globalData";
 import React from "react";
-import TopColleges from "@/components/homePageSections/topColleges/TopColleges";
+import TopColleges from "@/components/topColleges/TopColleges";
 import Section10 from "@/components/Section10";
 import AreYouConfused from "@/components/AreYouConfused";
 
@@ -24,7 +25,7 @@ export default function CollegeDetails() {
       <InformationSection data={collegeDetails?.cutOff} />
       <Section10 data={collegeDetails?.brochureSection} />
       <InformationSection data={collegeDetails?.reviews} />
-      <TopColleges />
+      <TopColleges data={global?.topColleges} />
       <InformationSection data={collegeDetails?.campusFacilities} />
       <InformationSection data={collegeDetails?.photoGallery} />
       <InformationSection data={collegeDetails?.videoGallery} />

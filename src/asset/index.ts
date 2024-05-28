@@ -49,6 +49,7 @@ import s10 from "./sponsors/s10.png";
 import Landing1 from "./home/Landing1.png";
 import Landing2 from "./home/Landing2.png";
 import Landing3 from "./home/Landing3.png";
+import banner2 from "./home/banner2.png";
 
 // icons
 import Student from "./icons/Student.svg";
@@ -85,7 +86,7 @@ export {
 
     section6Bg,
 
-    Landing1, Landing2, Landing3,
+    Landing1, Landing2, Landing3, banner2,
 
     Student, Certificate, GraduationCap, building, community,
     academicZone, auditorium,

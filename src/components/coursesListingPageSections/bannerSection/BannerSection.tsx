@@ -1,5 +1,4 @@
-import { section6 } from "@/data/homePage";
-import TextWithLineBreak from "@/utils/TextWithLineBreack";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,12 +26,12 @@ export default function BannerSection({ data }: any) {
               <TextWithLineBreak text={data?.text} />
             </p>
           )}
-          <Link
-            href={section6?.button.href}
+          {data?.button && <Link
+            href={data?.button.href}
             className="button4 w-max rounded-lg"
           >
-            <button>{section6?.button.text}</button>
-          </Link>
+            <button>{data?.button.text}</button>
+          </Link>}
         </div>
         <div className="absolute -right-[10%] top-1/2 flex h-[200%] -translate-y-1/2 items-center rounded-full bg-white/50 p-40 max-lg:hidden ">
           <Image

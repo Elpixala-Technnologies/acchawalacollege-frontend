@@ -1,13 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
-// Check if the import path aliases are correctly configured in your project setup
-import { topColleges } from "@/data/homePage";
 import { CollegesCardContent } from "@/components/cards/CollegesCard";
 
-export default function TopCollegesScroll() {
+export default function TopCollegesScroll({data}:any) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftButton, setShowLeftButton] = useState(false);
-  const [showRightButton, setShowRightButton] = useState(true); // Initialize to false
+  const [showRightButton, setShowRightButton] = useState(true); 
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
@@ -47,9 +45,9 @@ export default function TopCollegesScroll() {
   return (
     <div className="relative my-5 bg-blue-200 rounded-lg pb-6 max-w-[1035px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <h1 className="title1 p-6">
-        <span>{topColleges.title.t1}</span>{" "}
+        <span>{data.title.t1}</span>{" "}
         <span className="font-semibold text-blue-500">
-          {topColleges.title.t2}
+          {data.title.t2}
         </span>
       </h1>
       <div
@@ -57,7 +55,7 @@ export default function TopCollegesScroll() {
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >
-        {topColleges.colleges.map((college: any, index: number) => (
+        {data.colleges.map((college: any, index: number) => (
           <div
             key={index}
             className="min-w-[420px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
