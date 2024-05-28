@@ -167,8 +167,8 @@ export default function HeroExamSection({ examDetails }: any) {
           <div className="flex justify-center max-w-screen-xl mx-auto flex-col pt-6">
             <div className="infoOption flex items-center max-w-screen-xl mr-2">
               <div className="sticky-nav-wrapper w-full flex items-center justify-center">
-                <div className=" bg-white flex border-b border-b-primary-light w-full rounded-lg">
-                  <div className="sm:max-w-screen-xl pt-2 lg:mx-auto px-1 py-1 w-full justify-center shadow-md shadow-gray-600 rounded-lg mt-5">
+                <div className="flex border-b border-b-primary-light w-full rounded-lg">
+                  <div className="sm:max-w-screen-xl pt-2 lg:mx-auto px-1 py-1 w-full justify-center mt-5">
                     <NavbarSlider
                       buttonBorderColor="border-primary-text"
                       buttonTextColor="text-primary-text"
@@ -180,7 +180,7 @@ export default function HeroExamSection({ examDetails }: any) {
                         <div
                           key={tab.name}
                           onClick={() => handleTab(tab.value)}
-                          className={`text-nowrap hover:text-orange-400 hover:border-b-2 hover:border-orange-400 text-sm flex justify-center items-center w-max h-full text-center cursor-pointer font-semibold text-lg`}
+                          className={`text-nowrap hover:text-blue-950 hover:border-b-2 hover:border-blue-950 text-sm flex justify-center items-center w-max h-full text-center cursor-pointer font-semibold text-lg`}
                         >
                           {tab?.name}
                         </div>

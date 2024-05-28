@@ -86,7 +86,7 @@ const NavbarSlider = ({
           <div className="flex gap-4 items-center">
             <button
               data-testid="prev-button"
-              className={`border ${buttonBorderColor} p-2 md:p-3 cursor-pointer rounded-lg ${buttonTextColor} ${
+              className={`border ${buttonBorderColor} p-2 md:p-3 cursor-pointer rounded-full ${buttonTextColor} ${
                 isBeginning ? "opacity-50 pointer-events-none" : ""
               }`}
               onClick={prevSlide}
@@ -119,7 +119,7 @@ const NavbarSlider = ({
           <div className="flex gap-4 items-center">
             <button
               data-testid="next-button"
-              className={`border ${buttonBorderColor} p-1 md:p-3 cursor-pointer rounded-lg ${buttonTextColor} ${
+              className={`border ${buttonBorderColor} p-1 md:p-3 cursor-pointer rounded-full ${buttonTextColor} ${
                 isEnd ? "opacity-50 pointer-events-none" : ""
               }`}
               onClick={nextSlide}
