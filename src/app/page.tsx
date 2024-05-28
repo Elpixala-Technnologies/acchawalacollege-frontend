@@ -8,19 +8,18 @@ import PartnersSection from "@/components/homePageSections/partnersSection/Partn
 import Section2 from "@/components/homePageSections/section2/Section2";
 import Testimonials from "@/components/homePageSections/testimonials/testimonials";
 import { useQuery } from "@apollo/client";
-import{ GET_COLLEGES } from "@/query/schema";
+import{ GET_BLOGS } from "@/query/schema";
 
 export default function Home() {
 
-//get all colleges data
+//get all BLogs data
 const {
-  loading: CollegesLoader,
-  error: CollegesError,
-  data: CollegesData,
-} = useQuery(GET_COLLEGES);
-let CollegesLength = CollegesData?.colleges?.data?.length;
+  loading,
+  error,
+  data: BlogsData,
+} = useQuery(GET_BLOGS);
   
-console.log(CollegesData);
+console.log("BlogsData:", BlogsData);
 
 
   return (
