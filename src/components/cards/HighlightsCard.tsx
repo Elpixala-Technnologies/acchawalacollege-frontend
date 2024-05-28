@@ -76,7 +76,7 @@ export default function HighlightsCard({ collegeDetails }: any) {
   return (
     <>
       <Swiper {...swiperOptions} className="w-full max-w-fit px-5">
-        {HighlightsCards.map(
+        {collegeDetails?.highlights?.map(
           (h: any, index: number) =>
             h?.text2 && (
               <SwiperSlide
