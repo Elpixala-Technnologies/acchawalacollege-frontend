@@ -16,8 +16,8 @@ export default function CollegeDetails() {
     <>
       <HeroSection data={collegeDetailsPage} />
       <CollegeDetail data={collegeDetailsPage?.collegeDetails} />
-      <Section3 collegeDetailsPage={collegeDetailsPage} />
-      <HighlightsSlider collegeDetailsPage={collegeDetailsPage} />
+      <Section3 data={collegeDetailsPage} />
+      <HighlightsSlider data={collegeDetailsPage} />
       <InformationSection data={collegeDetailsPage?.topRecruiters} />
       <Section10 data={collegeDetailsPage?.brochureSection} />
       <InformationSection data={collegeDetailsPage?.reviews} />

@@ -51,13 +51,13 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
       {/* Article  */}
       {selectedDetail?.article && (
         <div
-          className="dangerouslySetInnerHTMLStyle text-justify mb-8"
+          className="dangerouslySetInnerHTMLStyle mb-8 text-justify"
           dangerouslySetInnerHTML={{ __html: selectedDetail?.article }}
         />
       )}
       {/* Read More  */}
       {selectedDetail?.readMoreLink && (
-        <p className="w-full text-right mb-8">
+        <p className="mb-8 w-full text-right">
           <Link
             href={selectedDetail?.readMoreLink}
             className="w-min text-nowrap font-medium hover:text-blue-500 hover:underline"
@@ -68,7 +68,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
       )}
       {/* facilities  */}
       {selectedDetail?.facilities && (
-        <div className="flex flex-wrap gap-5 rounded-lg bg-blue-100 p-5 mb-8">
+        <div className="mb-8 flex flex-wrap gap-5 rounded-lg bg-blue-100 p-5">
           {selectedDetail?.facilities?.map((d: any, i: number) => (
             <div
               key={i}
@@ -118,17 +118,17 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
           )}
         </div>
       )}
-              {/* Courses  */}
-              {selectedDetail?.courses && (
-          <div className="md:grid-col-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {selectedDetail?.courses.length > 0 &&
-              selectedDetail?.courses?.map((course: any, i: number) => (
-                <React.Fragment key={i}>
-                  <CollegeDetailsCardSlider course={course} />
-                </React.Fragment>
-              ))}
-          </div>
-        )}
+      {/* Courses  */}
+      {selectedDetail?.courses && (
+        <div className="md:grid-col-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {selectedDetail?.courses.length > 0 &&
+            selectedDetail?.courses?.map((course: any, i: number) => (
+              <React.Fragment key={i}>
+                <CollegeDetailsCardSlider course={course} />
+              </React.Fragment>
+            ))}
+        </div>
+      )}
     </div>
   );
 }

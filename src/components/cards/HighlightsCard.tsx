@@ -76,14 +76,14 @@ export default function HighlightsCard({ collegeDetails }: any) {
   return (
     <>
       <Swiper {...swiperOptions} className="w-full max-w-fit px-5">
-        {collegeDetails?.highlights?.map(
+        {HighlightsCards?.map(
           (h: any, index: number) =>
             h?.text2 && (
               <SwiperSlide
                 key={index}
                 className="flex-center w-full flex-col overflow-hidden rounded-md bg-sky-100 py-10 text-center my-5"
               >
-                <div className="mx-auto w-max pb-2 text-xl">{h.icon}</div>
+                <div className="mx-auto w-max pb-2 text-4xl text-blue-500">{h.icon}</div>
                 <p className="text-sm text-zinc-500">{h.text1}</p>
                 <p className="text-lg font-medium">{h?.text2}</p>
               </SwiperSlide>

@@ -46,7 +46,7 @@ export default function HeroSection({ data }: any) {
               {/* title  */}
               <div className="items-center gap-x-1 font-thin md:flex">
                 <h1 className="text-wrap text-2xl font-medium md:text-4xl">
-                  {data?.CollegeName}
+                  {data?.collegeName}
                 </h1>
                 {/* {data?.collegeType && (
                   <p className="flex w-max items-center gap-x-1 rounded-md bg-orange-600 px-2 py-1 text-xs font-thin">

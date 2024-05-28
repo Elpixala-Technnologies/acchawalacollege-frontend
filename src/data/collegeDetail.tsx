@@ -16,11 +16,16 @@ import {
   comp4,
   comp5,
 } from "@/asset";
+import { BiSolidInstitution } from "react-icons/bi";
+import { FaTransgenderAlt } from "react-icons/fa";
+import { HiBuildingOffice2 } from "react-icons/hi2";
+import { MdCastForEducation } from "react-icons/md";
+import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 
 export const collegeDetailsPage = {
   collegeLogo: collegeLogo,
   bg: c1,
-  CollegeName: "IIT Madras - Indian Institute of Technology ",
+  collegeName: "IIT Madras - Indian Institute of Technology ",
   location: {
     state: "Tamil Nadu",
     city: "Chennai",
@@ -85,6 +90,7 @@ export const collegeDetailsPage = {
       readMoreLink: "#",
       courses: [
         {
+          bg: c3,
           name: "B.Tech",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
@@ -96,6 +102,7 @@ export const collegeDetailsPage = {
           },
         },
         {
+          bg: c4,
           name: "M.Tech",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
@@ -107,6 +114,7 @@ export const collegeDetailsPage = {
           },
         },
         {
+          bg: c5,
           name: "Ph.D",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
@@ -118,6 +126,7 @@ export const collegeDetailsPage = {
           },
         },
         {
+          bg: c6,
           name: "MBA",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
@@ -129,6 +138,7 @@ export const collegeDetailsPage = {
           },
         },
         {
+          bg: c7,
           name: "BA",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
@@ -140,6 +150,7 @@ export const collegeDetailsPage = {
           },
         },
         {
+          bg: c8,
           name: "MBA",
           eligibility:
             "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
@@ -161,7 +172,7 @@ export const collegeDetailsPage = {
       },
       article:
         "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-        readMoreLink: "#",
+      readMoreLink: "#",
     },
     {
       navItem: "Facilities",
@@ -215,13 +226,48 @@ export const collegeDetailsPage = {
     },
     overallRating: "4.5",
     individualReviews: [
-      { title: "College Infrastructure", rating: "4.5", basedOn: "456" },
-      { title: "Academics & Faculty", rating: "3", basedOn: "456" },
-      { title: "Facilities", rating: "4.5", basedOn: "456" },
-      { title: "Placements & Internships", rating: "4.5", basedOn: "456" },
-      { title: "Fees & Scholarships", rating: "3", basedOn: "456" },
-      { title: "Crowd & Campus Life", rating: "2", basedOn: "456" },
-      { title: "Overall Experience", rating: "4.5", basedOn: "456" },
+      {
+        title: "College Infrastructure",
+        icon: <HiBuildingOffice2 />,
+        rating: "4.5",
+        basedOn: "456",
+      },
+      {
+        title: "Academics & Faculty",
+        icon: <BiSolidInstitution />,
+        rating: "3",
+        basedOn: "456",
+      },
+      {
+        title: "Facilities",
+        icon: <HiBuildingOffice2 />,
+        rating: "4.5",
+        basedOn: "456",
+      },
+      {
+        title: "Placements & Internships",
+        icon: <HiBuildingOffice2 />,
+        rating: "4.5",
+        basedOn: "456",
+      },
+      {
+        title: "Fees & Scholarships",
+        icon: <RiMoneyRupeeCircleFill />,
+        rating: "3",
+        basedOn: "456",
+      },
+      {
+        title: "Crowd & Campus Life",
+        icon: <FaTransgenderAlt />,
+        rating: "2",
+        basedOn: "456",
+      },
+      {
+        title: "Overall Experience",
+        icon: <MdCastForEducation />,
+        rating: "4.5",
+        basedOn: "456",
+      },
     ],
   },
   photoGallery: {
@@ -244,8 +290,8 @@ export const collegeDetailsPage = {
   },
   faqs: {
     title: {
-      t1: "IIT Madras",
-      t2: "Frequently Asked Questions",
+      t2: "IIT Madras",
+      t3: "Frequently Asked Questions",
     },
     faqsQuestionsAndAnswers: [
       {
