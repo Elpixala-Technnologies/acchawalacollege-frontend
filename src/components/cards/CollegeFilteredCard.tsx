@@ -11,7 +11,8 @@ import { TbCoinRupee, TbTransactionRupee } from "react-icons/tb";
 
 export default function CollegeFilteredCard({ college }: any) {
   return (
-    <div className="mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="relative mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <Tag />
       {/* Div 1 */}
       <div className="flex gap-y-2 p-5 max-md:flex-wrap">
         <Image
@@ -44,7 +45,11 @@ export default function CollegeFilteredCard({ college }: any) {
             </div>
           </div>
           {/* Line 2  */}
-          <h1 className=" mb-3 text-wrap text-xl font-bold">{college.name}</h1>
+          <Link href={`/colleges/${college.slug}`}>
+            <h1 className=" mb-3 text-wrap text-xl font-bold hover:text-blue-500">
+              {college.name}
+            </h1>
+          </Link>
           {/* Line 3 */}
           <div className="mb-3 flex flex-wrap gap-x-6">
             {/* item 1 */}
@@ -93,22 +98,25 @@ export default function CollegeFilteredCard({ college }: any) {
           {/* Line 4  */}
           <div className="flex gap-x-1 text-zinc-600">
             <p className="line-clamp-2 text-wrap text-sm [flex:11]">
-              {college.desc}{" "}
-              <span>
-                <Link href={college.link}>Read More</Link>
+              <span className="line-clamp-2">{college.desc}</span>
+              <span className="text-blue-500 hover:underline">
+                <Link href={`/colleges/{college.slug}`}>Read More</Link>
               </span>
             </p>
             <div className="flex items-center gap-x-1 text-3xl [flex:1]">
-              <CiHeart /> <span className="font-thin">|</span> <CiMobile1 />
+              <CiHeart /> <span className="font-thin">|</span>{" "}
+              <Link href={`/colleges/{college.slug}`}>
+                <CiMobile1 />
+              </Link>
             </div>
           </div>
         </div>
       </div>
       {/* Div 2  */}
       <div className="flex flex-wrap justify-between gap-y-2 border-t-2 border-black p-5">
-        <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-blue-600 text-sm">
+        <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-sm text-blue-600">
           {college.navbar.map((item: string, index: number) => (
-            <React.Fragment  key={index}>
+            <React.Fragment key={index}>
               <Link href="#">
                 <li key={index} className="cursor-pointer hover:underline">
                   {item}
@@ -119,14 +127,28 @@ export default function CollegeFilteredCard({ college }: any) {
           ))}
         </ul>
         <div className="flex gap-x-2">
-          <button className="rounded-lg border-2 border-blue-700 bg-blue-700 hover:bg-white hover:text-blue-500 px-4 py-2  text-white">
-            {college.button1.text}
-          </button>
-          <button className="rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:text-white px-2 py-2 text-blue-500">
-            {college.button2.text}
-          </button>
+          <Link href="#">
+            <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
+              {college.button1.text}
+            </button>
+          </Link>
+          <Link href="#">
+            <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white">
+              {college.button2.text}
+            </button>
+          </Link>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Tag() {
+  return (
+    <div className="flex-center absolute right-5 top-0 flex-col text-center font-bold text-white">
+      <p className="bg-blue-950 p-[8px]">#1</p>
+      <p className="z-10 rounded bg-blue-950 px-[9px]">NIRF</p>
+      <div className="h-0 w-0 -translate-y-2 border-[18px] border-b-transparent border-l-blue-950 border-r-blue-950 border-t-blue-950"></div>
     </div>
   );
 }

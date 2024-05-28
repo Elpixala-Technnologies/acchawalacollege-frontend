@@ -12,7 +12,7 @@ const MenuMobile = ({
         <SingleNavItem
           key={d?.id}
           label={d?.label}
-          link={d?.href}
+          href={d?.href}
           subNav={d?.subNav}
         />
       ))}
@@ -34,7 +34,7 @@ const SingleNavItem = (d: any) => {
     <>
       <Link
         onClick={toggleItem}
-        href={d?.link ?? "#"}
+        href={d?.href ?? "#"}
         className="relative px-2 py-3 transition-all border-b border-zinc-200"
       >
         <p className="flex justify-between cursor-pointer items-center gap-2 text-blue-950 group-hover:text-blue-500 ">
@@ -52,7 +52,7 @@ const SingleNavItem = (d: any) => {
           {d.subNav.map((ch: any, i: any) => (
             <Link
               key={i}
-              href={ch.link ?? "#"}
+              href={ch.href ?? "#"}
               className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-blue-950 hover:text-blue-500"
             >
               {ch.iconImage && (

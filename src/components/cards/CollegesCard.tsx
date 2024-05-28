@@ -7,11 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import { useEffect, useState } from "react";
-import { topColleges } from "@/data/homePage";
 import Image from "next/image";
 
-export default function CollegesCard() {
+export default function CollegesCard({data}:any) {
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -45,10 +43,10 @@ export default function CollegesCard() {
   return (
     <>
       <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
-        {topColleges.colleges.map((college: any, index: number) => (
+        {data?.map((college: any, index: number) => (
           <SwiperSlide
             key={index}
-            className="my-12 w-full overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-2xl"
+            className="mb-12 w-full overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-2xl"
           >
             <CollegesCardContent college={college} />
           </SwiperSlide>

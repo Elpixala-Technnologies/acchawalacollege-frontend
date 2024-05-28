@@ -7,6 +7,13 @@ import section6Bg from "./home/section6-bg.png";
 // college 
 import c1 from "./collages/c1.jpg";
 import c2 from "./collages/c2.jpg";
+import collegeLogo from "./collages/collegeLogo.png";
+import c3 from "./collages/c3.jpg";
+import c4 from "./collages/c4.jpg";
+import c5 from "./collages/c5.jpg";
+import c6 from "./collages/c6.jpg";
+import c7 from "./collages/c7.jpg";
+import c8 from "./collages/c8.jpg";
 //courses
 import co1 from "./courses/co1.png";
 import co2 from "./courses/co2.jpg";
@@ -14,6 +21,14 @@ import co3 from "./courses/co3.png";
 import au1 from "./courses/au1.png";
 import au2 from "./courses/au2.png";
 import au3 from "./courses/au3.png";
+import courseBg1 from "./courses/courseBg1.png";
+import courseBg2 from "./courses/courseBg2.png";
+import courseBg3 from "./courses/courseBg3.png";
+import coursesBanner from "./courses/coursesBanner.png";
+import coursesBanner1 from "./courses/coursesBanner1.svg";
+import video1 from "./courses/video1.png";
+import video2 from "./courses/video2.png";
+import video3 from "./courses/video3.png";
 
 // blogs 
 import b1 from "./blogs/b1.png";
@@ -34,16 +49,36 @@ import s10 from "./sponsors/s10.png";
 import Landing1 from "./home/Landing1.png";
 import Landing2 from "./home/Landing2.png";
 import Landing3 from "./home/Landing3.png";
+import banner2 from "./home/banner2.png";
 
-// section 2 icon
+// icons
 import Student from "./icons/Student.svg";
 import Certificate from "./icons/Certificate.svg";
 import GraduationCap from "./icons/GraduationCap.svg";
+import building from "./icons/building.svg";
+import community from "./icons/community.svg";
+// companies
+import comp1 from "./companies/comp1.png";
+import comp2 from "./companies/comp2.svg";
+import comp3 from "./companies/comp3.svg";
+import comp4 from "./companies/comp4.svg";
+import comp5 from "./companies/comp5.svg";
+// facilities
+import academicZone from "./icons/academicZone.svg"
+import auditorium from "./icons/auditorium.svg"
 
 // Testimonial
 import user1 from "./testimonial/user1.png";
 import testimonialBg from "./testimonial/testimonialBg.png";
 import quoteIcon from "./testimonial/quoteIcon.png";
+
+import questionImg from "./questionImg.svg"
+
+// Exams
+import examBg1 from "./exams/examBg1.png";
+import examBg2 from "./exams/examBg2.png";
+import examBg3 from "./exams/examBg3.png";
+import examBg4 from "./exams/examBg4.png";
 
 
 export {
@@ -51,19 +86,26 @@ export {
 
     section6Bg,
 
-    Landing1, Landing2, Landing3,
+    Landing1, Landing2, Landing3, banner2,
 
-    Student, Certificate, GraduationCap,
+    Student, Certificate, GraduationCap, building, community,
+    academicZone, auditorium,
 
     p1,
 
-    c1, c2,
+    c1, c2, collegeLogo, c3, c4, c5, c6, c7, c8,
 
-    co1, co2, co3, au1, au2, au3,
+    co1, co2, co3, au1, au2, au3, courseBg1, courseBg2, courseBg3, coursesBanner, coursesBanner1, video1, video2, video3,
 
     b1, b2, b3,
 
     s1, s2, s3, s4, s5, s6, s7, s8, s9, s10,
 
     user1, testimonialBg, quoteIcon,
+
+    comp1, comp2, comp3, comp4, comp5,
+
+    questionImg,
+
+    examBg1, examBg2, examBg3, examBg4
 }
