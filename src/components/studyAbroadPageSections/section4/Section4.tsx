@@ -15,7 +15,6 @@ export default function Section4({ data }: any) {
             </Wrapper>
             <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-2">
                 {/* <!-- Main Container --> */}
-
                 <div className="flex justify-center space-x-4">
                     {/* <!-- Left Section --> */}
                     <div className="flex-shrink-0 pt-2">

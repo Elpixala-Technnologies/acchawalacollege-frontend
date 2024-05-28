@@ -7,6 +7,11 @@ import TopCourses from '@/components/homePageSections/topCourses/TopCourses';
 import { studyAbroadData } from '@/data/studyAbroadPage';
 import Section3 from '@/components/studyAbroadPageSections/section3/Section3';
 import Section4 from '@/components/studyAbroadPageSections/section4/Section4';
+import Section5 from '@/components/studyAbroadPageSections/section5/Section5';
+import BlogAndOthersFilterSection from '@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection';
+import Section6 from '@/components/studyAbroadPageSections/section6/Section6';
+import CounsellingPackages from '@/components/homePageSections/counsellingPackages/CounsellingPackages';
+import AreYouConfused from '@/components/AreYouConfused';
 
 export default function StudyAbroad() {
   return (
@@ -17,6 +22,11 @@ export default function StudyAbroad() {
       <Section3 data={studyAbroadData?.scheduleCounsellingBanner} />
       <TopCourses data={global?.topCourses} />
       <Section4 data={studyAbroadData?.section4} />
+      <Section5 data={studyAbroadData?.brochureSection} />
+      <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
+      <Section6 data={studyAbroadData?.Section5} />
+      <CounsellingPackages data={studyAbroadData?.counsellingPackages} />
+      <AreYouConfused />
     </>
   );
 }

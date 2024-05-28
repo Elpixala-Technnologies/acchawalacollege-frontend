@@ -12,9 +12,9 @@ export default function BannerSection({ data }: any) {
         {/* Left Side of Banner */}
         <div className="flex w-max flex-col gap-8 p-5 [flex:1] max-md:pr-0">
           {/* Title  */}
-          <h1 className="text-3xl text-blue-900/80  flex flex-col gap-y-2 md:text-5xl font-medium text-wrap">
-            <span className="text-blue-900/80 font-bold	">{data?.title?.t1}</span>
-            <span className=" text-blue-500 font-bold	">{data?.title?.t2}</span>
+          <h1 className="flex flex-col gap-y-2 md:text-5xl font-medium text-wrap">
+            <span className="text-blue-900/80 font-bold	">{data?.title?.t1} {data?.title?.t2} </span>
+            <span className=" text-blue-500 text-5xl font-bold">{data?.title?.t3}</span>
           </h1>
           {data?.text1 && <p className="text-wrap">{data?.text1}</p>}
           {/* Input field */}
