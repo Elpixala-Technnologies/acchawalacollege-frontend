@@ -6,14 +6,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-import { useEffect, useState } from "react";
-import { topCourses } from "@/data/homePage";
 import Image from "next/image";
 import { FaRegCalendarAlt, FaRegClock, FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { formatRupee } from "@/utils/fotmatRupee";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
 export default function CoursesCard2({ data }: any) {

@@ -7,13 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import { useEffect, useState } from "react";
-import { topCourses } from "@/data/homePage";
 import Image from "next/image";
-import { FaRegCalendarAlt, FaRegClock, FaStar, FaStarHalfAlt } from "react-icons/fa";
+import {  FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Link from "next/link";
-import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { formatRupee } from "@/utils/fotmatRupee";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 
