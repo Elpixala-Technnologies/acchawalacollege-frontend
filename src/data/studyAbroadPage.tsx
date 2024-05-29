@@ -85,7 +85,7 @@ export const studyAbroadData = {
             t2: "Success Stories",
         },
         text1: "Discover how our guidance has empowered students to achieve their dreams abroad.",
-        text2: "Raj transformed his aspirations into reality by securing admission to <br> MIT. With our  personalized guidance, he navigated the complexities <br> of studying abroad and achieved his dream",
+        text2: "Raj transformed his aspirations into reality by securing <br> admission to  MIT. With our  personalized guidance, he <br> navigated the  complexities of studying abroad and <br> achieved his dream",
         button1: {
             text: "Read More",
             href: "#",

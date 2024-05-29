@@ -7,17 +7,17 @@ export default function Section4({ data }: any) {
     return (
         <section className="my-16 w-full">
             {/* Title  */}
-            <Wrapper className="flex max-md:flex-row max-md:gap-y-2">
-                <div className="flex w-max font-bold flex-row gap-2 p-5 [flex:1] max-md:pr-0">
+            <Wrapper className="flex max-md:flex-row max-md:gap-y-">
+                <div className="flex w-max font-bold flex-row gap-2 p-4 [flex:1] max-md:pr-0">
                     <span className="text-4xl text-blue-950">{data?.title?.t1}</span>
                     <span className="text-4xl text-blue-500">{data?.title?.t2}</span>
                 </div>
             </Wrapper>
             <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-2">
                 {/* <!-- Main Container --> */}
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center p-2 gap-12">
                     {/* <!-- Left Section --> */}
-                    <div className="flex-shrink-0 pt-2">
+                    <div className="flex-shrink-0">
                         <Image
                             src={data?.img[0]}
                             alt="b1"
