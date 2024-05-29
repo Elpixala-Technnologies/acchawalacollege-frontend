@@ -80,6 +80,8 @@ import examBg2 from "./exams/examBg2.png";
 import examBg3 from "./exams/examBg3.png";
 import examBg4 from "./exams/examBg4.png";
 
+// Scholarship
+import scholarship1 from "./scholarship/scholarship1.png";
 
 export {
     logo,
@@ -107,5 +109,7 @@ export {
 
     questionImg,
 
-    examBg1, examBg2, examBg3, examBg4
+    examBg1, examBg2, examBg3, examBg4,
+
+    scholarship1,
 }

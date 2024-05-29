@@ -15,6 +15,7 @@ import {
   comp3,
   comp4,
   comp5,
+  scholarship1,
 } from "@/asset";
 import { BiSolidInstitution } from "react-icons/bi";
 import { FaTransgenderAlt } from "react-icons/fa";
@@ -332,4 +333,211 @@ export const collegeDetailsPage = {
   avgFee: "95.1k Yearly",
   genderAccepted: "Co-ed",
   studyMode: "Regular, Part-time",
+  scholarshipPage: {
+    scholarshipDetails: [
+      {
+        navItem: "Overview",
+        title: {
+          t1: "About",
+          t2: "IIT Madras",
+          t3: "Scholarship",
+        },
+        article: `<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>
+          <div class="bg-blue my-5">
+          <h6 class="text-xl">This Story also Contains</h6>
+          <ul>
+          <li>Important Dates</li>
+          <li>Important Dates</li>
+          <li>Important Dates</li>
+          <li>Important Dates</li>
+          </ul>
+          </div>
+          `,
+      },
+      {
+        navItem: "Eligibility Criteria",
+        title: {
+          t1: "IIT Madras",
+          t2: "Scholarship",
+          t3: "Eligibility Criteria",
+        },
+        article:
+          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
+        readMoreLink: "#",
+        courses: [
+          {
+            bg: c3,
+            name: "B.Tech",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+          {
+            bg: c4,
+            name: "M.Tech",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+          {
+            bg: c5,
+            name: "Ph.D",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+          {
+            bg: c6,
+            name: "MBA",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+          {
+            bg: c7,
+            name: "BA",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+          {
+            bg: c8,
+            name: "MBA",
+            eligibility:
+              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
+            fees: "69999",
+            duration: "2 Years",
+            buttons: {
+              button1: { text: "Apply Now", href: "#" },
+              button2: { text: "Download Brochure", href: "#" },
+            },
+          },
+        ],
+      },
+      {
+        navItem: "Application Process",
+        title: {
+          t1: "How to Apply for",
+          t2: "IIT Madras",
+          t3: "Scholarship?",
+        },
+        article:
+          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
+        readMoreLink: "#",
+        image: [
+          {
+            img: scholarship1,
+            text: "Scholarship Success, Expert Guidance, Funding, Counselling Support",
+          },
+        ],
+      },
+      {
+        navItem: "Selection Process",
+        title: {
+          t1: "IIT Madras",
+          t2: "Scholarship",
+          t3: "Selection Process",
+        },
+        article:
+          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
+      },
+      {
+        navItem: "Selection Process",
+        title: {
+          t1: "IIT Madras",
+          t2: "Scholarship",
+          t3: "Key Dates",
+        },
+        article: `<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>
+          `,
+        table: `
+        <table border="1">
+  <tr>
+    <th>Exams and Events</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>Last Date to Apply for the Scholarship</td>
+    <td>January 2, 2025</td>
+  </tr>
+  <tr>
+    <td>Interview Dates</td>
+    <td>Between April and June</td>
+  </tr>
+  <tr>
+    <td>Declaration of Selection Results</td>
+    <td>June</td>
+  </tr>
+  <tr>
+    <td>Commencement of the Doctoral Programme</td>
+    <td>In the month of September/October</td>
+  </tr>
+</table>
+        `,
+      },
+    ],
+    faqs: {
+      title: {
+        t2: "IIT Madras",
+        t3: "Frequently Asked Questions",
+      },
+      faqsQuestionsAndAnswers: [
+        {
+          id: 1,
+          question: "When was the University Established?",
+          answer:
+            "The Indian Institute of Technology, Madras was established in 1961. The institute was founded by the erstwhile Prime Minister, Shri. Venkatesh Iyengar.",
+        },
+        {
+          id: 2,
+          question: "Is the University a Private or Government University",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 3,
+          question: "What is the University Affiliation?",
+          answer:
+            "The Indian Institute of Technology, Madras is affiliated to the University of Madras. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 4,
+          question: "How good is the University",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+        {
+          id: 5,
+          question: "What courses does the University Offer?",
+          answer:
+            "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+      ],
+    },
+  },
 };
