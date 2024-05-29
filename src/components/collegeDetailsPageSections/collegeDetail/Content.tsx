@@ -57,7 +57,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
       )}
       {/* Read More  */}
       {selectedDetail?.readMoreLink && (
-        <p className="mb-8 w-full text-right">
+        <p className="mb-5 w-full text-right">
           <Link
             href={selectedDetail?.readMoreLink}
             className="w-min text-nowrap font-medium hover:text-blue-500 hover:underline"

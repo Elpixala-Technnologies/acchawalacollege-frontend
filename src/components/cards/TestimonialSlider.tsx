@@ -80,7 +80,7 @@ function TestimonialSliderContent({ testimonial }: any) {
           <p className="text-xs text-zinc-500">{testimonial?.college}</p>
         </div>
       </div>
-      <p className="mb-5 line-clamp-4 text-wrap font-medium text-black">{`"${testimonial?.comment}"`}</p>
+      <p className="mb-5 line-clamp-4 text-wrap font-medium text-zinc-800">{`"${testimonial?.comment}"`}</p>
       {testimonial?.storyVideoLink && (
         <div className="flex justify-end">
           <Link href={testimonial?.storyVideoLink}>
