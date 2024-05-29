@@ -1,5 +1,7 @@
 // logo
 import logo from "./logo/Logo.png";
+import loginLogo  from "./logo/LoginLogo.png";
+import loginBg  from "./logo/LoginBg.png";
 
 // Home
 import p1 from "./icons/p1.png";
@@ -82,7 +84,7 @@ import examBg4 from "./exams/examBg4.png";
 
 
 export {
-    logo,
+    logo, loginLogo, loginBg,
 
     section6Bg,
 
