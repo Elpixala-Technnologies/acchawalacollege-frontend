@@ -10,11 +10,11 @@ export default function BannerSection({ data }: any) {
     <section className="my-16 w-full">
       <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-2">
         {/* Left Side of Banner */}
-        <div className="flex w-max flex-col gap-8 p-5 [flex:1] max-md:pr-0">
+        <div className="flex w-max flex-col gap-4 p-5 [flex:1] max-md:pr-0">
           {/* Title  */}
-          <h1 className="flex flex-col gap-y-2 md:text-5xl font-medium text-wrap">
+          <h1 className="flex flex-col gap-y-2 md:text-4xl font-medium text-wrap">
             <span className="text-blue-900/80 font-bold	">{data?.title?.t1} {data?.title?.t2} </span>
-            <span className=" text-blue-500 text-5xl font-bold">{data?.title?.t3}</span>
+            <span className=" text-blue-500 text-4xl font-bold">{data?.title?.t3}</span>
           </h1>
           {data?.text1 && <p className="text-wrap">{data?.text1}</p>}
           {/* Input field */}
@@ -66,7 +66,7 @@ export default function BannerSection({ data }: any) {
             className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
           />
           <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-full flex-col rounded-xl bg-blue-950 p-5 text-white">
-            <span className="mb-3 text-wrap">{data?.text2}</span>
+            <span className="text-wrap">{data?.text2}</span>
             <span>{data?.text3}</span>
           </p>
         </div>
