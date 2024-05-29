@@ -42,7 +42,7 @@ export default function ReviewsSlider({ reviews }: any) {
             h?.title && (
               <SwiperSlide
                 key={index}
-                className="flex-center my-5 w-full flex-col gap-y-3 overflow-hidden rounded-md border border-zinc-300 py-10 text-center"
+                className="flex-center w-full flex-col gap-y-3 overflow-hidden rounded-md border border-zinc-300 py-10 text-center"
               >
                 <div className="mx-auto w-max pb-2 text-4xl text-blue-500">{h.icon}</div>
                 <h6 className="font-medium">{h?.title}</h6>
