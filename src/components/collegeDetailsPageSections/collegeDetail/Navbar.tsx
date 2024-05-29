@@ -60,7 +60,7 @@ export default function Navbar({ courseDetails, onSelect, selectedIndex }: any) 
               }`}
               onClick={() => onSelect(index)}
             >
-              {item.title}
+              {item.navItem}
             </button>
           </li>
         ))}

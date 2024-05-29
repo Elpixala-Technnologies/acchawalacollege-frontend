@@ -37,7 +37,7 @@ const Carousel = ({
               )}
               {slide?.text && (
                 <p
-                  className="h-24 custom-scrollbar w-full overflow-y-scroll pr-2 text-justify text-sm"
+                  className="h-24 custom-scrollbar w-full overflow-y-scroll text-justify text-sm"
                   onMouseEnter={() => setIsPaused(true)}
                   onMouseLeave={() => setIsPaused(false)}
                 >
@@ -73,7 +73,7 @@ const Carousel = ({
                 setCurr(i);
               }}
               key={i}
-              className={`h-2 cursor-pointer rounded-full bg-blue-950 transition-all ${
+              className={`h-2 cursor-pointer rounded-full bg-blue-500 transition-all ${
                 curr === i ? "w-5 p-0.5" : "w-2 bg-opacity-50"
               }`}
             />

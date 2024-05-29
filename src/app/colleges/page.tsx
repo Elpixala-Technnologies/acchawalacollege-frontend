@@ -3,12 +3,14 @@ import HeroSection from "@/components/collegesListingPageSections/heroSection/He
 import React from "react";
 import { collegePages } from "@/data/collegeData";
 import { global } from "@/data/globalData";
+import Faqs from "@/components/faqs/Faqs";
 
 export default function colleges() {
   return (
-    <main className="mx-auto w-full bg-white">
+    <>
       <HeroSection data={collegePages?.bannerSection} />
       <CollegeListSection data={collegePages?.CollegesDataArray} topColleges={global?.topColleges} />
-    </main>
+      <Faqs data={collegePages?.faqs} />
+    </>
   );
 }

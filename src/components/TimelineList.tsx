@@ -8,7 +8,7 @@ export default function TimelineList({ data }: any) {
     setIsOpen(isOpen === id ? null : id);
   };
   return (
-    <div className="p-5 flex w-full gap-x-3 items-stretch">
+    <div className="pt-5 flex w-full gap-x-3 items-stretch">
       <div className=" mx-4 w-[2px] border-r-2 border-zinc-300"></div>
       <div className="w-full flex flex-col gap-4  pt-0">
         {data?.map((item: any, index: number) => (

@@ -217,11 +217,12 @@ export const global = {
   },
   topColleges : {
     title: {
-      t1: "Discover",
-      t2: "Top Colleges",
+      t2: "Discover",
+      t3: "Top Colleges",
     },
     colleges: [
       {
+        slug:"upgrad-tech",
         id: 1,
         stream: "MBA",
         collegeName: "upGrad Tech",
@@ -254,6 +255,7 @@ export const global = {
       },
       {
         id: 2,
+        slug:"upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -285,6 +287,7 @@ export const global = {
       },
       {
         id: 3,
+        slug:"upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -316,6 +319,7 @@ export const global = {
       },
       {
         id: 4,
+        slug:"upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -349,14 +353,14 @@ export const global = {
   },
   topCourses : {
     title: {
-      t1: "Discover",
-      t2: "Top Courses",
+      t2: "Discover",
+      t3: "Top Courses",
     },
     courses: [
       {
         id: 1,
+        slug:"acchawala",
         stream: "MBA",
-  
         bg: co1,
         teacherAvatar: user1,
         teacherName: "Dr. Pankaj Kumar",
@@ -378,13 +382,12 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 2,
         stream: "MBA",
-  
+        slug:"acchawala",
         bg: co2,
         teacherAvatar: au2,
         teacherName: "Andrew Garfield",
@@ -406,13 +409,12 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 3,
         stream: "MBA",
-  
+        slug:"acchawala",
         bg: co3,
         teacherAvatar: au3,
         teacherName: "Andrew Garfield",
@@ -434,13 +436,12 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 4,
         stream: "MBA",
-  
+        slug:"acchawala",
         bg: co1,
         teacherAvatar: au1,
         teacherName: "Andrew Garfield",
@@ -462,7 +463,6 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
     ],

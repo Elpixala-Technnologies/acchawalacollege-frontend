@@ -43,11 +43,11 @@ export default function TopCollegesScroll({data}:any) {
   }, []);
 
   return (
-    <div className="relative my-5 bg-blue-200 rounded-lg pb-6 max-w-[1035px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="relative my-16 bg-blue-200 rounded-lg pb-6 max-w-[1035px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <h1 className="title1 p-6">
-        <span>{data.title.t1}</span>{" "}
-        <span className="font-semibold text-blue-500">
-          {data.title.t2}
+        <span className="text-blue-950">{data.title.t2}</span>{" "}
+        <span className="text-blue-500">
+          {data.title.t3}
         </span>
       </h1>
       <div
