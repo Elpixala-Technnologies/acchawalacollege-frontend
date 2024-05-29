@@ -15,7 +15,7 @@ export default function Faqs({ data, className = "" }: any) {
       <Wrapper>
         {/* Title  */}
         {data?.title && (
-          <h1 className="title1 mb-5">
+          <h1 className="title1 mb-8">
             {data?.title.t1 && <span className="text-blue-950/70">{data?.title.t1}</span>}{" "}
             {data?.title.t2 && <span className="text-blue-950">{data?.title.t2}</span>}{" "}
             {data?.title.t3 && <span className="text-sky-500">{data?.title.t3}</span>}{" "}

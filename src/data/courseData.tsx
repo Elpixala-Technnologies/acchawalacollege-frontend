@@ -662,8 +662,8 @@ export const courseDetailsPage = {
     },
     similarCourses : {
       title: {
-        t1: "Discover",
-        t2: "Similar Courses",
+        t2: "Discover",
+        t3: "Similar Courses",
       },
       courses: [
         {
