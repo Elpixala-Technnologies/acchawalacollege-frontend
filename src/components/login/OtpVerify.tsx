@@ -30,7 +30,7 @@ export default function OtpVerify() {
             {isOpen && (
                 <div className="fixed w-886 h-653 top-111 left-277 inset-0  bg-gray-600 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white flex rounded-lg shadow-lg w-full max-w-4xl">
-                        <div className="bg-blue-900 text-white p-8 rounded-l-lg w-1/3" style={{ backgroundImage: "url('../../asset/logo/LoginBg.png')" }}>
+                        <div className="bg-custom text-white p-8 rounded-l-lg w-1/3">
                             <div className="logo flex justify-center">
                                 {/* <img src="../../asset/logo/LoginBg.png" alt="" /> */}
                                 <div className="p-4">
@@ -101,10 +101,10 @@ export default function OtpVerify() {
                             </button>
                             <div className="max-w-md w-full space-y-4 p-10">
                                 <h2 className="mt-1 text-3xl leading-9 font-bold text-gray-950">
-                                {LoginData?.otpData?.t1}
+                                    {LoginData?.otpData?.t1}
                                 </h2>
                                 <p className="mb-6 text-lg leading-5 text-gray-600">
-                                {LoginData?.otpData?.t2}
+                                    {LoginData?.otpData?.t2}
                                 </p>
                                 <form className="mt-4 space-y-4">
                                     <div className="mb-4">
@@ -143,7 +143,7 @@ export default function OtpVerify() {
                                             type="submit"
                                             className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition duration-150 ease-in-out"
                                         >
-                                           {LoginData?.otpData?.button2?.text}
+                                            {LoginData?.otpData?.button2?.text}
                                         </button>
                                     </div>
                                 </form>

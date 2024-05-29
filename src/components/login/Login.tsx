@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { FaCheckSquare } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
-import { loginLogo, logo } from '@/asset';
+import { loginBg, loginLogo, logo } from '@/asset';
 import { LoginData } from '@/data/LoginData';
 
 export default function Login() {
@@ -22,7 +22,7 @@ export default function Login() {
             {isOpen && (
                 <div className="fixed w-886 h-653 top-111 left-277 inset-0  bg-gray-600 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white flex rounded-lg shadow-lg w-full max-w-4xl">
-                        <div className="bg-blue-900 text-white p-8 rounded-l-lg w-1/3">
+                        <div className="bg-custom text-white p-8 rounded-l-lg w-1/3">
                             <div className="logo flex justify-center">
                                 <div className="p-4">
                                     <Image src={loginLogo} width={80} height={80} alt="logo" className="text-center" />
@@ -83,6 +83,7 @@ export default function Login() {
                                 </li>
                             </ul>
                         </div>
+                        {/* <Image src={loginBg} objectFit="object-cover" alt="" /> */}
                         <div className="p-8 w-2/3 relative">
                             <button
                                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"

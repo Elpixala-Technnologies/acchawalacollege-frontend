@@ -21,7 +21,7 @@ export default function Otp() {
             {isOpen && (
                 <div className="fixed w-886 h-653 top-111 left-277 inset-0  bg-gray-600 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white flex rounded-lg shadow-lg w-full max-w-4xl">
-                        <div className="bg-blue-900 text-white p-8 rounded-l-lg w-1/3">
+                        <div className="bg-custom text-white p-8 rounded-l-lg w-1/3">
                             <div className="logo flex justify-center">
                                 <div className="p-4">
                                     <Image src={loginLogo} width={80} height={80} alt="logo" className="text-center" />
