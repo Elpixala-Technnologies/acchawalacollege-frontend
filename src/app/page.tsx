@@ -8,18 +8,36 @@ import PartnersSection from "@/components/homePageSections/partnersSection/Partn
 import Section2 from "@/components/homePageSections/section2/Section2";
 import Testimonials from "@/components/homePageSections/testimonials/testimonials";
 import { useQuery } from "@apollo/client";
-import{ GET_BLOGS } from "@/query/schema";
+import{ GET_BLOGS, GET_COLLEGES, GET_COURSES, GET_EXAMS, GET_EXAMS_LEVEL } from "@/query/schema";
 
 export default function Home() {
 
-//get all BLogs data
 const {
-  loading,
-  error,
   data: BlogsData,
 } = useQuery(GET_BLOGS);
   
+const {
+  data: CollegesData,
+} = useQuery(GET_COLLEGES);
+
+
+const {
+  data: CoursesData,
+} = useQuery(GET_COURSES);
+
+const {
+  data: ExamsData,
+} = useQuery(GET_EXAMS);
+
+const {
+  data: ExamsLevelData,
+} = useQuery(GET_EXAMS_LEVEL);
+
 console.log("BlogsData:", BlogsData);
+console.log("CollegesData:", CollegesData);
+console.log("ExamsData:", ExamsData);
+console.log("ExamsLevelData:", ExamsLevelData);
+console.log("CoursesData:", CoursesData);
 
 
   return (
