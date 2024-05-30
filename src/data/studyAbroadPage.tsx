@@ -18,7 +18,15 @@ import {
     SuccessStories1,
     SuccessStories3,
     p1,
-    AssistanceFrom
+    AssistanceFrom,
+    c1,
+    c2,
+    c4,
+    c3,
+    c5,
+    c6,
+    c7,
+    c8
 } from "@/asset";
 import { TbRuler2Off } from "react-icons/tb";
 
@@ -28,7 +36,7 @@ export const studyAbroadData = {
     homeBanner: {
         title: {
             t1: "Embark on",
-            t2:"Your Global",
+            t2: "Your Global",
             t3: "Education Journey",
         },
         text1: "Explore Top Universities Worldwide and Transform \n Your Future with Expert Guidance",
@@ -66,6 +74,89 @@ export const studyAbroadData = {
         title: "Our Knowledge Partners",
         images: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10],
     },
+
+    colleges: [
+        {
+            id: 1,
+            image: c1,
+            name: 'University of Cambridge',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 2,
+            image: c2,
+            name: 'University of Oxford',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 3,
+            image: c3,
+            name: 'University of Massachusetts',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 4,
+            image: c5,
+            name: 'University of California',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 5,
+            image: c5,
+            name: 'University of Cambridge',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 6,
+            image: c1,
+            name: 'University of Oxford',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 7,
+            image: c2,
+            name: 'University of Massachusetts',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+        {
+            id: 8,
+            image: c2,
+            name: 'University of California',
+            location: 'Public university in Cambridge, England',
+            rating: '4.5',
+            reviews: '2.3k reviews',
+            priceRange: '$20,000 to $50,000',
+            distance: '5.8',
+        },
+    ],
 
     // Section 3
     scheduleCounsellingBanner: {
