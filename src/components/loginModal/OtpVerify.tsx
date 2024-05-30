@@ -1,4 +1,3 @@
-// components/Modal.js
 "use client";
 import { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
@@ -32,7 +31,6 @@ export default function OtpVerify() {
                     <div className="bg-white flex rounded-lg shadow-lg w-full max-w-4xl">
                         <div className="bg-custom text-white p-8 rounded-l-lg w-1/3">
                             <div className="logo flex justify-center">
-                                {/* <img src="../../asset/logo/LoginBg.png" alt="" /> */}
                                 <div className="p-4">
                                     <Image src={loginLogo} width={80} height={80} alt="logo" className="text-center" />
                                 </div>

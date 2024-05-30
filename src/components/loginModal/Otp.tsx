@@ -1,13 +1,11 @@
-// components/Modal.js
 "use client";
 import { useState } from 'react';
-import { FaCheckSquare } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
-import { loginBg, loginLogo, logo } from '@/asset';
+import { loginLogo, } from '@/asset';
 import { LoginData } from '@/data/LoginData';
 
-export default function Login() {
+export default function Otp() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -29,8 +27,8 @@ export default function Login() {
                                 </div>
                             </div>
                             <div className="text-center mb-8">
-                                <h2 className="text-xl font-black">{LoginData?.signUp?.title.t1}</h2>
-                                <p className="text-xs">{LoginData?.signUp?.title.t2}</p>
+                                <h2 className="text-xl font-black">Acchawala College</h2>
+                                <p className="text-xs">India's Best Education Consultancy</p>
                             </div>
                             <ul className="space-y-2 mb-6 text-base">
                                 <li className="flex items-center">
@@ -47,7 +45,7 @@ export default function Login() {
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
-                                    <span className="text-white">{LoginData?.signUp?.checkBox?.t2}e</span>
+                                    <span className="text-white">{LoginData?.signUp?.checkBox?.t2}</span>
                                 </li>
                                 <li className="flex items-center">
                                     <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
@@ -83,54 +81,62 @@ export default function Login() {
                                 </li>
                             </ul>
                         </div>
-                        {/* <Image src={loginBg} objectFit="object-cover" alt="" /> */}
-                        <div className="p-8 w-2/3 relative">
+                        <div className="p-10 w-2/3 relative">
                             <button
                                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
                                 onClick={() => setIsOpen(false)}
                             >
                                 &times;
                             </button>
-                            <h2 className="text-2xl font-bold mb-4 text-blue-950">{LoginData?.signUp?.mainContainerTitle?.t1}</h2>
-                            <form>
-                                <div className="mb-4">
-                                    <input type="text" className="w-full px-3 py-2 border rounded" placeholder="Name" />
-                                </div>
-                                <div className="mb-4">
-                                    <div className="flex">
-                                        <span className="inline-flex items-center px-3 border border-r-0 rounded-l bg-white">
-                                            <ReactCountryFlag countryCode="IN" svg style={{ width: '1em', height: '1em' }} className="mr-2" />
-                                            +91
-                                        </span>
-                                        <input type="text" className="w-full px-3 py-2 border rounded-r" placeholder="Mobile" />
+                            <div className="max-w-md w-full space-y-4 p-10">
+                                <h2 className="mt-1 text-3xl leading-9 font-bold text-gray-950">
+                                    {LoginData?.otpData?.t1}
+                                </h2>
+                                <p className="mb-6 text-lg leading-5 text-gray-600">
+                                    {LoginData?.otpData?.t2}
+                                </p>
+                                <form className="mt-8 space-y-6">
+                                    <div className="mb-4">
+                                        {/* <label className="block text-gray-700">Mobile</label> */}
+                                        <div className="flex">
+                                            <span className="inline-flex items-center px-3 border border-r-0 rounded-l bg-white">
+                                                <ReactCountryFlag countryCode="IN" svg style={{ width: '1em', height: '1em' }} className="mr-2" />
+                                                +91
+                                            </span>
+                                            <input type="text" className="w-full px-3 py-2 border rounded-r" placeholder="Enter your phone number" />
+                                        </div>
                                     </div>
+                                    <div>
+                                        <button
+                                            type="submit"
+                                            className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition duration-150 ease-in-out"
+                                        >
+                                            {LoginData?.otpData?.button1?.text}
+                                        </button>
+                                    </div>
+                                </form>
+                                <div className="text-center p-10 text-xs leading-5 text-gray-500">
+                                    By proceeding ahead you expressly agree to the Achhawala College{' '}
+                                    <a href="#" className="underline">
+                                        Terms & Conditions
+                                    </a>{' '}
+                                    and{' '}
+                                    <a href="#" className="underline">
+                                        Privacy Policy
+                                    </a>
                                 </div>
-                                <div className="mb-4">
-                                    <input type="email" className="w-full px-3 py-2 border rounded" placeholder="Email" />
+                                <div className="mt-6 text-center text-sm leading-5">
+                                    <p>
+                                        Don't have an account yet?{' '}
+                                        <a
+                                            href="#"
+                                            className="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                                        >
+                                            Sign up
+                                        </a>
+                                    </p>
                                 </div>
-                                <div className="mb-4">
-                                    <select className="w-full px-3 py-2 border rounded">
-                                        <option>Please select Preferred Stream</option>
-                                    </select>
-                                </div>
-                                <div className="mb-4">
-
-                                    <select className="w-full px-3 py-2 border rounded">
-                                        <option>Please select Preferred Level</option>
-                                    </select>
-                                </div>
-                                <div className="flex items-center mb-4">
-                                    <input type="checkbox" className="mr-2 rounded-full" />
-                                    <label className="text-gray-700"></label>{LoginData?.signUp?.mainContainerTitle?.t2}
-                                </div>
-                                <button className="bg-blue-500 text-white px-4 py-2 rounded w-full">{LoginData?.signUp?.button?.text}</button>
-                            </form>
-                            <p className="mt-4 text-center text-gray-600">
-                                By proceeding ahead you expressly agree to the Acchawalacollege <a href="#" className="text-blue-500">Terms & Conditions</a> and <a href="#" className="text-blue-500">Privacy Policy</a>.
-                            </p>
-                            <p className="mt-2 text-center text-gray-600">
-                                Already have an account? <a href="#" className="text-blue-500">Login</a>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
