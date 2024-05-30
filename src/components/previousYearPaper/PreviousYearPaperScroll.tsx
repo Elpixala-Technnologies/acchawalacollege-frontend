@@ -1,8 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
-import { CollegesCardContent } from "@/components/cards/CollegesCard";
+import Image from "next/image";
+import { PiStudent } from "react-icons/pi";
+import { IoCalendarOutline } from "react-icons/io5";
+import { formatDate } from "@/utils/formatDate";
+import { MdAutoGraph } from "react-icons/md";
+import Link from "next/link";
+import Navbar from "./Navbar";
 
-export default function TopCollegesScroll({ data }: any) {
+export default function PreviousYearPaperScroll({ data }: any) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
@@ -42,8 +48,14 @@ export default function TopCollegesScroll({ data }: any) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Navbar
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const handleSelect = (index: any) => {
+    setSelectedIndex(index);
+  };
+
   return (
-    <div className="relative my-16 max-w-[1035px] rounded-lg bg-blue-200 pb-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="relative mb-5 max-w-[1035px] rounded-lg bg-blue-200 pb-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       {data?.title && (
         <h1 className="title1 p-6">
           {data?.title?.t1 && (
@@ -63,17 +75,23 @@ export default function TopCollegesScroll({ data }: any) {
           )}
         </h1>
       )}
+      {/* Navbar Filter  */}
+      <Navbar
+        category={data?.filterBy?.category}
+        selectedNav={selectedIndex}
+        onSelect={handleSelect}
+      />
       <div
         className="flex w-full gap-6 overflow-x-hidden px-5"
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >
-        {data.colleges.map((college: any, index: number) => (
+        {data?.papers?.map((paper: any, index: number) => (
           <div
             key={index}
-            className="min-w-[420px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
+            className="min-w-[300px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
           >
-            <CollegesCardContent college={college} />
+            <PapersCardContent paper={paper} />
           </div>
         ))}
       </div>
@@ -96,3 +114,20 @@ export default function TopCollegesScroll({ data }: any) {
     </div>
   );
 }
+
+export const PapersCardContent = function ({ paper }: any) {
+  return (
+    <React.Fragment>
+      <div className="flex-center relative w-full flex-col bg-blue-950/10 p-5 text-center">
+        <Image src={paper?.img} alt="paper" className="h-20 object-contain" />
+        {paper?.title && (
+          <Link href={paper?.href}>
+            <h4 className="text-xl font-medium text-blue-950">
+              {paper?.title}
+            </h4>
+          </Link>
+        )}
+      </div>
+    </React.Fragment>
+  );
+};

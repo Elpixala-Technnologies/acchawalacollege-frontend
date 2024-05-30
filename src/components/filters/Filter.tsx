@@ -2,12 +2,7 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
-export default function Filter({
-  title,
-  filteredDataArray,
-  handleFilter,
-  checked,
-}: any) {
+export default function Filter({ title, filteredDataArray, handleFilter, checked, }: any) {
   const [open, setOpen] = useState(true);
   const [showAll, setShowAll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -15,12 +10,14 @@ export default function Filter({
   const handleOpen = () => setOpen(!open);
   const handleViewMore = () => setShowAll(!showAll);
 
+  console.log(filteredDataArray, "ppp");
+
   function handleSortAvgFeePerYear(data: any) {
     // sort operation
   }
 
-   // Function to handle search input change
-   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Function to handle search input change
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 
@@ -68,13 +65,13 @@ export default function Filter({
             {title === "STREAM" && (
               <>
                 {filteredDataArray
-                  .reduce((uniqueStreams: string[], filter: any) => {
+                  ?.reduce((uniqueStreams: string[], filter: any) => {
                     if (!uniqueStreams.includes(filter.stream)) {
                       uniqueStreams.push(filter.stream);
                     }
                     return uniqueStreams;
                   }, [])
-                  .slice(0, showAll ? filteredDataArray.length : 2)
+                  .slice(0, showAll ? filteredDataArray?.length : 2)
                   .map((stream: string) => (
                     <div
                       key={stream}
@@ -137,7 +134,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.avgFeePerYear}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -194,7 +191,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.state}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -230,7 +227,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.city}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -266,7 +263,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.course}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -302,7 +299,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.programType}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -338,7 +335,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.collegeType}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -374,7 +371,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.collegeCategory}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -410,7 +407,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.affiliation}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -446,7 +443,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.gender}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -482,7 +479,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.ranking}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -518,7 +515,7 @@ export default function Filter({
                   .slice(0, showAll ? filteredDataArray.length : 2)
                   .map((filter: any) => (
                     <div
-                      key={filter.id}
+                      key={filter.exam}
                       className="my-2 flex cursor-pointer items-center gap-1"
                     >
                       <input
@@ -534,6 +531,92 @@ export default function Filter({
                         className="text-secondary-text hover:text-primary text-base font-medium"
                       >
                         {filter.exam}
+                      </label>
+                    </div>
+                  ))}
+                {!showAll && filteredDataArray.length > 2 && (
+                  <p
+                    className="cursor-pointer text-right font-medium text-blue-500"
+                    onClick={handleViewMore}
+                  >
+                    See All
+                  </p>
+                )}
+              </>
+            )}
+
+            {/* Exams Filters */}
+            {/* MODE  */}
+            {title === "MODE" && (
+              <>
+                {filteredDataArray
+                  .reduce((uniqueStreams: string[], filter: any) => {
+                    if (!uniqueStreams.includes(filter.mode)) {
+                      uniqueStreams.push(filter.mode);
+                    }
+                    return uniqueStreams;
+                  }, [])
+                  .slice(0, showAll ? filteredDataArray.length : 2)
+                  .map((mode: string) => (
+                    <div
+                      key={mode}
+                      className="my-2 flex cursor-pointer items-center gap-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id={mode}
+                        name={mode}
+                        checked={checked.includes(mode)}
+                        className="cursor-pointer"
+                        onChange={() => handleFilter(mode)}
+                      />
+                      <label
+                        htmlFor={mode}
+                        className="text-secondary-text hover:text-primary text-base font-medium"
+                      >
+                        {mode}
+                      </label>
+                    </div>
+                  ))}
+                {!showAll && filteredDataArray.length > 2 && (
+                  <p
+                    className="cursor-pointer text-right font-medium text-blue-500"
+                    onClick={handleViewMore}
+                  >
+                    See All
+                  </p>
+                )}
+              </>
+            )}
+            {/* LEVEL  */}
+            {title === "LEVEL" && (
+              <>
+                {filteredDataArray
+                  .reduce((uniqueStreams: string[], filter: any) => {
+                    if (!uniqueStreams.includes(filter.level)) {
+                      uniqueStreams.push(filter.level);
+                    }
+                    return uniqueStreams;
+                  }, [])
+                  .slice(0, showAll ? filteredDataArray.length : 2)
+                  .map((level: string) => (
+                    <div
+                      key={level}
+                      className="my-2 flex cursor-pointer items-center gap-1"
+                    >
+                      <input
+                        type="checkbox"
+                        id={level}
+                        name={level}
+                        checked={checked.includes(level)}
+                        className="cursor-pointer"
+                        onChange={() => handleFilter(level)}
+                      />
+                      <label
+                        htmlFor={level}
+                        className="text-secondary-text hover:text-primary text-base font-medium"
+                      >
+                        {level}
                       </label>
                     </div>
                   ))}
