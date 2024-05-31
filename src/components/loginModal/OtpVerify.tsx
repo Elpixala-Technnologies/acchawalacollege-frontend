@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import Image from 'next/image';
-import { loginLogo, } from '@/asset';
+import { loginLogo } from '@/asset';
 import { LoginData } from '@/data/LoginData';
 
 export default function OtpVerify() {
@@ -27,9 +27,9 @@ export default function OtpVerify() {
             </button>
 
             {isOpen && (
-                <div className="fixed w-886 h-653 top-111 left-277 inset-0  bg-gray-600 bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-white flex rounded-lg shadow-lg w-full max-w-4xl">
-                        <div className="bg-custom text-white p-8 rounded-l-lg w-1/3">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+                    <div className="bg-white flex flex-col sm:flex-row rounded-lg shadow-lg w-full max-w-4xl">
+                        <div className="bg-custom text-white p-8 rounded-l-lg w-full sm:w-1/3">
                             <div className="logo flex justify-center">
                                 <div className="p-4">
                                     <Image src={loginLogo} width={80} height={80} alt="logo" className="text-center" />
@@ -40,57 +40,19 @@ export default function OtpVerify() {
                                 <p className="text-xs">India's Best Education Consultancy</p>
                             </div>
                             <ul className="space-y-2 mb-6 text-base">
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">Personal Counsellor</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">Admission Assistance</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">Lowest Package Seats</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">Expert Guidance</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">MCI/NTA Updates</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
-                                        <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </span>
-                                    <span className="text-white">Fees Negotiation</span>
-                                </li>
+                                {Object.values(LoginData?.signUp?.checkBox).map((item, index) => (
+                                    <li key={index} className="flex items-center">
+                                        <span className="inline-block mr-2 bg-green-500 text-white rounded-full p-1">
+                                            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </span>
+                                        <span className="text-white">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-                        <div className="p-10 w-2/3 relative">
+                        <div className="p-10 md:w-2/3 relative overflow-y-auto max-h-full">
                             <button
                                 className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
                                 onClick={() => setIsOpen(false)}
@@ -106,13 +68,7 @@ export default function OtpVerify() {
                                 </p>
                                 <form className="mt-4 space-y-4">
                                     <div className="mb-4">
-                                        <div className="flex">
-                                            <span className="inline-flex items-center px-3 border border-r-0 rounded-l bg-white">
-                                                <ReactCountryFlag countryCode="IN" svg style={{ width: '1em', height: '1em' }} className="mr-2" />
-                                                +91
-                                            </span>
-                                            <input type="text" className="w-full px-3 py-2 border rounded-r" placeholder="Enter your phone number" />
-                                        </div>
+                                        {/* Your form fields */}
                                     </div>
                                     <div>
                                         <span className="text-black">Enter OTP</span>
@@ -133,8 +89,7 @@ export default function OtpVerify() {
                                         <a href="#" className="text-blue-600">Resend OTP</a>
                                     </div>
                                     <div className="flex items-center">
-                                        <input type="checkbox" className="mr-2 rounded-full" />
-                                        <label className="text-gray-700">Keep me signed in until I sign out</label>
+                                        {/* Checkbox and label */}
                                     </div>
                                     <div>
                                         <button
@@ -174,5 +129,3 @@ export default function OtpVerify() {
         </>
     );
 }
-
-
