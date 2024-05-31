@@ -5,12 +5,12 @@ import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 export default function TopColleges({data}:any) {
   return (
-    <section className="mx-auto my-5 w-full max-w-[1440px] px-5">
-      <Wrapper>
+    <section className="my-16 w-full">
+      <Wrapper isMaxWidthChangeRequired="max-w-[1500px]">
       <div className="mb-8 flex justify-between">
        {data?.title && <h1 className="title1 md:ml-8">
-          <span className="font-normal">{data?.title?.t1}</span>{" "}
-          <span className="font-semibold text-blue-500">{data.title.t2}</span>
+          <span className="text-blue-950">{data?.title?.t2}</span>{" "}
+          <span className=" text-blue-500">{data.title.t3}</span>
         </h1>}
         {/* filter Button  */}
         {/* <button className="button3 h-max md:mr-8">

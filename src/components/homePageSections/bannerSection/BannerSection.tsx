@@ -13,8 +13,8 @@ export default function BannerSection({data}:any) {
         <div className="flex w-max flex-col gap-8 p-5 [flex:1] max-md:pr-0">
           {/* Title  */}
           <h1 className="text-3xl flex flex-col gap-y-2 md:text-5xl font-medium text-wrap">
-            <span className="  text-blue-900/80">{data?.title?.t1}</span>
-            <span className=" text-blue-900">{data?.title?.t2}</span>
+            <span className="  text-blue-950/70">{data?.title?.t1}</span>
+            <span className=" text-blue-950">{data?.title?.t2}</span>
             <span className=" text-blue-500">{data?.title?.t3}</span>
           </h1>
           {data?.text1 && <p className="text-wrap">{data?.text1}</p>}

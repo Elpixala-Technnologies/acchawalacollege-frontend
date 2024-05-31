@@ -514,6 +514,7 @@ export const courseDetailsPage = {
       courseType: "offline",
       collegeDetails: {
         collegeLogo: collegeLogo,
+        bg: courseBg1,
         CollegeName: "IIT Madras - Indian Institute of Technology ",
         location: {
           state: "Tamil Nadu",
@@ -537,12 +538,10 @@ export const courseDetailsPage = {
       {
         title: "Overview",
         article: `<p>This is an overview of the course.</p><p class='note'>Disclaimer: Data for total fees has been calculated based on all years/semesters as provided by the college.</p> <p>The actual fees may vary.</p><p>This is an overview of the course.</p>`,
-        note: "This course is designed to provide comprehensive knowledge.",
       },
       {
         title: "Course Details",
         article: "These are the details of the course.",
-        note: "Detailed curriculum and syllabus are included.",
       },
       {
         title: "Programme Offerings",
@@ -562,17 +561,14 @@ export const courseDetailsPage = {
       {
         title: "Eligibility Criteria",
         article: "Eligibility criteria for the course.",
-        note: "Please ensure you meet the criteria before applying.",
       },
       {
         title: "Admission Details",
         article: "Details about the admission process.",
-        note: "Follow the steps outlined for a smooth admission process.",
       },
       {
         title: "Application Details",
         article: "How to apply for the course.",
-        note: "Submit your application before the deadline.",
       },
 
       {
@@ -622,12 +618,15 @@ export const courseDetailsPage = {
       },
       {
         title: "Evaluation Process",
-        article: "",
-        note: "",
+        article: `<p>Evaluation process of the course.</p> <p>This is an overview of the course.</p> <p>The actual fees may vary.</p><p class="note">This is an overview of the course.</p>`,
       },
     ],
     faqs: {
-      title: "Frequently Asked Questions",
+      title: { 
+        t1: "",
+        t2: "Frequently",
+        t3: "Asked Questions",
+      },
       faqsQuestionsAndAnswers: [
         {
           id: 1,
@@ -658,6 +657,214 @@ export const courseDetailsPage = {
           question: "What courses does the University Offer?",
           answer:
             "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
+        },
+      ],
+    },
+    similarCourses : {
+      title: {
+        t2: "Discover",
+        t3: "Similar Courses",
+      },
+      courses: [
+        {
+          id: 1,
+          slug:"acchawala",
+          stream: "MBA",
+          bg: co1,
+          teacherAvatar: user1,
+          teacherName: "Dr. Pankaj Kumar",
+          teacherRole: "Teacher",
+          designation: "MBA Specialist and Director of Admission",
+    
+          title: "Acchawala",
+          stars: 4.5,
+          courseDetails: {
+            noOfAvailableCourses: "13",
+            courseTime: "2 hours",
+            duration: "15 months",
+            coursesPrice: {
+              fullTime: "20000",
+              partTime: "10000",
+            },
+          },
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Learn More",
+          },
+        },
+        {
+          id: 2,
+          stream: "MBA",
+          slug:"acchawala",
+          bg: co2,
+          teacherAvatar: au2,
+          teacherName: "Andrew Garfield",
+          teacherRole: "Teacher",
+          designation: "MBA Specialist and Director of Admission",
+    
+          title: "Acchawala",
+          stars: 4.5,
+          courseDetails: {
+            noOfAvailableCourses: "13",
+            courseTime: "2 hours",
+            duration: "15 months",
+            coursesPrice: {
+              fullTime: "20000",
+              partTime: "10000",
+            },
+          },
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Learn More",
+          },
+        },
+        {
+          id: 3,
+          stream: "MBA",
+          slug:"acchawala",
+          bg: co3,
+          teacherAvatar: au3,
+          teacherName: "Andrew Garfield",
+          teacherRole: "Teacher",
+          designation: "MBA Specialist and Director of Admission",
+    
+          title: "Acchawala",
+          stars: 4.5,
+          courseDetails: {
+            noOfAvailableCourses: "13",
+            courseTime: "2 hours",
+            duration: "15 months",
+            coursesPrice: {
+              fullTime: "20000",
+              partTime: "10000",
+            },
+          },
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Learn More",
+          },
+        },
+        {
+          id: 4,
+          stream: "MBA",
+          slug:"acchawala",
+          bg: co1,
+          teacherAvatar: au1,
+          teacherName: "Andrew Garfield",
+          teacherRole: "Teacher",
+          designation: "MBA Specialist and Director of Admission",
+    
+          title: "Acchawala",
+          stars: 4.5,
+          courseDetails: {
+            noOfAvailableCourses: "13",
+            courseTime: "2 hours",
+            duration: "15 months",
+            coursesPrice: {
+              fullTime: "20000",
+              partTime: "10000",
+            },
+          },
+          summery:
+            "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
+          button: {
+            text: "Learn More",
+          },
+        },
+      ],
+    },
+    moreCourses: {
+      title: {
+        t2: "More Courses by",
+        t3: "IIT Madras",
+      },
+      coursesCard: [
+        {
+          id: 1,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 2,
+          bg: courseBg2,
+          teacher: {
+            avatar: au2,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 3,
+          bg: courseBg3,
+          teacher: {
+            avatar: au3,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
+        },
+        {
+          id: 4,
+          bg: courseBg1,
+          teacher: {
+            avatar: au1,
+            name: "Dr. Andrew Garfield",
+            designation: "MBA Specialist and Director of \nAdmission",
+            role: "Speaker",
+          },
+          title: "Dive Into Leadership In 3 Weeks",
+          button: {
+            button1: {
+              text: "Ask me anything",
+              href: "#",
+            },
+            button2: {
+              text: "Register",
+              href: "#",
+            },
+          },
         },
       ],
     },

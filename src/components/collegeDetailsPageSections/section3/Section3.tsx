@@ -2,25 +2,25 @@ import Image from "next/image";
 import React from "react";
 import { Student, building, community } from "@/asset";
 
-export default function Section3({ collegeDetails }: any) {
+export default function Section3({ data }: any) {
   return (
-    <section className="mb-5 w-full">
+    <section className="my-16 w-full">
       <div className="flex w-full max-w-screen-2xl max-md:flex-col">
         <Card
           bgColor="bg-blue-950"
-          title={collegeDetails?.campusSize}
+          title={data?.campusSize}
           text="Campus Size"
           icon={building}
         />
         <Card
           bgColor="bg-[#165bae]"
-          title={collegeDetails?.noOfFaculty}
+          title={data?.noOfFaculty}
           text="No. of Faculty"
           icon={Student}
         />
         <Card
           bgColor="bg-sky-500"
-          title={collegeDetails?.noOfStudents}
+          title={data?.noOfStudents}
           text="No. of Students"
           icon={community}
         />

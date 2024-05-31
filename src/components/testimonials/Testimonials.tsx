@@ -25,7 +25,7 @@ export default function Testimonials({ data }: any) {
         {/* Title and Text */}
         <div className="z-3 absolute left-0 top-[50%] flex -translate-y-1/2 flex-col gap-3">
           <h1 className="title1 flex flex-col gap-3">
-            <span>{data.title.t1}</span>
+            <span className="text-blue-950">{data.title.t1}</span>
             <span className="text-blue-500">{data.title.t2}</span>
           </h1>
           <p>

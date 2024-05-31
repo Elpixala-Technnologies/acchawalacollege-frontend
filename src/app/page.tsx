@@ -6,7 +6,7 @@ import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOth
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
 import Section2 from "@/components/homePageSections/section2/Section2";
 import Section6 from "@/components/homePageSections/section6/Section6";
-import TopCourses from "@/components/homePageSections/topCourses/TopCourses";
+import TopCourses from "@/components/topCourses/TopCourses";
 import Testimonials from "@/components/testimonials/Testimonials";
 import { home } from "@/data/homePage";
 import { global } from "@/data/globalData";
@@ -15,6 +15,7 @@ import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSe
 export default function Home() {
   return (
     <>
+    {/* home page  */}
       <BannerSection data={home?.homeBanner} />
       <Section2 data={home?.section2} />
       <PartnersSection data={global?.partners} />

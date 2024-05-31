@@ -39,9 +39,9 @@ export default function BannerSection1({ data }: any) {
   return (
     <section className="my-16 w-full">
       <Wrapper>
-        <h1 className="mb-5 text-2xl font-bold md:text-4xl">
-          <span className="text-blue-900/80">{data?.title?.t1}</span>{" "}
-          <span className="text-blue-900">{data?.title?.t2}</span>{" "}
+        <h1 className="mb-5 title1">
+          <span className="text-blue-950/70">{data?.title?.t1}</span>{" "}
+          <span className="text-blue-950">{data?.title?.t2}</span>{" "}
           <span className="text-blue-500">{data?.title?.t3}</span>
         </h1>
         {data?.text && (

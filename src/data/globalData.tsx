@@ -22,6 +22,8 @@ import {
   au1,
   au2,
   au3,
+  exam1,
+  examPaper,
 } from "@/asset";
 import { CiCalendar, CiStar } from "react-icons/ci";
 import { FaUniversity } from "react-icons/fa";
@@ -31,7 +33,7 @@ import {
 } from "react-icons/md";
 
 export const global = {
-  header : {
+  header: {
     logo: logo,
     href: "/",
 
@@ -52,22 +54,19 @@ export const global = {
         id: 2,
         label: "Courses",
         href: "/courses",
-        subNav: [
-        ],
+        subNav: [],
       },
       {
         id: 3,
         label: "Exams",
         href: "/exams",
-        subNav: [
-        ],
+        subNav: [],
       },
       {
         id: 4,
         label: "Study Abroad",
         href: "/study-abroad",
-        subNav: [
-        ],
+        subNav: [],
       },
       {
         id: 5,
@@ -87,7 +86,7 @@ export const global = {
     title: "Our Knowledge Partners",
     images: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10],
   },
-  footer : {
+  footer: {
     logo: logo,
     newLetterTitle: "Subscribe to Our Newsletter!",
     contactDetails: {
@@ -215,13 +214,15 @@ export const global = {
       ],
     },
   },
-  topColleges : {
+  topColleges: {
     title: {
-      t1: "Discover",
-      t2: "Top Colleges",
+      t1: "",
+      t2: "Discover",
+      t3: "Top Colleges",
     },
     colleges: [
       {
+        slug: "upgrad-tech",
         id: 1,
         stream: "MBA",
         collegeName: "upGrad Tech",
@@ -254,6 +255,7 @@ export const global = {
       },
       {
         id: 2,
+        slug: "upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -285,6 +287,7 @@ export const global = {
       },
       {
         id: 3,
+        slug: "upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -316,6 +319,7 @@ export const global = {
       },
       {
         id: 4,
+        slug: "upgrad-tech",
         stream: "MBA",
         collegeName: "upGrad Tech",
         icon: <FaUniversity />,
@@ -347,22 +351,23 @@ export const global = {
       },
     ],
   },
-  topCourses : {
+  topCourses: {
     title: {
-      t1: "Discover",
-      t2: "Top Courses",
+      t1: "",
+      t2: "Discover",
+      t3: "Top Courses",
     },
     courses: [
       {
         id: 1,
+        slug: "acchawala",
         stream: "MBA",
-  
         bg: co1,
         teacherAvatar: user1,
         teacherName: "Dr. Pankaj Kumar",
         teacherRole: "Teacher",
         designation: "MBA Specialist and Director of Admission",
-  
+
         title: "Acchawala",
         stars: 4.5,
         courseDetails: {
@@ -378,19 +383,18 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 2,
         stream: "MBA",
-  
+        slug: "acchawala",
         bg: co2,
         teacherAvatar: au2,
         teacherName: "Andrew Garfield",
         teacherRole: "Teacher",
         designation: "MBA Specialist and Director of Admission",
-  
+
         title: "Acchawala",
         stars: 4.5,
         courseDetails: {
@@ -406,19 +410,18 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 3,
         stream: "MBA",
-  
+        slug: "acchawala",
         bg: co3,
         teacherAvatar: au3,
         teacherName: "Andrew Garfield",
         teacherRole: "Teacher",
         designation: "MBA Specialist and Director of Admission",
-  
+
         title: "Acchawala",
         stars: 4.5,
         courseDetails: {
@@ -434,19 +437,18 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
       {
         id: 4,
         stream: "MBA",
-  
+        slug: "acchawala",
         bg: co1,
         teacherAvatar: au1,
         teacherName: "Andrew Garfield",
         teacherRole: "Teacher",
         designation: "MBA Specialist and Director of Admission",
-  
+
         title: "Acchawala",
         stars: 4.5,
         courseDetails: {
@@ -462,12 +464,552 @@ export const global = {
           "MBA is a graduate degree in business management, covering finance, marketing, operations, and strategy.",
         button: {
           text: "Learn More",
-          href: "#",
         },
       },
     ],
   },
-  BlogsAndOthers : {
+  upcomingExams: {
+    title: {
+      t1: "",
+      t2: "Upcoming",
+      t3: "Exams",
+    },
+    exams: [
+      {
+        id: 1,
+        img: exam1,
+        title: "Joint Entrance Exam Advanced (JEE Advanced)",
+        studentsParticipation: "63,73,884",
+        slug: "/jee-advanced",
+        stream: "Engineering",
+        level: ["national", "international"],
+        mode: ["offline", "online"],
+        category: ["JEE MAIN", "JEE ADVANCED"],
+        examDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        applicationFormDate: {
+          startDate: "Thu Jan 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+          endDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        },
+        resultAnnounceDate:
+          "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        examDetails: [
+          {
+            navItem: "overview",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Overview",
+            },
+          },
+          {
+            navItem: "sample papers",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Sample Papers",
+            },
+          },
+          {
+            navItem: "cutoff",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Cutoff",
+            },
+          },
+          {
+            navItem: "eligibility",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Eligibility",
+            },
+          },
+          {
+            navItem: "application",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Application",
+            },
+          },
+          {
+            navItem: "results",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Results",
+            },
+          },
+          {
+            navItem: "Exam Pattern",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Exam Pattern",
+            },
+          },
+          {
+            navItem: "Preparation Tips",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Preparation Tips",
+            },
+          },
+          {
+            navItem: "Answer Key",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Answer Key",
+            },
+          },
+          {
+            navItem: "Counselling",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Counselling",
+            },
+          },
+          {
+            navItem: "College Predictor",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "College Predictor",
+            },
+          },
+        ],
+        button1: {
+          text: "Register Now",
+          href: "#",
+        },
+        button2: {
+          text: "Get Updates",
+          href: "#",
+        },
+        button3: {
+          text: "Download Brochure",
+          href: 1,
+        },
+      },
+      {
+        id: 2,
+        img: exam1,
+        title: "Joint Entrance Exam Advanced (JEE Advanced)",
+        slug: "/jee-advanced",
+        studentsParticipation: "63,73,884",
+        stream: "Engineering",
+        level: ["national", "international"],
+        mode: ["offline", "online"],
+        category: ["JEE MAIN", "JEE ADVANCED"],
+        examDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        applicationFormDate: {
+          startDate: "Thu Jan 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+          endDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        },
+        resultAnnounceDate:
+          "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        examDetails: [
+          {
+            navItem: "overview",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Overview",
+            },
+          },
+          {
+            navItem: "sample papers",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Sample Papers",
+            },
+          },
+          {
+            navItem: "cutoff",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Cutoff",
+            },
+          },
+          {
+            navItem: "eligibility",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Eligibility",
+            },
+          },
+          {
+            navItem: "application",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Application",
+            },
+          },
+          {
+            navItem: "results",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Results",
+            },
+          },
+          {
+            navItem: "Exam Pattern",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Exam Pattern",
+            },
+          },
+          {
+            navItem: "Preparation Tips",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Preparation Tips",
+            },
+          },
+          {
+            navItem: "Answer Key",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Answer Key",
+            },
+          },
+          {
+            navItem: "Counselling",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Counselling",
+            },
+          },
+          {
+            navItem: "College Predictor",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "College Predictor",
+            },
+          },
+        ],
+        button1: {
+          text: "Register Now",
+          href: "#",
+        },
+        button2: {
+          text: "Get Updates",
+          href: "#",
+        },
+        button3: {
+          text: "Download Brochure",
+          href: 1,
+        },
+      },
+      {
+        id: 3,
+        img: exam1,
+        title: "Joint Entrance Exam Advanced (JEE Advanced)",
+        slug: "/jee-advanced",
+        studentsParticipation: "63,73,884",
+        stream: "Engineering",
+        level: ["national", "international"],
+        mode: ["offline", "online"],
+        category: ["JEE MAIN", "JEE ADVANCED"],
+        examDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        applicationFormDate: {
+          startDate: "Thu Jan 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+          endDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        },
+        resultAnnounceDate:
+          "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        examDetails: [
+          {
+            navItem: "overview",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Overview",
+            },
+          },
+          {
+            navItem: "sample papers",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Sample Papers",
+            },
+          },
+          {
+            navItem: "cutoff",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Cutoff",
+            },
+          },
+          {
+            navItem: "eligibility",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Eligibility",
+            },
+          },
+          {
+            navItem: "application",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Application",
+            },
+          },
+          {
+            navItem: "results",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Results",
+            },
+          },
+          {
+            navItem: "Exam Pattern",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Exam Pattern",
+            },
+          },
+          {
+            navItem: "Preparation Tips",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Preparation Tips",
+            },
+          },
+          {
+            navItem: "Answer Key",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Answer Key",
+            },
+          },
+          {
+            navItem: "Counselling",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Counselling",
+            },
+          },
+          {
+            navItem: "College Predictor",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "College Predictor",
+            },
+          },
+        ],
+        button1: {
+          text: "Register Now",
+          href: "#",
+        },
+        button2: {
+          text: "Get Updates",
+          href: "#",
+        },
+        button3: {
+          text: "Download Brochure",
+          href: "#",
+        },
+      },
+      {
+        id: 4,
+        img: exam1,
+        title: "Joint Entrance Exam Advanced (JEE Advanced)",
+        slug: "/jee-advanced",
+        studentsParticipation: "63,73,884",
+        stream: "Engineering",
+        level: ["national", "international"],
+        mode: ["offline", "online"],
+        category: ["JEE MAIN", "JEE ADVANCED"],
+        examDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        applicationFormDate: {
+          startDate: "Thu Jan 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+          endDate: "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        },
+        resultAnnounceDate:
+          "Thu May 30 2024 14:42:25 GMT+0530 (India Standard Time)",
+        examDetails: [
+          {
+            navItem: "overview",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Overview",
+            },
+          },
+          {
+            navItem: "sample papers",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Sample Papers",
+            },
+          },
+          {
+            navItem: "cutoff",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Cutoff",
+            },
+          },
+          {
+            navItem: "eligibility",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Eligibility",
+            },
+          },
+          {
+            navItem: "application",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Application",
+            },
+          },
+          {
+            navItem: "results",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Results",
+            },
+          },
+          {
+            navItem: "Exam Pattern",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Exam Pattern",
+            },
+          },
+          {
+            navItem: "Preparation Tips",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Preparation Tips",
+            },
+          },
+          {
+            navItem: "Answer Key",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Answer Key",
+            },
+          },
+          {
+            navItem: "Counselling",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "Counselling",
+            },
+          },
+          {
+            navItem: "College Predictor",
+            title: {
+              t1: "",
+              t2: "JEE Advanced",
+              t3: "College Predictor",
+            },
+          },
+        ],
+        button1: {
+          text: "Register Now",
+          href: "#",
+        },
+        button2: {
+          text: "Get Updates",
+          href: "#",
+        },
+        button3: {
+          text: "Download Brochure",
+          href: 1,
+        },
+      },
+    ],
+  },
+  previousYearPapers: {
+    title: {
+      t1: "",
+      t2: "Top JEE Main",
+      t3: "Previous Year Paper",
+    },
+    filterBy: {
+      category: [
+        "JEE MAIN",
+        "NEET",
+        "CAT",
+        "GATE",
+        "CLAT",
+        "JEE ADVANCED",
+        "KCET",
+        "GRE",
+        "TOEFL",
+        "IELTS",
+        "GMAT",
+      ],
+    },
+    papers: [
+      {
+        id: "1",
+        title: "JEE Main 2024 Mathematics Question Paper April 8 Shift 1",
+        href: "#",
+        img: examPaper,
+        category: "JEE MAIN",
+      },
+      {
+        id: "2",
+        title: "JEE Main 2024 Mathematics Question Paper April 8 Shift 1",
+        href: "#",
+        img: examPaper,
+        category: "JEE MAIN",
+      },
+      {
+        id: "3",
+        title: "JEE MAIN 2024 Mathematics Question Paper April 8 Shift 1",
+        href: "#",
+        img: examPaper,
+        category: "JEE MAIN",
+      },
+      {
+        id: "4",
+        title: "JEE MAIN 2024 Mathematics Question Paper April 8 Shift 1",
+        href: "#",
+        img: examPaper,
+        category: "JEE MAIN",
+      },
+    ],
+  },
+  BlogsAndOthers: {
     filterBy: [
       {
         id: 1,
@@ -667,5 +1209,5 @@ export const global = {
         storyVideoLink: "#",
       },
     ],
-  }
+  },
 };

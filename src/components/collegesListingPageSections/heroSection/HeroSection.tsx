@@ -7,10 +7,10 @@ export default function HeroSection({data}:any) {
   return (
     <section className="mb-10 w-full border-t border-zinc-400 bg-blue-100">
       <Wrapper className="flex flex-col gap-y-5 p-5 md:p-10">
-        <h1 className="title2">
-          {data?.title?.t1 && <span>{data.title.t1}</span>}{" "}
-          {data?.title?.t2 && <span>{data.title.t2}</span>}{" "}
-          {data?.title?.t3 && <span>{data.title.t3}</span>}{" "}
+        <h1 className="title1">
+          {data?.title?.t1 && <span className="text-blue-950/70">{data.title.t1}</span>}{" "}
+          {data?.title?.t2 && <span className="text-blue-950">{data.title.t2}</span>}{" "}
+          {data?.title?.t3 && <span className="text-blue-500">{data.title.t3}</span>}{" "}
         </h1>
         <div className="flex items-center gap-x-2 ">
           <Image

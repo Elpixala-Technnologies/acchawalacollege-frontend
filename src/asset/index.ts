@@ -57,12 +57,14 @@ import Certificate from "./icons/Certificate.svg";
 import GraduationCap from "./icons/GraduationCap.svg";
 import building from "./icons/building.svg";
 import community from "./icons/community.svg";
+
 // companies
 import comp1 from "./companies/comp1.png";
 import comp2 from "./companies/comp2.svg";
 import comp3 from "./companies/comp3.svg";
 import comp4 from "./companies/comp4.svg";
 import comp5 from "./companies/comp5.svg";
+
 // facilities
 import academicZone from "./icons/academicZone.svg"
 import auditorium from "./icons/auditorium.svg"
@@ -79,6 +81,8 @@ import examBg1 from "./exams/examBg1.png";
 import examBg2 from "./exams/examBg2.png";
 import examBg3 from "./exams/examBg3.png";
 import examBg4 from "./exams/examBg4.png";
+import exam1 from "./exams/exam1.png";
+import examPaper from "./exams/examPaper.png";
 
 // Study Abroad 
 import AbroadLanding1 from "./studyAbroad/AbroadLanding1.png";
@@ -89,6 +93,8 @@ import SuccessStories2 from "./studyAbroad/SuccessStories2.png";
 import SuccessStories3 from "./studyAbroad/SuccessStories3.png";
 import AssistanceFrom from "./studyAbroad/AssistanceFrom.png";
 
+// Scholarship
+import scholarship1 from "./scholarship/scholarship1.png";
 
 export {
     logo,
@@ -116,7 +122,9 @@ export {
 
     questionImg,
 
-    examBg1, examBg2, examBg3, examBg4,
+    examBg1, examBg2, examBg3, examBg4,exam1,examPaper,
+
+    scholarship1,
 
     AbroadLanding1, AbroadLanding2, AbroadLanding3, SuccessStories1, SuccessStories2, SuccessStories3, AssistanceFrom
 }

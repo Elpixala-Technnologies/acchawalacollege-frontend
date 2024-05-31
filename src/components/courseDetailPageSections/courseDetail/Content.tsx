@@ -6,30 +6,39 @@ export default function Content({ courseDetails, selectedIndex }: any) {
   const selectedDetail = courseDetails[selectedIndex];
 
   return (
-    <div className="w-full  border-b border-zinc-300">
+    <div className="mt-5 w-full border-b border-zinc-300 pb-5">
       {/* Title  */}
       {selectedDetail?.title && (
-        <h2 className="mb-3 text-blue-950 text-2xl font-medium p-5 pb-0">
-          {selectedDetail?.title}
+        <h2 className="title1 mb-8 ">
+          {selectedDetail?.title?.split(" ")?.map((word: any, index: any) => (
+            <span
+              key={index}
+              className={`font-medium ${index === 0 ? "text-blue-950" : "text-blue-500"}`}
+            >
+              {word}{" "}
+            </span>
+          ))}
         </h2>
       )}
       {/* Article  */}
       {selectedDetail.article && (
         <div
-          className="dangerouslySetInnerHTMLStyle p-5 text-justify"
+          className="dangerouslySetInnerHTMLStyle text-justify"
           dangerouslySetInnerHTML={{ __html: selectedDetail.article }}
         />
       )}
       {/* List  */}
       {selectedDetail?.list && (
-        <ul className="flex gap-x-5 flex-wrap p-5 pt-0">
+        <ul className="flex flex-wrap gap-x-5">
           {selectedDetail?.list.map((item: any, index: any) => (
             <li key={index} className="mb-2 flex items-center gap-x-2">
-              <SiTicktick className="text-blue-500 text-xl" />{item}
+              <SiTicktick className="text-xl text-blue-500" />
+              {item}
             </li>
           ))}
         </ul>
       )}
+      {/* Semester  */}
       {selectedDetail?.semesters && (
         <TimelineList data={selectedDetail?.semesters} />
       )}
