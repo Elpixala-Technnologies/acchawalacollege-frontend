@@ -12,16 +12,13 @@ import BlogAndOthersFilterSection from '@/components/homePageSections/blogAndOth
 import Section6 from '@/components/studyAbroadPageSections/section6/Section6';
 import CounsellingPackages from '@/components/homePageSections/counsellingPackages/CounsellingPackages';
 import AreYouConfused from '@/components/AreYouConfused';
-import DiscoverTopColleges from '@/components/studyAbroadPageSections/discoverTopColleges/DiscoverTopColleges';
-import DiscoverTopCoursesCard from '@/components/cards/DiscoverTopCoursesCard';
 
 export default function StudyAbroad() {
   return (
     <>
       <BannerSection data={studyAbroadData?.homeBanner} />
       <Section2 data={studyAbroadData?.section2} />
-      <DiscoverTopColleges data={studyAbroadData.colleges} />
-      {/* <TopColleges data={global?.topColleges} /> */}
+      <TopColleges data={global?.topColleges} />
       <Section3 data={studyAbroadData?.scheduleCounsellingBanner} />
       <TopCourses data={global?.topCourses} />
       <Section4 data={studyAbroadData?.section4} />
