@@ -3,7 +3,6 @@ import Section2 from '@/components/studyAbroadPageSections/section2/Section2';
 import TopColleges from '@/components/topColleges/TopColleges';
 import { global } from "@/data/globalData";
 import React from 'react'
-import TopCourses from '@/components/homePageSections/topCourses/TopCourses';
 import { studyAbroadData } from '@/data/studyAbroadPage';
 import Section3 from '@/components/studyAbroadPageSections/section3/Section3';
 import Section4 from '@/components/studyAbroadPageSections/section4/Section4';
@@ -12,13 +11,15 @@ import BlogAndOthersFilterSection from '@/components/homePageSections/blogAndOth
 import Section6 from '@/components/studyAbroadPageSections/section6/Section6';
 import CounsellingPackages from '@/components/homePageSections/counsellingPackages/CounsellingPackages';
 import AreYouConfused from '@/components/AreYouConfused';
+import TopCourses from '@/components/topCourses/TopCourses';
+import DiscoverTopColleges from '@/components/studyAbroadPageSections/discoverTopColleges/DiscoverTopColleges';
 
 export default function StudyAbroad() {
   return (
     <>
       <BannerSection data={studyAbroadData?.homeBanner} />
       <Section2 data={studyAbroadData?.section2} />
-      <TopColleges data={global?.topColleges} />
+      <DiscoverTopColleges data={studyAbroadData?.colleges} />
       <Section3 data={studyAbroadData?.scheduleCounsellingBanner} />
       <TopCourses data={global?.topCourses} />
       <Section4 data={studyAbroadData?.section4} />

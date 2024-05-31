@@ -28,7 +28,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t1}</span>
@@ -36,7 +36,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t2}</span>
@@ -44,7 +44,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t3}</span>
@@ -52,7 +52,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t4}</span>
@@ -60,7 +60,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t5}</span>
@@ -68,7 +68,7 @@ export default function Section6({ data }: any) {
                                 <li className="flex items-start">
                                     <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
                                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </span>
                                     <span className="text-gray-700 pt-2">{data?.checkBoxData?.t6}</span>
