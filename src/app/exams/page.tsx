@@ -7,7 +7,6 @@ export default function examsPage() {
   return (
     <section className='w-full'>
       <BannerSection data={examsListingPage?.homeBanner} />
-      <LoginModal />
     </section>
   )
 }
