@@ -7,10 +7,14 @@ export default function Section4({ data }: any) {
         <section className="my-16 w-full">
             {/* Title  */}
             <Wrapper className="flex flex-col items-center md:flex-row md:items-start md:justify-start md:gap-4">
-                <div className="flex w-max font-bold flex-row gap-2 p-4 [flex:1] max-md:pr-0">
+                {/* <div className="flex w-max font-bold flex-row gap-2 p-4 [flex:1] max-md:pr-0">
                     <span className="text-4xl text-blue-950">{data?.title?.t1}</span>
                     <span className="text-4xl text-blue-500">{data?.title?.t2}</span>
-                </div>
+                </div> */}
+                <h1 className="title1 md:ml-8">
+                    <span className="text-4xl text-blue-950">{data?.title?.t1}</span>{" "}
+                    <span className="text-4xl text-blue-500">{data?.title?.t2}</span>
+                </h1>
             </Wrapper>
             <Wrapper className="flex flex-col items-center md:flex-row md:items-start md:gap-12">
                 {/* <!-- Main Container --> */}

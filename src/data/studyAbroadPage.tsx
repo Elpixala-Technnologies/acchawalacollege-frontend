@@ -84,7 +84,7 @@ export const studyAbroadData = {
             rating: '4.5',
             reviews: '2.3k reviews',
             priceRange: '$20,000 to $50,000',
-            distance: '5.8',
+            distance: '5.8k',
         },
         {
             id: 2,
