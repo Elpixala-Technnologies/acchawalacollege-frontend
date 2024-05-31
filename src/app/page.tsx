@@ -15,6 +15,7 @@ import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSe
 export default function Home() {
   return (
     <>
+    {/* home page  */}
       <BannerSection data={home?.homeBanner} />
       <Section2 data={home?.section2} />
       <PartnersSection data={global?.partners} />
