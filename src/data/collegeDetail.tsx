@@ -26,7 +26,7 @@ import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 export const collegeDetailsPage = {
   collegeLogo: collegeLogo,
   bg: c1,
-  collegeName: "IIT Madras - Indian Institute of Technology ",
+  collegeName: "IIT Madras - Indian Institute of Technology",
   location: {
     state: "Tamil Nadu",
     city: "Chennai",

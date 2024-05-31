@@ -2,7 +2,12 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
-export default function Filter({ title, filteredDataArray, handleFilter, checked, }: any) {
+export default function Filter({
+  title,
+  filteredDataArray,
+  handleFilter,
+  checked,
+}: any) {
   const [open, setOpen] = useState(true);
   const [showAll, setShowAll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,7 +15,7 @@ export default function Filter({ title, filteredDataArray, handleFilter, checked
   const handleOpen = () => setOpen(!open);
   const handleViewMore = () => setShowAll(!showAll);
 
-  console.log(filteredDataArray, "ppp");
+  // console.log(filteredDataArray, "ppp");
 
   function handleSortAvgFeePerYear(data: any) {
     // sort operation
