@@ -9,7 +9,11 @@ export default function colleges() {
   return (
     <>
       <HeroSection data={collegePages?.bannerSection} />
-      <CollegeListSection data={collegePages?.CollegesDataArray} topColleges={global?.topColleges} />
+      <CollegeListSection
+        data={collegePages?.CollegesDataArray}
+        topColleges={global?.topColleges}
+        filterBy={collegePages?.filterBy}
+      />
       <Faqs data={collegePages?.faqs} />
     </>
   );
