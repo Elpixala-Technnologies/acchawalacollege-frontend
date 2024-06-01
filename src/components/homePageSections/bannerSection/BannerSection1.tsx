@@ -37,7 +37,7 @@ export default function BannerSection1({ data }: any) {
   }, []);
 
   return (
-    <section className="my-16 w-full">
+    <section className="my-16 mt-0 w-full">
       <Wrapper>
         <h1 className="mb-5 title1">
           <span className="text-blue-950/70">{data?.title?.t1}</span>{" "}
@@ -49,9 +49,9 @@ export default function BannerSection1({ data }: any) {
             <TextWithLineBreak text={data?.text} />
           </p>
         )}
-        <div className="flex w-full justify-center max-md:flex-col">
+        <div className="flex w-full justify-center max-md:flex-col overflow-hidden">
           {/* Image */}
-          <div className="relative flex w-[29rem] md:scale-[0.82] scale-[0.72] md:justify-center">
+          <div className="max-md:hidden relative flex w-[29rem] md:scale-[0.82] md:justify-center max-md:-translate-x-16">
             <Image
               src={data?.bg}
               height={700}
@@ -63,12 +63,12 @@ export default function BannerSection1({ data }: any) {
             <div className="absolute bottom-[14px] left-0 -z-20 h-96 w-96 rounded-full bg-blue-950"></div>
           </div>
           {/* Steps */}
-          <ul className="mt-8 flex flex-col gap-y-5 md:mt-0 md:-translate-x-16 md:gap-y-[2.8rem]">
+          <ul className="pb-2 flex flex-col gap-y-5 md:mt-0 md:-translate-x-16 md:gap-y-[2.8rem] mr-1">
             {data?.steps &&
               data?.steps.map((item: any, i: any) => (
                 <li
                   key={i}
-                  className="flex w-full gap-x-3"
+                  className="flex items-center w-full gap-x-3"
                   style={{
                     transform: isMdScreen
                       ? `translateX(${positions[i]?.x}px)`
