@@ -46,7 +46,7 @@ export default function TestimonialSlider({ testimonials }: any) {
     <div className="relative">
       <Swiper
         {...swiperOptions}
-        className="w-full max-w-fit translate-x-[25%] px-5"
+        className="w-full max-w-fit md:translate-x-[25%] max-md:mt-5 px-5"
       >
         {testimonials.map((test: any, index: number) => (
           <SwiperSlide
@@ -80,7 +80,7 @@ function TestimonialSliderContent({ testimonial }: any) {
           <p className="text-xs text-zinc-500">{testimonial?.college}</p>
         </div>
       </div>
-      <p className="mb-5 line-clamp-4 text-wrap font-medium text-zinc-800">{`"${testimonial?.comment}"`}</p>
+      <p className="mb-5 md:line-clamp-4 text-wrap font-medium text-zinc-800">{`"${testimonial?.comment}"`}</p>
       {testimonial?.storyVideoLink && (
         <div className="flex justify-end">
           <Link href={testimonial?.storyVideoLink}>
