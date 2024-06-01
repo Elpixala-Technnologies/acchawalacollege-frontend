@@ -132,7 +132,7 @@ export default function InformationSection({ data }: any) {
         )}
         {/* Video Gallery  */}
         {data?.videos && (
-          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4">
             {data?.videos?.map((d: any, i: number) => (
               <YoutubeVideo
                 videoId={d?.videoId}

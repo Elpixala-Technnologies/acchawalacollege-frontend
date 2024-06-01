@@ -284,7 +284,9 @@ export default function CollegeFilters({
         <div className="flex flex-wrap items-center gap-1">
           {Object.values(SelectedFilters).some(
             (value) =>
-              value !== "" && (!Array.isArray(value) || value.length !== 0),
+              value !== "" &&
+              value !== 0 &&
+              (!Array.isArray(value) || value.length !== 0),
           ) && <span className="text-xs font-bold">Filters Applied : </span>}
           {Object.entries(SelectedFilters).map(([key, value]: any) => {
             if (Array.isArray(value)) {
@@ -294,7 +296,8 @@ export default function CollegeFilters({
               const duration: any =
                 typeof value === "string" ? parseInt(value) : value;
               return (
-                value !== "" && (
+                value !== "" &&
+                value !== 0 && (
                   <div
                     key={key}
                     className="flex w-max items-center gap-1 rounded-md border border-blue-500 px-2 py-1 text-xs"

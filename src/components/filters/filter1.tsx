@@ -25,9 +25,14 @@ const Filter: React.FC<FilterProps> = ({
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
+
+  function handleSortAvgFeePerYear(data: any) {
+    // sort operation
+  }
+
   return (
     <div
-      className={`w-full ${title === "LEVEL" ? "" : "border-b"} mb-5 border-zinc-500 pb-5`}
+      className={`w-full ${title === "LEVEL" || title === "EXAM ACCEPTED" ? "" : "border-b"} mb-5 border-zinc-500 pb-5`}
     >
       <div
         className="flex cursor-pointer items-center justify-between"
@@ -44,20 +49,24 @@ const Filter: React.FC<FilterProps> = ({
       </div>
       {open && (
         <div>
-          {title !== "MODE" && title !== "LEVEL" && (
-            <div className="searchBar relative">
-              <input
-                type="text"
-                className="my-2 w-full rounded border border-zinc-500 p-2 pl-4 text-sm shadow-md outline-none"
-                placeholder={`Search ${title.toLowerCase()}`}
-                value={searchQuery}
-                onChange={handleSearchChange}
-              />
-              <IoIosSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
-            </div>
-          )}
+          {title !== "COURSE DURATION" &&
+            title !== "AVG FEE PER YEAR" &&
+            title !== "PROGRAM TYPE" &&
+            title !== "COLLEGE TYPE" &&
+            title !== "GENDER ACCEPTED" && (
+              <div className="searchBar relative">
+                <input
+                  type="text"
+                  className="my-2 w-full rounded border border-zinc-500 p-2 pl-4 text-sm shadow-md outline-none"
+                  placeholder={`Search ${title.toLowerCase()}`}
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                />
+                <IoIosSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500" />
+              </div>
+            )}
           <div className="h-full max-h-48 overflow-y-auto">
-            {/* Stream  */}
+            {/* STREAM | MODE | LEVEL | STATE | CITY | COURSE | PROGRAM TYPE  */}
             {(title === "STREAM" ||
               title === "MODE" ||
               title === "LEVEL" ||
@@ -99,7 +108,51 @@ const Filter: React.FC<FilterProps> = ({
                       </label>
                     </div>
                   ))}
-                {!showAll && filterList.length > 2 && (
+                {!showAll && filterList.length > 5 && (
+                  <p
+                    className="cursor-pointer text-right font-medium text-blue-500"
+                    onClick={handleViewMore}
+                  >
+                    See All
+                  </p>
+                )}
+              </>
+            )}
+            {/* RANKING | GENDER ACCEPTED | AVG FEE PER YEAR */}
+            {(title === "RANKING" ||
+              title === "GENDER ACCEPTED" ||
+              title === "AVG FEE PER YEAR") && (
+              <>
+                {filterList
+                  ?.reduce((uniqueStreams: string[], filter: any) => {
+                    if (!uniqueStreams.includes(filter)) {
+                      uniqueStreams.push(filter);
+                    }
+                    return uniqueStreams;
+                  }, [])
+                  .slice(0, showAll ? filterList?.length : 5)
+                  .map((filter: any) => (
+                    <div
+                      key={filter.ranking}
+                      className="my-2 flex cursor-pointer items-center gap-1"
+                    >
+                      <input
+                        type="radio"
+                        id={filter}
+                        name={filter}
+                        checked={checked === filter}
+                        className="cursor-pointer"
+                        onChange={() => handleFilter(filter)}
+                      />
+                      <label
+                        htmlFor={filter}
+                        className="text-secondary-text hover:text-primary text-base font-medium"
+                      >
+                        {filter}
+                      </label>
+                    </div>
+                  ))}
+                {!showAll && filterList.length > 5 && (
                   <p
                     className="cursor-pointer text-right font-medium text-blue-500"
                     onClick={handleViewMore}
@@ -133,51 +186,29 @@ const Filter: React.FC<FilterProps> = ({
                 </div>
               </div>
             )}
-            {/* RANKING */}
-            {(title === "RANKING" ||
-              title === "AVG FEE PER YEAR" ||
-              title === "GENDER ACCEPTED") && (
-              <>
-                {filterList
-                  ?.reduce((uniqueStreams: string[], filter: any) => {
-                    if (!uniqueStreams.includes(filter)) {
-                      uniqueStreams.push(filter);
-                    }
-                    return uniqueStreams;
-                  }, [])
-                  .slice(0, showAll ? filterList?.length : 5)
-                  .map((filter: any) => (
-                    <div
-                      key={filter.ranking}
-                      className="my-2 flex cursor-pointer items-center gap-1"
-                    >
-                      <input
-                        type="radio"
-                        id={filter}
-                        name={filter}
-                        checked={checked === filter}
-                        className="cursor-pointer"
-                        onChange={() => handleFilter(filter)}
-                      />
-                      <label
-                        htmlFor={filter}
-                        className="text-secondary-text hover:text-primary text-base font-medium"
-                      >
-                        {filter}
-                      </label>
-                    </div>
-                  ))}
-                {!showAll && filterList.length > 2 && (
-                  <p
-                    className="cursor-pointer text-right font-medium text-blue-500"
-                    onClick={handleViewMore}
-                  >
-                    See All
-                  </p>
-                )}
-              </>
-            )}
           </div>
+          {title === "AVG FEE PER YEAR" && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              <button
+                className="rounded  border border-blue-500 px-3 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
+                onClick={() => handleSortAvgFeePerYear("min")}
+              >
+                ₹ Min
+              </button>
+              <button
+                className="rounded border border-blue-500 px-3 py-2 text-blue-500 [flex:1] hover:bg-blue-500 hover:text-white"
+                onClick={() => handleSortAvgFeePerYear("max")}
+              >
+                ₹ Max
+              </button>
+              <button
+                className="rounded bg-blue-500 px-4 py-2 text-white"
+                onClick={() => handleSortAvgFeePerYear("go")}
+              >
+                Go
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
