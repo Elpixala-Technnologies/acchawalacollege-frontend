@@ -27,19 +27,19 @@ export default function CollegeDetailsCardSlider({ course }: any) {
     console.log("compare");
   }
   return (
-    <div className="relative rounded-md border border-zinc-300 overflow-hidden text-white h-80">
+    <div className="relative h-[21.5rem] overflow-hidden rounded-md border border-zinc-300 text-white md:h-[21rem]">
       {/* Image  */}
       {course?.bg && (
         <Image
           src={course?.bg}
           alt="bg"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           width={500}
           height={500}
         />
       )}
       {/* Like / Compare  */}
-      <div className="flex-center absolute right-4 top-2 gap-x-2 text-white z-10">
+      <div className="flex-center absolute right-4 top-2 z-10 gap-x-2 text-white">
         <p
           className="cursor-pointer border-r border-zinc-300 pr-2 text-sm hover:underline"
           onClick={handleCompare}

@@ -7,7 +7,7 @@ import { s1, s2, s3, s4, s5, s6, s7, s8, s9, s10 } from "@/asset";
 import Wrapper from "@/components/Wrapper";
 
 export default function CompaniesScrollSlideShow({image}: any) {
-  const FAST_DURATION = 25;
+  const FAST_DURATION = 5;
   const SLOW_DURATION = 75;
 
   const [duration, setDuration] = useState(FAST_DURATION);

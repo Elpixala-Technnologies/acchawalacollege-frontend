@@ -53,7 +53,7 @@ export default function Navbar({ courseDetails, onSelect, selectedIndex }: any) 
         {courseDetails.map((item:any, index: number) => (
           <li key={index}>
             <button
-              className={`md:py-5 ${
+              className={`py-5 text-nowrap ${
                 selectedIndex === index
                   ? "rounded border-b-4 border-blue-950 text-blue-950"
                   : ""

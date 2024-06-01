@@ -10,7 +10,7 @@ import { CiStar } from "react-icons/ci";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 export default function ReviewsSlider({ reviews }: any) {
   const swiperOptions = {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     autoplay: {
       delay: 2000,
@@ -24,7 +24,7 @@ export default function ReviewsSlider({ reviews }: any) {
     modules: [Autoplay, Navigation],
     breakpoints: {
       640: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 4,
