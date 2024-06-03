@@ -185,6 +185,47 @@ body::-webkit-scrollbar-track {
     }
   }
 }
+.Package {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    color: #2095f2 !important;
+    fill: #2095f2 !important;
+    stroke: #2095f2 !important;
+    width: 20px;
+    height: 20px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+}
 .testimonials {
   .swiper-button-next,
   .swiper-button-prev {

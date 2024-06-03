@@ -80,7 +80,7 @@ const Header = ({header}:any) => {
         </div>
       </Wrapper>
       {/* Mobile Section */}
-      <Wrapper className="flex items-center justify-between md:hidden">
+      <Wrapper className="flex items-center gap-2 justify-between md:hidden">
         {isMobileMenuOpen && <MenuMobile navItemsArray={navItems} />}
         {/* Logo with Link */}
         <Link href={header?.href}>
@@ -92,10 +92,10 @@ const Header = ({header}:any) => {
           />
         </Link>
         <div className="flex items-center gap-2">
-          <Link href={"/login"} className="button4 rounded">
+          <Link href={"/login"} className="flex-center  bg-blue-500 px-2 py-1.5 font-medium text-sm text-white transition-all duration-300 hover:bg-blue-600 active:scale-90 rounded">
             <button>LogIn</button>
           </Link>
-          <div className="flex-center relative cursor-pointer rounded-full p-2 text-2xl hover:bg-blue-500/5">
+          <div className="flex-center relative cursor-pointer rounded-full text-3xl text-blue-950 hover:bg-blue-500/5">
             {isMobileMenuOpen ? (
               <VscChromeClose onClick={handleMobileMenu} />
             ) : (

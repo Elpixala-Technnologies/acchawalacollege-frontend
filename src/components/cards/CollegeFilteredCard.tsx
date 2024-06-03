@@ -18,11 +18,11 @@ export default function CollegeFilteredCard({ college }: any) {
         <Image
           src={college.img}
           alt="collage"
-          className="h-[160px] w-[200px] rounded-md max-md:ml-5 max-md:w-full"
+          className="h-[160px] w-[200px] rounded-md max-md:w-full"
         />
-        <div className="px-5">
+        <div className="md:px-5">
           {/* Line 1  */}
-          <div className="mb-3 flex flex-wrap gap-x-8">
+          <div className="mb-3 flex flex-wrap gap-x-8 max-md:gap-1">
             <div className="flex items-center gap-x-2">
               <span className="flex items-center gap-x-1 rounded bg-green-600 px-1 text-sm font-thin text-white">
                 {college.rating} <FaStar className="mb-[1px]" />
@@ -112,29 +112,38 @@ export default function CollegeFilteredCard({ college }: any) {
           </div>
         </div>
       </div>
-      {/* Div 2  */}
+      {/* div 3  */}
       <div className="flex flex-wrap justify-between gap-y-2 border-t-2 border-black p-5">
+      {/* Navbar Items  */}
         <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-sm text-blue-600">
-          {college.navbar.map((item: string, index: number) => (
+          {college?.navbar?.slice(0, 5)?.map((item: string, index: number) => (
             <React.Fragment key={index}>
               <Link href="#">
                 <li key={index} className="cursor-pointer hover:underline">
                   {item}
                 </li>
               </Link>
-              {index !== college.navbar.length - 1 && <li>|</li>}
+              {index !== college?.navbar.length - 1 && <li>|</li>}
             </React.Fragment>
           ))}
+          {college?.navbar?.length > 5 && (
+            <Link href={`/colleges/${college?.slug}`}>
+              <li className="cursor-pointer capitalize hover:underline">
+                more
+              </li>
+            </Link>
+          )}
         </ul>
-        <div className="flex gap-x-2">
-          <Link href="#">
-            <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500">
-              {college.button1.text}
+        {/* buttons  */}
+        <div className="flex max-md:flex-col gap-2 max-md:w-full">
+          <Link href="#" className="max-md:w-full">
+            <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500 max-md:w-full">
+              {college?.button1?.text}
             </button>
           </Link>
-          <Link href="#">
-            <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white">
-              {college.button2.text}
+          <Link href="#" className="max-md:w-full">
+            <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white max-md:w-full">
+              {college?.button2?.text}
             </button>
           </Link>
         </div>

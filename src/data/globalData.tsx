@@ -1023,10 +1023,6 @@ export const global = {
         id: 3,
         category: "news",
       },
-      {
-        id: 4,
-        category: "boards",
-      },
     ],
     cardsContent: [
       {
