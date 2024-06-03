@@ -2,14 +2,18 @@
 "use client";
 import BannerSection from "@/components/homePageSections/bannerSection/BannerSection";
 import CounsellingPackages from "@/components/homePageSections/counsellingPackages/CounsellingPackages";
-import TopColleges from "@/components/homePageSections/topColleges/TopColleges";
+import TopColleges from "@/components/topColleges/TopColleges";
 import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection";
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
 import Section2 from "@/components/homePageSections/section2/Section2";
-import Testimonials from "@/components/homePageSections/testimonials/testimonials";
+import Section6 from "@/components/homePageSections/section6/Section6";
+import TopCourses from "@/components/topCourses/TopCourses";
+import Testimonials from "@/components/testimonials/Testimonials";
+import { home } from "@/data/homePage";
+import { global } from "@/data/globalData";
+import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
 import { useQuery } from "@apollo/client";
 import{ GET_BLOGS, GET_COLLEGES, GET_COURSES, GET_EXAMS, GET_EXAMS_LEVEL } from "@/query/schema";
-
 export default function Home() {
 
 const {
@@ -42,13 +46,16 @@ console.log("CoursesData:", CoursesData);
 
   return (
     <>
-      <BannerSection />
-      <Section2 />
-      <PartnersSection />
-      <TopColleges />
-      <CounsellingPackages />
-      <BlogAndOthersFilterSection />
-      <Testimonials />
-      </>
+      <BannerSection data={home?.homeBanner} />
+      <Section2 data={home?.section2} />
+      <PartnersSection data={global?.partners} />
+      <BannerSection1 data={home?.banner2} />
+      <TopColleges data={global?.topColleges} />
+      <TopCourses data={global?.topCourses} />
+      <CounsellingPackages data={home?.CounsellingPackages} />
+      <Section6 data={home?.banner1} />
+      <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
+      <Testimonials data={global?.testimonialsSection} />
+    </>
   );
 }

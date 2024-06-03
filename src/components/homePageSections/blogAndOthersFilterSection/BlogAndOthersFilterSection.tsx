@@ -1,10 +1,8 @@
 "use client";
 import BlogCard from "@/components/cards/BlogCard";
-import { BlogsAndOthers } from "@/data/homePage";
-import Image from "next/image";
 import { useState } from "react";
 
-export default function BlogAndOthersFilterSection() {
+export default function BlogAndOthersFilterSection({ data }: any) {
   const [activeCategory, setActiveCategory] = useState("articles");
 
   const handleCategoryClick = (category: string) => {
@@ -12,14 +10,14 @@ export default function BlogAndOthersFilterSection() {
   };
 
   return (
-    <section className="w-full max-w-[1440px] mx-auto p-5 my-5">
-      <div className="flex gap-5 justify-center flex-wrap mb-10">
+    <section className="mx-auto my-16 w-full max-w-[1440px] p-5">
+      <div className="mb-10 flex flex-wrap justify-center gap-5">
         {/* Filter Titles  */}
-        {BlogsAndOthers.filterBy.map((item: any) => (
+        {data.filterBy.map((item: any) => (
           <h1
-            className={`px-3 cursor-pointer transition-all duration-200  ${
+            className={`cursor-pointer px-3 transition-all duration-200  ${
               activeCategory === item?.category
-                ? "border-b-2 border-black text-black pb-1 -translate-y-1"
+                ? "-translate-y-1 border-b-2 border-black pb-1 text-black"
                 : "pb-0 text-zinc-500"
             }`}
             key={item.id}
@@ -29,14 +27,15 @@ export default function BlogAndOthersFilterSection() {
           </h1>
         ))}
       </div>
-      <div className="flex flex-wrap justify-center mt-5 gap-5">
-        {BlogsAndOthers.cardsContent
+      <div className="mt-5 flex flex-wrap justify-center gap-5">
+        {data.cardsContent
           .filter(
-            (card) =>
-              activeCategory === "articles" || card.category.includes(activeCategory)
+            (card: any) =>
+              activeCategory === "articles" ||
+              card.category.includes(activeCategory),
           )
           .slice(0, 3)
-          .map((card) => (
+          .map((card: any) => (
             <BlogCard key={card.id} card={card} />
           ))}
       </div>

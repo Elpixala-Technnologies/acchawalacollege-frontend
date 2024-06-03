@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { ApolloWrapper } from "@/lib/client";
+import {global} from "@/data/globalData"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
