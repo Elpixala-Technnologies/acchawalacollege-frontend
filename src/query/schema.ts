@@ -207,3 +207,16 @@ query GetTopColleges{
     }
   }
   `;
+
+export const GET_COLLEGES_BY_ID = gql`
+query GetCollegesById($collegeId :  ID!){
+  college(id : $collegeId){
+    data{
+      id
+      attributes{
+        college_name
+      }
+    }  
+  }
+}
+  `;
