@@ -64,7 +64,7 @@ body::-webkit-scrollbar-track {
     @apply flex-center rounded border border-blue-950 bg-white px-5 py-2 text-sm font-medium text-blue-950 transition-all duration-300 hover:bg-gray-100 active:scale-90;
   }
   .button8 {
-    @apply flex-center  bg-transparent px-8 py-2.5 border border-white  font-medium text-white transition-all duration-300 hover:bg-blue-600 active:scale-90;
+    @apply flex-center  border border-white bg-transparent px-8 py-2.5  font-medium text-white transition-all duration-300 hover:bg-blue-600 active:scale-90;
   }
   /* END Sign Up / Sign In  Button */
   .cardButton1 {
@@ -118,28 +118,32 @@ body::-webkit-scrollbar-track {
         @apply bg-gray-50;
       }
       th {
-        @apply px-6 py-3 text-left bg-blue-100  font-semibold text-blue-950 tracking-wider;
+        @apply bg-blue-100 px-6 py-3 text-left  font-semibold tracking-wider text-blue-950;
       }
       tbody {
-        @apply bg-white divide-y divide-gray-200 divide-x;
+        @apply divide-x divide-y divide-gray-200 bg-white;
       }
       tbody tr:nth-child(odd) {
         @apply bg-blue-100;
       }
-      tr{
+      tr {
         @apply divide-x divide-gray-200;
       }
       td {
-        @apply px-6 py-4 whitespace-nowrap;
+        @apply whitespace-nowrap px-6 py-4;
       }
     }
-    .bg-blue{
-      @apply bg-blue-200 p-5 pb-0 rounded-md text-blue-900;
-      h1,h2,h3,h4,h5,h6{
-        @apply text-blue-950 font-medium;    
+    .bg-blue {
+      @apply rounded-md bg-blue-200 p-5 pb-0 text-blue-900;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @apply font-medium text-blue-950;
       }
     }
-
   }
 }
 
@@ -182,9 +186,67 @@ body::-webkit-scrollbar-track {
     .swiper-button-prev::after,
     .swiper-button-next::after {
       font-size: 15px;
+      padding-left: 19px;
     }
   }
 }
+.topCollegesAbroad {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    /* background-color: #ececec; */
+    border-radius: 100%;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    color: #2095f2 !important;
+    fill: #2095f2 !important;
+    stroke: #2095f2 !important;
+    width: 20px;
+    height: 20px;
+    z-index: 999999999;
+  }
+  .swiper-button-prev::after {
+    font-size: 25px;
+    padding-right: 15px;
+  }
+  .swiper-button-next::after {
+    font-size: 25px;
+    padding-left: 15px;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0% !important;
+    width: 20px !important;
+    height: 3px !important;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (min-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 25px;
+      height: 25px;
+      display: none;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 15px;
+    }
+  }
+}
+
 .testimonials {
   .swiper-button-next,
   .swiper-button-prev {

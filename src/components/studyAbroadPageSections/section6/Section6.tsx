@@ -9,9 +9,9 @@ export default function Section6({ data }: any) {
             <Wrapper className="">
                 <div className="bg-white rounded-lg p-8 mx-auto">
                     <h1 className="title1 font-bold flex-row gap-2 pt-2 [flex:1]">
-                        <span className="text-4xl text-blue-950">{data?.title?.t1}</span>{" "}
-                        <span className="text-4xl text-black">{data?.title?.t2}</span>{" "}
-                        <span className="text-4xl text-blue-500">{data?.title?.t3}</span>
+                        <span className="text-2xl md:text-4xl text-blue-950">{data?.title?.t1}</span>{" "}
+                        <span className="text-2xl md:text-4xl text-black">{data?.title?.t2}</span>{" "}
+                        <span className="text-2xl md:text-4xl text-blue-500">{data?.title?.t3}</span>
                     </h1>
                     <p className="text-gray-600 mb-6 pt-2">{data?.text}</p>
                     <div className="flex flex-col lg:flex-row items-center">
@@ -25,13 +25,13 @@ export default function Section6({ data }: any) {
                             />
                         </div>
                         <div className="lg:w-1/2 w-full">
-                            <ul className="space-y-4 flex flex-col gap-4">
+                            <ul className="space-y-4 flex flex-col  md:gap-2">
                                 {Object.values(data?.checkBoxData).map((item: any, index) => (
                                     <li key={index} className="flex items-start">
                                         <span className="inline-block bg-blue-600 text-white rounded-xl p-2 mr-4">
-                                            <IoMdCheckmark className="h-6 w-6" />
+                                            <IoMdCheckmark className="h-4 w-4 md:h-6 md:w-6" />
                                         </span>
-                                        <span className="text-gray-700 pt-2">{item}</span>
+                                        <span className="text-gray-700  md:pt-2">{item}</span>
                                     </li>
                                 ))}
                             </ul>

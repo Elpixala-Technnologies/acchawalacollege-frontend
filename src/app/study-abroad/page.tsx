@@ -20,7 +20,7 @@ export default function StudyAbroad() {
     <>
       <BannerSection data={studyAbroadData?.homeBanner} />
       <Section2 data={studyAbroadData?.section2} />
-      <DiscoverTopColleges data={studyAbroadData.colleges} />
+      <DiscoverTopColleges data={studyAbroadData.topAbroadColleges} />
       {/* <TopColleges data={global?.topColleges} /> */}
       <Section3 data={studyAbroadData?.scheduleCounsellingBanner} />
       <TopCourses data={global?.topCourses} />
