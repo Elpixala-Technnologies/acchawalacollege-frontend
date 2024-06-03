@@ -190,3 +190,20 @@ export const GET_HERO_SECTION = gql`
     }
   }
 `;
+
+export const GET_TOP_COLLEGES = gql`
+query GetTopColleges{
+    colleges(filters:{
+      is_top:{eq: true}
+    }
+     
+    ){
+      data{
+        id
+        attributes{
+          college_name
+        }
+      }
+    }
+  }
+  `;

@@ -12,7 +12,7 @@ import { home } from "@/data/homePage";
 import { global } from "@/data/globalData";
 import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
 import { useQuery } from "@apollo/client";
-import{ GET_BLOGS, GET_COLLEGES, GET_COURSES, GET_EXAMS, GET_EXAMS_LEVEL, GET_HERO_SECTION } from "@/query/schema";
+import{ GET_BLOGS, GET_COLLEGES, GET_COURSES, GET_EXAMS, GET_EXAMS_LEVEL, GET_HERO_SECTION, GET_TOP_COLLEGES } from "@/query/schema";
 
 export default function Home() {
   const {
@@ -40,12 +40,18 @@ export default function Home() {
     data: HeroSectionNData,
   } = useQuery(GET_HERO_SECTION);
 
+const {
+  data: TopCollegesData,
+} = useQuery(GET_TOP_COLLEGES);
+
   console.log("BlogsData:", BlogsData);
   console.log("CollegesData:", CollegesData);
   console.log("ExamsData:", ExamsData);
   console.log("ExamsLevelData:", ExamsLevelData);
   console.log("CoursesData:", CoursesData);
-  console.log("HeroSectionNData",HeroSectionNData);
+  console.log("HeroSectionNData:",HeroSectionNData);
+  console.log("TopCollegesData:", TopCollegesData);
+
   
   return (
     <>
