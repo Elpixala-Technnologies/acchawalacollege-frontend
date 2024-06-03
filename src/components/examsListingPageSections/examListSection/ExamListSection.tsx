@@ -9,12 +9,7 @@ import ExamFilters from "./ExamFilters";
 import Navbar from "./Navbar";
 import UpcomingExamsScroll from "@/components/upcomingExams/UpcomingExamsScroll";
 import PreviousYearPaperScroll from "@/components/previousYearPaper/PreviousYearPaperScroll";
-export default function ExamListSection({
-  examDataArray,
-  filterBy,
-  upcomingExams,
-  previousYearPapers,
-}: any) {
+export default function ExamListSection({ examDataArray, filterBy, upcomingExams, previousYearPapers, }: any) {
   const [MobileFilter, setMobileFilter] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
   const [filteredData, setFilteredData] = useState<any>(examDataArray);

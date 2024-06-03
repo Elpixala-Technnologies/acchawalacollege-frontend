@@ -3,16 +3,9 @@ import Filter from "@/components/filters/filter1";
 import React, { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 
-export default function ExamFilters({
-  filterBy,
-  SelectedFilters,
-  setSelectedFilters,
-  totalResults,
-}: any) {
+export default function ExamFilters({ filterBy, SelectedFilters, setSelectedFilters, totalResults, }: any) {
   // Filter Checked
-  const [StreamCheckedFilters, setStreamCheckedFilters] = useState<string[]>(
-    [],
-  );
+  const [StreamCheckedFilters, setStreamCheckedFilters] = useState<string[]>([]);
   const [ModeCheckedFilters, setModeCheckedFilters] = useState<string[]>([]);
   const [LevelCheckedFilters, setLevelCheckedFilters] = useState<string[]>([]);
 

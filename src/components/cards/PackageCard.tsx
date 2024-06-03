@@ -8,11 +8,11 @@ import Link from "next/link";
 export default function PackageCard({ data, isActive, onSelect }: any) {
   return (
     <div
-      className={`relative min-w-[400px] max-w-[450x] rounded-lg border-2 ${isActive ? "translate-y-4 scale-105 border-blue-500 shadow-lg shadow-blue-500" : data.styling.border} gap-1 overflow-hidden transition-all duration-300  hover:translate-y-4 hover:scale-105 hover:shadow-lg hover:shadow-blue-500`}
+      className={`relative max-md:mx-5 max-w-[450x] md:min-w-[400px] rounded-lg border-2 ${isActive ? "md:translate-y-4 md:scale-105 scale-100 md:border-blue-500 md:shadow-lg md:shadow-blue-500" : data.styling.border} gap-1 overflow-hidden transition-all duration-300  hover:translate-y-4 hover:scale-105 hover:shadow-lg hover:shadow-blue-500`}
       onClick={onSelect}
     >
       {data?.isPopular && (
-        <div className="absolute right-[8.5rem] top-[2.5rem] w-full -rotate-45 bg-red-800 py-1 text-center text-white">
+        <div className="md:absolute right-[8.5rem] top-[2.5rem] w-full md:-rotate-45 bg-red-800 py-1 text-center text-white">
           Most Popular
         </div>
       )}

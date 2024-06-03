@@ -55,7 +55,7 @@ export default function CounsellingPackages({ data }: any) {
       )}
       <div className="relative w-full">
         <div
-          className="relative mx-auto flex w-full max-w-[1440px] justify-center gap-6 overflow-x-hidden pb-14 pt-5"
+          className="relative mx-auto flex flex-wrap w-full max-w-[1440px] justify-center gap-6 max-md:flex-col pb-14 pt-5"
           // ref={scrollContainerRef}
           // onScroll={handleScroll}
         >
