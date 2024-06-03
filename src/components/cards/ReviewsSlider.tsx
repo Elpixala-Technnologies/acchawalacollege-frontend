@@ -9,17 +9,18 @@ import Image from "next/image";
 import { CiStar } from "react-icons/ci";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 export default function ReviewsSlider({ reviews }: any) {
+  const uniqueId = "review1234";
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 20,
     autoplay: {
-      delay: 2000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Navigation],
     breakpoints: {
@@ -36,7 +37,10 @@ export default function ReviewsSlider({ reviews }: any) {
   };
   return (
     <>
-      <Swiper {...swiperOptions} className="w-full max-w-fit px-5">
+      <Swiper
+        {...swiperOptions}
+        className={`w-full max-w-fit px-5 ${uniqueId}`}
+      >
         {reviews?.map(
           (h: any, index: number) =>
             h?.title && (
@@ -44,27 +48,14 @@ export default function ReviewsSlider({ reviews }: any) {
                 key={index}
                 className="flex-center w-full flex-col gap-y-3 overflow-hidden rounded-md border border-zinc-300 py-10 text-center"
               >
-                <div className="mx-auto w-max pb-2 text-4xl text-blue-500">{h.icon}</div>
-                <h6 className="font-medium">{h?.title}</h6>
-                <StarRating rating={h?.rating} totalStars={5} />
-                <p className="flex-center gap-x-1">
-                  {h?.rating} <FaStar className="mb-[1px]" />
-                </p>
-                {h?.basedOn && (
-                  <p className="text-xs">
-                    <span className="text-zinc-500">Based on </span>
-                    <span className="font-medium underline">
-                      {h?.basedOn} reviews
-                    </span>
-                  </p>
-                )}
+                <ReviewsSliderContent h={h} />
               </SwiperSlide>
             ),
         )}
       </Swiper>
       {/* Add navigation buttons */}
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
     </>
   );
 }
@@ -86,3 +77,22 @@ const StarRating = ({ rating = 3.5, totalStars = 5 }) => {
 
   return <div className="flex-center gap-x-1 text-white">{renderStars()}</div>;
 };
+
+function ReviewsSliderContent({ h }: any) {
+  return (
+    <React.Fragment>
+      <div className="mx-auto w-max pb-2 text-4xl text-blue-500">{h.icon}</div>
+      <h6 className="font-medium">{h?.title}</h6>
+      <StarRating rating={h?.rating} totalStars={5} />
+      <p className="flex-center gap-x-1">
+        {h?.rating} <FaStar className="mb-[1px]" />
+      </p>
+      {h?.basedOn && (
+        <p className="text-xs">
+          <span className="text-zinc-500">Based on </span>
+          <span className="font-medium underline">{h?.basedOn} reviews</span>
+        </p>
+      )}
+    </React.Fragment>
+  );
+}

@@ -35,9 +35,9 @@ const SingleNavItem = (d: any) => {
       <Link
         onClick={toggleItem}
         href={d?.href ?? "#"}
-        className="relative px-2 py-3 transition-all border-b border-zinc-200"
+        className="relative px-5 py-3 transition-all border-b border-zinc-200 text-blue-950 hover:bg-blue-500 hover:text-white"
       >
-        <p className="flex justify-between cursor-pointer items-center gap-2 text-blue-950 group-hover:text-blue-500 ">
+        <p className="flex justify-between cursor-pointer items-center gap-2 ">
           <span>{d?.label}</span>
           {d?.subNav && d.subNav.length !== 0 && (
             <BsChevronDown
@@ -52,10 +52,10 @@ const SingleNavItem = (d: any) => {
           {d.subNav.map((ch: any, i: any) => (
             <Link
               key={i}
-              href={ch.href ?? "#"}
-              className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-blue-950 hover:text-blue-500"
+              href={ch?.href ?? "#"}
+              className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-blue-950 hover:bg-blue-500 hover:text-white"
             >
-              {ch.iconImage && (
+              {ch?.iconImage && (
                 <Image src={ch.iconImage} alt="item-icon" width={20} height={20} />
               )}
               <span className="whitespace-nowrap pl-3">{ch.label}</span>
