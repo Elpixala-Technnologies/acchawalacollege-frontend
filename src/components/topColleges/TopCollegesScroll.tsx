@@ -64,14 +64,14 @@ export default function TopCollegesScroll({ data }: any) {
         </h1>
       )}
       <div
-        className="flex w-full gap-6 overflow-x-hidden px-5"
+        className="flex w-full gap-6 overflow-x-hidden md:px-5"
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >
         {data.colleges.map((college: any, index: number) => (
           <div
             key={index}
-            className="min-w-[420px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
+            className="min-w-96 max-md:min-w-[17.2rem] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
           >
             <CollegesCardContent college={college} />
           </div>
@@ -79,7 +79,7 @@ export default function TopCollegesScroll({ data }: any) {
       </div>
       {showLeftButton && (
         <button
-          className="absolute right-24 top-3 rounded-full bg-blue-500 p-3"
+          className="absolute right-24 top-3 rounded-full bg-blue-500 p-3 max-md:opacity-60 max-md:hover:opacity-60"
           onClick={handleScrollLeft}
         >
           <TiChevronLeft className="text-3xl text-white" />
