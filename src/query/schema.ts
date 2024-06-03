@@ -1,5 +1,5 @@
 //src/query/schema.ts
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_BLOGS = gql`
   query GetBlogs {
@@ -54,12 +54,137 @@ export const GET_EXAMS = gql`
 `;
 
 export const GET_EXAMS_LEVEL = gql`
-  query GetExamLevel{
-    examLevels{
-      data{
+  query GetExamLevel {
+    examLevels {
+      data {
         id
-        attributes{
+        attributes {
           exam_level_name
+        }
+      }
+    }
+  }
+`;
+
+export const GET_HERO_SECTION = gql`
+  query GetHomeSection {
+    heroSections {
+      data {
+        id
+        attributes {
+          homebanner {
+            id
+            title {
+              t1
+              t2
+              t3
+            }
+            text1
+            button1 {
+              text
+              href
+            }
+          }
+          section2 {
+            card1 {
+              icon {
+                data {
+                  id
+                  attributes {
+                    name
+                  }
+                }
+              }
+              title
+              text
+            }
+          }
+          partners {
+            title
+            images {
+              data {
+                id
+                attributes {
+                  name
+                }
+              }
+            }
+          }
+          CounsellingPackages {
+            title
+            CounsellingPackagesCards {
+              id_no
+              icon {
+                data {
+                  id
+                  attributes {
+                    name
+                  }
+                }
+              }
+              PackageName
+              isPopular
+              price
+              text1
+              lists {
+                data {
+                  id
+                  attributes {
+                    isInclude
+                    text
+                    college {
+                      data {
+                        id
+                        attributes {
+                          college_name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          banner1 {
+            title
+            text1
+            button {
+              text
+              href
+              bgImg {
+                data {
+                  id
+                  attributes {
+                    name
+                  }
+                }
+              }
+            }
+          }
+          banner2 {
+            title {
+              t1
+              t2
+              t3
+            }
+            text
+            steps {
+              data {
+                id
+                attributes {
+                  text
+                  colleges {
+                    data {
+                      id
+                      attributes {
+                        college_name
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
