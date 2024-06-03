@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import {global} from "@/data/globalData"
+import { ApolloWrapper } from "@/lib/client";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,10 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-poppins">
-        <Header header={global?.header} />
-        {children}
-        <Footer footer={global?.footer} />
+      <body className="text-primary-text font-poppins bg-gray-100">
+        <ApolloWrapper>
+          <Header  header={global?.header}  />
+          {children}
+          <Footer footer={global?.footer} />
+        </ApolloWrapper>
       </body>
     </html>
   );
