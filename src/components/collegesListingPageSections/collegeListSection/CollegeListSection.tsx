@@ -55,7 +55,7 @@ export default function CollegeListSection({
           filterBy={filterBy}
           SelectedFilters={SelectedFilters}
           setSelectedFilters={setSelectedFilters}
-          totalResults={data.length}
+          totalResults={data?.length}
           mobileFilter={MobileFilter}
           setMobileFilter={setMobileFilter}
         />
