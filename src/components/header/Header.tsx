@@ -81,7 +81,7 @@ const Header = ({header}:any) => {
       </Wrapper>
       {/* Mobile Section */}
       <Wrapper className="flex items-center gap-2 justify-between md:hidden">
-        {isMobileMenuOpen && <MenuMobile navItemsArray={navItems} />}
+        {isMobileMenuOpen && <MenuMobile navItemsArray={navItems} setIsMobileMenuOpen={setIsMobileMenuOpen} />}
         {/* Logo with Link */}
         <Link href={header?.href}>
           <Image
