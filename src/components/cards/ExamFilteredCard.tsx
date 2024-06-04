@@ -3,26 +3,19 @@ import { formatDate } from "@/utils/formatDate";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { CiHeart, CiLocationOn, CiMobile1 } from "react-icons/ci";
-import { FaStar } from "react-icons/fa";
-import { FaHandHoldingDollar } from "react-icons/fa6";
-import { MdOutlineOutlinedFlag } from "react-icons/md";
-import { RiTodoLine } from "react-icons/ri";
-import { SlBadge } from "react-icons/sl";
-import { TbCoinRupee, TbTransactionRupee } from "react-icons/tb";
 
 export default function ExamFilteredCard({ exam }: any) {
   return (
     <div className="relative mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       {/* Div 1 */}
-      <div className="w-full md:grid grid-cols-12 gap-4 p-5 max-md:flex flex-col gap-y-2">
+      <div className="w-full grid-cols-12 flex-col gap-4 gap-y-2 p-5 max-md:flex md:grid">
         {/* left Side */}
         {exam?.img && (
           <div className="col-span-2 ">
             <Image
               src={exam?.img}
               alt="collage"
-              className="w-full max-md:max-h-24 rounded-md object-contain"
+              className="w-full rounded-md object-contain max-md:max-h-24"
             />
           </div>
         )}
@@ -36,24 +29,29 @@ export default function ExamFilteredCard({ exam }: any) {
             </Link>
           )}
           <div>
-          {exam?.examDate && (
-            <p className="flex justify-between border-b border-zinc-300">
-              <span>Exam Date</span>
-              <span>{formatDate(exam?.examDate)}</span>
-            </p>
-          )}
-          {exam?.applicationFormDate && (
-            <p className="flex justify-between border-b border-zinc-300">
-              <span>Application Form</span>
-              <span>{formatDate(exam?.applicationFormDate?.startDate)} - {formatDate(exam?.applicationFormDate?.endDate)}</span>
-            </p>
-          )}
-          {exam?.resultAnnounceDate && (
-            <p className="flex justify-between border-b border-zinc-300">
-              <span>Result Announce</span>
-              <span>{formatDate(exam?.resultAnnounceDate)}</span>
-            </p>
-          )}
+            {exam?.examDate && (
+              <p className="flex justify-between gap-x-2 border-b border-zinc-300 max-md:text-sm">
+                <span>Exam Date</span>
+                <span>{formatDate(exam?.examDate)}</span>
+              </p>
+            )}
+            {exam?.applicationFormDate && (
+              <p className="flex justify-between gap-x-2 border-b border-zinc-300 max-md:text-sm">
+                <span>Application Form</span>
+                <span className="flex max-sm:flex-col">
+                <span>
+                  {formatDate(exam?.applicationFormDate?.startDate)} -{" "}
+                </span>
+                <span>{formatDate(exam?.applicationFormDate?.endDate)}</span>
+                </span>
+              </p>
+            )}
+            {exam?.resultAnnounceDate && (
+              <p className="flex justify-between gap-x-2 border-b border-zinc-300 max-md:text-sm">
+                <span>Result Announce</span>
+                <span>{formatDate(exam?.resultAnnounceDate)}</span>
+              </p>
+            )}
           </div>
         </div>
         {/* Right Side  */}
@@ -80,9 +78,7 @@ export default function ExamFilteredCard({ exam }: any) {
         <ul className="flex flex-wrap items-center gap-x-4 rounded-md bg-blue-100 px-4 py-1 text-sm text-blue-600">
           {exam?.examDetails?.slice(0, 5)?.map((item: any, index: number) => (
             <React.Fragment key={index}>
-              <Link
-                href={`/exams/${exam?.slug || "#"}/#${item?.navItem}`}
-              >
+              <Link href={`/exams/${exam?.slug || "#"}/#${item?.navItem}`}>
                 <li
                   key={index}
                   className="cursor-pointer capitalize hover:underline"
@@ -105,4 +101,3 @@ export default function ExamFilteredCard({ exam }: any) {
     </div>
   );
 }
-

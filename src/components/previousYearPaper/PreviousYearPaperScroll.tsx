@@ -89,7 +89,7 @@ export default function PreviousYearPaperScroll({ data }: any) {
         {data?.papers?.map((paper: any, index: number) => (
           <div
             key={index}
-            className="min-w-[300px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
+            className="min-w-[280px] overflow-hidden rounded-xl border border-zinc-300 bg-white"
           >
             <PapersCardContent paper={paper} />
           </div>
@@ -122,7 +122,7 @@ export const PapersCardContent = function ({ paper }: any) {
         <Image src={paper?.img} alt="paper" className="h-20 object-contain" />
         {paper?.title && (
           <Link href={paper?.href}>
-            <h4 className="text-xl font-medium text-blue-950">
+            <h4 className="md:text-xl text-lg font-medium text-blue-950">
               {paper?.title}
             </h4>
           </Link>

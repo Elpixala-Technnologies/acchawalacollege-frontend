@@ -46,7 +46,7 @@ export default function Navbar({ category, onSelect, selectedNav }: any) {
   return (
     <nav className="relative w-full mb-5">
       <ul
-        className="flex space-x-6 overflow-x-hidden pt-1 pr-12"
+        className="flex space-x-6 overflow-x-hidden pt-1"
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >

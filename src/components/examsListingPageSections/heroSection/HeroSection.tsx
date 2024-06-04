@@ -7,7 +7,7 @@ import Wrapper from "@/components/Wrapper";
 
 export default function BannerSection({ data }: any) {
   return (
-    <section className="my-5 mt-0 w-full bg-blue-100">
+    <section className="my-5 mt-0 w-full bg-blue-100 border-t border-blue-200">
       <Wrapper className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Left Side of Banner */}
         <div className="flex flex-col justify-end md:pb-20">
@@ -32,7 +32,7 @@ export default function BannerSection({ data }: any) {
           </form>
         </div>
         {/* Right Side of Banner  */}
-        <div className="grid grid-cols-3 gap-5 md:my-5">
+        <div className="grid grid-cols-3 gap-5 md:my-5 max-md:hidden">
           <div className="col-span-1 flex h-full items-end">
             <Image
               src={data?.img[0]}

@@ -1,11 +1,21 @@
 "use client";
 import Filter from "@/components/filters/filter1";
 import React, { useEffect, useState } from "react";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import { MdClose } from "react-icons/md";
 
-export default function ExamFilters({ filterBy, SelectedFilters, setSelectedFilters, totalResults, }: any) {
+export default function ExamFilters({
+  filterBy,
+  SelectedFilters,
+  setSelectedFilters,
+  totalResults,
+  mobileFilter,
+  setMobileFilter,
+}: any) {
   // Filter Checked
-  const [StreamCheckedFilters, setStreamCheckedFilters] = useState<string[]>([]);
+  const [StreamCheckedFilters, setStreamCheckedFilters] = useState<string[]>(
+    [],
+  );
   const [ModeCheckedFilters, setModeCheckedFilters] = useState<string[]>([]);
   const [LevelCheckedFilters, setLevelCheckedFilters] = useState<string[]>([]);
 
@@ -72,9 +82,19 @@ export default function ExamFilters({ filterBy, SelectedFilters, setSelectedFilt
     }
   };
   return (
-    <aside className={`min-w-[300px] px-3 [flex:2]`}>
-      <h1 className="mb-10 font-medium">Showing {totalResults} Results</h1>
-      <div className="w-full rounded border-2 border-zinc-300 p-5 pb-0">
+    <aside
+      className={`min-w-[300px] px-3 [flex:2] max-md:bg-black max-md:bg-opacity-80  ${mobileFilter ? "fixed left-0 top-0 z-40 h-screen w-full overflow-y-scroll pr-[20%]" : "max-md:hidden"}`}
+    >
+      <button
+        className="fixed right-5 top-24 text-3xl text-white md:hidden"
+        onClick={() => setMobileFilter(false)}
+      >
+        <IoIosCloseCircleOutline />
+      </button>
+      <h1 className="mb-10 font-medium">
+        Showing {totalResults} Results
+      </h1>
+      <div className="w-full rounded border-2 border-zinc-300 bg-white p-5 pb-0 max-md:bg-opacity-95">
         <h2 className="mb-5 font-medium">Find Exam</h2>
         {/* Selected filters display */}
         <div className="flex flex-wrap items-center gap-1">
@@ -82,28 +102,26 @@ export default function ExamFilters({ filterBy, SelectedFilters, setSelectedFilt
             (value) =>
               value !== "" && (!Array.isArray(value) || value.length !== 0),
           ) && <span className="text-xs font-bold">Filters Applied : </span>}
-          {Object.entries(SelectedFilters).map(
-            ([key, value]: any) => {
-              if (Array.isArray(value)) {
-                // If the value is an array, join its elements with commas
-                value = value.join(" , ");
-              }
-              return (
-                value !== "" &&
-                (!Array.isArray(value) || value.length !== 0) && (
-                  <div
-                    key={key}
-                    className="flex w-max items-center gap-1 rounded-md border border-blue-500 px-2 py-1 text-xs"
-                  >
-                    <span className="max-w-[150px] text-wrap">{value}</span>
-                    <button onClick={() => handleUnselectFilter(key)}>
-                      <MdClose />
-                    </button>
-                  </div>
-                )
-              );
-            },
-          )}
+          {Object.entries(SelectedFilters).map(([key, value]: any) => {
+            if (Array.isArray(value)) {
+              // If the value is an array, join its elements with commas
+              value = value.join(" , ");
+            }
+            return (
+              value !== "" &&
+              (!Array.isArray(value) || value.length !== 0) && (
+                <div
+                  key={key}
+                  className="flex w-max items-center gap-1 rounded-md border border-blue-500 px-2 py-1 text-xs"
+                >
+                  <span className="max-w-[150px] text-wrap">{value}</span>
+                  <button onClick={() => handleUnselectFilter(key)}>
+                    <MdClose />
+                  </button>
+                </div>
+              )
+            );
+          })}
         </div>
         {/* END shows filter by options */}
 

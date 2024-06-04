@@ -276,7 +276,7 @@ export default function CollegeFilters({
         <IoIosCloseCircleOutline />
       </button>
       <h1 className="mb-10 font-medium max-md:mt-0">
-        Showing {totalResults.length} Colleges
+        Showing {totalResults} Colleges
       </h1>
       <div className="w-full rounded border-2 border-zinc-300 bg-white p-5 pb-0 max-md:bg-opacity-95">
         <h2 className="mb-5 font-medium">Find colleges</h2>
