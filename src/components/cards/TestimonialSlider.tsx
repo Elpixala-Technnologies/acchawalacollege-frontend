@@ -47,7 +47,7 @@ export default function TestimonialSlider({ testimonials }: any) {
     <div className="relative">
       <Swiper
         {...swiperOptions}
-        className="w-full max-w-fit md:translate-x-[25%] max-md:mt-5 px-5"
+        className={`w-full max-w-fit md:translate-x-[25%] max-md:mt-5 px-5 ${uniqueId}`}
       >
         {testimonials.map((test: any, index: number) => (
           <SwiperSlide
@@ -60,8 +60,8 @@ export default function TestimonialSlider({ testimonials }: any) {
       </Swiper>
       {/* Add navigation buttons */}
       <div className="absolute h-full w-20">
-        <div className="swiper-button-next pb-44 active:scale-90 transition-all duration-300"></div>
-        <div className="swiper-button-prev pb-44 active:scale-90 transition-all duration-300"></div>
+        <div className={`${uniqueId}-next swiper-button-next pb-44 active:scale-90 transition-all duration-300`}></div>
+        <div className={`${uniqueId}-prev swiper-button-prev pb-44 active:scale-90 transition-all duration-300`}></div>
       </div>
     </div>
   );
