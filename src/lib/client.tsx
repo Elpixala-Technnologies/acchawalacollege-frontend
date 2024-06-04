@@ -1,30 +1,28 @@
-// src/lib/client.tsx
 "use client";
 import { BASE_GQL_URL } from "@/utils/network/network";
-import { HttpLink, ApolloLink } from "@apollo/client";
+// ^ this file needs the "use client" pragma
 
+import { ApolloLink, HttpLink } from "@apollo/client";
 import {
-  NextSSRApolloClient,
   ApolloNextAppProvider,
-  NextSSRInMemoryCache,
+  ApolloClient,
+  InMemoryCache,
   SSRMultipartLink,
-} from "@apollo/experimental-nextjs-app-support/ssr";
+} from "@apollo/experimental-nextjs-app-support";
 
 function makeClient() {
   const httpLink = new HttpLink({
+    
     uri: BASE_GQL_URL,
+    
+    fetchOptions: { cache: "no-store" },
   });
-  return new NextSSRApolloClient({
-    cache: new NextSSRInMemoryCache(),
-    link:
-      typeof window === "undefined"
-        ? ApolloLink.from([
-            new SSRMultipartLink({
-              stripDefer: true,
-            }),
-            httpLink,
-          ])
-        : httpLink,
+
+  
+  return new ApolloClient({
+    
+    cache: new InMemoryCache(),
+    link: httpLink,
   });
 }
 
