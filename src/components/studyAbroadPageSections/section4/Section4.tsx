@@ -1,6 +1,5 @@
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Section4({ data }: any) {
     return (
@@ -15,7 +14,7 @@ export default function Section4({ data }: any) {
             </Wrapper>
             <Wrapper className="flex flex-col p-1 pt-2 items-center md:flex-row md:items-start md:gap-12">
                 {/* <!-- Main Container --> */}
-                <div className="flex flex-col md:flex-row md:justify-center p-2 gap-12">
+                <div className="flex flex-col md:flex-row md:justify-center p-2 md:gap-12">
                     {/* <!-- Left Section --> */}
                     <div className="flex-shrink-0">
                         <Image
