@@ -12,6 +12,7 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function TestimonialSlider({ testimonials }: any) {
+  const uniqueId = "test1234";
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 40,
@@ -19,14 +20,14 @@ export default function TestimonialSlider({ testimonials }: any) {
       clickable: true,
       // dynamicBullets: true,
     },
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {

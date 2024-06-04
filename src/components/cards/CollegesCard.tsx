@@ -6,10 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
 import Image from "next/image";
 
-export default function CollegesCard({data}:any) {
+export default function CollegesCard({ data }: any) {
+  const uniqueId = "college123";
+
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -18,13 +19,13 @@ export default function CollegesCard({data}:any) {
       // dynamicBullets: true,
     },
     autoplay: {
-      delay: 2000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {
@@ -42,7 +43,7 @@ export default function CollegesCard({data}:any) {
 
   return (
     <>
-      <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
+      <Swiper {...swiperOptions} className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}>
         {data?.map((college: any, index: number) => (
           <SwiperSlide
             key={index}
@@ -53,18 +54,19 @@ export default function CollegesCard({data}:any) {
         ))}
       </Swiper>
       {/* Add navigation buttons */}
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
     </>
   );
 }
+
 
 export const CollegesCardContent = function CollegesCard({ college }: any) {
   return (
     <React.Fragment>
       <div className="relative w-full">
-        <Image src={college?.img} alt="college" className="h-[200px] w-full" />
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 rounded-lg bg-white p-5">
+        <Image src={college?.img} alt="college" className="h-[200px] w-full object-cover" />
+        <div className="absolute right-4 top-4 rounded-lg bg-white p-5">
           {college?.icon}
         </div>
       </div>
@@ -73,8 +75,8 @@ export const CollegesCardContent = function CollegesCard({ college }: any) {
       </div>
       <div className="p-5">
         <p className="font-semibold text-blue-950">{college?.text1}</p>
-        <h4 className="mb-10 text-2xl font-medium">
-        {college?.stream} from {college?.collegeName}
+        <h4 className="mb-5 text-2xl font-medium md:mb-8">
+          {college?.stream} from {college?.collegeName}
         </h4>
         <p className="icon-text">
           <span>{college?.degreeType?.icon}</span>
@@ -89,7 +91,7 @@ export const CollegesCardContent = function CollegesCard({ college }: any) {
           )}{" "}
           {college.noOfSpecializations.no} Specializations
         </p>
-        <div className="my-8 flex justify-between gap-x-4 ">
+        <div className="my-5 flex justify-between gap-4 max-md:flex-col md:my-8 ">
           <button className="cardButton1">
             {college.button1.icon && <span>{college.button1.icon}</span>}{" "}
             {college.button1.text}

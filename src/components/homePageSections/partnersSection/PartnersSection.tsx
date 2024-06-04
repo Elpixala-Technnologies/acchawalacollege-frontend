@@ -8,7 +8,7 @@ import Wrapper from "@/components/Wrapper";
 
 export default function PartnersSection({data}:any) {
   const images = [...data?.images];
-  const FAST_DURATION = 25;
+  const FAST_DURATION = 10;
   const SLOW_DURATION = 75;
 
   const [duration, setDuration] = useState(FAST_DURATION);
@@ -66,7 +66,7 @@ export default function PartnersSection({data}:any) {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...images, ...images].map((item, idx) => (
+          {[...images, ...images, ...images, ...images, ...images].map((item, idx) => (
             <PartnersCard image={item} key={idx} />
           ))}
         </motion.div>
