@@ -12,59 +12,64 @@ import { home } from "@/data/homePage";
 import { global } from "@/data/globalData";
 import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
 import { useQuery } from "@apollo/client";
-import{ GET_BLOGS, GET_COLLEGES, GET_COLLEGES_BY_ID, GET_COURSES, GET_EXAMS, GET_EXAMS_LEVEL, GET_HERO_SECTION, GET_TOP_COLLEGES } from "@/query/schema";
-
-
+import {
+  GET_BLOGS,
+  GET_COLLEGES,
+  GET_COLLEGES_BY_ID,
+  GET_COURSES,
+  GET_EXAMS,
+  GET_EXAMS_LEVEL,
+  GET_EXAM_BY_ID,
+  GET_FEATURED_EXAMS,
+  GET_HERO_SECTION,
+  GET_TOP_COLLEGES,
+} from "@/query/schema";
 
 export default function Home() {
-  const {
-    data: BlogsData,
-  } = useQuery(GET_BLOGS);
-    
-  const {
-    data: CollegesData,
-  } = useQuery(GET_COLLEGES);
   
-  
-  const {
-    data: CoursesData,
-  } = useQuery(GET_COURSES);
-  
-  const {
-    data: ExamsData,
-  } = useQuery(GET_EXAMS);
-  
-  const {
-    data: ExamsLevelData,
-  } = useQuery(GET_EXAMS_LEVEL);
-  
-  const {
-    data: HeroSectionNData,
-  } = useQuery(GET_HERO_SECTION);
+  const { data: BlogsData } = useQuery(GET_BLOGS);
 
-const {
-  data: TopCollegesData,
-} = useQuery(GET_TOP_COLLEGES);
+  const { data: CoursesData } = useQuery(GET_COURSES);
 
-const collegeId = 2;
+  const { data: HeroSectionNData } = useQuery(GET_HERO_SECTION);
 
-const {
-  data: CollegesDatabyId,
-} = useQuery(GET_COLLEGES_BY_ID, {
-  variables: { collegeId },
-});
+  const { data: CollegesData } = useQuery(GET_COLLEGES);
+
+  const { data: TopCollegesData } = useQuery(GET_TOP_COLLEGES);
+
+  const collegeId = 2;
+
+  const { data: CollegesDatabyId } = useQuery(GET_COLLEGES_BY_ID, {
+    variables: { collegeId },
+  });
+
+  const { data: ExamsData } = useQuery(GET_EXAMS);
+
+  const { data: ExamsLevelData } = useQuery(GET_EXAMS_LEVEL);
+
+  const examId = 1;
+
+  const { data: ExamDatabyId } = useQuery(GET_EXAM_BY_ID, {
+    variables: { examId },
+  });
+
+  const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
 
   console.log("BlogsData: ", BlogsData);
-  console.log("CollegesData: ", CollegesData);
-  console.log("ExamsData: ", ExamsData);
-  console.log("ExamsLevelData: ", ExamsLevelData);
+
   console.log("CoursesData: ", CoursesData);
-  console.log("HeroSectionNData: ",HeroSectionNData);
+
+  console.log("HeroSectionNData: ", HeroSectionNData);
+
+  console.log("CollegesData: ", CollegesData);
   console.log("TopCollegesData: ", TopCollegesData);
   console.log("CollegesDatabyId: ", CollegesDatabyId);
-  
 
-  
+  console.log("ExamsData: ", ExamsData);
+  console.log("ExamsLevelData: ", ExamsLevelData);
+  console.log("ExamDatabyId: ", ExamDatabyId);
+  console.log("FeaturedExamsData: ", FeaturedExamsData);
+
   return (
     <>
       <BannerSection data={home?.homeBanner} />
