@@ -70,7 +70,7 @@ function CoursesCardContent({ data }: any) {
           alt="data"
           className="h-[250px] w-full object-cover"
         />
-        <div className="absolute left-0 top-0 flex h-full w-full gap-3 bg-black/50 p-3">
+        <div className="absolute left-0 top-0 flex max-sm:flex-col h-full w-full gap-3 bg-black/50 p-3">
           <div className="flex flex-col justify-between text-white">
             {data?.button?.button1 && (
               <Link href={data?.button?.button1?.href} className="mb-5">
@@ -99,7 +99,7 @@ function CoursesCardContent({ data }: any) {
               alt="teacher"
               width={112}
               height={112}
-              className="m-2 h-28 w-28 rounded-full border-2 border-zinc-200 object-cover"
+              className="m-2 h-28 w-28 max-sm:h-16 max-sm:w-16 rounded-full border-2 border-zinc-200 object-cover max-sm:relative right-1 bottom-1"
             />
           )}
         </div>

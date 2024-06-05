@@ -8,7 +8,7 @@ export default function Testimonials1({ data }: any) {
   return (
     <section className="relative my-5 w-full">
       {/* Background Images  */}
-      <div className="relative flex w-full max-w-screen-2xl">
+      <div className="relative flex w-full max-w-screen-2xl mx-auto">
         <div className="w-full">
           <Image
             src={data.bg}
@@ -18,15 +18,15 @@ export default function Testimonials1({ data }: any) {
           <div className="absolute top-0 h-full w-full bg-blue-950/70"></div>
         </div>
         {/* Title and Text */}
-        <div className="absolute left-0 top-0 w-full py-8  text-center">
+        <div className="absolute left-0 top-0 w-full py-8 text-center">
           <Wrapper>
             {/* Title  */}
-            <h1 className="max-md:xl mb-2 w-full gap-y-2 text-5xl font-medium">
+            <h1 className="title1 mb-2 w-full gap-y-2 md:text-5xl font-medium">
               <span className=" text-[#5C5B8F]">{data?.title?.t1}</span>{" "}
               <span className=" text-white">{data?.title?.t2}</span>{" "}
               <span className=" text-blue-500">{data?.title?.t3}</span>
             </h1>
-            <p className="text-white md:mb-10">
+            <p className="text-white mb-5 md:mb-10">
               <TextWithLineBreak text={data?.text} />
             </p>
             {/* Testimonials  Slider */}
