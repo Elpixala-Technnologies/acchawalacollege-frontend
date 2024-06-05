@@ -10,12 +10,13 @@ export default function ExamFilteredCard({ exam }: any) {
       {/* Div 1 */}
       <div className="w-full grid-cols-12 flex-col gap-4 gap-y-2 p-5 max-md:flex md:grid">
         {/* left Side */}
-        {exam?.img && (
+        {exam?.logo && (
           <div className="col-span-2 ">
             <Image
-              src={exam?.img}
+              src={exam?.logo}
               alt="collage"
               className="w-full rounded-md object-contain max-md:max-h-24"
+              loading = 'lazy' 
             />
           </div>
         )}

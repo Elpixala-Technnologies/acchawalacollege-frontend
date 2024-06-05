@@ -364,7 +364,7 @@ export const examsPageData = {
     },
     {
       id: 2,
-      img: exam1,
+      logo: exam1,
       title: "Joint Entrance Exam Advanced (JEE Advanced)",
       slug: "/jee-advanced",
       studentsParticipation: "63,73,884",
@@ -484,7 +484,7 @@ export const examsPageData = {
     },
     {
       id: 3,
-      img: exam1,
+      logo: exam1,
       title: "Joint Entrance Exam Advanced (JEE Advanced)",
       slug: "/jee-advanced",
       studentsParticipation: "63,73,884",
@@ -604,7 +604,7 @@ export const examsPageData = {
     },
     {
       id: 4,
-      img: exam1,
+      logo: exam1,
       title: "Joint Entrance Exam Advanced (JEE Advanced)",
       slug: "/jee-advanced",
       studentsParticipation: "63,73,884",
