@@ -207,6 +207,8 @@ export default function Content({ selectedContent }: any) {
                   dangerouslySetInnerHTML={{ __html: section?.table }}
                 />
               )}
+              {/* Semester  */}
+              {section?.semesters && <TimelineList data={section?.semesters} />}
               {/* Article2 */}
               {section?.article2 && (
                 <>
