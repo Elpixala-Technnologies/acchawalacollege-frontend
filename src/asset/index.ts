@@ -1,5 +1,6 @@
 // logo
 import logo from "./logo/Logo.png";
+import logoSmall from "./logo/logoSmall.png";
 
 // Home
 import p1 from "./icons/p1.png";
@@ -87,8 +88,11 @@ import examPaper from "./exams/examPaper.png";
 // Scholarship
 import scholarship1 from "./scholarship/scholarship1.png";
 
+// Module
+import moduleBanner from "./moduleBanner.png";
+
 export {
-    logo,
+    logo, logoSmall,
 
     section6Bg,
 
@@ -116,4 +120,6 @@ export {
     examBg1, examBg2, examBg3, examBg4,exam1,examPaper,
 
     scholarship1,
+
+    moduleBanner
 }
