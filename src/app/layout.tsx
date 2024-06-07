@@ -33,8 +33,8 @@ export default function RootLayout({
           <Header  header={global?.header}  />
           {children}
           <Footer footer={global?.footer} />
-        </ReduxProvider>
         </ApolloWrapper>
+        </ReduxProvider>
       </body>
     </html>
   );
