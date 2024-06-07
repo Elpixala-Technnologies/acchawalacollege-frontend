@@ -65,7 +65,7 @@ export default function Home() {
 
   // console.log("CoursesData: ", CoursesData);
 
-  // console.log("homePageData: ", homePageData);
+   console.log("homePageData: ", homePageData);
   // console.log("partnersData: ", partnersData);
   // console.log("counsellingPackagesData: ", counsellingPackagesData);
   
@@ -80,7 +80,7 @@ export default function Home() {
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
-  console.log(homeData?.section2, "home");
+  // console.log(homeData?.section2, "home");
 
   return (
     <>

@@ -48,6 +48,19 @@ export const GET_HOME_PAGE = gql`
               text
               href
             }
+            img {
+              data {
+                id
+                attributes {
+                  alternativeText
+                  width
+                  height
+                  url
+                }
+              }
+            }
+            text2
+            text3
           }
           section2 {
             card1 {
