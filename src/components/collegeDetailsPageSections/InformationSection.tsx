@@ -11,11 +11,11 @@ import Faqs from "../faqs/Faqs";
 
 export default function InformationSection({ data }: any) {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full">
       <Wrapper className="flex flex-col gap-y-5 border-b border-zinc-400 p-5 md:p-10">
         {/* Title  */}
         {data?.title && (
-          <h1 className="title2">
+          <h1 className="title2 mb-5">
             {data?.title.t1 && <span>{data?.title.t1}</span>}{" "}
             {data?.title.t2 && <span>{data?.title.t2}</span>}{" "}
             {data?.title.t3 && <span>{data?.title.t3}</span>}{" "}
@@ -132,7 +132,7 @@ export default function InformationSection({ data }: any) {
         )}
         {/* Video Gallery  */}
         {data?.videos && (
-          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4">
             {data?.videos?.map((d: any, i: number) => (
               <YoutubeVideo
                 videoId={d?.videoId}

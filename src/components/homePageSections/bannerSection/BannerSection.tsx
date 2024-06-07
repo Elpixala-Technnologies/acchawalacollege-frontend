@@ -4,47 +4,49 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
+import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
-export default function BannerSection({data}:any) {
+export default function BannerSection({ data }: any) {
   return (
-    <section className="my-16 w-full">
-      <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-2">
+    <section className="my-16 max-md:mt-5 w-full">
+      <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-5 justify-between">
         {/* Left Side of Banner */}
-        <div className="flex w-max flex-col gap-8 p-5 [flex:1] max-md:pr-0">
+        <div className="flex w-max flex-col gap-y-8">
           {/* Title  */}
-          <h1 className="text-3xl flex flex-col gap-y-2 md:text-5xl font-medium text-wrap">
-            <span className="  text-blue-900/80">{data?.title?.t1}</span>
-            <span className=" text-blue-900">{data?.title?.t2}</span>
-            <span className=" text-blue-500">{data?.title?.t3}</span>
+          <h1 className="flex flex-col md:gap-y-2 text-wrap text-[1.750rem] font-medium md:text-5xl">
+            <span className="text-blue-950/70">{data?.title?.t1}</span>
+            <span className="text-blue-950">{data?.title?.t2}</span>
+            <span className="text-blue-500">{data?.title?.t3}</span>
           </h1>
-          {data?.text1 && <p className="text-wrap">{data?.text1}</p>}
+          {/* {data?.text1 && (
+            <p className="text-wrap">
+              <TextWithLineBreak text={data?.text1} />
+            </p>
+          )} */}
           {/* Input field */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex h-10  gap-1"
+            className="flex items-center h-10 gap-1"
           >
             <input
-              className="h-full w-full max-w-[500px] rounded-md  border bg-zinc-100 p-5 shadow"
+              className="h-full w-full rounded-md border  bg-zinc-100 p-5 shadow md:max-w-[500px]"
               placeholder="Search Colleges, Courses, Exams & more"
             />
-            <button
-              type="submit"
-              className="banner-search-button"
-            >
+            <button type="submit" className="banner-search-button ">
               <CiSearch className="text-2xl text-white" />
             </button>
           </form>
-          <div className="flex gap-2">
-            <Link href={data?.button1?.href} className="button2">
+          <div className="flex md:gap-2 gap-1">
+            <Link href={data?.button1?.href} className="button2  max-md:px-2">
               {data?.button1?.text}
             </Link>
-            <Link href={data?.button2?.href} className="button1">
+            <Link href={data?.button2?.href} className="button1  max-md:px-3">
               {data?.button2?.text}
             </Link>
           </div>
         </div>
         {/* Right Side of Banner  */}
-        <div className="relative flex w-1/2 items-center gap-x-5">
+        <div className="relative flex md:w-1/2 items-center gap-x-5">
           <div className="relative flex h-full w-3/5 flex-col gap-y-5">
             <Image
               src={data?.img[0]}
@@ -66,7 +68,7 @@ export default function BannerSection({data}:any) {
             height={1000}
             className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
           />
-          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-full flex-col rounded-xl bg-blue-950 p-5 text-white">
+          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] md:translate-x-full translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75">
             <span className="mb-3 text-wrap">{data?.text2}</span>
             <span>{data?.text3}</span>
           </p>

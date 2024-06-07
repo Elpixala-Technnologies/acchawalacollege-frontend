@@ -1,18 +1,98 @@
+"use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { formatRupee } from "@/utils/fotmatRupee";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { SlClose } from "react-icons/sl";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import Link from "next/link";
-export default function PackageCard({ data, isActive, onSelect }: any) {
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
+
+export default function PackageCardSlider({ data }: any) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(1);
+  const [showAll, setShowAll] = useState(false);
+
+  const handleSelect = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  const uniqueId = "package123";
+
+  const swiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+      // dynamicBullets: true,
+    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
+    loop: true,
+    navigation: {
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
+    },
+    modules: [Autoplay, Pagination, Navigation],
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  };
+
+  return (
+    <>
+      <Swiper
+        {...swiperOptions}
+        className={`mySwiper w-[95%] max-w-fit px-2 ${uniqueId}`}
+      >
+        {data?.map((data: any, index: number) => (
+          <SwiperSlide key={index} className="mb-3 w-full p-5 md:mb-10">
+            <PackageCard
+              data={data}
+              isActive={index === activeIndex}
+              onSelect={() => handleSelect(index)}
+              showAll={showAll}
+              setShowAll={setShowAll}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      {/* Add navigation buttons */}
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
+    </>
+  );
+}
+
+export function PackageCard({
+  data,
+  isActive,
+  onSelect,
+  showAll,
+  setShowAll,
+}: any) {
+  const displayedList = showAll ? data.list : data.list.slice(0, 4);
   return (
     <div
-      className={`relative min-w-[400px] max-w-[450x] rounded-lg border-2 ${isActive ? "translate-y-4 scale-105 border-blue-500 shadow-lg shadow-blue-500" : data.styling.border} gap-1 overflow-hidden transition-all duration-300  hover:translate-y-4 hover:scale-105 hover:shadow-lg hover:shadow-blue-500`}
+      className={`relative w-full rounded-lg border-2 ${isActive ? "scale-100 md:translate-y-4 md:scale-105 md:border-blue-500 md:shadow-lg md:shadow-blue-500" : data.styling.border} gap-1 transition-all duration-300 md:overflow-hidden  md:hover:translate-y-4 md:hover:scale-105 md:hover:shadow-lg md:hover:shadow-blue-500`}
       onClick={onSelect}
     >
       {data?.isPopular && (
-        <div className="absolute right-[8.5rem] top-[2.5rem] w-full -rotate-45 bg-red-800 py-1 text-center text-white">
+        <div className="right-[8.5rem] top-[2.5rem] w-full bg-red-800 py-1 text-center text-white md:absolute md:-rotate-45">
           Most Popular
         </div>
       )}
@@ -20,7 +100,7 @@ export default function PackageCard({ data, isActive, onSelect }: any) {
         <Image src={data.icon} alt="icon" width={30} height={30} />
       </div>
       <div className="flex w-full flex-col items-center text-center">
-        <h2 className="font-semibold">
+        <h2 className="mt-2 font-semibold">
           <TextWithLineBreak text={data.PackageName} />
         </h2>
 
@@ -31,28 +111,69 @@ export default function PackageCard({ data, isActive, onSelect }: any) {
           <span className="text-xs text-zinc-500">/year</span>
         </p>
 
-        <p className="mb-8">
-          <TextWithLineBreak text={data.text1} />
-        </p>
-
-        <ul className="w-max text-left leading-8">
-          {data.list.map((d: any, i: number) => (
-            <li key={i} className="flex items-center gap-4">
-              <span>
-                {d.isInclude ? (
-                  <FaRegCircleCheck className="text-green-500" />
-                ) : (
-                  <SlClose className="text-red-500" />
-                )}
-              </span>
-              <span>{d.text}</span>
-            </li>
-          ))}
+        {data?.text1 && (
+          <>
+            <p className="mb-8 px-3 max-md:mb-5 max-md:hidden">
+              <TextWithLineBreak text={data.text1} />
+            </p>
+            <p className="mb-8 px-3 max-md:mb-5 md:hidden">
+              {data?.text1}
+            </p>
+          </>
+        )}
+        <ul className="w-full text-left leading-8 max-md:hidden md:pl-12">
+          {data.list.map(
+            (d: any, i: number) =>
+              d?.text && (
+                <li key={i} className="flex items-center gap-4 text-wrap">
+                  <span>
+                    {d.isInclude ? (
+                      <FaRegCircleCheck className="mt-[0.6rem] text-green-500" />
+                    ) : (
+                      <SlClose className="mt-[0.6rem] text-red-500" />
+                    )}
+                  </span>
+                  <span className="w-full text-wrap">
+                    <TextWithLineBreak text={d?.text} />
+                  </span>
+                </li>
+              ),
+          )}
+        </ul>
+        {/* mobile view  */}
+        <ul className="w-full px-5 text-left leading-8 md:hidden">
+          {displayedList.map(
+            (d: any, i: number) =>
+              d.text && (
+                <li key={i} className="flex gap-4 text-wrap">
+                  <span>
+                    {d.isInclude ? (
+                      <FaRegCircleCheck className="mt-[0.6rem] text-green-500" />
+                    ) : (
+                      <SlClose className="mt-[0.6rem] text-red-500" />
+                    )}
+                  </span>
+                  <span className="w-full text-wrap">
+                    <TextWithLineBreak text={d?.text} />
+                  </span>
+                </li>
+              ),
+          )}
+          {data.list.length > 4 && (
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="w-full text-left text-blue-500 underline md:hidden"
+            >
+              {showAll ? "Show Less" : "Read More"}
+            </button>
+          )}
         </ul>
 
-        <Link href={data.button.href}>
-          <button className="button2 my-8">{data.button.text}</button>
-        </Link>
+        {data?.button && (
+          <Link href={data?.button?.href}>
+            <button className="button2 my-8">{data?.button?.text}</button>
+          </Link>
+        )}
       </div>
     </div>
   );

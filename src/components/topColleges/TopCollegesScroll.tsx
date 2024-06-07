@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { CollegesCardContent } from "@/components/cards/CollegesCard";
 
-export default function TopCollegesScroll({data}:any) {
+export default function TopCollegesScroll({ data }: any) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftButton, setShowLeftButton] = useState(false);
-  const [showRightButton, setShowRightButton] = useState(true); 
+  const [showRightButton, setShowRightButton] = useState(true);
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
@@ -19,7 +19,7 @@ export default function TopCollegesScroll({data}:any) {
   const handleScrollLeft = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({
-        left: scrollContainerRef.current.scrollLeft - 200,
+        left: scrollContainerRef.current.scrollLeft - 300,
         behavior: "smooth",
       });
     }
@@ -28,7 +28,7 @@ export default function TopCollegesScroll({data}:any) {
   const handleScrollRight = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({
-        left: scrollContainerRef.current.scrollLeft + 200,
+        left: scrollContainerRef.current.scrollLeft + 300,
         behavior: "smooth",
       });
     }
@@ -43,22 +43,35 @@ export default function TopCollegesScroll({data}:any) {
   }, []);
 
   return (
-    <div className="relative my-5 bg-blue-200 rounded-lg pb-6 max-w-[1035px] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-      <h1 className="title1 p-6">
-        <span>{data.title.t1}</span>{" "}
-        <span className="font-semibold text-blue-500">
-          {data.title.t2}
-        </span>
-      </h1>
+    <div className="relative my-16 max-w-[1035px] rounded-lg bg-blue-200 pb-6 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      {data?.title && (
+        <h1 className="title1 p-6">
+          {data?.title?.t1 && (
+            <>
+              <span className="text-blue-950">{data?.title?.t1}</span>{" "}
+            </>
+          )}
+          {data?.title?.t2 && (
+            <>
+              <span className="text-blue-950">{data?.title?.t2}</span>{" "}
+            </>
+          )}
+          {data?.title?.t3 && (
+            <>
+              <span className="text-blue-500">{data?.title?.t3} </span>{" "}
+            </>
+          )}
+        </h1>
+      )}
       <div
-        className="flex w-full gap-6 overflow-x-hidden px-5"
+        className="flex w-full gap-6 overflow-x-hidden md:px-5"
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >
         {data.colleges.map((college: any, index: number) => (
           <div
             key={index}
-            className="min-w-[420px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
+            className="min-w-96 max-md:min-w-[17.2rem] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
           >
             <CollegesCardContent college={college} />
           </div>
@@ -66,7 +79,7 @@ export default function TopCollegesScroll({data}:any) {
       </div>
       {showLeftButton && (
         <button
-          className="absolute right-24 top-3 rounded-full bg-blue-500 p-3"
+          className="absolute right-24 top-3 rounded-full bg-blue-500 p-3 max-md:opacity-60 max-md:hover:opacity-60"
           onClick={handleScrollLeft}
         >
           <TiChevronLeft className="text-3xl text-white" />

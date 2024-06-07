@@ -6,7 +6,7 @@ export default function BlogCard({ card }: any) {
   return (
     <div
       key={card.id}
-      className="max-w-sm rounded overflow-hidden shadow-lg border-b-2 border-blue-950"
+      className="max-w-sm rounded overflow-hidden shadow-lg border-b-2 border-blue-950 min-w-80 mb-5"
     >
       <div className="relative w-full">
         <Image
@@ -19,7 +19,7 @@ export default function BlogCard({ card }: any) {
         </p>
       </div>
       <div className="p-5 pb-2">
-        <div className="flex justify-between items-center text-sm">
+        <div className="flex justify-between items-center text-sm flex-wrap">
           <div className="flex gap-2 items-center">
             <Image
               src={card.author.avatar}
@@ -30,8 +30,8 @@ export default function BlogCard({ card }: any) {
             />
             <span className="font-bold">{card.author.name}</span>
           </div>
-          <span className="text-zinc-500">{card.date}</span>
-          <span className="text-zinc-500 flex gap-1">
+          <span className="text-zinc-500 text-nowrap">{card.date}</span>
+          <span className="text-zinc-500 flex gap-1 flex-nowrap">
           <IoShareSocialOutline className="mt-0.5" />{card.shares}</span>
         </div>
 

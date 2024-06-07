@@ -1,5 +1,6 @@
 // logo
 import logo from "./logo/Logo.png";
+import logoSmall from "./logo/logoSmall.png";
 
 // Home
 import p1 from "./icons/p1.png";
@@ -57,12 +58,14 @@ import Certificate from "./icons/Certificate.svg";
 import GraduationCap from "./icons/GraduationCap.svg";
 import building from "./icons/building.svg";
 import community from "./icons/community.svg";
+
 // companies
 import comp1 from "./companies/comp1.png";
 import comp2 from "./companies/comp2.svg";
 import comp3 from "./companies/comp3.svg";
 import comp4 from "./companies/comp4.svg";
 import comp5 from "./companies/comp5.svg";
+
 // facilities
 import academicZone from "./icons/academicZone.svg"
 import auditorium from "./icons/auditorium.svg"
@@ -79,10 +82,17 @@ import examBg1 from "./exams/examBg1.png";
 import examBg2 from "./exams/examBg2.png";
 import examBg3 from "./exams/examBg3.png";
 import examBg4 from "./exams/examBg4.png";
+import exam1 from "./exams/exam1.png";
+import examPaper from "./exams/examPaper.png";
 
+// Scholarship
+import scholarship1 from "./scholarship/scholarship1.png";
+
+// Module
+import moduleBanner from "./moduleBanner.png";
 
 export {
-    logo,
+    logo, logoSmall,
 
     section6Bg,
 
@@ -107,5 +117,9 @@ export {
 
     questionImg,
 
-    examBg1, examBg2, examBg3, examBg4
+    examBg1, examBg2, examBg3, examBg4,exam1,examPaper,
+
+    scholarship1,
+
+    moduleBanner
 }

@@ -3,7 +3,7 @@ import { courseListingPage } from "@/data/courseData";
 import HeroSection from "@/components/coursesListingPageSections/heroSection/HeroSection";
 import Section10 from "@/components/Section10";
 import AboutCardSection from "@/components/coursesListingPageSections/aboutCardSection/AboutCardSection";
-import TopCourses from "@/components/homePageSections/topCourses/TopCourses";
+import TopCourses from "@/components/topCourses/TopCourses";
 import BannerSection from "@/components/coursesListingPageSections/bannerSection/BannerSection";
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
 import Testimonials1 from "@/components/testimonials/Testimonials1";
@@ -14,10 +14,10 @@ import { global } from "@/data/globalData";
 
 export default function coursesListing() {
   return (
-    <section className="w-full bg-white">
+    <>
       <HeroSection data={courseListingPage?.MBA?.homeBanner} />
       <Section10 data={courseListingPage?.MBA?.brochureSection} />
-      <AboutCardSection data={courseListingPage?.MBA?.about} /> 
+      <AboutCardSection data={courseListingPage?.MBA?.about} />
       <TopCourses data={global?.topCourses} />
       <BannerSection data={courseListingPage?.MBA?.bannerSection} />
       <PartnersSection data={courseListingPage?.MBA?.partners} />
@@ -27,6 +27,6 @@ export default function coursesListing() {
       <InformationSection data={courseListingPage?.MBA?.featuredPrograms} />
       <InformationSection data={courseListingPage?.MBA?.freePrograms} />
       <AreYouConfused />
-    </section>
+    </>
   );
 }

@@ -13,7 +13,8 @@ import Link from "next/link";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { formatRupee } from "@/utils/fotmatRupee";
 
-export default function CoursesCard({data}:any) {
+export default function CoursesCard({ data }: any) {
+  const uniqueId = "course123";
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -21,14 +22,14 @@ export default function CoursesCard({data}:any) {
       clickable: true,
       // dynamicBullets: true,
     },
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {
@@ -46,7 +47,7 @@ export default function CoursesCard({data}:any) {
 
   return (
     <>
-      <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
+      <Swiper {...swiperOptions} className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}>
         {data.map((course: any, index: number) => (
           <SwiperSlide
             key={index}
@@ -57,8 +58,8 @@ export default function CoursesCard({data}:any) {
         ))}
       </Swiper>
       {/* Add navigation buttons */}
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
     </>
   );
 }
@@ -87,42 +88,65 @@ export const CoursesCardContent = function CoursesCard({ course }: any) {
       </div>
       <div className="p-5">
         {/* line 1  */}
-        <div className="flex items-center justify-between mb-5">
-          <h4 className="text-wrap text-2xl font-medium max-w-max">
-            {course?.stream} from {course?.title}
-          </h4>
+        <div className="mb-5 flex items-center justify-between">
+          <Link href={`/courses/${course?.slug}`}>
+            <h4 className="max-w-max text-wrap text-2xl font-medium hover:text-blue-500">
+              {course?.stream} from {course?.title}
+            </h4>
+          </Link>
           {/* stars  */}
           <div className="flex flex-nowrap items-center gap-x-1">
             <FaStar className="text-yellow-400" />
-            <span className="text-sm bg-blue-950 text-white rounded px-1">{course?.stars}</span>
+            <span className="rounded bg-blue-950 px-1 text-sm text-white">
+              {course?.stars}
+            </span>
           </div>
         </div>
         {/* END line 1  */}
         {/* line 2  */}
-        <div className="flex border-b border-zinc-400 mb-2 text-sm">
+        <div className="mb-2 flex border-b border-zinc-400 text-sm">
           <div className="flex-[1] border-r border-zinc-400 pb-5">
-            <h6 className="font-bold text-base">Course Details</h6>
-            <p className="flex items-center gap-x-2"><MdOutlineMapsHomeWork className="text-blue-500 text-lg" />{course?.courseDetails?.noOfAvailableCourses} Courses</p>
-            <p className="flex items-center gap-x-2"><FaRegClock className="text-blue-500 text-lg" />{course?.courseDetails?.courseTime}</p>
-            <p className="flex items-center gap-x-2"><FaRegCalendarAlt className="text-blue-500 text-lg" />{course?.courseDetails?.duration}</p>
+            <h6 className="text-base font-bold">Course Details</h6>
+            <p className="flex items-center gap-x-2">
+              <MdOutlineMapsHomeWork className="text-lg text-blue-500" />
+              {course?.courseDetails?.noOfAvailableCourses} Courses
+            </p>
+            <p className="flex items-center gap-x-2">
+              <FaRegClock className="text-lg text-blue-500" />
+              {course?.courseDetails?.courseTime}
+            </p>
+            <p className="flex items-center gap-x-2">
+              <FaRegCalendarAlt className="text-lg text-blue-500" />
+              {course?.courseDetails?.duration}
+            </p>
           </div>
-          <div className="flex-[1] pl-5 pb-5">
-            <h6 className="font-bold text-base">Course Price</h6>
-            <p>Full Time : <span className="font-bold text-blue-500">{formatRupee(course?.courseDetails?.coursesPrice?.fullTime)}</span></p>
-            <p>Part Time : <span className="font-bold text-blue-500">{formatRupee(course?.courseDetails?.coursesPrice?.partTime)}</span></p>
+          <div className="flex-[1] pb-5 pl-5">
+            <h6 className="text-base font-bold">Course Price</h6>
+            <p>
+              Full Time :{" "}
+              <span className="font-bold text-blue-500">
+                {formatRupee(course?.courseDetails?.coursesPrice?.fullTime)}
+              </span>
+            </p>
+            <p>
+              Part Time :{" "}
+              <span className="font-bold text-blue-500">
+                {formatRupee(course?.courseDetails?.coursesPrice?.partTime)}
+              </span>
+            </p>
           </div>
         </div>
         {/* END line 2  */}
 
         {/* line 3  */}
 
-        <h6 className="font-bold text-sm">Course Summery</h6>
-        <p className="text-sm mb-2">{course?.summery}</p>
+        <h6 className="text-sm font-bold">Course Summery</h6>
+        <p className="mb-2 text-sm">{course?.summery}</p>
         {/* END line 3  */}
 
         {/* line 4  */}
-        <Link href={course?.button?.href}>
-          <button className="cardButton2">{course.button.text}</button>
+        <Link href={`/courses/${course?.slug}`}>
+          <button className="cardButton2">{course?.button?.text}</button>
         </Link>
       </div>
     </React.Fragment>
