@@ -68,14 +68,14 @@ export default function UpcomingExamsScroll({ data }: any) {
         </h1>
       )}
       <div
-        className="flex w-full gap-6 overflow-x-hidden px-5"
+        className="flex w-full gap-6 overflow-x-hidden md:px-5"
         ref={scrollContainerRef}
         onScroll={handleScroll}
       >
         {data?.exams?.map((exam: any, index: number) => (
           <div
             key={index}
-            className="min-w-[420px] overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl"
+            className="min-w-96 overflow-hidden rounded-xl border border-zinc-300 bg-white shadow-xl max-md:min-w-[17.2rem]"
           >
             <ExamCardContent exam={exam} />
           </div>
@@ -104,10 +104,10 @@ export default function UpcomingExamsScroll({ data }: any) {
 export const ExamCardContent = function ({ exam }: any) {
   return (
     <React.Fragment>
-      <div className="flex-center relative w-full bg-blue-950/10 py-5">
+      <div className="flex-center relative w-full bg-blue-950/10 md:py-5">
         <Image src={exam?.img} alt="exam" className="h-32 object-contain" />
         {exam?.mode && (
-          <div className="absolute right-2 top-2  flex flex-col gap-2 rounded-lg p-5 text-sm text-black">
+          <div className="absolute md:right-2 md:top-2 right-1 top-1 flex flex-col gap-2 rounded-lg md:p-5 text-sm text-black">
             {exam?.mode?.map((item: any, index: number) => (
               <p
                 key={index}
@@ -119,47 +119,50 @@ export const ExamCardContent = function ({ exam }: any) {
           </div>
         )}
       </div>
-      <div className="p-5 flex flex-col gap-3">
+      <div className="flex flex-col p-5 md:gap-3">
         {exam.title && (
-          <h4 className="mb-5 text-xl font-medium text-blue-950">{exam.title}</h4>
+          <h4 className="mb-5 text-xl font-medium text-blue-950">
+            {exam.title}
+          </h4>
         )}
-        <p className="flex justify-between text-nowrap text-sm">
-          <span className="flex-center gap-2">
+        <p className="flex justify-between text-sm">
+          <span className="flex-center gap-2 text-wrap">
             <PiStudent />
             Students Participating
           </span>
-          <span className="flex-center gap-2">
-            {exam?.studentsParticipation}
-          </span>
+          <span className="flex gap-2">{exam?.studentsParticipation}</span>
         </p>
         {exam?.applicationFormDate && (
-          <p className="flex justify-between text-nowrap text-sm">
-            <span className="flex-center gap-2">
+          <p className="flex justify-between text-sm">
+            <span className="flex-center gap-2 text-wrap">
               <IoCalendarOutline />
               Registration Date
             </span>
-            <span className="flex-center gap-2">
-              {formatDate(exam?.applicationFormDate.startDate)} -{" "}
-              {formatDate(exam.applicationFormDate?.endDate)}
+            <span className="flex max-sm:flex-col">
+              <span className="text-nowrap">
+                {formatDate(exam?.applicationFormDate.startDate)}
+              </span>
+              <span> - {formatDate(exam.applicationFormDate?.endDate)}</span>
             </span>
           </p>
         )}
         {exam?.level && (
-          <p className="flex justify-between text-nowrap text-sm">
+          <p className="flex justify-between text-sm">
             <span className="flex-center gap-2">
               <MdAutoGraph />
               Exam Level
             </span>
-            <span className="flex-center gap-2 capitalize">
+            <span className="flex capitalize max-sm:text-right">
               {exam?.level?.map((item: any, i: number) => (
                 <React.Fragment key={i}>
-                  {item}{i !== exam?.level?.length - 1 ? ", " : ""}
+                  {item}
+                  {i !== exam?.level?.length - 1 ? ", " : ""}
                 </React.Fragment>
               ))}
             </span>
           </p>
         )}
-        <div className="mt-5 flex justify-between gap-x-4 ">
+        <div className="mt-5 flex justify-between gap-2 md:gap-4 max-md:flex-col ">
           <button className="cardButton1">
             {exam.button1.icon && <span>{exam.button1.icon}</span>}{" "}
             {exam.button1.text}

@@ -76,7 +76,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
                 alt="image"
                 className="h-80 w-full object-cover"
               />
-              <p className="absolute bottom-0 left-0 w-full bg-blue-950 opacity-80 text-white p-2 pl-5">
+              <p className="absolute bottom-0 left-0 w-full bg-blue-950 p-2 pl-5 text-white opacity-80">
                 {i?.text}
               </p>
             </div>
@@ -146,8 +146,8 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
             ))}
         </div>
       )}
-            {/* Table  */}
-            {selectedDetail?.table && (
+      {/* Table  */}
+      {selectedDetail?.table && (
         <div
           className="dangerouslySetInnerHTMLStyle mb-8 text-justify"
           dangerouslySetInnerHTML={{ __html: selectedDetail?.table }}

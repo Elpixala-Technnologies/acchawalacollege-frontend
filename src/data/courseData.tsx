@@ -536,15 +536,25 @@ export const courseDetailsPage = {
     },
     courseDetails: [
       {
-        title: "Overview",
-        article: `<p>This is an overview of the course.</p><p class='note'>Disclaimer: Data for total fees has been calculated based on all years/semesters as provided by the college.</p> <p>The actual fees may vary.</p><p>This is an overview of the course.</p>`,
+        navItem: "Overview",
+        sections: [
+          {
+            article: `<p>This is an overview of the course.</p><p class='note'>Disclaimer: Data for total fees has been calculated based on all years/semesters as provided by the college.</p> <p>The actual fees may vary.</p><p>This is an overview of the course.</p>`,
+          },
+        ],
       },
       {
-        title: "Course Details",
+        navItem: "Course Details",
+        sections: [
+          {
         article: "These are the details of the course.",
       },
+    ],
+      },
       {
-        title: "Programme Offerings",
+        navItem: "Programme Offerings",
+        sections: [
+          {
         article: "These are the details of the course.",
         list: [
           "UGC approved",
@@ -557,72 +567,88 @@ export const courseDetailsPage = {
           "Project work",
           "Access to online lab and remote lab.",
         ],
+      }]
       },
       {
-        title: "Eligibility Criteria",
+        navItem: "Eligibility Criteria",
+        sections: [
+          {
         article: "Eligibility criteria for the course.",
+          }]
       },
       {
-        title: "Admission Details",
+        navItem: "Admission Details",
+        sections: [
+          {
         article: "Details about the admission process.",
+          }]
       },
       {
-        title: "Application Details",
+        navItem: "Application Details",
+        sections: [
+          {
         article: "How to apply for the course.",
+          }]
       },
-
       {
-        title: "The Syllabus",
+        navItem: "The Syllabus",
+        sections: [
+          {
         article: "",
-        semesters: [{
-          id: 1,
-          title: "Semester 1",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id: 2,
-          title: "Semester 2",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:3,
-          title: "Semester 3",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:4,
-          title: "Semester 4",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:5,
-          title: "Semester 5",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:6,
-          title: "Semester 6",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:7,
-          title: "Semester 7",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-        {
-          id:8,
-          title: "Semester 8",
-          text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>"
-        },
-      ],
+        semesters: [
+          {
+            id: 1,
+            title: "Semester 1",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 2,
+            title: "Semester 2",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 3,
+            title: "Semester 3",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 4,
+            title: "Semester 4",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 5,
+            title: "Semester 5",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 6,
+            title: "Semester 6",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 7,
+            title: "Semester 7",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+          {
+            id: 8,
+            title: "Semester 8",
+            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+          },
+        ],
+      }]
       },
       {
-        title: "Evaluation Process",
+        navItem: "Evaluation Process",
+        sections: [
+          {
         article: `<p>Evaluation process of the course.</p> <p>This is an overview of the course.</p> <p>The actual fees may vary.</p><p class="note">This is an overview of the course.</p>`,
+          }]
       },
     ],
     faqs: {
-      title: { 
+      title: {
         t1: "",
         t2: "Frequently",
         t3: "Asked Questions",
@@ -660,7 +686,7 @@ export const courseDetailsPage = {
         },
       ],
     },
-    similarCourses : {
+    similarCourses: {
       title: {
         t2: "Discover",
         t3: "Similar Courses",
@@ -668,14 +694,14 @@ export const courseDetailsPage = {
       courses: [
         {
           id: 1,
-          slug:"acchawala",
+          slug: "acchawala",
           stream: "MBA",
           bg: co1,
           teacherAvatar: user1,
           teacherName: "Dr. Pankaj Kumar",
           teacherRole: "Teacher",
           designation: "MBA Specialist and Director of Admission",
-    
+
           title: "Acchawala",
           stars: 4.5,
           courseDetails: {
@@ -696,13 +722,13 @@ export const courseDetailsPage = {
         {
           id: 2,
           stream: "MBA",
-          slug:"acchawala",
+          slug: "acchawala",
           bg: co2,
           teacherAvatar: au2,
           teacherName: "Andrew Garfield",
           teacherRole: "Teacher",
           designation: "MBA Specialist and Director of Admission",
-    
+
           title: "Acchawala",
           stars: 4.5,
           courseDetails: {
@@ -723,13 +749,13 @@ export const courseDetailsPage = {
         {
           id: 3,
           stream: "MBA",
-          slug:"acchawala",
+          slug: "acchawala",
           bg: co3,
           teacherAvatar: au3,
           teacherName: "Andrew Garfield",
           teacherRole: "Teacher",
           designation: "MBA Specialist and Director of Admission",
-    
+
           title: "Acchawala",
           stars: 4.5,
           courseDetails: {
@@ -750,13 +776,13 @@ export const courseDetailsPage = {
         {
           id: 4,
           stream: "MBA",
-          slug:"acchawala",
+          slug: "acchawala",
           bg: co1,
           teacherAvatar: au1,
           teacherName: "Andrew Garfield",
           teacherRole: "Teacher",
           designation: "MBA Specialist and Director of Admission",
-    
+
           title: "Acchawala",
           stars: 4.5,
           courseDetails: {
