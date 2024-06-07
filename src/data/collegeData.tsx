@@ -118,6 +118,7 @@ export const collegePages = {
     ],
     programType: ["Full-Time", "Part-Time", "Distance", "Online", "Hybrid"],
   },
+  // Don't use for backend 
   CollegesDataArray: [
     {
       id: 1,

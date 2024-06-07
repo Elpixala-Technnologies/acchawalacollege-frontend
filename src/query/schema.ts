@@ -1,4 +1,3 @@
-//src/query/schema.ts
 import { gql } from "@apollo/client";
 
 export const GET_BLOGS = gql`
@@ -27,8 +26,8 @@ export const GET_COURSES = gql`
   }
 `;
 
-export const GET_HERO_SECTION = gql`
-  query GetHomeSection {
+export const GET_HOME_PAGE = gql`
+query GetHomeSection {
     heroSections {
       data {
         id
@@ -58,52 +57,6 @@ export const GET_HERO_SECTION = gql`
               }
               title
               text
-            }
-          }
-          partners {
-            title
-            images {
-              data {
-                id
-                attributes {
-                  name
-                }
-              }
-            }
-          }
-          CounsellingPackages {
-            title
-            CounsellingPackagesCards {
-              id_no
-              icon {
-                data {
-                  id
-                  attributes {
-                    name
-                  }
-                }
-              }
-              PackageName
-              isPopular
-              price
-              text1
-              lists {
-                data {
-                  id
-                  attributes {
-                    isInclude
-                    text
-                    college {
-                      data {
-                        id
-                        attributes {
-                          college_name
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
           banner1 {
@@ -139,6 +92,97 @@ export const GET_HERO_SECTION = gql`
                       id
                       attributes {
                         college_name
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const GET_PARTNERS = gql`
+  query GetPartners {
+    heroSections {
+      data {
+        id
+        attributes {
+          partners{
+            id
+            title
+            images{
+              data{
+                id
+                attributes{
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const GET_COUNSELLING_PACKAGES = gql`
+  query GetCounsellingPackages {
+    heroSections {
+      data {
+        id
+        attributes {
+          CounsellingPackages{
+            id
+            title
+            CounsellingPackagesCards{
+              id
+              id_no
+              icon{
+                data
+                {
+                  id
+                  attributes{
+                    name
+                  }
+                }
+              }
+              PackageName
+              isPopular
+              price
+              text1
+              lists{
+                data{
+                  id
+                  attributes{
+                    isInclude
+                    text
+                    college{
+                      data{
+                        id
+                        attributes{
+                          college_name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              button{
+                data{
+                  id
+                  attributes{
+                    text
+                    href
+                    colleges{
+                      data{
+                        id
+                        attributes{
+                          college_name
+                        }
                       }
                     }
                   }
@@ -218,7 +262,7 @@ export const GET_EXAMS_LEVEL = gql`
 `;
 
 export const GET_EXAM_BY_ID = gql`
-  query GetExamsById($examId: ID!) {
+  query GetExamById($examId: ID!) {
     exam(id: $examId) {
       data {
         id
@@ -231,7 +275,7 @@ export const GET_EXAM_BY_ID = gql`
 `;
 
 export const GET_FEATURED_EXAMS = gql`
-  query GetFeaturedExam {
+  query GetFeaturedExams {
     exams(filters: { isFeaturedExam: { eq: true } }) {
       data {
         id

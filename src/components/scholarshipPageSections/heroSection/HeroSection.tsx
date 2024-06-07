@@ -4,18 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CiFlag1, CiLocationOn } from "react-icons/ci";
-import {
-  FaAngleRight,
-  FaQuestionCircle,
-  FaRegClock,
-} from "react-icons/fa";
+import { FaAngleRight, FaQuestionCircle, FaRegClock } from "react-icons/fa";
 import { IoBookOutline, IoHeartCircleSharp } from "react-icons/io5";
 
 export default function HeroSection({ data }: any) {
   return (
     <section className="relative w-full border-b border-zinc-300">
       <Image
-        src={data?.bg}
+        src={data?.bgImage}
         alt="collegeBanner"
         className="h-[42rem] w-full object-cover sm:h-[32rem] md:h-[21.5rem]"
       />
@@ -58,26 +54,29 @@ export default function HeroSection({ data }: any) {
               {/* End  title  */}
               {/* Location  */}
               <div className="flex gap-x-6 max-md:flex-col">
-                {data?.location && <p className="flex items-center gap-x-1 font-thin">
-                  <CiLocationOn />
-                  {data?.location?.city && data?.location?.city}{" "}
-                  {data?.location?.state && (
-                    <>
-                      {", "}
-                      {data?.location?.state}
-                    </>
-                  )}
-                </p>}
+                {data?.location && (
+                  <p className="flex items-center gap-x-1 font-thin">
+                    <CiLocationOn />
+                    {data?.location?.city && data?.location?.city}{" "}
+                    {data?.location?.state && (
+                      <>
+                        {", "}
+                        {data?.location?.state}
+                      </>
+                    )}
+                  </p>
+                )}
                 {data?.estYear && (
                   <p className="flex items-center gap-1 text-wrap font-thin">
                     <CiFlag1 />
-                    Est{" "}{data?.estYear}
+                    Est {data?.estYear}
                   </p>
                 )}
-                  <p className="flex items-center gap-1 text-wrap font-thin">
+                <p className="flex items-center gap-1 text-wrap font-thin">
                   <IoBookOutline />
-                {data?.collegeType === "Government" ? "Govt." : "Pvt."} College
-              </p>
+                  {data?.collegeType === "Government" ? "Govt." : "Pvt."}{" "}
+                  College
+                </p>
               </div>
               {/* End Location  */}
             </div>
@@ -89,20 +88,25 @@ export default function HeroSection({ data }: any) {
             </p>
             {/* End Last Updated  */}
             <div className="flex flex-wrap justify-end gap-x-6 text-nowrap max-md:gap-y-2">
-              <p className="flex items-center gap-x-1 font-thin cursor-pointer">
+              <p className="flex cursor-pointer items-center gap-x-1 font-thin">
                 <IoHeartCircleSharp className="text-lg" />
                 Save
               </p>
-              <p className="flex items-center gap-x-1 font-thin cursor-pointer">
+              <p className="flex cursor-pointer items-center gap-x-1 font-thin">
                 <FaQuestionCircle />
                 Ask
               </p>
               <div className="flex flex-wrap gap-2">
-                <Link href={data?.button?.button1?.href} className="button4 rounded-lg">
-                  {data?.button?.button1?.text}
+                {/* Register Now */}
+                <Link href={"#"} className="button4 rounded-lg max-sm:w-full">
+                  Register Now
                 </Link>
-                <Link href={data?.button?.button2?.href} className="button8 rounded-lg">
-                  {data?.button?.button2?.text}
+                {/* Brochure  */}
+                <Link
+                  href={data?.brochureSection?.buttons?.button1?.href || "#"}
+                  className="button8 rounded-lg  max-sm:w-full"
+                >
+                  {data?.brochureSection?.buttons?.button1?.text}
                 </Link>
               </div>
             </div>
