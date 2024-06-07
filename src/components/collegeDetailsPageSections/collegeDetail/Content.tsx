@@ -59,7 +59,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
       {selectedDetail?.readMoreLink && (
         <p className="mb-5 w-full text-right">
           <Link
-            href={selectedDetail?.readMoreLink}
+            href={selectedDetail?.readMoreLink || "#"}
             className="w-min text-nowrap font-medium hover:text-blue-500 hover:underline"
           >
             Read More
@@ -103,7 +103,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
           {selectedDetail?.button?.button1?.text && (
             <Link
               className="button6 flex-[1]"
-              href={selectedDetail?.button?.button1?.link}
+              href={selectedDetail?.button?.button1?.link || "#"}
             >
               {selectedDetail?.button?.button1?.text}
             </Link>
@@ -111,7 +111,7 @@ export default function Content({ collegeDetails, selectedIndex }: any) {
           {selectedDetail?.button?.button2?.text && (
             <Link
               className="button7 flex-[1]"
-              href={selectedDetail?.button?.button2?.link}
+              href={selectedDetail?.button?.button2?.link || "#"}
             >
               {selectedDetail?.button?.button2?.text}
             </Link>

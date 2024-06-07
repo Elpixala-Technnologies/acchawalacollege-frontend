@@ -54,7 +54,7 @@ export default function InformationSection({ data }: any) {
         {data?.readMoreLink && (
           <p className="w-full text-right">
             <Link
-              href={data?.readMoreLink}
+              href={data?.readMoreLink || "#"}
               className="w-min text-nowrap font-medium hover:text-blue-500 hover:underline"
             >
               Read More
@@ -65,12 +65,12 @@ export default function InformationSection({ data }: any) {
         {data?.button && (
           <div className="flex gap-x-4 md:max-w-xl">
             {data?.button1?.text && (
-              <Link className="button6 flex-[1]" href={data?.button1?.link}>
+              <Link className="button6 flex-[1]" href={data?.button1?.link || "#"}>
                 {data?.button1?.text}
               </Link>
             )}
             {data?.button2?.text && (
-              <Link className="button7 flex-[1]" href={data?.button2?.link}>
+              <Link className="button7 flex-[1]" href={data?.button2?.link || "#"}>
                 {data?.button2?.text}
               </Link>
             )}

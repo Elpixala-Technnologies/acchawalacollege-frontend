@@ -26,6 +26,7 @@ import {
   GET_PARTNERS,
   GET_TOP_COLLEGES,
 } from "@/query/schema";
+import { flattenAttributes } from "@/utils/flattenAttributes";
 
 export default function Home() {
   
@@ -33,10 +34,8 @@ export default function Home() {
 
   const { data: CoursesData } = useQuery(GET_COURSES);
 
-  const { data: homePageData,
-    loading: Loader,
-    error: streamsError,
-   } = useQuery(GET_HOME_PAGE);
+  const { data: homePageData, loading: HomePageLoader, error: homePageError, } = useQuery(GET_HOME_PAGE);
+
   const { data: partnersData } = useQuery(GET_PARTNERS);
   const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
@@ -66,7 +65,7 @@ export default function Home() {
 
   // console.log("CoursesData: ", CoursesData);
 
-  // console.log("HeroSectionNData: ", HeroSectionNData);
+  // console.log("homePageData: ", homePageData);
   // console.log("partnersData: ", partnersData);
   // console.log("counsellingPackagesData: ", counsellingPackagesData);
   
@@ -79,6 +78,9 @@ export default function Home() {
   // console.log("ExamsLevelData: ", ExamsLevelData);
   // console.log("ExamDatabyId: ", ExamDatabyId);
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
+
+  const homeData = flattenAttributes(homePageData?.heroSections?.data);
+  // console.log(homeData, "home");
 
   return (
     <>
