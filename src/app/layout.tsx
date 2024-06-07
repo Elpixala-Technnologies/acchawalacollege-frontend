@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import {global} from "@/data/globalData"
 import ReduxProvider from "@/Redux/provider";
+import { ApolloWrapper } from "@/lib/client";
 const inter = Inter({ subsets: ["latin"] });
 
 import setupLocatorUI from "@locator/runtime";
@@ -26,12 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-poppins relative">
+      <body className="text-primary-text font-poppins relative bg-gray-100">
       <ReduxProvider>
-        <Header header={global?.header} />
-        {children}
-        <Footer footer={global?.footer} />
+        <ApolloWrapper>
+          <Header  header={global?.header}  />
+          {children}
+          <Footer footer={global?.footer} />
         </ReduxProvider>
+        </ApolloWrapper>
       </body>
     </html>
   );
