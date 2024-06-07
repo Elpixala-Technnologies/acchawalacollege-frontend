@@ -16,14 +16,17 @@ import {
   GET_BLOGS,
   GET_COLLEGES,
   GET_COLLEGES_BY_ID,
+  GET_COUNSELLING_PACKAGES,
   GET_COURSES,
   GET_EXAMS,
   GET_EXAMS_LEVEL,
   GET_EXAM_BY_ID,
   GET_FEATURED_EXAMS,
-  GET_HERO_SECTION,
+  GET_HOME_PAGE,
+  GET_PARTNERS,
   GET_TOP_COLLEGES,
 } from "@/query/schema";
+import { flattenAttributes } from "@/utils/flattenAttributes";
 
 export default function Home() {
   
@@ -31,7 +34,10 @@ export default function Home() {
 
   const { data: CoursesData } = useQuery(GET_COURSES);
 
-  const { data: HeroSectionNData } = useQuery(GET_HERO_SECTION);
+  const { data: homePageData, loading: HomePageLoader, error: homePageError, } = useQuery(GET_HOME_PAGE);
+
+  const { data: partnersData } = useQuery(GET_PARTNERS);
+  const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
   const { data: CollegesData } = useQuery(GET_COLLEGES);
 
@@ -59,8 +65,11 @@ export default function Home() {
 
   // console.log("CoursesData: ", CoursesData);
 
-  // console.log("HeroSectionNData: ", HeroSectionNData);
-
+  // console.log("homePageData: ", homePageData);
+  // console.log("partnersData: ", partnersData);
+  // console.log("counsellingPackagesData: ", counsellingPackagesData);
+  
+  
   // console.log("CollegesData: ", CollegesData);
   // console.log("TopCollegesData: ", TopCollegesData);
   // console.log("CollegesDatabyId: ", CollegesDatabyId);
@@ -69,6 +78,9 @@ export default function Home() {
   // console.log("ExamsLevelData: ", ExamsLevelData);
   // console.log("ExamDatabyId: ", ExamDatabyId);
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
+
+  const homeData = flattenAttributes(homePageData?.heroSections?.data);
+  // console.log(homeData, "home");
 
   return (
     <>

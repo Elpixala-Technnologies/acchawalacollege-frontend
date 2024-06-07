@@ -23,9 +23,10 @@ import { HiBuildingOffice2 } from "react-icons/hi2";
 import { MdCastForEducation } from "react-icons/md";
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 
+// Single college Details 
 export const collegeDetailsPage = {
   collegeLogo: collegeLogo,
-  bg: c1,
+  bgImage: c1,
   collegeName: "IIT Madras - Indian Institute of Technology",
   location: {
     state: "Tamil Nadu",
@@ -33,11 +34,8 @@ export const collegeDetailsPage = {
   },
   collegeType: "Government",
   estYear: "1990",
-  button: {
-    button1: { text: "Register Now", href: "#" },
-    button2: { text: "Download Brochure", href: "#" },
-  },
   lastUpdate: "Nov 17, 2023 14:25 IST",
+  //  dont collegeDetails right now
   collegeDetails: [
     {
       navItem: "Overview",
@@ -203,6 +201,8 @@ export const collegeDetailsPage = {
       ],
     },
   ],
+  // leave courseArray right now
+  courseArray:[],
   topRecruiters: {
     title: {
       t1: "IIT Madras",
@@ -224,6 +224,7 @@ export const collegeDetailsPage = {
     title: {
       t1: "IIT Madras",
       t2: "Reviews",
+      t3:"",
     },
     overallRating: "4.5",
     individualReviews: [
@@ -275,6 +276,7 @@ export const collegeDetailsPage = {
     title: {
       t1: "IIT Madras",
       t2: "Photo Gallery",
+      t3: "",
     },
     photos: [c3, c4, c5, c6, c7, c8],
   },
@@ -282,6 +284,7 @@ export const collegeDetailsPage = {
     title: {
       t1: "IIT Madras",
       t2: "Video Gallery",
+      t3:"",
     },
     videos: [
       { id: 1, title: "Video 1", videoId: "4-YEBaUXUGo" },
@@ -291,6 +294,7 @@ export const collegeDetailsPage = {
   },
   faqs: {
     title: {
+      t1:"",
       t2: "IIT Madras",
       t3: "Frequently Asked Questions",
     },
