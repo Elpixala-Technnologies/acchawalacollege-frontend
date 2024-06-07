@@ -4,7 +4,7 @@ import CounsellingPackages from "@/components/homePageSections/counsellingPackag
 import TopColleges from "@/components/topColleges/TopColleges";
 import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection";
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
-import Section2 from "@/components/homePageSections/section2/Section2";
+import Section2 from "@/components/section2/Section2";
 import Section6 from "@/components/homePageSections/section6/Section6";
 import TopCourses from "@/components/topCourses/TopCourses";
 import Testimonials from "@/components/testimonials/Testimonials";
@@ -55,20 +55,20 @@ export default function Home() {
 
   const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
 
-  console.log("BlogsData: ", BlogsData);
+  // console.log("BlogsData: ", BlogsData);
 
-  console.log("CoursesData: ", CoursesData);
+  // console.log("CoursesData: ", CoursesData);
 
-  console.log("HeroSectionNData: ", HeroSectionNData);
+  // console.log("HeroSectionNData: ", HeroSectionNData);
 
-  console.log("CollegesData: ", CollegesData);
-  console.log("TopCollegesData: ", TopCollegesData);
-  console.log("CollegesDatabyId: ", CollegesDatabyId);
+  // console.log("CollegesData: ", CollegesData);
+  // console.log("TopCollegesData: ", TopCollegesData);
+  // console.log("CollegesDatabyId: ", CollegesDatabyId);
 
-  console.log("ExamsData: ", ExamsData);
-  console.log("ExamsLevelData: ", ExamsLevelData);
-  console.log("ExamDatabyId: ", ExamDatabyId);
-  console.log("FeaturedExamsData: ", FeaturedExamsData);
+  // console.log("ExamsData: ", ExamsData);
+  // console.log("ExamsLevelData: ", ExamsLevelData);
+  // console.log("ExamDatabyId: ", ExamDatabyId);
+  // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   return (
     <>

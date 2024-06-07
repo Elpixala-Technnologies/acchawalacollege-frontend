@@ -68,7 +68,7 @@ export default function BannerSection({ data }: any) {
             height={1000}
             className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
           />
-          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] md:translate-x-full translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75">
+          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[235px] translate-x-1/2 flex-col rounded-xl bg-blue-950 px-8 py-3 text-white max-md:scale-75 md:translate-x-full">
             <span className="mb-3 text-wrap">{data?.text2}</span>
             <span>{data?.text3}</span>
           </p>
