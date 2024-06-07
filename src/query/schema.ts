@@ -26,8 +26,8 @@ export const GET_COURSES = gql`
   }
 `;
 
-export const GET_HERO_SECTION = gql`
-query GetHeroSection {
+export const GET_HOME_PAGE = gql`
+query GetHomeSection {
     heroSections {
       data {
         id

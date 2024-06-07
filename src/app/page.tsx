@@ -22,7 +22,7 @@ import {
   GET_EXAMS_LEVEL,
   GET_EXAM_BY_ID,
   GET_FEATURED_EXAMS,
-  GET_HERO_SECTION,
+  GET_HOME_PAGE,
   GET_PARTNERS,
   GET_TOP_COLLEGES,
 } from "@/query/schema";
@@ -33,7 +33,10 @@ export default function Home() {
 
   const { data: CoursesData } = useQuery(GET_COURSES);
 
-  const { data: HeroSectionNData } = useQuery(GET_HERO_SECTION);
+  const { data: homePageData,
+    loading: Loader,
+    error: streamsError,
+   } = useQuery(GET_HOME_PAGE);
   const { data: partnersData } = useQuery(GET_PARTNERS);
   const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
@@ -59,23 +62,23 @@ export default function Home() {
 
   const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
 
-  console.log("BlogsData: ", BlogsData);
+  // console.log("BlogsData: ", BlogsData);
 
-  console.log("CoursesData: ", CoursesData);
+  // console.log("CoursesData: ", CoursesData);
 
-  console.log("HeroSectionNData: ", HeroSectionNData);
-  console.log("partnersData: ", partnersData);
-  console.log("counsellingPackagesData: ", counsellingPackagesData);
+  // console.log("HeroSectionNData: ", HeroSectionNData);
+  // console.log("partnersData: ", partnersData);
+  // console.log("counsellingPackagesData: ", counsellingPackagesData);
   
   
-  console.log("CollegesData: ", CollegesData);
-  console.log("TopCollegesData: ", TopCollegesData);
-  console.log("CollegesDatabyId: ", CollegesDatabyId);
+  // console.log("CollegesData: ", CollegesData);
+  // console.log("TopCollegesData: ", TopCollegesData);
+  // console.log("CollegesDatabyId: ", CollegesDatabyId);
 
-  console.log("ExamsData: ", ExamsData);
-  console.log("ExamsLevelData: ", ExamsLevelData);
-  console.log("ExamDatabyId: ", ExamDatabyId);
-  console.log("FeaturedExamsData: ", FeaturedExamsData);
+  // console.log("ExamsData: ", ExamsData);
+  // console.log("ExamsLevelData: ", ExamsLevelData);
+  // console.log("ExamDatabyId: ", ExamDatabyId);
+  // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   return (
     <>
