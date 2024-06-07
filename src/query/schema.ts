@@ -27,7 +27,7 @@ export const GET_COURSES = gql`
 `;
 
 export const GET_HOME_PAGE = gql`
-query GetHomeSection {
+  query GetHomeSection {
     heroSections {
       data {
         id
@@ -44,6 +44,10 @@ query GetHomeSection {
               text
               href
             }
+            button2 {
+              text
+              href
+            }
           }
           section2 {
             card1 {
@@ -51,7 +55,40 @@ query GetHomeSection {
                 data {
                   id
                   attributes {
-                    name
+                    url
+                    alternativeText
+                    width
+                    height
+                  }
+                }
+              }
+              title
+              text
+            }
+            card2 {
+              icon {
+                data {
+                  id
+                  attributes {
+                    alternativeText
+                    width
+                    height
+                    url
+                  }
+                }
+              }
+              title
+              text
+            }
+            card3 {
+              icon {
+                data {
+                  id
+                  attributes {
+                    alternativeText
+                    width
+                    height
+                    url
                   }
                 }
               }
@@ -69,7 +106,10 @@ query GetHomeSection {
                 data {
                   id
                   attributes {
-                    name
+                    url
+                    alternativeText
+                    width
+                    height
                   }
                 }
               }
@@ -111,14 +151,17 @@ export const GET_PARTNERS = gql`
       data {
         id
         attributes {
-          partners{
+          partners {
             id
             title
-            images{
-              data{
+            images {
+              data {
                 id
-                attributes{
-                  name
+                attributes {
+                  alternativeText
+                  width
+                  height
+                  url
                 }
               }
             }
@@ -135,18 +178,20 @@ export const GET_COUNSELLING_PACKAGES = gql`
       data {
         id
         attributes {
-          CounsellingPackages{
+          CounsellingPackages {
             id
             title
-            CounsellingPackagesCards{
+            CounsellingPackagesCards {
               id
               id_no
-              icon{
-                data
-                {
+              icon {
+                data {
                   id
-                  attributes{
-                    name
+                  attributes {
+                    alternativeText
+                    width
+                    height
+                    url
                   }
                 }
               }
@@ -154,16 +199,16 @@ export const GET_COUNSELLING_PACKAGES = gql`
               isPopular
               price
               text1
-              lists{
-                data{
+              lists {
+                data {
                   id
-                  attributes{
+                  attributes {
                     isInclude
                     text
-                    college{
-                      data{
+                    college {
+                      data {
                         id
-                        attributes{
+                        attributes {
                           college_name
                         }
                       }
@@ -171,16 +216,16 @@ export const GET_COUNSELLING_PACKAGES = gql`
                   }
                 }
               }
-              button{
-                data{
+              button {
+                data {
                   id
-                  attributes{
+                  attributes {
                     text
                     href
-                    colleges{
-                      data{
+                    colleges {
+                      data {
                         id
-                        attributes{
+                        attributes {
                           college_name
                         }
                       }
