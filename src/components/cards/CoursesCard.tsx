@@ -14,6 +14,7 @@ import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { formatRupee } from "@/utils/fotmatRupee";
 
 export default function CoursesCard({ data }: any) {
+  const uniqueId = "course123";
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -22,13 +23,13 @@ export default function CoursesCard({ data }: any) {
       // dynamicBullets: true,
     },
     autoplay: {
-      delay: 2000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {
@@ -46,7 +47,7 @@ export default function CoursesCard({ data }: any) {
 
   return (
     <>
-      <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
+      <Swiper {...swiperOptions} className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}>
         {data.map((course: any, index: number) => (
           <SwiperSlide
             key={index}
@@ -57,8 +58,8 @@ export default function CoursesCard({ data }: any) {
         ))}
       </Swiper>
       {/* Add navigation buttons */}
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
     </>
   );
 }

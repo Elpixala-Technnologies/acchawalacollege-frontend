@@ -21,7 +21,7 @@ export default function HeroSection({ data }: any) {
       <Image
         src={data?.collegeDetails?.bg}
         alt="collegeBanner"
-        className="h-[42rem] w-full object-cover sm:h-[32rem] md:h-[21.5rem]"
+        className="h-[40rem] w-full object-cover sm:h-[32rem] md:h-[21.5rem]"
       />
       <div className="absolute left-0 top-0 h-full w-full bg-black/65">
         <Wrapper className="p-10 text-white">
@@ -132,10 +132,10 @@ export default function HeroSection({ data }: any) {
                 Ask
               </p>
               <div className="flex flex-wrap gap-2">
-                <Link href={data?.button1?.href} className="button4 rounded-lg">
+                <Link href={data?.button1?.href} className="button4 rounded-lg max-sm:w-full">
                   {data?.button1?.text}
                 </Link>
-                <Link href={data?.button2?.href} className="button8 rounded-lg">
+                <Link href={data?.button2?.href} className="button8 rounded-lg max-sm:w-full">
                   {data?.button2?.text}
                 </Link>
               </div>

@@ -13,7 +13,7 @@ export default function BlogAndOthersFilterSection({ data }: any) {
     <section className="mx-auto my-16 w-full max-w-[1440px] p-5">
       <div className="mb-10 flex flex-wrap justify-center gap-5">
         {/* Filter Titles  */}
-        {data.filterBy.map((item: any) => (
+        {data?.filterBy.map((item: any) => (
           <h1
             className={`cursor-pointer px-3 transition-all duration-200  ${
               activeCategory === item?.category
@@ -27,7 +27,7 @@ export default function BlogAndOthersFilterSection({ data }: any) {
           </h1>
         ))}
       </div>
-      <div className="mt-5 flex flex-wrap justify-center gap-5">
+      <div className="mt-5 flex overflow-x-auto gap-5 w-full md:justify-center">
         {data.cardsContent
           .filter(
             (card: any) =>

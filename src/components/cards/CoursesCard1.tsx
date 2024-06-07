@@ -11,6 +11,7 @@ import Link from "next/link";
 import { FaRegCirclePlay } from "react-icons/fa6";
 
 export default function CoursesCard1({ data }: any) {
+  const uniqueId = "course1234";
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -19,13 +20,13 @@ export default function CoursesCard1({ data }: any) {
       // dynamicBullets: true,
     },
     autoplay: {
-      delay: 2000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${uniqueId}-next`,
+      prevEl: `.${uniqueId}-prev`,
     },
     modules: [Autoplay, Pagination, Navigation],
     breakpoints: {
@@ -43,7 +44,7 @@ export default function CoursesCard1({ data }: any) {
 
   return (
     <>
-      <Swiper {...swiperOptions} className="mySwiper w-[95%] max-w-fit px-5">
+      <Swiper {...swiperOptions} className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}>
         {data.map((d: any, index: number) => (
           <SwiperSlide
             key={index}
@@ -54,8 +55,8 @@ export default function CoursesCard1({ data }: any) {
         ))}
       </Swiper>
       {/* Add navigation buttons */}
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={`${uniqueId}-next swiper-button-next`}></div>
+      <div className={`${uniqueId}-prev swiper-button-prev`}></div>
     </>
   );
 }
@@ -69,7 +70,7 @@ function CoursesCardContent({ data }: any) {
           alt="data"
           className="h-[250px] w-full object-cover"
         />
-        <div className="absolute left-0 top-0 flex h-full w-full gap-3 bg-black/50 p-3">
+        <div className="absolute left-0 top-0 flex max-sm:flex-col h-full w-full gap-3 bg-black/50 p-3">
           <div className="flex flex-col justify-between text-white">
             {data?.button?.button1 && (
               <Link href={data?.button?.button1?.href} className="mb-5">
@@ -98,7 +99,7 @@ function CoursesCardContent({ data }: any) {
               alt="teacher"
               width={112}
               height={112}
-              className="m-2 h-28 w-28 rounded-full border-2 border-zinc-200 object-cover"
+              className="m-2 h-28 w-28 max-sm:h-16 max-sm:w-16 rounded-full border-2 border-zinc-200 object-cover max-sm:relative right-1 bottom-1"
             />
           )}
         </div>

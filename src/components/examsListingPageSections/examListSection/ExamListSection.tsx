@@ -30,11 +30,11 @@ export default function ExamListSection({ examDataArray, filterBy, upcomingExams
   const handleFilterOptionClick = (option: any) => {
     if (option === "a-z") {
       const sortedData: any = [...examDataArray].sort((a: any, b: any) => {
-        return a?.name.localeCompare(b?.name);
+        return a?.name?.localeCompare(b?.name);
       });
       setFilteredData(sortedData.slice(0, displayCount));
     } else if (option === "reset") {
-      const resetArray: any = [...examDataArray].slice(0, displayCount);
+      const resetArray: any = [...examDataArray]?.slice(0, displayCount);
       setFilteredData(resetArray);
     }
   };
@@ -53,7 +53,9 @@ export default function ExamListSection({ examDataArray, filterBy, upcomingExams
           filterBy={filterBy}
           SelectedFilters={SelectedFilters}
           setSelectedFilters={setSelectedFilters}
-          totalResults={examDataArray.length}
+          totalResults={examDataArray?.length}
+          mobileFilter={MobileFilter}
+          setMobileFilter={setMobileFilter}
         />
         {/* main Exam Search and List Section  */}
         <main className="flex w-full flex-col p-5 pt-0  md:min-w-[550px] md:[flex:8]">

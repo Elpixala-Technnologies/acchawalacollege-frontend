@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Content from "./Content";
 
-export default function CourseDetail({ data }: any) {
+export default function PageNavbarDetails({ data }: any) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleSelect = (index: any) => {
@@ -14,11 +14,11 @@ export default function CourseDetail({ data }: any) {
     <section className="mb-14 w-full">
       <Wrapper>
         <Navbar
-          courseDetails={data}
+          navItems={data}
           onSelect={handleSelect}
           selectedIndex={selectedIndex}
         />
-        <Content courseDetails={data} selectedIndex={selectedIndex} />
+        <Content selectedContent={data?.[selectedIndex]} />
       </Wrapper>
     </section>
   );
