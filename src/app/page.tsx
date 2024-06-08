@@ -65,7 +65,7 @@ export default function Home() {
 
   // console.log("CoursesData: ", CoursesData);
 
-   console.log("homePageData: ", homePageData);
+  //  console.log("homePageData: ", homePageData);
   // console.log("partnersData: ", partnersData);
   // console.log("counsellingPackagesData: ", counsellingPackagesData);
   
@@ -80,14 +80,14 @@ export default function Home() {
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
-  // console.log(homeData?.section2, "home");
+  console.log(homeData?.banner2, "home");
 
   return (
     <>
       <BannerSection data={home?.homeBanner} sData={homeData?.homebanner} />
       <Section2 data={home?.section2} sData={homeData?.section2} />
       <PartnersSection data={global?.partners} />
-      <BannerSection1 data={home?.banner2} />
+      <BannerSection1 data={home?.banner2} sData={homeData?.banner2} />
       <TopColleges data={global?.topColleges} />
       <TopCourses data={global?.topCourses} />
       <CounsellingPackages data={home?.CounsellingPackages} />

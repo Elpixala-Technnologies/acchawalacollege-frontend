@@ -51,10 +51,10 @@ export default function BannerSection({ data, sData }: any) {
               {sData?.button1?.text}
             </Link>
             <Link
-              href={data?.button2?.href || "#"}
+              href={sData?.button2?.href || "#"}
               className="button1  max-md:px-3"
             >
-              {data?.button2?.text}
+              {sData?.button2?.text}
             </Link>
           </div>
         </div>
@@ -62,28 +62,30 @@ export default function BannerSection({ data, sData }: any) {
         <div className="relative flex items-center gap-x-5 md:w-1/2">
           <div className="relative flex h-full w-3/5 flex-col gap-y-5">
             <Image
-              src={data?.img[0]}
+              src={sData?.img?.data[0]?.url}
               alt="b2"
               width={1000}
               height={1000}
               className="ml-auto h-full max-h-[200px] w-max  rounded-lg object-contain"
             />
             <Image
-              src={data?.img[1]}
+              src={sData?.img?.data[1]?.url}
               alt="b1"
+              width={1000}
+              height={1000}
               className="ml-auto h-full max-h-[320px] w-max  rounded-lg object-contain"
             />
           </div>
           <Image
-            src={data?.img[2]}
+            src={sData?.img?.data[2]?.url}
             alt="b3"
             width={1000}
             height={1000}
             className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
           />
           <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75 md:translate-x-full">
-            <span className="mb-3 text-wrap">{data?.text2}</span>
-            <span>{data?.text3}</span>
+            <span className="mb-3 text-wrap">{sData?.text2}</span>
+            <span>{sData?.text3}</span>
           </p>
         </div>
       </Wrapper>
