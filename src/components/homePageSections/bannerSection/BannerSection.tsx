@@ -5,13 +5,15 @@ import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
+import useIsMobile from "@/customHooks/useIsMobile";
 
 export default function BannerSection({ data, sData }: any) {
+  const isMobile = useIsMobile(450);
   return (
     <section className="my-16 w-full max-md:mt-5">
       <Wrapper className="flex items-center justify-between max-md:flex-col max-md:gap-y-5">
         {/* Left Side of Banner */}
-        <div className="flex w-max flex-col gap-y-3">
+        <div className="flex w-max max-sm:w-full flex-col gap-y-3">
           {/* Title  */}
           <h1 className="flex flex-col text-wrap text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
             {sData?.title?.t1 && (
@@ -26,7 +28,7 @@ export default function BannerSection({ data, sData }: any) {
           </h1>
           {sData?.text1 && (
             <p className="mb-5 text-wrap">
-              <TextWithLineBreak text={sData?.text1} />
+              { isMobile? sData?.text1 : <TextWithLineBreak text={sData?.text1} />}
             </p>
           )}
           {/* Input field */}

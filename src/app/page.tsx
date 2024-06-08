@@ -23,8 +23,6 @@ import {
   GET_EXAM_BY_ID,
   GET_FEATURED_EXAMS,
   GET_HOME_PAGE,
-  GET_PARTNERS,
-  GET_TOP_COLLEGES,
 } from "@/query/schema";
 import { flattenAttributes } from "@/utils/flattenAttributes";
 
@@ -61,23 +59,6 @@ export default function Home() {
 
   const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
 
-  // console.log("BlogsData: ", BlogsData);
-
-  // console.log("CoursesData: ", CoursesData);
-
-  //  console.log("homePageData: ", homePageData);
-  // console.log("partnersData: ", partnersData);
-  // console.log("counsellingPackagesData: ", counsellingPackagesData);
-  
-  
-  // console.log("CollegesData: ", CollegesData);
-  // console.log("TopCollegesData: ", TopCollegesData);
-  // console.log("CollegesDatabyId: ", CollegesDatabyId);
-
-  // console.log("ExamsData: ", ExamsData);
-  // console.log("ExamsLevelData: ", ExamsLevelData);
-  // console.log("ExamDatabyId: ", ExamDatabyId);
-  // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
   console.log(homeData?.banner1, "home");
