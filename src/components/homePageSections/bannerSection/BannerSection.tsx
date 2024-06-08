@@ -6,27 +6,33 @@ import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
-export default function BannerSection({ data }: any) {
+export default function BannerSection({ data, sData }: any) {
   return (
-    <section className="my-16 max-md:mt-5 w-full">
-      <Wrapper className="flex items-center max-md:flex-col max-md:gap-y-5 justify-between">
+    <section className="my-16 w-full max-md:mt-5">
+      <Wrapper className="flex items-center justify-between max-md:flex-col max-md:gap-y-5">
         {/* Left Side of Banner */}
-        <div className="flex w-max flex-col gap-y-8">
+        <div className="flex w-max flex-col gap-y-3">
           {/* Title  */}
-          <h1 className="flex flex-col md:gap-y-2 text-wrap text-[1.750rem] font-medium md:text-5xl">
-            <span className="text-blue-950/70">{data?.title?.t1}</span>
-            <span className="text-blue-950">{data?.title?.t2}</span>
-            <span className="text-blue-500">{data?.title?.t3}</span>
+          <h1 className="flex flex-col text-wrap text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
+            {sData?.title?.t1 && (
+              <span className="text-blue-950/70">{sData?.title?.t1}</span>
+            )}
+            {sData?.title?.t2 && (
+              <span className="text-blue-950">{sData?.title?.t2}</span>
+            )}
+            {sData?.title?.t3 && (
+              <span className="text-blue-500">{sData?.title?.t3}</span>
+            )}
           </h1>
-          {/* {data?.text1 && (
-            <p className="text-wrap">
-              <TextWithLineBreak text={data?.text1} />
+          {sData?.text1 && (
+            <p className="mb-5 text-wrap">
+              <TextWithLineBreak text={sData?.text1} />
             </p>
-          )} */}
+          )}
           {/* Input field */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex items-center h-10 gap-1"
+            className="mb-5 flex h-12 items-center gap-1"
           >
             <input
               className="h-full w-full rounded-md border  bg-zinc-100 p-5 shadow md:max-w-[500px]"
@@ -36,17 +42,24 @@ export default function BannerSection({ data }: any) {
               <CiSearch className="text-2xl text-white" />
             </button>
           </form>
-          <div className="flex md:gap-2 gap-1">
-            <Link href={data?.button1?.href} className="button2  max-md:px-2">
-              {data?.button1?.text}
+          {/* Buttons  */}
+          <div className="flex gap-1 md:gap-2">
+            <Link
+              href={sData?.button1?.href || "#"}
+              className="button2  max-md:px-2"
+            >
+              {sData?.button1?.text}
             </Link>
-            <Link href={data?.button2?.href} className="button1  max-md:px-3">
+            <Link
+              href={data?.button2?.href || "#"}
+              className="button1  max-md:px-3"
+            >
               {data?.button2?.text}
             </Link>
           </div>
         </div>
         {/* Right Side of Banner  */}
-        <div className="relative flex md:w-1/2 items-center gap-x-5">
+        <div className="relative flex items-center gap-x-5 md:w-1/2">
           <div className="relative flex h-full w-3/5 flex-col gap-y-5">
             <Image
               src={data?.img[0]}

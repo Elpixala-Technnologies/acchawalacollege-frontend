@@ -79,13 +79,13 @@ export default function Home() {
   // console.log("ExamDatabyId: ", ExamDatabyId);
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
-  const homeData = flattenAttributes(homePageData?.heroSections?.data);
-  // console.log(homeData, "home");
+  const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
+  console.log(homeData?.section2, "home");
 
   return (
     <>
-      <BannerSection data={home?.homeBanner} />
-      <Section2 data={home?.section2} />
+      <BannerSection data={home?.homeBanner} sData={homeData?.homebanner} />
+      <Section2 data={home?.section2} sData={homeData?.section2} />
       <PartnersSection data={global?.partners} />
       <BannerSection1 data={home?.banner2} />
       <TopColleges data={global?.topColleges} />
