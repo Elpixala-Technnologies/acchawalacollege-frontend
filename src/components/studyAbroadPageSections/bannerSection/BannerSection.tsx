@@ -5,30 +5,36 @@ import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
+import useIsMobile from "@/customHooks/useIsMobile";
 
 export default function BannerSection({ data }: any) {
+  const isMobile = useIsMobile(450);
   return (
     <section className="my-16 w-full max-md:mt-5">
       <Wrapper className="flex items-center justify-between max-md:flex-col max-md:gap-y-5">
         {/* Left Side of Banner */}
-        <div className="flex w-max flex-col gap-y-3">
+        <div className="flex w-max max-sm:w-full flex-col gap-y-3">
           {/* Title  */}
           <h1 className="flex flex-col text-wrap text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
-            <span>
-              <span className="text-blue-950/70">{data?.title?.t1} </span>
+            {data?.title?.t1 && (
+              <span className="text-blue-950/70">{data?.title?.t1}</span>
+            )}
+            {data?.title?.t2 && (
               <span className="text-blue-950">{data?.title?.t2}</span>
-            </span>
-            <span className="text-blue-500">{data?.title?.t3}</span>
+            )}
+            {data?.title?.t3 && (
+              <span className="text-blue-500">{data?.title?.t3}</span>
+            )}
           </h1>
           {data?.text1 && (
-            <p className="text-wrap mb-5">
-              <TextWithLineBreak text={data?.text1} />
+            <p className="mb-5 !text-wrap flex-wrap">
+              {isMobile ? data?.text1 : <TextWithLineBreak text={data?.text1} />}
             </p>
           )}
           {/* Input field */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex h-12 items-center gap-1 pb-5"
+            className="mb-5 flex h-12 items-center gap-1"
           >
             <input
               className="h-full w-full rounded-md border  bg-zinc-100 p-5 shadow md:max-w-[500px]"
@@ -38,11 +44,18 @@ export default function BannerSection({ data }: any) {
               <CiSearch className="text-2xl text-white" />
             </button>
           </form>
+          {/* Buttons  */}
           <div className="flex gap-1 md:gap-2">
-            <Link href={data?.button1?.href} className="button2  max-md:px-2">
+            <Link
+              href={data?.button1?.href || "#"}
+              className="button2  max-md:px-2"
+            >
               {data?.button1?.text}
             </Link>
-            <Link href={data?.button2?.href} className="button1  max-md:px-3">
+            <Link
+              href={data?.button2?.href || "#"}
+              className="button1  max-md:px-3"
+            >
               {data?.button2?.text}
             </Link>
           </div>

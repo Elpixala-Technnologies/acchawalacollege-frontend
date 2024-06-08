@@ -7,6 +7,7 @@ import Wrapper from "@/components/Wrapper";
 import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
 export default function BannerSection({ data, sData }: any) {
+  
   return (
     <section className="my-16 w-full max-md:mt-5">
       <Wrapper className="flex items-center justify-between max-md:flex-col max-md:gap-y-5">

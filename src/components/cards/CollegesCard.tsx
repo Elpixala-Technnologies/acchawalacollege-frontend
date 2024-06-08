@@ -43,7 +43,10 @@ export default function CollegesCard({ data }: any) {
 
   return (
     <>
-      <Swiper {...swiperOptions} className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}>
+      <Swiper
+        {...swiperOptions}
+        className={`mySwiper w-[95%] max-w-fit px-5 ${uniqueId}`}
+      >
         {data?.map((college: any, index: number) => (
           <SwiperSlide
             key={index}
@@ -60,12 +63,17 @@ export default function CollegesCard({ data }: any) {
   );
 }
 
-
 export const CollegesCardContent = function CollegesCard({ college }: any) {
   return (
     <React.Fragment>
       <div className="relative w-full">
-        <Image src={college?.img} alt="college" className="h-[200px] w-full object-cover" />
+      <Image
+          src={college?.image}
+          alt={college?.name}
+          width={800}
+          height={800}
+          className="w-full h-[200px] object-cover rounded-xl"
+        />
         <div className="absolute right-4 top-4 rounded-lg bg-white p-5">
           {college?.icon}
         </div>

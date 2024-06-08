@@ -7,21 +7,21 @@ export default function Section2({ data, sData }: any) {
       <div className="flex w-full max-w-screen-2xl max-md:flex-col">
         <Card
           bgColor="bg-blue-950"
-          title={sData?.card1?.title}
-          text={sData?.card1?.text}
-          icon={data?.card1?.icon}
+          title={sData?.card1?.title || data?.card1?.title}
+          text={sData?.card1?.text || data?.card1?.text}
+          icon={data?.card1?.icon || sData?.card1?.icon}
         />
         <Card
           bgColor="bg-[#165bae]"
-          title={data?.card2?.title}
-          text={data?.card2?.text}
-          icon={data?.card2?.icon}
+          title={sData?.card2?.title || data?.card2?.title}
+          text={sData?.card2?.text || data?.card2?.text}
+          icon={sData?.card2?.icon || data?.card2?.icon}
         />
         <Card
           bgColor="bg-sky-500"
-          title={data?.card3?.title}
-          text={data?.card3?.text}
-          icon={data?.card3?.icon}
+          title={sData?.card3?.title || data?.card3?.title}
+          text={sData?.card3?.text || data?.card3?.text}
+          icon={sData?.card3?.icon || data?.card3?.icon}
         />
       </div>
     </section>

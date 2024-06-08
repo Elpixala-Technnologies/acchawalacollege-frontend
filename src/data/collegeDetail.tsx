@@ -17,6 +17,7 @@ import {
   comp5,
   scholarship1,
 } from "@/asset";
+import { distance } from "framer-motion";
 import { BiSolidInstitution } from "react-icons/bi";
 import { FaTransgenderAlt } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
@@ -31,6 +32,7 @@ export const collegeDetailsPage = {
   location: {
     state: "Tamil Nadu",
     city: "Chennai",
+    country: "India",
   },
   collegeType: "Government",
   estYear: "1990",
@@ -544,4 +546,6 @@ export const collegeDetailsPage = {
       ],
     },
   },
+  isAbroadCollege: false,
+  distanceFromAirport: "5.8",
 };
