@@ -4,7 +4,7 @@ import CounsellingPackages from "@/components/homePageSections/counsellingPackag
 import TopColleges from "@/components/topColleges/TopColleges";
 import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection";
 import PartnersSection from "@/components/homePageSections/partnersSection/PartnersSection";
-import Section2 from "@/components/homePageSections/section2/Section2";
+import Section2 from "@/components/section2/Section2";
 import Section6 from "@/components/homePageSections/section6/Section6";
 import TopCourses from "@/components/topCourses/TopCourses";
 import Testimonials from "@/components/testimonials/Testimonials";
