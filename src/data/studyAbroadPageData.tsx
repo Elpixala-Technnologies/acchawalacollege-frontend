@@ -31,6 +31,11 @@ import {
   c7,
   c8,
   exam1,
+  abroad3,
+  abroad2,
+  au3,
+  au2,
+  au1,
 } from "@/asset";
 import { TbRuler2Off } from "react-icons/tb";
 
@@ -102,7 +107,7 @@ export const studyAbroadData = {
           city: "England",
           country: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -115,7 +120,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -128,7 +133,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -141,7 +146,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -154,7 +159,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -167,7 +172,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -180,7 +185,7 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
@@ -193,31 +198,31 @@ export const studyAbroadData = {
           state: "Tamil Nadu",
           city: "England",
         },
-    overallRating: "4.5",
+        overallRating: "4.5",
         reviews: "2.3k reviews",
         priceRange: "$20,000 to $50,000",
         distanceFromAirport: "5.8",
       },
     ],
   },
-  section4: {
+  banner2: {
     title: {
       t1: "Growth and",
       t2: "Success Stories",
     },
-    text1:
+    text:
       "Discover how our guidance has empowered students to achieve their dreams abroad.",
-    text2:
+    text1:
       "Raj transformed his aspirations into reality by securing <br> admission to  MIT. With our  personalized guidance, he <br> navigated the  complexities of studying abroad and <br> achieved his dream",
     button1: {
       text: "Read More",
       href: "#",
     },
-    // img: [SuccessStories3, SuccessStories1],
-    middleCard: {
-      // img: SuccessStories2,
-      t1: "50K+",
-      t2: "Students",
+    img: [abroad2, abroad3],
+    reviews: {
+      userAvatars: [au1,au2,au3],
+      text1: "50K+",
+      text2: "Students",
     },
 
     card1: {
@@ -237,8 +242,8 @@ export const studyAbroadData = {
       t2: "Professors",
     },
   },
-
-  section5: {
+  // Admission Process and Assistance
+  banner3: {
     title: {
       t1: "Student Admission",
       t2: "Process and",
@@ -249,16 +254,15 @@ export const studyAbroadData = {
       text: "See all our admission",
       href: "#",
     },
-    // img: AssistanceFrom,
-
-    checkBoxData: {
-      t1: "Fill The Acchawalacollege End to End Form",
-      t2: "Our Expert Counsellor will Contact you",
-      t3: "Select The Right Counselling Package",
-      t4: "Shortlist Colleges And Fill Application Forms",
-      t5: "Upload Documents & Pay Fee",
-      t6: "Confirm Admission and Claim Gift",
-    },
+    img: abroad3,
+    steps: [
+      "Fill The Acchawalacollege End to End Form",
+      "Our Expert Counsellor will Contact you",
+      "Select The Right Counselling Package",
+      "Shortlist Colleges And Fill Application Forms",
+      "Upload Documents & Pay Fee",
+      "Confirm Admission and Claim Gift",
+    ],
   },
   banner1: {
     title:
@@ -269,16 +273,6 @@ export const studyAbroadData = {
       href: "#",
     },
     bgImg: section6Bg,
-  },
-
-  banner2: {
-    text: "Discover courses tailored to your aspirations and unlock endless \nopportunities for growth and success.",
-    buttons: {
-      button1: {
-        text: "Download Brochure",
-        href: "#",
-      },
-    },
   },
   counsellingPackages: {
     title: "Counselling Packages",

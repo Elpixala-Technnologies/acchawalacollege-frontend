@@ -45,7 +45,7 @@ export default function AbroadCollegesCard({ data }: any) {
         {data?.slice(0, 4).map((college: any, index: number) => (
           <SwiperSlide
             key={index}
-            className="mb-12 flex w-full flex-col overflow-hidden rounded-xl border border-zinc-300 bg-white"
+            className="mb-12 flex w-full flex-col overflow-hidden rounded-xl border"
           >
             <CollegesCardContent college={college} />
           </SwiperSlide>
@@ -88,18 +88,18 @@ export const CollegesCardContent = function DiscoverTopCollegesCard({
       />
       <h2 className="my-2 text-xl font-semibold">{college?.collegeName}</h2>
       <p className="mb-2 text-base">{formatLocation(college?.location)}</p>
-      <div className="flex flex-wrap items-center justify-between text-sm">
+      <div className="flex max-sm:flex-col flex-wrap sm:justify-between text-sm">
         <p>
           <span className="mr-1 rounded bg-blue-500 px-1 py-0.5 text-center text-white">
             {college?.overallRating}
           </span>
           <span className=" ">{getRatingText(college?.overallRating)}</span>
         </p>
-        <p className="flex-center">
+        <p className="flex items-center">
           <LuDot className="text-2xl text-blue-950" />
           {college?.reviews}
         </p>
-        <p className="flex-center">
+        <p className="flex items-center">
           <LuDot className="text-2xl text-blue-950" />
           {college?.distanceFromAirport} km away
         </p>

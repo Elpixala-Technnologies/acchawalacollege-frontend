@@ -10,6 +10,8 @@ import CounsellingPackages from "@/components/homePageSections/counsellingPackag
 import Section10 from "@/components/Section10";
 import UpcomingExams from "@/components/upcomingExams/UpcomingExams";
 import AbroadTopColleges from "@/components/studyAbroadPageSections/abroadTopColleges/AbroadTopColleges";
+import Banner3Section from "@/components/studyAbroadPageSections/bannerSection/Banner3Section";
+import Banner2Section from "@/components/studyAbroadPageSections/bannerSection/Banner2Section";
 export default function StudyAbroad() {
   return (
     <>
@@ -19,15 +21,11 @@ export default function StudyAbroad() {
       <Section6 data={studyAbroadData?.banner1} />
       <TopCourses data={global?.topCourses} />
       <UpcomingExams data={studyAbroadData?.upcomingExams} />
+      {/* <Banner2Section data={studyAbroadData?.banner2} /> */}
       <Section10 data={studyAbroadData?.brochureSection} />
       <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
+      <Banner3Section data={studyAbroadData?.banner3} />
       <CounsellingPackages data={studyAbroadData?.counsellingPackages} />
-      {/*
-      <Section3 data={studyAbroadData?.scheduleCounsellingBanner} />
-      <Section4 data={studyAbroadData?.section4} />
-      <Section5 data={studyAbroadData?.brochureSection} />
-      <Section6 data={studyAbroadData?.Section5} />
-       */}
       <AreYouConfused />
     </>
   );

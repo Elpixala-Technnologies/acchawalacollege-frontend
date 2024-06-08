@@ -10,7 +10,7 @@ export default function AbroadTopColleges({ data }: any) {
           {data?.title && (
             <h1 className="title1">
               {data?.title?.t1 && (
-                <span className="text-blue-950/60">{data?.title?.t1}</span>
+                <span className="text-blue-950/70">{data?.title?.t1}</span>
               )}{" "}
               {data?.title?.t2 && (
                 <span className="text-blue-950">{data?.title?.t2}</span>
