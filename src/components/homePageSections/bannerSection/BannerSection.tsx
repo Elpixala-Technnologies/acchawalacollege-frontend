@@ -61,28 +61,28 @@ export default function BannerSection({ data, sData }: any) {
         {/* Right Side of Banner  */}
         <div className="relative flex items-center gap-x-5 md:w-1/2">
           <div className="relative flex h-full w-3/5 flex-col gap-y-5">
-            <Image
+            {sData?.img?.data[0]?.url && <Image
               src={sData?.img?.data[0]?.url}
               alt="b2"
               width={1000}
               height={1000}
               className="ml-auto h-full max-h-[200px] w-max  rounded-lg object-contain"
-            />
-            <Image
+            />}
+            {sData?.img?.data[1]?.url && <Image
               src={sData?.img?.data[1]?.url}
               alt="b1"
               width={1000}
               height={1000}
               className="ml-auto h-full max-h-[320px] w-max  rounded-lg object-contain"
-            />
+            />}
           </div>
-          <Image
+          {sData?.img?.data[2]?.url && <Image
             src={sData?.img?.data[2]?.url}
             alt="b3"
             width={1000}
             height={1000}
             className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
-          />
+          />}
           <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75 md:translate-x-full">
             <span className="mb-3 text-wrap">{sData?.text2}</span>
             <span>{sData?.text3}</span>

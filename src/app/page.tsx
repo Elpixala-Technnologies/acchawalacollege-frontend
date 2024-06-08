@@ -80,7 +80,7 @@ export default function Home() {
   // console.log("FeaturedExamsData: ", FeaturedExamsData);
 
   const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
-  console.log(homeData?.banner2, "home");
+  console.log(homeData?.banner1, "home");
 
   return (
     <>
@@ -91,7 +91,7 @@ export default function Home() {
       <TopColleges data={global?.topColleges} />
       <TopCourses data={global?.topCourses} />
       <CounsellingPackages data={home?.CounsellingPackages} />
-      <Section6 data={home?.banner1} />
+      {/* <Section6 data={home?.banner1} sData={homeData?.banner1} /> */}
       <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
       <Testimonials data={global?.testimonialsSection} />
     </>
