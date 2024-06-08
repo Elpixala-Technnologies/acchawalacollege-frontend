@@ -27,7 +27,7 @@ export const GET_COURSES = gql`
 `;
 
 export const GET_HOME_PAGE = gql`
-  query GetHomeSection {
+query GetHomeSection {
     heroSections {
       data {
         id
@@ -151,10 +151,22 @@ export const GET_HOME_PAGE = gql`
                 }
               }
             }
+            bg{
+              data{
+                id
+                attributes{
+                  alternativeText
+                  width
+                  height
+                  url
+                }
+              }
+            }
           }
         }
       }
     }
+  }
   }
 `;
 
