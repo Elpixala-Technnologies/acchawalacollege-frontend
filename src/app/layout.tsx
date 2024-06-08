@@ -9,11 +9,11 @@ import ReduxProvider from "@/Redux/provider";
 import { ApolloWrapper } from "@/lib/client";
 const inter = Inter({ subsets: ["latin"] });
 
-import setupLocatorUI from "@locator/runtime";
+// import setupLocatorUI from "@locator/runtime";
 
-if (process.env.NODE_ENV === "development") {
-  setupLocatorUI();
-}
+// if (process.env.NODE_ENV === "development") {
+//   setupLocatorUI();
+// }
 
 export const metadata: Metadata = {
   title: "Accha Wala College",
