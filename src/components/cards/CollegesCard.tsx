@@ -67,13 +67,13 @@ export const CollegesCardContent = function CollegesCard({ college }: any) {
   return (
     <React.Fragment>
       <div className="relative w-full">
-      <Image
+      {college?.img && <Image
           src={college?.img}
           alt={college?.name}
           width={800}
           height={800}
           className="w-full h-[200px] object-cover rounded-xl"
-        />
+        />}
         <div className="absolute right-4 top-4 rounded-lg bg-white p-5">
           {college?.icon}
         </div>

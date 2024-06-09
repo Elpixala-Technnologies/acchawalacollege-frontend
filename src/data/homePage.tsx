@@ -89,7 +89,7 @@ export const home = {
         isPopular: false,
         price: 11000,
         text1: "Essential guidance to kickstart \nyour journey",
-        list: [
+        lists: [
           {
             isInclude: true,
             text: "Personal Counsellor",
@@ -159,7 +159,7 @@ export const home = {
         isPopular: TbRuler2Off,
         price: 25000,
         text1: "Comprehensive support tailored \nto your ambitions",
-        list: [
+        lists: [
           {
             isInclude: true,
             text: "Personal Counsellor",
@@ -229,7 +229,7 @@ export const home = {
         isPopular: false,
         price: 55000,
         text1: "Unmatched assistance for your \nacademic aspirations",
-        list: [
+        lists: [
           {
             isInclude: true,
             text: "Personal Counsellor",

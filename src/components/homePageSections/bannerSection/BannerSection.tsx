@@ -13,7 +13,7 @@ export default function BannerSection({ data, sData }: any) {
     <section className="my-16 w-full max-md:mt-5">
       <Wrapper className="flex items-center justify-between max-md:flex-col max-md:gap-y-5">
         {/* Left Side of Banner */}
-        <div className="flex w-max max-sm:w-full flex-col gap-y-3">
+        <div className="flex w-max flex-col gap-y-3 max-sm:w-full">
           {/* Title  */}
           <h1 className="flex flex-col text-wrap text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
             {sData?.title?.t1 && (
@@ -28,7 +28,11 @@ export default function BannerSection({ data, sData }: any) {
           </h1>
           {sData?.text1 && (
             <p className="mb-5 text-wrap">
-              { isMobile? sData?.text1 : <TextWithLineBreak text={sData?.text1} />}
+              {isMobile ? (
+                sData?.text1
+              ) : (
+                <TextWithLineBreak text={sData?.text1} />
+              )}
             </p>
           )}
           {/* Input field */}
@@ -63,28 +67,34 @@ export default function BannerSection({ data, sData }: any) {
         {/* Right Side of Banner  */}
         <div className="relative flex items-center gap-x-5 md:w-1/2">
           <div className="relative flex h-full w-3/5 flex-col gap-y-5">
-            {sData?.img?.data[0]?.url && <Image
-              src={sData?.img?.data[0]?.url}
-              alt="b2"
-              width={1000}
-              height={1000}
-              className="ml-auto h-full max-h-[200px] w-max  rounded-lg object-contain"
-            />}
-            {sData?.img?.data[1]?.url && <Image
-              src={sData?.img?.data[1]?.url}
-              alt="b1"
-              width={1000}
-              height={1000}
-              className="ml-auto h-full max-h-[320px] w-max  rounded-lg object-contain"
-            />}
+            {sData?.img?.data[0]?.url && (
+              <Image
+                src={sData?.img?.data[0]?.url}
+                alt="b2"
+                width={1000}
+                height={1000}
+                className="ml-auto h-full max-h-[200px] w-max  rounded-lg object-contain"
+              />
+            )}
+            {sData?.img?.data[1]?.url && (
+              <Image
+                src={sData?.img?.data[1]?.url}
+                alt="b1"
+                width={1000}
+                height={1000}
+                className="ml-auto h-full max-h-[320px] w-max  rounded-lg object-contain"
+              />
+            )}
           </div>
-          {sData?.img?.data[2]?.url && <Image
-            src={sData?.img?.data[2]?.url}
-            alt="b3"
-            width={1000}
-            height={1000}
-            className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
-          />}
+          {sData?.img?.data[2]?.url && (
+            <Image
+              src={sData?.img?.data[2]?.url}
+              alt="b3"
+              width={1000}
+              height={1000}
+              className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
+            />
+          )}
           <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75 md:translate-x-full">
             <span className="mb-3 text-wrap">{sData?.text2}</span>
             <span>{sData?.text3}</span>

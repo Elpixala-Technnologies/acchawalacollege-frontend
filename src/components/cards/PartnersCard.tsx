@@ -38,7 +38,7 @@ const PartnersCard: React.FC<CardProps> = ({ image }) => {
           </motion.div>
         )}
       </AnimatePresence> */}
-      <Image src={image} alt={image} className="w-full max-h-20 h-full object-fit" />
+      {image && <Image src={image} alt="image" width={250} height={250} className="w-full max-h-20 h-full object-fit" />}
     </motion.div>
   );
 };

@@ -4,7 +4,7 @@ import TextWithLineBreak from "@/utils/TextWithLineBreak";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-export default  function  BannerSection1({ data, sData }: any) {
+export default function BannerSection1({ data, sData }: any) {
   const [positions, setPositions] = useState<any[]>([]);
   const [isMdScreen, setIsMdScreen] = useState<boolean>(false);
 
@@ -55,13 +55,15 @@ export default  function  BannerSection1({ data, sData }: any) {
         <div className="flex w-full justify-center overflow-hidden max-md:flex-col">
           {/* Image */}
           <div className="relative flex w-[29rem] max-md:hidden max-md:-translate-x-16 md:scale-[0.82] md:justify-center">
-            <Image
-              src={data?.bg}
-              height={700}
-              width={700}
-              alt="banner"
-              className="h-[31rem] rounded-b-full object-contain"
-            />
+            {sData?.bg?.data[0]?.url && (
+              <Image
+                src={sData?.bg?.data[0]?.url}
+                height={700}
+                width={700}
+                alt="banner"
+                className="h-[31rem] rounded-b-full object-contain"
+              />
+            )}
             <div className="absolute right-0 top-0 -z-10 h-96 w-96 rounded-full bg-blue-500"></div>
             <div className="absolute bottom-[14px] left-0 -z-20 h-96 w-96 rounded-full bg-blue-950"></div>
           </div>
