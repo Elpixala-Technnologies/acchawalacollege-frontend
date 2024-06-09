@@ -89,6 +89,10 @@ export default function BannerSection({ data, sData }: any) {
             <span className="mb-3 text-wrap">{sData?.text2}</span>
             <span>{sData?.text3}</span>
           </p>
+          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[235px] translate-x-1/2 flex-col rounded-xl bg-blue-950 px-8 py-3 text-white max-md:scale-75 md:translate-x-full">
+            <span className="mb-3 text-wrap">{data?.text2}</span>
+            <span>{data?.text3}</span>
+          </p>
         </div>
       </Wrapper>
     </section>

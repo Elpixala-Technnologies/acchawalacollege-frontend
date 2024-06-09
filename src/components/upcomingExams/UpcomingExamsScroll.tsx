@@ -120,9 +120,9 @@ export const ExamCardContent = function ({ exam }: any) {
         )}
       </div>
       <div className="flex flex-col p-5 md:gap-3">
-        {exam.title && (
+        {exam?.title && (
           <h4 className="mb-5 text-xl font-medium text-blue-950">
-            {exam.title}
+            {exam?.title}
           </h4>
         )}
         <p className="flex justify-between text-sm">
@@ -140,9 +140,9 @@ export const ExamCardContent = function ({ exam }: any) {
             </span>
             <span className="flex max-sm:flex-col">
               <span className="text-nowrap">
-                {formatDate(exam?.applicationFormDate.startDate)}
+                {formatDate(exam?.applicationFormDate?.startDate)}
               </span>
-              <span> - {formatDate(exam.applicationFormDate?.endDate)}</span>
+              <span> - {formatDate(exam?.applicationFormDate?.endDate)}</span>
             </span>
           </p>
         )}
@@ -164,12 +164,12 @@ export const ExamCardContent = function ({ exam }: any) {
         )}
         <div className="mt-5 flex justify-between gap-2 md:gap-4 max-md:flex-col ">
           <button className="cardButton1">
-            {exam.button1.icon && <span>{exam.button1.icon}</span>}{" "}
+            {exam?.button1.icon && <span>{exam?.button1?.icon}</span>}{" "}
             {exam.button1.text}
           </button>
           <button className="cardButton2">
-            {exam.button2.icon && <span>{exam.button2.icon}</span>}{" "}
-            {exam.button2.text}
+            {exam?.button2?.icon && <span>{exam?.button2?.icon}</span>}{" "}
+            {exam?.button2?.text}
           </button>
         </div>
       </div>
