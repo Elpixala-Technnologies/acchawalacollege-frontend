@@ -15,13 +15,15 @@ export default function BannerSection({ data }: any) {
         {/* Left Side of Banner */}
         <div className="flex w-max max-sm:w-full flex-col gap-y-3">
           {/* Title  */}
-          <h1 className="flex flex-col text-wrap text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
+          <h1 className="flex text-nowrap flex-col text-[1.750rem] font-medium md:gap-y-2 md:text-5xl">
+            <div className="flex max-md:flex-col gap-x-2">
             {data?.title?.t1 && (
               <span className="text-blue-950/70">{data?.title?.t1}</span>
             )}
             {data?.title?.t2 && (
               <span className="text-blue-950">{data?.title?.t2}</span>
             )}
+            </div>
             {data?.title?.t3 && (
               <span className="text-blue-500">{data?.title?.t3}</span>
             )}
