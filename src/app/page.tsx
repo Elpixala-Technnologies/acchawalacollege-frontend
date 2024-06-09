@@ -23,41 +23,47 @@ import {
   GET_EXAM_BY_ID,
   GET_FEATURED_EXAMS,
   GET_HOME_PAGE,
+  GET_PARTNERS,
+  GET_TOP_COLLEGES
+
 } from "@/query/schema";
 import { flattenAttributes } from "@/utils/flattenAttributes";
 
 export default function Home() {
   
-  const { data: BlogsData } = useQuery(GET_BLOGS);
+  // const { data: BlogsData } = useQuery(GET_BLOGS);
 
-  const { data: CoursesData } = useQuery(GET_COURSES);
+  // const { data: CoursesData } = useQuery(GET_COURSES);
 
-  const { data: homePageData, loading: HomePageLoader, error: homePageError, } = useQuery(GET_HOME_PAGE);
+  
+  // const { data: CollegesData } = useQuery(GET_COLLEGES);
+
+  // const { data: TopCollegesData } = useQuery(GET_TOP_COLLEGES);
+
+  // const collegeId = 2;
+
+  // const { data: CollegesDatabyId } = useQuery(GET_COLLEGES_BY_ID, {
+  //   variables: { collegeId },
+  // });
+
+  // const { data: ExamsData } = useQuery(GET_EXAMS);
+
+  // const { data: ExamsLevelData } = useQuery(GET_EXAMS_LEVEL);
+
+  // const examId = 1;
+
+  // const { data: ExamDatabyId } = useQuery(GET_EXAM_BY_ID, {
+  //   variables: { examId },
+  // });
+
+  // const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
+
+
 
   const { data: partnersData } = useQuery(GET_PARTNERS);
   const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
-  const { data: CollegesData } = useQuery(GET_COLLEGES);
-
-  const { data: TopCollegesData } = useQuery(GET_TOP_COLLEGES);
-
-  const collegeId = 2;
-
-  const { data: CollegesDatabyId } = useQuery(GET_COLLEGES_BY_ID, {
-    variables: { collegeId },
-  });
-
-  const { data: ExamsData } = useQuery(GET_EXAMS);
-
-  const { data: ExamsLevelData } = useQuery(GET_EXAMS_LEVEL);
-
-  const examId = 1;
-
-  const { data: ExamDatabyId } = useQuery(GET_EXAM_BY_ID, {
-    variables: { examId },
-  });
-
-  const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
+  const { data: homePageData, loading: HomePageLoader, error: homePageError, } = useQuery(GET_HOME_PAGE);
 
 
   const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);

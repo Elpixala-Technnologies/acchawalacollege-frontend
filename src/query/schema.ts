@@ -115,6 +115,8 @@ query GetHomeSection {
             button {
               text
               href
+              
+            }
               bgImg {
                 data {
                   id
@@ -126,7 +128,6 @@ query GetHomeSection {
                   }
                 }
               }
-            }
           }
           banner2 {
             title {
@@ -167,7 +168,7 @@ query GetHomeSection {
       }
     }
   }
-  }
+  
 `;
 
 export const GET_PARTNERS = gql`
