@@ -13,62 +13,57 @@ import { global } from "@/data/globalData";
 import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
 import { useQuery } from "@apollo/client";
 import {
-  GET_BLOGS,
-  GET_COLLEGES,
-  GET_COLLEGES_BY_ID,
-  GET_COUNSELLING_PACKAGES,
-  GET_COURSES,
-  GET_EXAMS,
-  GET_EXAMS_LEVEL,
-  GET_EXAM_BY_ID,
-  GET_FEATURED_EXAMS,
   GET_HOME_PAGE,
-  GET_PARTNERS,
-  GET_TOP_COLLEGES
-
+  // GET_BLOGS,
+  // GET_COLLEGES,
+  // GET_COLLEGES_BY_ID,
+  // GET_COUNSELLING_PACKAGES,
+  // GET_COURSES,
+  // GET_EXAMS,
+  // GET_EXAMS_LEVEL,
+  // GET_EXAM_BY_ID,
+  // GET_FEATURED_EXAMS,
+  // GET_PARTNERS,
+  // GET_TOP_COLLEGES
 } from "@/query/schema";
 import { flattenAttributes } from "@/utils/flattenAttributes";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  
   // const { data: BlogsData } = useQuery(GET_BLOGS);
-
   // const { data: CoursesData } = useQuery(GET_COURSES);
-
-  
   // const { data: CollegesData } = useQuery(GET_COLLEGES);
-
   // const { data: TopCollegesData } = useQuery(GET_TOP_COLLEGES);
-
   // const collegeId = 2;
-
   // const { data: CollegesDatabyId } = useQuery(GET_COLLEGES_BY_ID, {
   //   variables: { collegeId },
   // });
-
   // const { data: ExamsData } = useQuery(GET_EXAMS);
-
   // const { data: ExamsLevelData } = useQuery(GET_EXAMS_LEVEL);
-
   // const examId = 1;
-
   // const { data: ExamDatabyId } = useQuery(GET_EXAM_BY_ID, {
   //   variables: { examId },
   // });
-
   // const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
+  // const { data: partnersData } = useQuery(GET_PARTNERS);
+  // const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
-
-
-  const { data: partnersData } = useQuery(GET_PARTNERS);
-  const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
-
-  const { data: homePageData, loading: HomePageLoader, error: homePageError, } = useQuery(GET_HOME_PAGE);
-
-
-  const homeData = flattenAttributes(homePageData?.heroSections?.data?.[0]);
-  console.log(homeData?.banner1, "home");
-
+// HOME DATA FETCHING
+  const [homeData, setHomeData] = useState<any>();
+  const {
+    data: homePageData,
+    loading: HomePageLoader,
+    error: homePageError,
+  } = useQuery(GET_HOME_PAGE);
+  useEffect(() => {
+    if (homePageData) {
+      setHomeData(flattenAttributes(homePageData?.heroSections?.data?.[0]));
+    }
+  }, [homePageData]);
+  if (HomePageLoader) return <p>Loading...</p>;
+  if (homePageError) return <p>Error: {homePageError.message}</p>;
+// END HOME DATA FETCHING
+console.log(homeData, "homeData");
   return (
     <>
       <BannerSection data={home?.homeBanner} sData={homeData?.homebanner} />
