@@ -36,6 +36,7 @@ import {
   au3,
   au2,
   au1,
+  abroad1,
 } from "@/asset";
 import { TbRuler2Off } from "react-icons/tb";
 
@@ -210,37 +211,21 @@ export const studyAbroadData = {
       t1: "Growth and",
       t2: "Success Stories",
     },
-    text:
-      "Discover how our guidance has empowered students to achieve their dreams abroad.",
+    text: "Discover how our guidance has empowered students to achieve their dreams abroad.",
     text1:
-      "Raj transformed his aspirations into reality by securing <br> admission to  MIT. With our  personalized guidance, he <br> navigated the  complexities of studying abroad and <br> achieved his dream",
-    button1: {
+      "Raj transformed his aspirations into reality by securing admission to  MIT. With our  personalized guidance, he navigated the complexities of studying abroad and achieved his dream",
+    button: {
       text: "Read More",
       href: "#",
     },
-    img: [abroad2, abroad3],
-    reviews: {
-      userAvatars: [au1,au2,au3],
-      text1: "50K+",
-      text2: "Students",
-    },
-
-    card1: {
-      t1: "35+",
-      t2: "Course",
-    },
-    card2: {
-      t1: "56+",
-      t2: "Startups",
-    },
-    card3: {
-      t1: "100+",
-      t2: "Language",
-    },
-    card4: {
-      t1: "150+",
-      t2: "Professors",
-    },
+    img: [abroad1, abroad2],
+    cards: [
+      { userAvatars: [au1, au2, au3], text1: "50K+", text2: "Students" },
+      { text1: "35+", text2: "Course" },
+      { text1: "56+", text2: "Startups" },
+      { text1: "100+", text2: "Language" },
+      { text1: "150+", text2: "Professors" },
+    ],
   },
   // Admission Process and Assistance
   banner3: {

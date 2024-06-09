@@ -68,7 +68,7 @@ export const CollegesCardContent = function CollegesCard({ college }: any) {
     <React.Fragment>
       <div className="relative w-full">
       <Image
-          src={college?.image}
+          src={college?.img}
           alt={college?.name}
           width={800}
           height={800}

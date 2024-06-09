@@ -22,7 +22,7 @@ export default function Banner3Section({ data }: any) {
           </h1>
         )}
         {data?.text && <p className="mb-5">{data?.text}</p>}
-        <div className="grid grid-cols-1  gap-x-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
           <Image
             src={data?.img}
             alt="assistanceFrom"
