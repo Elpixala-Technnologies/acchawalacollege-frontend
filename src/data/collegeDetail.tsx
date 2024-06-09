@@ -24,7 +24,7 @@ import { HiBuildingOffice2 } from "react-icons/hi2";
 import { MdCastForEducation } from "react-icons/md";
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 
-// Single college Details 
+// Single college Details
 export const collegeDetailsPage = {
   collegeLogo: collegeLogo,
   bgImage: c1,
@@ -204,7 +204,7 @@ export const collegeDetailsPage = {
     },
   ],
   // leave courseArray right now
-  courseArray:[],
+  courseArray: [],
   topRecruiters: {
     title: {
       t1: "IIT Madras",
@@ -226,7 +226,7 @@ export const collegeDetailsPage = {
     title: {
       t1: "IIT Madras",
       t2: "Reviews",
-      t3:"",
+      t3: "",
     },
     overallRating: "4.5",
     individualReviews: [
@@ -286,7 +286,7 @@ export const collegeDetailsPage = {
     title: {
       t1: "IIT Madras",
       t2: "Video Gallery",
-      t3:"",
+      t3: "",
     },
     videos: [
       { id: 1, title: "Video 1", videoId: "4-YEBaUXUGo" },
@@ -296,7 +296,7 @@ export const collegeDetailsPage = {
   },
   faqs: {
     title: {
-      t1:"",
+      t1: "",
       t2: "IIT Madras",
       t3: "Frequently Asked Questions",
     },
