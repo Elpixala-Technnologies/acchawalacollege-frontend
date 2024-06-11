@@ -1,4 +1,6 @@
 "use client";
+import { useEffect, useState } from "react";
+import { useQuery } from "@apollo/client";
 import BannerSection from "@/components/homePageSections/bannerSection/BannerSection";
 import CounsellingPackages from "@/components/homePageSections/counsellingPackages/CounsellingPackages";
 import TopColleges from "@/components/topColleges/TopColleges";
@@ -11,23 +13,21 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import { home } from "@/data/homePage";
 import { global } from "@/data/globalData";
 import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
-import { useQuery } from "@apollo/client";
 import {
   GET_HOME_PAGE,
   // GET_BLOGS,
   // GET_COLLEGES,
   // GET_COLLEGES_BY_ID,
-  // GET_COUNSELLING_PACKAGES,
+  GET_COUNSELLING_PACKAGES,
   // GET_COURSES,
   // GET_EXAMS,
   // GET_EXAMS_LEVEL,
   // GET_EXAM_BY_ID,
   // GET_FEATURED_EXAMS,
-  // GET_PARTNERS,
+  GET_PARTNERS,
   // GET_TOP_COLLEGES
 } from "@/query/schema";
 import { flattenAttributes } from "@/utils/flattenAttributes";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   // const { data: BlogsData } = useQuery(GET_BLOGS);
@@ -45,35 +45,86 @@ export default function Home() {
   //   variables: { examId },
   // });
   // const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
-  // const { data: partnersData } = useQuery(GET_PARTNERS);
-  // const { data: counsellingPackagesData } = useQuery(GET_COUNSELLING_PACKAGES);
 
-// HOME DATA FETCHING
-  const [homeData, setHomeData] = useState<any>();
+  // HOME DATA FETCHING
+  const [homeData, setHomeData] = useState<any>(null);
+  const [homePartnersData, setHomePartnersData] = useState<any>(null);
+  const [counsellingPackagesData, setCounsellingPackagesData] = useState<any>( )
+
   const {
     data: homePageData,
     loading: HomePageLoader,
     error: homePageError,
   } = useQuery(GET_HOME_PAGE);
+
   useEffect(() => {
     if (homePageData) {
       setHomeData(flattenAttributes(homePageData?.heroSections?.data?.[0]));
     }
   }, [homePageData]);
-  if (HomePageLoader) return <p>Loading...</p>;
-  if (homePageError) return <p>Error: {homePageError.message}</p>;
-// END HOME DATA FETCHING
-console.log(homeData, "homeData");
+
+    // END HOME DATA FETCHING
+
+  // SPONSORS DATA FETCHING
+  const {
+    data: partnersData,
+    loading: PartnersLoader,
+    error: partnersError,
+  } = useQuery(GET_PARTNERS);
+
+  useEffect(() => {
+    if (partnersData) {
+      setHomePartnersData(
+        flattenAttributes(
+          partnersData?.heroSections?.data[0]?.attributes?.partners,
+        ),
+      );
+    }
+  }, [partnersData]);
+
+
+
+    // END SPONSORS DATA FETCHING
+
+  // COUNSELLING PACKAGES DATA FETCHING
+  const {
+    data: counsellingPackages,
+    loading: CounsellingPackagesLoader,
+    error: CounsellingPackagesError,
+  } = useQuery(GET_COUNSELLING_PACKAGES);
+
+  useEffect(() => {
+    if (counsellingPackages) {
+      setCounsellingPackagesData(
+        flattenAttributes(
+          counsellingPackages?.heroSections?.data[0]?.attributes?.CounsellingPackages,
+        ),
+      );
+    }
+  }, [counsellingPackages]);
+
+    // END COUNSELLING PACKAGES DATA FETCHING
+
+
+    // if (HomePageLoader) return <p>HOME Loading...</p>;
+    if (homePageError) return <p>Error: {homePageError.message}</p>;
+    // if (PartnersLoader) return <p>PARTNERS Loading...</p>;
+    if (partnersError) return <p>Error: {partnersError.message}</p>;
+    // if (CounsellingPackagesLoader) return <p>PACKAGE Loading...</p>;
+    if (CounsellingPackagesError) return <p>Error: {CounsellingPackagesError.message}</p>;
+
+  console.log(homeData?.section2, "homeData");
+
   return (
     <>
-      {/* <BannerSection data={home?.homeBanner} sData={homeData?.homebanner} /> */}
-      {/* <Section2 data={home?.section2} sData={homeData?.section2} /> */}
-      <PartnersSection data={global?.partners} />
+      <BannerSection data={home?.homeBanner} sData={homeData?.homebanner} />
+      <Section2 data={home?.section2} sData={homeData?.section2} />
+      <PartnersSection data={global?.partners} sData={homePartnersData} />
       <BannerSection1 data={home?.banner2} sData={homeData?.banner2} />
       <TopColleges data={global?.topColleges} />
       <TopCourses data={global?.topCourses} />
-      <CounsellingPackages data={home?.CounsellingPackages} />
-      {/* <Section6 data={home?.banner1} sData={homeData?.banner1} /> */}
+      <CounsellingPackages data={home?.CounsellingPackages} sData={counsellingPackagesData} />
+      <Section6 data={home?.banner1} sData={homeData?.banner1} />
       <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
       <Testimonials data={global?.testimonialsSection} />
     </>

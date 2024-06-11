@@ -11,10 +11,8 @@ import {
 } from "@apollo/experimental-nextjs-app-support";
 
 function makeClient() {
-  const httpLink = new HttpLink({
-    
-    uri: BASE_GQL_URL,
-    
+  const httpLink = new HttpLink({ 
+    uri: BASE_GQL_URL, 
     fetchOptions: { cache: "no-store" },
   });
 

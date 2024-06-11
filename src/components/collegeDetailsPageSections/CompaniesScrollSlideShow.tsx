@@ -6,7 +6,7 @@ import useMeasure from "react-use-measure";
 import { s1, s2, s3, s4, s5, s6, s7, s8, s9, s10 } from "@/asset";
 import Wrapper from "@/components/Wrapper";
 
-export default function CompaniesScrollSlideShow({image}: any) {
+export default function CompaniesScrollSlideShow({ image }: any) {
   const FAST_DURATION = 5;
   const SLOW_DURATION = 75;
 
@@ -45,10 +45,10 @@ export default function CompaniesScrollSlideShow({image}: any) {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <section className="mx-auto w-full bg-white">
+    <section className="mx-auto w-full ">
       <Wrapper className="relative overflow-x-hidden ">
-        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-white"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray-100 to-transparent"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-gray-100"></div>
         <motion.div
           className=" mx-auto flex max-w-[1440px] gap-4"
           style={{ x: xTranslation }}
@@ -62,9 +62,11 @@ export default function CompaniesScrollSlideShow({image}: any) {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...image, ...image].map((item, idx) => (
-            <PartnersCard image={item} key={idx} />
-          ))}
+          {[...image, ...image, ...image, ...image, ...image, ...image].map(
+            (item, idx) => (
+              <PartnersCard image={item} key={idx} />
+            ),
+          )}
         </motion.div>
       </Wrapper>
     </section>
