@@ -46,13 +46,13 @@ export default function PartnersSection({data, sData}:any) {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <section className="mx-auto my-5 w-full bg-white">
+    <section className="mx-auto my-5 w-full">
       <Wrapper className="relative overflow-x-hidden py-8">
         <h1 className="title1 mb-5 w-full text-center font-semibold">
           {sData?.title}
         </h1>
-        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-white"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray-100 to-transparent"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-gray-100"></div>
         <motion.div
           className=" mx-auto flex max-w-[1440px] gap-4"
           style={{ x: xTranslation }}

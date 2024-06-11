@@ -63,6 +63,8 @@ export default function Home() {
     }
   }, [homePageData]);
 
+    // END HOME DATA FETCHING
+
   // SPONSORS DATA FETCHING
   const {
     data: partnersData,
@@ -79,6 +81,10 @@ export default function Home() {
       );
     }
   }, [partnersData]);
+
+
+
+    // END SPONSORS DATA FETCHING
 
   // COUNSELLING PACKAGES DATA FETCHING
   const {
@@ -97,12 +103,17 @@ export default function Home() {
     }
   }, [counsellingPackages]);
 
+    // END COUNSELLING PACKAGES DATA FETCHING
 
-  if (HomePageLoader || PartnersLoader || CounsellingPackagesLoader) return <p>Loading...</p>;
-  if (homePageError) return <p>Error: {homePageError.message}</p>;
-  if (partnersError) return <p>Error: {partnersError.message}</p>;
 
-  console.log(counsellingPackagesData, "homeData");
+    // if (HomePageLoader) return <p>HOME Loading...</p>;
+    if (homePageError) return <p>Error: {homePageError.message}</p>;
+    // if (PartnersLoader) return <p>PARTNERS Loading...</p>;
+    if (partnersError) return <p>Error: {partnersError.message}</p>;
+    // if (CounsellingPackagesLoader) return <p>PACKAGE Loading...</p>;
+    if (CounsellingPackagesError) return <p>Error: {CounsellingPackagesError.message}</p>;
+
+  console.log(homeData?.section2, "homeData");
 
   return (
     <>
