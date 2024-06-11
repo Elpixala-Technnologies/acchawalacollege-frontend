@@ -52,13 +52,13 @@ export default function BannerSection({ data, sData }: any) {
           <div className="flex gap-1 md:gap-2">
             <Link
               href={sData?.button1?.href || "#"}
-              className="button2  max-md:px-2"
+              className="button2 max-md:px-2"
             >
               {sData?.button1?.text}
             </Link>
             <Link
               href={sData?.button2?.href || "#"}
-              className="button1  max-md:px-3"
+              className="button1 max-md:px-3"
             >
               {sData?.button2?.text}
             </Link>
@@ -95,10 +95,6 @@ export default function BannerSection({ data, sData }: any) {
               className="h-full max-h-[350px] w-2/5 rounded-lg object-contain"
             />
           )}
-          <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[205px] translate-x-1/2 flex-col rounded-xl bg-blue-950 p-5 text-white max-md:scale-75 md:translate-x-full">
-            <span className="mb-3 text-wrap">{sData?.text2}</span>
-            <span>{sData?.text3}</span>
-          </p>
           <p className="absolute bottom-5 right-1/2 flex w-[30%] min-w-[235px] translate-x-1/2 flex-col rounded-xl bg-blue-950 px-8 py-3 text-white max-md:scale-75 md:translate-x-full">
             <span className="mb-3 text-wrap">{data?.text2}</span>
             <span>{data?.text3}</span>

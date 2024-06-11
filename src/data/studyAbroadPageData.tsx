@@ -48,7 +48,7 @@ export const studyAbroadData = {
       t3: "Education Journey",
     },
     text1:
-      "Explore Top Universities Worldwide and Transform Your \nFuture with Expert Guidance",
+      "Explore Top Universities Worldwide and Transform Your \\nFuture with Expert Guidance",
     button1: {
       text: "Explore Colleges",
       href: "#",
@@ -58,23 +58,23 @@ export const studyAbroadData = {
       href: "#",
     },
     img: [abroadLanding1, abroadLanding2, abroadLanding3],
-    text2: "Get 30% off on every \n  1st month",
+    text2: "Get 30% off on every \\n  1st month",
     text3: "Expert Counsellors",
   },
 
   section2: {
     card1: {
-      icon: Certificate,
+      icon: {url:Certificate},
       title: "2,300+",
       text: "Admissions done",
     },
     card2: {
-      icon: Student,
+      icon:{url: Student},
       title: "6,200+",
       text: "Fulfilled dreams",
     },
     card3: {
-      icon: GraduationCap,
+      icon: {url:GraduationCap},
       title: "5,100+",
       text: "Counselling sessions ",
     },
@@ -84,7 +84,7 @@ export const studyAbroadData = {
     images: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10],
   },
   brochureSection: {
-    text: "Discover courses tailored to your aspirations and unlock endless \nopportunities for growth and success.",
+    text: "Discover courses tailored to your aspirations and unlock endless \\nopportunities for growth and success.",
     buttons: {
       button1: {
         text: "Download Brochure",
@@ -251,7 +251,7 @@ export const studyAbroadData = {
   },
   banner1: {
     title:
-      "Embark on Your Career Journey Today! Connect \n with Our Expert Counseling Team Now.",
+      "Embark on Your Career Journey Today! Connect \\n with Our Expert Counseling Team Now.",
     text1: "Navigate the Path to Success with Our Support",
     button: {
       text: "Schedule  Counselling",
@@ -268,7 +268,7 @@ export const studyAbroadData = {
         PackageName: "Silver Package",
         isPopular: false,
         price: 11000,
-        text1: "Essential guidance to kickstart \nyour journey",
+        text1: "Essential guidance to kickstart \\nyour journey",
         list: [
           {
             isInclude: true,
@@ -338,7 +338,7 @@ export const studyAbroadData = {
         PackageName: "Gold Package",
         // isPopular: TbRuler2Off,
         price: 25000,
-        text1: "Comprehensive support tailored \nto your ambitions",
+        text1: "Comprehensive support tailored \\nto your ambitions",
         list: [
           {
             isInclude: true,
@@ -408,7 +408,7 @@ export const studyAbroadData = {
         PackageName: "Diamond Package",
         isPopular: false,
         price: 55000,
-        text1: "Unmatched assistance for your \nacademic aspirations",
+        text1: "Unmatched assistance for your \\nacademic aspirations",
         list: [
           {
             isInclude: true,

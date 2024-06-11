@@ -49,7 +49,7 @@ export default function Home() {
   // HOME DATA FETCHING
   const [homeData, setHomeData] = useState<any>(null);
   const [homePartnersData, setHomePartnersData] = useState<any>(null);
-  const [counsellingPackagesData, setCounsellingPackagesData] = useState<any>( )
+  const [counsellingPackagesData, setCounsellingPackagesData] = useState<any>();
 
   const {
     data: homePageData,
@@ -63,7 +63,7 @@ export default function Home() {
     }
   }, [homePageData]);
 
-    // END HOME DATA FETCHING
+  // END HOME DATA FETCHING
 
   // SPONSORS DATA FETCHING
   const {
@@ -82,9 +82,7 @@ export default function Home() {
     }
   }, [partnersData]);
 
-
-
-    // END SPONSORS DATA FETCHING
+  // END SPONSORS DATA FETCHING
 
   // COUNSELLING PACKAGES DATA FETCHING
   const {
@@ -97,23 +95,24 @@ export default function Home() {
     if (counsellingPackages) {
       setCounsellingPackagesData(
         flattenAttributes(
-          counsellingPackages?.heroSections?.data[0]?.attributes?.CounsellingPackages,
+          counsellingPackages?.heroSections?.data[0]?.attributes
+            ?.CounsellingPackages,
         ),
       );
     }
   }, [counsellingPackages]);
 
-    // END COUNSELLING PACKAGES DATA FETCHING
+  // END COUNSELLING PACKAGES DATA FETCHING
 
+  // if (HomePageLoader) return <p>HOME Loading...</p>;
+  if (homePageError) return <p>Error: {homePageError.message}</p>;
+  // if (PartnersLoader) return <p>PARTNERS Loading...</p>;
+  if (partnersError) return <p>Error: {partnersError.message}</p>;
+  // if (CounsellingPackagesLoader) return <p>PACKAGE Loading...</p>;
+  if (CounsellingPackagesError)
+    return <p>Error: {CounsellingPackagesError.message}</p>;
 
-    // if (HomePageLoader) return <p>HOME Loading...</p>;
-    if (homePageError) return <p>Error: {homePageError.message}</p>;
-    // if (PartnersLoader) return <p>PARTNERS Loading...</p>;
-    if (partnersError) return <p>Error: {partnersError.message}</p>;
-    // if (CounsellingPackagesLoader) return <p>PACKAGE Loading...</p>;
-    if (CounsellingPackagesError) return <p>Error: {CounsellingPackagesError.message}</p>;
-
-  console.log(homeData?.section2, "homeData");
+  // console.log(homeData?.section2, "homeData");
 
   return (
     <>
@@ -123,7 +122,10 @@ export default function Home() {
       <BannerSection1 data={home?.banner2} sData={homeData?.banner2} />
       <TopColleges data={global?.topColleges} />
       <TopCourses data={global?.topCourses} />
-      <CounsellingPackages data={home?.CounsellingPackages} sData={counsellingPackagesData} />
+      <CounsellingPackages
+        data={home?.CounsellingPackages}
+        sData={counsellingPackagesData}
+      />
       <Section6 data={home?.banner1} sData={homeData?.banner1} />
       <BlogAndOthersFilterSection data={global?.BlogsAndOthers} />
       <Testimonials data={global?.testimonialsSection} />

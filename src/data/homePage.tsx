@@ -84,7 +84,7 @@ export const home = {
     CounsellingPackagesCards: [
       {
         id: 1,
-        icon: p1,
+        icon: {data:[{url:p1}]},
         PackageName: "Silver Package",
         isPopular: false,
         price: 11000,
@@ -154,7 +154,7 @@ export const home = {
       },
       {
         id: 2,
-        icon: p1,
+        icon: {data:[{url:p1}]},
         PackageName: "Gold Package",
         isPopular: TbRuler2Off,
         price: 25000,
@@ -224,65 +224,67 @@ export const home = {
       },
       {
         id: 3,
-        icon: p1,
+        icon: {data:[{url:p1}]},
         PackageName: "Diamond Package",
         isPopular: false,
         price: 55000,
         text1: "Unmatched assistance for your \nacademic aspirations",
-        lists: [
-          {
-            isInclude: true,
-            text: "Personal Counsellor",
-          },
-          {
-            isInclude: true,
-            text: "Admission Procedure",
-          },
-          {
-            isInclude: true,
-            text: "Lowest Package Seats",
-          },
-          {
-            isInclude: true,
-            text: "Budget Based Counselling",
-          },
-          {
-            isInclude: true,
-            text: "Detailed College Description",
-          },
-          {
-            isInclude: true,
-            text: "Premium College Counseling",
-          },
-          {
-            isInclude: true,
-            text: "24x7 Availability via Messaging",
-          },
-          {
-            isInclude: false,
-            text: "24x7 Availability via Calling",
-          },
-          {
-            isInclude: false,
-            text: "MCI/NTA Updates",
-          },
-          {
-            isInclude: false,
-            text: "College Based Analysis",
-          },
-          {
-            isInclude: false,
-            text: "Score Based Analysis",
-          },
-          {
-            isInclude: false,
-            text: "Management Quota Counseling",
-          },
-          {
-            isInclude: false,
-            text: "Fees Negotiation",
-          },
-        ],
+        lists: {
+          data:[
+            {
+              isInclude: true,
+              text: "Personal Counsellor",
+            },
+            {
+              isInclude: true,
+              text: "Admission Procedure",
+            },
+            {
+              isInclude: true,
+              text: "Lowest Package Seats",
+            },
+            {
+              isInclude: true,
+              text: "Budget Based Counselling",
+            },
+            {
+              isInclude: true,
+              text: "Detailed College Description",
+            },
+            {
+              isInclude: true,
+              text: "Premium College Counseling",
+            },
+            {
+              isInclude: true,
+              text: "24x7 Availability via Messaging",
+            },
+            {
+              isInclude: false,
+              text: "24x7 Availability via Calling",
+            },
+            {
+              isInclude: false,
+              text: "MCI/NTA Updates",
+            },
+            {
+              isInclude: false,
+              text: "College Based Analysis",
+            },
+            {
+              isInclude: false,
+              text: "Score Based Analysis",
+            },
+            {
+              isInclude: false,
+              text: "Management Quota Counseling",
+            },
+            {
+              isInclude: false,
+              text: "Fees Negotiation",
+            },
+          ]
+        },
         button: {
           text: "Get Started",
           href: "#",
