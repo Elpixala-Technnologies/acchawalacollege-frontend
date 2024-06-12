@@ -1,8 +1,9 @@
 import React from "react";
 import Wrapper from "@/components/Wrapper";
 import AbroadCollegesCard, { CollegesCardContent } from "@/components/cards/AbroadCollegesCard";
+import Link from "next/link";
 
-export default function AbroadTopColleges({ data }: any) {
+export default function AbroadTopColleges({ data, sliceValue=8 }: any) {
   return (
     <section className="my-16 w-full">
       <Wrapper>
@@ -32,12 +33,21 @@ export default function AbroadTopColleges({ data }: any) {
         {/* Grid for desktop view */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {data?.colleges
-            ?.slice(0, 8)
+            ?.slice(0, sliceValue)
             .map((college: any, index: number) => (
               <div key={index} className="flex flex-col">
               <CollegesCardContent  college={college} />
               </div>
             ))}
+        </div>
+                {/* View All Button  */}
+                <div className="flex-center pt-5">
+          <Link
+            href={"/study-abroad/colleges"}
+            className="w-max font-medium hover:text-blue-500"
+          >
+            View All
+          </Link>
         </div>
       </Wrapper>
     </section>

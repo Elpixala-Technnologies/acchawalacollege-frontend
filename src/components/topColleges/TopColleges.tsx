@@ -30,7 +30,7 @@ export default function TopColleges({ data }: any) {
         <div className="topColleges relative">
           <CollegesCard data={data?.colleges} />
         </div>
-        <div className="flex-center p-5">
+        <div className="flex-center pt-5">
           <Link
             href={"/colleges"}
             className="w-max font-medium hover:text-blue-500"
