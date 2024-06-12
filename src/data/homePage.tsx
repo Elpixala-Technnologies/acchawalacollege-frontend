@@ -298,13 +298,13 @@ export const home = {
   },
   banner1 : {
     title:
-      "Embark on Your Career Journey Today! Connect \n with Our Expert Counseling Team Now.",
+      "Embark on Your Career Journey Today! Connect \\n with Our Expert Counseling Team Now.",
     text1: "Navigate the Path to Success with Our Support",
     button: {
       text: "Schedule  Counselling",
       href: "#",
     },
-    bgImg: section6Bg,
+    bgImg: {url:section6Bg},
   },
   banner2 : {
     title:{

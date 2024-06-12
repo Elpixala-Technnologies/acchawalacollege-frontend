@@ -170,8 +170,8 @@ export default function Content({ selectedContent }: any) {
                   <Image
                     src={section?.banner?.img}
                     alt="banner"
-                    width={500}
-                    height={300}
+                    width={1700}
+                    height={480}
                     className="h-96 w-full object-cover object-center"
                   />
                   <p className="absolute bottom-0 left-0 w-full text-wrap bg-blue-950 bg-opacity-60 px-5 py-3 text-white">

@@ -87,6 +87,7 @@ import examPaper from "./exams/examPaper.png";
 
 // Scholarship
 import scholarship1 from "./scholarship/scholarship1.png";
+import scLogo from "./scholarship/scLogo.png";
 
 // Module
 import moduleBanner from "./moduleBanner.png";
@@ -127,7 +128,7 @@ export {
 
     examBg1, examBg2, examBg3, examBg4,exam1,examPaper,
 
-    scholarship1,
+    scholarship1, scLogo,
 
     moduleBanner,
 

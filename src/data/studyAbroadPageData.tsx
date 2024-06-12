@@ -47,6 +47,8 @@ import {
   comp4,
   comp5,
   scholarship1,
+  examBg3,
+  scLogo,
 } from "@/asset";
 import { BiSolidInstitution } from "react-icons/bi";
 import { FaTransgenderAlt } from "react-icons/fa";
@@ -122,9 +124,60 @@ export const studyAbroadData = {
           city: "England",
           country: "England",
         },
-        overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -136,8 +189,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -149,8 +254,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -162,8 +319,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -175,8 +384,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -188,8 +449,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -201,8 +514,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
       {
@@ -214,8 +579,60 @@ export const studyAbroadData = {
           city: "England",
         },
         overallRating: "4.5",
-        reviews: "2.3k reviews",
-        priceRange: "$20,000 to $50,000",
+        reviews: {
+          title: {
+            t1: "IIT Madras",
+            t2: "Reviews",
+            t3: "",
+          },
+          totalReviews: "7",
+          overallRating: "4.5",
+          individualReviews: [
+            {
+              title: "College Infrastructure",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Academics & Faculty",
+              icon: <BiSolidInstitution />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Facilities",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Placements & Internships",
+              icon: <HiBuildingOffice2 />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+            {
+              title: "Fees & Scholarships",
+              icon: <RiMoneyRupeeCircleFill />,
+              rating: "3",
+              basedOn: "456",
+            },
+            {
+              title: "Crowd & Campus Life",
+              icon: <FaTransgenderAlt />,
+              rating: "2",
+              basedOn: "456",
+            },
+            {
+              title: "Overall Experience",
+              icon: <MdCastForEducation />,
+              rating: "4.5",
+              basedOn: "456",
+            },
+          ],
+        },
+        avgFeePerYear: "$ 95.1k Yearly",
         distanceFromAirport: "5.8",
       },
     ],
@@ -1078,491 +1495,357 @@ export const studyAbroadListingPage = {
 };
 
 // Single college Details
-export const abroadColleges = [{
-  collegeLogo: {url:collegeLogo},
-  bgImage: {url:c1},
-  collegeName: "UCLA- The University of California, Los Angeles",
-  location: {
-    state: "",
-    city: "Los Angeles",
-    country: "USA",
-  },
-  collegeType: "Government",
-  estYear: "1990",
-  lastUpdate: "Nov 17, 2023 14:25 IST",
-  //  dont collegeDetails right now
-  collegeDetails: [
-    {
-      navItem: "Overview",
-      title: {
-        t1: "Top Engineering Colleges",
-        t2: "in India",
-        t3: "2024",
-      },
-      author: {
-        avatar: user1,
-        name: "Pankaj Kumar",
-        lastUpdated: "MAR 21, 2024 18:39 IST",
-      },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-      readMoreLink: "#",
-      button: {
-        button1: { text: "Apply Now", link: "#" },
-        button2: { text: "Download Brochure", link: "#" },
-      },
+export const abroadColleges = [
+  {
+    slug: "ucla",
+    collegeLogo: { url: collegeLogo },
+    breadCrumb: "UCLA",
+    bgImage: { url: c1 },
+    collegeName: "UCLA- The University of California, Los Angeles",
+    description:
+      "Located in the vibrant city of Los Angeles, UCLA (University of California, Los Angeles) is renowned for its academic excellence and innovative research programs. With a diverse student body and a wide range. Located in the vibrant city of Los Angeles, UCLA (University of California, Los Angeles) is renowned for its",
+    location: {
+      state: "",
+      city: "Los Angeles",
+      country: "USA",
     },
-    {
-      navItem: "Placements",
+    collegeType: "Government",
+    affiliation: ["WASC", "WSCUC"],
+    estYear: "1990",
+    lastUpdate: "Nov 17, 2023 14:25 IST",
+    exam: ["SAT", "ACT"],
+    //  don't collegeDetails right now
+    collegeDetails: [
+      {
+        navItem: "overview",
+        sections: [
+          {
+            id: 1,
+            title: {
+              t1: "Top Engineering Colleges",
+              t2: "in India",
+              t3: "2024",
+            },
+            author: {
+              avatar: user1,
+              name: "Pankaj Kumar",
+              lastUpdated: "MAR 21, 2024 18:39 IST",
+            },
+            article:
+              "<p>JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>",
+            button: {
+              button1: { text: "Apply Now", link: "#" },
+              button2: { text: "Download Brochure", link: "#" },
+            },
+            importantLinks: [
+              {
+                id: 1,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+            ],
+            banner: {
+              img: examBg3,
+              text: "JEE Main 2024: Paper 2 Result (Out), Cut Off, Toppers List, Counselling Dates",
+              href: "#",
+            },
+            article1: `<p class="bg-blue-100 rounded-lg p-5">JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>`,
+            table: `
+              <table border="1">
+        <tr>
+          <th>Exams and Events</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>Last Date to Apply for the Scholarship</td>
+          <td>January 2, 2025</td>
+        </tr>
+        <tr>
+          <td>Interview Dates</td>
+          <td>Between April and June</td>
+        </tr>
+        <tr>
+          <td>Declaration of Selection Results</td>
+          <td>June</td>
+        </tr>
+        <tr>
+          <td>Commencement of the Doctoral Programme</td>
+          <td>In the month of September/October</td>
+        </tr>
+      </table>
+              `,
+            article2:
+              "<p>JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>",
+          },
+          {
+            id: 2,
+            title: {
+              t1: "",
+              t2: "",
+              t3: "",
+            },
+            article:
+              "<p>JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>",
+          },
+        ],
+      },
+      {
+        navItem: "sample papers",
+        sections: [
+          {
+            id: 1,
+            title: {
+              t1: "Top Engineering Colleges",
+              t2: "in India",
+              t3: "2024",
+            },
+            author: {
+              avatar: user1,
+              name: "Pankaj Kumar",
+              lastUpdated: "MAR 21, 2024 18:39 IST",
+            },
+            article:
+              "<p>JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>",
+            button: {
+              button1: { text: "Apply Now", link: "#" },
+              button2: { text: "Download Brochure", link: "#" },
+            },
+            importantLinks: [
+              {
+                id: 1,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+            ],
+          },
+          {
+            id: 2,
+            title: {
+              t1: "",
+              t2: "",
+              t3: "",
+            },
+            article:
+              "<p>JEE Main 2024: NTA has released the JEE Main 2024 session 2 result for paper 2 at jeemain.nta.ac.in. The authority closed the JEE Main 2024 challenge window on May 1, 2024. The provisional JEE Main 2024 answer key for paper 2 has been released on April 30. Candidates can check the JEE Main B.Arch answer key 2024 for session 2 on the official website. Candidates who appeared for the JEE Main exam could raise objections to the answer key from April 30 to May 1. </p>",
+          },
+          {
+            importantLinks: [
+              {
+                id: 1,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+              {
+                id: 2,
+                title: "Important Links",
+                text: "https://nta.ac.in/",
+                href: "#",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        navItem: "cutoff",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Cutoff",
+        },
+      },
+      {
+        navItem: "eligibility",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Eligibility",
+        },
+      },
+      {
+        navItem: "application",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Application",
+        },
+      },
+      {
+        navItem: "results",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Results",
+        },
+      },
+      {
+        navItem: "Exam Pattern",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Exam Pattern",
+        },
+      },
+      {
+        navItem: "Preparation Tips",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Preparation Tips",
+        },
+      },
+      {
+        navItem: "Answer Key",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Answer Key",
+        },
+      },
+      {
+        navItem: "Counselling",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "Counselling",
+        },
+      },
+      {
+        navItem: "College Predictor",
+        title: {
+          t1: "",
+          t2: "JEE Advanced",
+          t3: "College Predictor",
+        },
+      },
+    ],
+    // leave courseArray right now
+    courseArray: [],
+    topRecruiters: {
       title: {
         t1: "IIT Madras",
-        t2: "Placements",
+        t2: "Top Recruiters",
         t3: "2023",
       },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
+      companyLogos: [comp1, comp2, comp3, comp4, comp5],
     },
-    {
-      navItem: "Courses",
+    brochureSection: {
+      text: "Interested in learning more about the Indian Institute of Technology, Madras?",
+      buttons: {
+        button1: {
+          text: "Download Brochure",
+          href: "#",
+        },
+      },
+    },
+    reviews: {
       title: {
         t1: "IIT Madras",
-        t2: "Courses And Admission",
-        t3: "2024",
+        t2: "Reviews",
+        t3: "",
       },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-    },
-    {
-      navItem: "Eligibility",
-      title: {
-        t1: "IIT Madras",
-        t2: "Courses and Eligibility Criteria",
-        t3: "2024",
-      },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-      readMoreLink: "#",
-      courses: [
+      totalReviews: "7",
+      overallRating: "4.5",
+      individualReviews: [
         {
-          bg: c3,
-          name: "B.Tech",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "College Infrastructure",
+          icon: <HiBuildingOffice2 />,
+          rating: "4.5",
+          basedOn: "456",
         },
         {
-          bg: c4,
-          name: "M.Tech",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "Academics & Faculty",
+          icon: <BiSolidInstitution />,
+          rating: "3",
+          basedOn: "456",
         },
         {
-          bg: c5,
-          name: "Ph.D",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "Facilities",
+          icon: <HiBuildingOffice2 />,
+          rating: "4.5",
+          basedOn: "456",
         },
         {
-          bg: c6,
-          name: "MBA",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "Placements & Internships",
+          icon: <HiBuildingOffice2 />,
+          rating: "4.5",
+          basedOn: "456",
         },
         {
-          bg: c7,
-          name: "BA",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "Fees & Scholarships",
+          icon: <RiMoneyRupeeCircleFill />,
+          rating: "3",
+          basedOn: "456",
         },
         {
-          bg: c8,
-          name: "MBA",
-          eligibility:
-            "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
-          fees: "69999",
-          duration: "2 Years",
-          buttons: {
-            button1: { text: "Apply Now", href: "#" },
-            button2: { text: "Download Brochure", href: "#" },
-          },
+          title: "Crowd & Campus Life",
+          icon: <FaTransgenderAlt />,
+          rating: "2",
+          basedOn: "456",
+        },
+        {
+          title: "Overall Experience",
+          icon: <MdCastForEducation />,
+          rating: "4.5",
+          basedOn: "456",
         },
       ],
     },
-    {
-      navItem: "Cut Off",
+    photoGallery: {
       title: {
         t1: "IIT Madras",
-        t2: "Cut Off",
-        t3: "2024",
+        t2: "Photo Gallery",
+        t3: "",
       },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-      readMoreLink: "#",
+      photos: [c3, c4, c5, c6, c7, c8],
     },
-    {
-      navItem: "Facilities",
+    videoGallery: {
       title: {
         t1: "IIT Madras",
-        t2: "Campus Facilities",
+        t2: "Video Gallery",
+        t3: "",
       },
-      article:
-        "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-      facilities: [
-        { icon: academicZone, name: "Academic Zone" },
-        { icon: auditorium, name: "Auditorium" },
-        { icon: academicZone, name: "Boys Hostel" },
-        { icon: auditorium, name: "Canteen" },
-        { icon: academicZone, name: "Computer Lab" },
-        { icon: auditorium, name: "Girls Hostel" },
-        { icon: academicZone, name: "Wifi" },
-        { icon: auditorium, name: "Library" },
-        { icon: academicZone, name: "Medical Facilities" },
-        { icon: auditorium, name: "Class Rooms" },
-        { icon: academicZone, name: "Placement" },
-        { icon: auditorium, name: "Transport" },
-        { icon: academicZone, name: "Seminar Hall" },
-        { icon: auditorium, name: "Cafeteria" },
-        { icon: academicZone, name: "Sports Facility" },
-        { icon: auditorium, name: "Library" },
+      videos: [
+        { id: 1, title: "Video 1", videoId: "4-YEBaUXUGo" },
+        { id: 2, title: "Video 2", videoId: "4-YEBaUXUGo" },
+        { id: 3, title: "Video 3", videoId: "4-YEBaUXUGo" },
       ],
     },
-  ],
-  // leave courseArray right now
-  courseArray: [],
-  topRecruiters: {
-    title: {
-      t1: "IIT Madras",
-      t2: "Top Recruiters",
-      t3: "2023",
-    },
-    companyLogos: [comp1, comp2, comp3, comp4, comp5],
-  },
-  brochureSection: {
-    text: "Interested in learning more about the Indian Institute of Technology, Madras?",
-    buttons: {
-      button1: {
-        text: "Download Brochure",
-        href: "#",
-      },
-    },
-  },
-  reviews: {
-    title: {
-      t1: "IIT Madras",
-      t2: "Reviews",
-      t3: "",
-    },
-    totalReviews: "7",
-    overallRating: "4.5",
-    individualReviews: [
-      {
-        title: "College Infrastructure",
-        icon: <HiBuildingOffice2 />,
-        rating: "4.5",
-        basedOn: "456",
-      },
-      {
-        title: "Academics & Faculty",
-        icon: <BiSolidInstitution />,
-        rating: "3",
-        basedOn: "456",
-      },
-      {
-        title: "Facilities",
-        icon: <HiBuildingOffice2 />,
-        rating: "4.5",
-        basedOn: "456",
-      },
-      {
-        title: "Placements & Internships",
-        icon: <HiBuildingOffice2 />,
-        rating: "4.5",
-        basedOn: "456",
-      },
-      {
-        title: "Fees & Scholarships",
-        icon: <RiMoneyRupeeCircleFill />,
-        rating: "3",
-        basedOn: "456",
-      },
-      {
-        title: "Crowd & Campus Life",
-        icon: <FaTransgenderAlt />,
-        rating: "2",
-        basedOn: "456",
-      },
-      {
-        title: "Overall Experience",
-        icon: <MdCastForEducation />,
-        rating: "4.5",
-        basedOn: "456",
-      },
-    ],
-  },
-  photoGallery: {
-    title: {
-      t1: "IIT Madras",
-      t2: "Photo Gallery",
-      t3: "",
-    },
-    photos: [c3, c4, c5, c6, c7, c8],
-  },
-  videoGallery: {
-    title: {
-      t1: "IIT Madras",
-      t2: "Video Gallery",
-      t3: "",
-    },
-    videos: [
-      { id: 1, title: "Video 1", videoId: "4-YEBaUXUGo" },
-      { id: 2, title: "Video 2", videoId: "4-YEBaUXUGo" },
-      { id: 3, title: "Video 3", videoId: "4-YEBaUXUGo" },
-    ],
-  },
-  faqs: {
-    title: {
-      t1: "",
-      t2: "IIT Madras",
-      t3: "Frequently Asked Questions",
-    },
-    faqsQuestionsAndAnswers: [
-      {
-        id: 1,
-        question: "When was the University Established?",
-        answer:
-          "The Indian Institute of Technology, Madras was established in 1961. The institute was founded by the erstwhile Prime Minister, Shri. Venkatesh Iyengar.",
-      },
-      {
-        id: 2,
-        question: "Is the University a Private or Government University",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
-      },
-      {
-        id: 3,
-        question: "What is the University Affiliation?",
-        answer:
-          "The Indian Institute of Technology, Madras is affiliated to the University of Madras. The institute is governed by the Government of India. The institute has a status of Government.",
-      },
-      {
-        id: 4,
-        question: "How good is the University",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
-      },
-      {
-        id: 5,
-        question: "What courses does the University Offer?",
-        answer:
-          "The Indian Institute of Technology, Madras is a private university. The institute is governed by the Government of India. The institute has a status of Government.",
-      },
-    ],
-  },
-  campusSize: "617 Acres",
-  noOfFaculty: "592",
-  noOfStudents: "10224",
-  avgFee: "95.1k Yearly",
-  genderAccepted: "Co-ed",
-  studyMode: "Regular, Part-time",
-  scholarshipPage: {
-    scholarshipDetails: [
-      {
-        navItem: "Overview",
-        title: {
-          t1: "About",
-          t2: "IIT Madras",
-          t3: "Scholarship",
-        },
-        article: `<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>
-          <div class="bg-blue my-5">
-          <h6 class="text-xl">This Story also Contains</h6>
-          <ul>
-          <li>Important Dates</li>
-          <li>Important Dates</li>
-          <li>Important Dates</li>
-          <li>Important Dates</li>
-          </ul>
-          </div>
-          `,
-      },
-      {
-        navItem: "Eligibility Criteria",
-        title: {
-          t1: "IIT Madras",
-          t2: "Scholarship",
-          t3: "Eligibility Criteria",
-        },
-        article:
-          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-        readMoreLink: "#",
-        courses: [
-          {
-            bg: c3,
-            name: "B.Tech",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-          {
-            bg: c4,
-            name: "M.Tech",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-          {
-            bg: c5,
-            name: "Ph.D",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-          {
-            bg: c6,
-            name: "MBA",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a minimum of 55% marks (50% for SC/ST candidates) or equivalent grade, and should have studied Mathematics at the 10+2 level or at the Bachelor's level. Additionally, candidates need to qualify for the Joint Admission Test for M.Sc. (JAM) conducted by IITs.",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-          {
-            bg: c7,
-            name: "BA",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-          {
-            bg: c8,
-            name: "MBA",
-            eligibility:
-              "The eligibility criteria for pursuing an M.C.A. (Master of Computer Applications) degree at IIT Madras in India are as follows: Candidates must have completed a Bachelor's degree in any discipline from a recognized university with a",
-            fees: "69999",
-            duration: "2 Years",
-            buttons: {
-              button1: { text: "Apply Now", href: "#" },
-              button2: { text: "Download Brochure", href: "#" },
-            },
-          },
-        ],
-      },
-      {
-        navItem: "Application Process",
-        title: {
-          t1: "How to Apply for",
-          t2: "IIT Madras",
-          t3: "Scholarship?",
-        },
-        article:
-          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-        readMoreLink: "#",
-        image: [
-          {
-            img: scholarship1,
-            text: "Scholarship Success, Expert Guidance, Funding, Counselling Support",
-          },
-        ],
-      },
-      {
-        navItem: "Selection Process",
-        title: {
-          t1: "IIT Madras",
-          t2: "Scholarship",
-          t3: "Selection Process",
-        },
-        article:
-          "<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>",
-      },
-      {
-        navItem: "Selection Process",
-        title: {
-          t1: "IIT Madras",
-          t2: "Scholarship",
-          t3: "Key Dates",
-        },
-        article: `<p><strong>Indian Institute of Technologies, National Institute or Technologies and Indian Institutes or Information Technology</strong> are considered to be the best Engineering Colleges in India. Engineering is likewise one of the most logically predominant fields of choice in India. Pretty much every science student has a fantasy to turn into a successful engineer. However, It is not easy for engineering aspirants to select the right engineering college in India. Here Is the following information regarding the Top Engineering Colleges in India for engineering aspirants...</p>
-          `,
-        table: `
-        <table border="1">
-  <tr>
-    <th>Exams and Events</th>
-    <th>Date</th>
-  </tr>
-  <tr>
-    <td>Last Date to Apply for the Scholarship</td>
-    <td>January 2, 2025</td>
-  </tr>
-  <tr>
-    <td>Interview Dates</td>
-    <td>Between April and June</td>
-  </tr>
-  <tr>
-    <td>Declaration of Selection Results</td>
-    <td>June</td>
-  </tr>
-  <tr>
-    <td>Commencement of the Doctoral Programme</td>
-    <td>In the month of September/October</td>
-  </tr>
-</table>
-        `,
-      },
-    ],
     faqs: {
       title: {
+        t1: "",
         t2: "IIT Madras",
         t3: "Frequently Asked Questions",
       },
@@ -1599,7 +1882,161 @@ export const abroadColleges = [{
         },
       ],
     },
+    scholarship: {
+      title: {
+        t1: "Discover",
+        t2: "Top Scholarships",
+        t3: "in Germany",
+      },
+      scholarshipsArray: [
+        {
+          id: 1,
+          slug: "Bayer-Foundation",
+          logo: { url: scLogo },
+          bgImage: { url: scholarship1 },
+          title: "Bayer Foundation",
+          awardedTo:
+            "International students pursuing masters or PhD in German Universities ",
+          date: "31st August , 2024",
+          amount: "$10,000",
+          country: "United States",
+          scholarshipType: ["merit-based", "Need-based"],
+          eligibility: ["age", "Income"],
+          applicationStatus: "Open",
+          provider: ["Government"],
+          noOfScholarShipAvailable: "10",
+          conductedBy:
+            "University College Cork [UCC] and Government of Ireland",
+          course: ["sports", "Creative Arts"],
+          IsInternationalAllowed: true,
+          sequence: "1",
+          isTop: true,
+          topSequence: "1",
+        },
+        {
+          id: 2,
+          slug: "Bayer-Foundation",
+          logo: { url: scLogo },
+          bgImage: { url: scholarship1 },
+          title: "Bayer Foundation",
+          awardedTo:
+            "International students pursuing masters or PhD in German Universities ",
+          date: "31st August , 2024",
+          amount: "$10,000",
+          country: "United States",
+          scholarshipType: ["merit-based", "Need-based"],
+          eligibility: ["age", "Income"],
+          applicationStatus: "Open",
+          provider: ["Government"],
+          noOfScholarShipAvailable: "10",
+          conductedBy:
+            "University College Cork [UCC] and Government of Ireland",
+          course: ["sports", "Creative Arts"],
+          IsInternationalAllowed: true,
+          sequence: "2",
+          isTop: true,
+          topSequence: "1",
+        },
+        {
+          id: 3,
+          slug: "Bayer-Foundation",
+          logo: { url: scLogo },
+          bgImage: { url: scholarship1 },
+          title: "Bayer Foundation",
+          awardedTo:
+            "International students pursuing masters or PhD in German Universities ",
+          date: "31st August , 2024",
+          amount: "$10,000",
+          country: "United States",
+          scholarshipType: ["merit-based", "Need-based"],
+          eligibility: ["age", "Income"],
+          applicationStatus: "Open",
+          provider: ["Government"],
+          noOfScholarShipAvailable: "10",
+          conductedBy:
+            "University College Cork [UCC] and Government of Ireland",
+          course: ["sports", "Creative Arts"],
+          IsInternationalAllowed: true,
+          sequence: "1",
+          isTop: true,
+          topSequence: "1",
+        },
+        {
+          id: 4,
+          slug: "Bayer-Foundation",
+          logo: { url: scLogo },
+          bgImage: { url: scholarship1 },
+          title: "Bayer Foundation",
+          awardedTo:
+            "International students pursuing masters or PhD in German Universities ",
+          date: "31st August , 2024",
+          amount: "$10,000",
+          country: "United States",
+          scholarshipType: ["merit-based", "Need-based"],
+          eligibility: ["age", "Income"],
+          applicationStatus: "Open",
+          provider: ["Government"],
+          noOfScholarShipAvailable: "10",
+          conductedBy:
+            "University College Cork [UCC] and Government of Ireland",
+          course: ["sports", "Creative Arts"],
+          IsInternationalAllowed: true,
+          sequence: "1",
+          isTop: true,
+          topSequence: "1",
+        },
+        {
+          id: 5,
+          slug: "Bayer-Foundation",
+          logo: { url: scLogo },
+          bgImage: { url: scholarship1 },
+          title: "Bayer Foundation",
+          awardedTo:
+            "International students pursuing masters or PhD in German Universities ",
+          date: "31st August , 2024",
+          amount: "$10,000",
+          country: "United States",
+          scholarshipType: ["merit-based", "Need-based"],
+          eligibility: ["age", "Income"],
+          applicationStatus: "Open",
+          provider: ["Government"],
+          noOfScholarShipAvailable: "10",
+          conductedBy:
+            "University College Cork [UCC] and Government of Ireland",
+          course: ["sports", "Creative Arts"],
+          IsInternationalAllowed: true,
+          sequence: "1",
+          isTop: true,
+          topSequence: "1",
+        },
+      ],
+    },
+    campusSize: "617 Acres",
+    noOfFaculty: "592",
+    noOfStudents: "10224",
+    avgFeePerYear: "95.1k Yearly",
+    avgFeePerSem: "$4.8k",
+    avgPackage: "$79.8K",
+    genderAccepted: "Co-ed",
+    studyMode: "Regular, Part-time",
+    isAbroadCollege: false,
+    collegeSequence: 1,
+    isTopCollege: true,
+    topCollegeSequence: 2,
+    distanceFromAirport: "5.8",
+    tag: {
+      sequence: 1,
+      tagName: "NRIF",
+    },
+    banner1: {
+      title:
+        "Embark on Your Career Journey Today! Connect \\n with Our Expert Counseling Team Now.",
+      text1: "Navigate the Path to Success with Our Support",
+      button: {
+        text: "Schedule  Counselling",
+        href: "#",
+      },
+      bgImg: { url: section6Bg },
+    },
   },
-  isAbroadCollege: false,
-  distanceFromAirport: "5.8",
-}];
+];

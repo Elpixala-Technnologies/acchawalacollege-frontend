@@ -24,7 +24,7 @@ export default function TopCourses({ data }: any) {
         <div className="topColleges relative">
           <CoursesCard data={data?.courses} />
         </div>
-        <div className="flex-center p-5">
+        <div className="flex-center pt-5">
           <Link
             href={"/courses"}
             className="w-max font-medium hover:text-blue-500"

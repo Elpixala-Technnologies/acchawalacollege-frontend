@@ -91,13 +91,13 @@ export const CollegesCardContent = function DiscoverTopCollegesCard({
       <div className="flex max-sm:flex-col flex-wrap sm:justify-between text-sm">
         <p>
           <span className="mr-1 rounded bg-blue-500 px-1 py-0.5 text-center text-white">
-            {college?.overallRating}
+            {college?.reviews?.overallRating}
           </span>
-          <span className=" ">{getRatingText(college?.overallRating)}</span>
+          <span className=" ">{getRatingText(college?.reviews?.overallRating)}</span>
         </p>
         <p className="flex items-center">
           <LuDot className="text-2xl text-blue-950" />
-          {college?.reviews}
+          {college?.reviews?.totalReviews} reviews
         </p>
         <p className="flex items-center">
           <LuDot className="text-2xl text-blue-950" />
@@ -105,7 +105,7 @@ export const CollegesCardContent = function DiscoverTopCollegesCard({
         </p>
       </div>
       <div className="mt-2 text-semibold text-orange-500">
-        {college?.priceRange}
+        {college?.avgFeePerYear}
       </div>
     </React.Fragment>
   );
