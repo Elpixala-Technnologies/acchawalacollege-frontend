@@ -19,14 +19,14 @@ export function LoginSignUpModule({ setIsLoginModule, isLoginModule, closePopup 
       onClick={handleOverlayClick}
     >
       {/* Module  */}
-      <div className="z-10 flex w-full rounded bg-white shadow-lg md:max-w-[780px] max-h-[100vh] overflow-y-auto">
+      <div className="relative z-10 flex max-sm:flex-col  w-full rounded bg-white shadow-lg md:max-w-[780px] max-h-[100%] overflow-y-auto">
         {/* Left Side  */}
         <div
-          className="hidden bg-cover bg-center text-white [flex:4] md:block"
+          className=" bg-cover bg-center text-white [flex:4]"
           style={{ backgroundImage: "url('./moduleBanner.png')" }}
         >
           <div className="flex-center h-full w-full flex-col bg-blue-950 bg-opacity-70  p-5">
-            <div className="flex-center mb-10 flex-col text-center">
+            <div className="flex-center sm:mb-10 flex-col text-center">
               <Image
                 src={logoSmall}
                 alt="logo"
@@ -36,7 +36,7 @@ export function LoginSignUpModule({ setIsLoginModule, isLoginModule, closePopup 
               <h2 className="text-xl font-bold">AcchaWala College</h2>
               <p className="text-xs">India’s Best Education Consultancy</p>
             </div>
-            <ul className="ml-5 flex list-disc flex-col gap-y-2 text-sm">
+            <ul className="ml-5 flex list-disc flex-col gap-y-2 text-sm max-sm:hidden">
               <li>Personal Counsellor</li>
               <li>Admission Assistance</li>
               <li>Lowest Package Seats</li>

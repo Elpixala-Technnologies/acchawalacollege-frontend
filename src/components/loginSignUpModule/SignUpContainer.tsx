@@ -136,7 +136,7 @@ export function SignUpContainer({
   const mobileRegex = /^[0-9]{10}$/;
 
   return (
-    <div className="relative flex min-h-[90vh] flex-col md:justify-center rounded-b rounded-r p-8 text-black [flex:6] overflow-y-auto">
+    <div className="sm:relative flex min-h-[90vh] flex-col md:justify-center rounded-b rounded-r p-8 text-black [flex:6] overflow-y-auto">
       <button
         className="absolute right-[0.05rem] top-[0.05rem] w-max p-3  text-sm text-blue-500 hover:underline"
         onClick={closePopup}
@@ -144,7 +144,7 @@ export function SignUpContainer({
       >
         Close
       </button>
-      <h1 className="text-lg font-bold text-zinc-800">
+      <h1 className="sm:text-lg font-bold text-zinc-800">
         Confused with the Admission process to your dream college? Register with
         us
       </h1>
