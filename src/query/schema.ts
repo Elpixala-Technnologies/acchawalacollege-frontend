@@ -28,7 +28,7 @@ export const GET_COURSES = gql`
 
 export const GET_HOME_PAGE = gql`
 query GetHomeSection {
-    heroSections {
+    homepages {
       data {
         id
         attributes {
@@ -168,16 +168,19 @@ query GetHomeSection {
       }
     }
   }
+
   
 `;
 
 export const GET_PARTNERS = gql`
   query GetPartners {
-    heroSections {
+    homepages {
       data {
         id
         attributes {
-          partners {
+          sponsors{
+            id
+            partners {
             id
             title
             images {
@@ -192,6 +195,8 @@ export const GET_PARTNERS = gql`
               }
             }
           }
+          }
+          
         }
       }
     }
@@ -199,12 +204,12 @@ export const GET_PARTNERS = gql`
 `;
 
 export const GET_COUNSELLING_PACKAGES = gql`
-  query GetCounsellingPackages {
-    heroSections {
+ query GetCounsellingPackages {
+    homepages {
       data {
         id
         attributes {
-          CounsellingPackages {
+           counsellingPackages{
             id
             title
             CounsellingPackagesCards {
