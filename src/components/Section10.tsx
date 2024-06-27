@@ -5,8 +5,8 @@ import TextWithLineBreak from "@/utils/TextWithLineBreak";
 
 export default function Section10({ data }: any) {
   return (
-    <section className="my-5 w-full bg-blue-950 py-10 text-white">
-      <Wrapper className="flex items-center justify-between max-md:flex-col max-md:text-center">
+    <section className="my-5 w-full ">
+      <Wrapper isMaxWidthChangeRequired="max-w-screen-2xl" className="flex items-center justify-between bg-blue-950 py-10 text-white max-md:flex-col max-md:text-center">
         {data?.text && (
           <h2 className="text-lg font-medium">
             <TextWithLineBreak text={data?.text} />

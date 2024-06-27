@@ -4,7 +4,7 @@ import React from "react";
 export default function Section2({ data, sData }: any) {
   return (
     <section className="my-5 w-full">
-      <div className="flex w-full max-w-screen-2xl max-md:flex-col">
+      <div className="flex w-full max-w-screen-2xl max-md:flex-col mx-auto">
         <Card
           bgColor="bg-blue-950"
           title={sData?.card1?.title}
