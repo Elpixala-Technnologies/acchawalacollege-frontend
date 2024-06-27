@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
-import BannerSection from "@/components/homePageSections/bannerSection/BannerSection";
 import CounsellingPackages from "@/components/homePageSections/counsellingPackages/CounsellingPackages";
 import TopColleges from "@/components/topColleges/TopColleges";
 import BlogAndOthersFilterSection from "@/components/homePageSections/blogAndOthersFilterSection/BlogAndOthersFilterSection";
@@ -12,40 +11,16 @@ import TopCourses from "@/components/topCourses/TopCourses";
 import Testimonials from "@/components/testimonials/Testimonials";
 import { home } from "@/data/homePage";
 import { global } from "@/data/globalData";
+import BannerSection from "@/components/homePageSections/bannerSection/BannerSection";
 import BannerSection1 from "@/components/homePageSections/bannerSection/BannerSection1";
 import {
   GET_HOME_PAGE,
-  // GET_BLOGS,
-  // GET_COLLEGES,
-  // GET_COLLEGES_BY_ID,
   GET_COUNSELLING_PACKAGES,
-  // GET_COURSES,
-  // GET_EXAMS,
-  // GET_EXAMS_LEVEL,
-  // GET_EXAM_BY_ID,
-  // GET_FEATURED_EXAMS,
   GET_PARTNERS,
-  // GET_TOP_COLLEGES
 } from "@/query/schema";
 import { flattenAttributes } from "@/utils/flattenAttributes";
 
 export default function Home() {
-  // const { data: BlogsData } = useQuery(GET_BLOGS);
-  // const { data: CoursesData } = useQuery(GET_COURSES);
-  // const { data: CollegesData } = useQuery(GET_COLLEGES);
-  // const { data: TopCollegesData } = useQuery(GET_TOP_COLLEGES);
-  // const collegeId = 2;
-  // const { data: CollegesDatabyId } = useQuery(GET_COLLEGES_BY_ID, {
-  //   variables: { collegeId },
-  // });
-  // const { data: ExamsData } = useQuery(GET_EXAMS);
-  // const { data: ExamsLevelData } = useQuery(GET_EXAMS_LEVEL);
-  // const examId = 1;
-  // const { data: ExamDatabyId } = useQuery(GET_EXAM_BY_ID, {
-  //   variables: { examId },
-  // });
-  // const { data: FeaturedExamsData } = useQuery(GET_FEATURED_EXAMS);
-
   // HOME DATA FETCHING
   const [homeData, setHomeData] = useState<any>(null);
   const [homePartnersData, setHomePartnersData] = useState<any>(null);
@@ -59,7 +34,7 @@ export default function Home() {
 
   useEffect(() => {
     if (homePageData) {
-      setHomeData(flattenAttributes(homePageData?.heroSections?.data?.[0]));
+      setHomeData(flattenAttributes(homePageData?.homepages?.data?.[0]));
     }
   }, [homePageData]);
 
@@ -95,24 +70,17 @@ export default function Home() {
     if (counsellingPackages) {
       setCounsellingPackagesData(
         flattenAttributes(
-          counsellingPackages?.heroSections?.data[0]?.attributes
-            ?.CounsellingPackages,
+          counsellingPackages?.homepages?.data[0]?.attributes
+            ?.counsellingPackages,
         ),
       );
     }
   }, [counsellingPackages]);
-
   // END COUNSELLING PACKAGES DATA FETCHING
 
-  // if (HomePageLoader) return <p>HOME Loading...</p>;
-  if (homePageError) return <p>Error: {homePageError.message}</p>;
-  // if (PartnersLoader) return <p>PARTNERS Loading...</p>;
-  if (partnersError) return <p>Error: {partnersError.message}</p>;
-  // if (CounsellingPackagesLoader) return <p>PACKAGE Loading...</p>;
-  if (CounsellingPackagesError)
-    return <p>Error: {CounsellingPackagesError.message}</p>;
-
-  // console.log(homeData?.section2, "homeData");
+  // useEffect(() => {
+  //   console.log(counsellingPackagesData, "home");
+  // }, [counsellingPackagesData]);
 
   return (
     <>
