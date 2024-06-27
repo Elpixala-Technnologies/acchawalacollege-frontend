@@ -93,12 +93,12 @@ import scLogo from "./scholarship/scLogo.png";
 import moduleBanner from "./moduleBanner.png";
 
 // Study Abroad
-import abroadLanding1 from "./studyAbroad/AbroadLanding1.png";
-import abroadLanding2 from "./studyAbroad/AbroadLanding2.png";
-import abroadLanding3 from "./studyAbroad/AbroadLanding3.png";
 import abroad1 from "./studyAbroad/abroad1.png";
 import abroad2 from "./studyAbroad/abroad2.png";
 import abroad3 from "./studyAbroad/abroad3.png";
+import abroad4 from "./studyAbroad/abroad4.png";
+import abroad5 from "./studyAbroad/abroad5.png";
+import abroad6 from "./studyAbroad/abroad6.png";
 
 export {
     logo, logoSmall,
@@ -132,5 +132,5 @@ export {
 
     moduleBanner,
 
-    abroadLanding1, abroadLanding2, abroadLanding3, abroad1, abroad2, abroad3, 
+    abroad1, abroad2, abroad3, abroad4, abroad5, abroad6
 }
