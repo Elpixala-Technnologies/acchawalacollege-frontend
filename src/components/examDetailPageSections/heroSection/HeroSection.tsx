@@ -81,13 +81,13 @@ export default function HeroSection({ data }: any) {
               </p>
               <div className="flex flex-wrap gap-2">
                 <Link
-                  href={data?.button1?.href}
+                  href={data?.button1?.href || "#"}
                   className="button4 rounded-lg max-sm:w-full"
                 >
                   {data?.button1?.text}
                 </Link>
                 <Link
-                  href={data?.button3?.href}
+                  href={data?.button3?.href || "#"}
                   className="button8 rounded-lg  max-sm:w-full"
                 >
                   {data?.button3?.text}

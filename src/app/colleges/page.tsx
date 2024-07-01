@@ -6,6 +6,7 @@ import HeroSection from "@/components/collegesListingPageSections/heroSection/He
 import Faqs from "@/components/faqs/Faqs";
 import { collegePages } from "@/data/collegeData";
 import { global } from "@/data/globalData";
+
 import { getAllCollegesData } from "@/query/graphql/colleges";
 import { flattenAttributes } from "@/utils/flattenAttributes";
 
@@ -24,11 +25,11 @@ export default function Colleges() {
     }
   }, [colleges]);
 
-  useEffect(() => {
-    if (colleges) {
-      console.log(colleges, "colleges");
-    }
-  }, [colleges]);
+  // useEffect(() => {
+  //   if (colleges) {
+  //     console.log(colleges, "colleges");
+  //   }
+  // }, [colleges]);
 
 
   return (

@@ -89,7 +89,7 @@ export const CoursesCardContent = function CoursesCard({ course }: any) {
       <div className="p-5">
         {/* line 1  */}
         <div className="mb-5 flex items-center justify-between">
-          <Link href={`/courses/${course?.slug}`}>
+          <Link href={`/courses/${course?.slug} || #`}>
             <h4 className="max-w-max text-wrap text-2xl font-medium hover:text-blue-500">
               {course?.stream} from {course?.title}
             </h4>
@@ -145,7 +145,7 @@ export const CoursesCardContent = function CoursesCard({ course }: any) {
         {/* END line 3  */}
 
         {/* line 4  */}
-        <Link href={`/courses/${course?.slug}`}>
+        <Link href={`/courses/${course?.slug} || #`}>
           <button className="cardButton2">{course?.button?.text}</button>
         </Link>
       </div>

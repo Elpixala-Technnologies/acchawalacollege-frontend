@@ -86,7 +86,7 @@ const Header = ({ header }: any) => {
           />
         )}
         {/* Logo with Link */}
-        <Link href={header?.href}>
+        <Link href={header?.href || "/"}>
           <Image
             src={header?.logo}
             alt="logo"

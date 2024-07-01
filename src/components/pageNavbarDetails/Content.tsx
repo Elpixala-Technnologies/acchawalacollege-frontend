@@ -6,6 +6,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { SiTicktick } from "react-icons/si";
 import useIsMobile from "@/customHooks/useIsMobile";
+import ThreeCardSection from "./components/ThreeCardSection";
+import HighlightsSlider from "./components/highlightsSlider/HighlightsSlider";
+import CompaniesScrollSlideShow from "./components/CompaniesScrollSlideShow";
+import BrochureSection from "./components/BrochureSection";
+import YoutubeVideo from "../youtubeVideo";
+import ReviewsSlider from "../cards/ReviewsSlider";
 
 export default function Content({ selectedContent }: any) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -135,6 +141,10 @@ export default function Content({ selectedContent }: any) {
                   )}
                 </div>
               )}
+              {/* Three Card Section  */}
+              {section?.cardsSection && (
+                <ThreeCardSection data={section?.cardsSection} />
+              )}
               {/* Courses */}
               {section?.courses && (
                 <div className="md:grid-col-2 my-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -209,6 +219,51 @@ export default function Content({ selectedContent }: any) {
               )}
               {/* Semester  */}
               {section?.semesters && <TimelineList data={section?.semesters} />}
+              {/* Highlights Slider  */}
+              {section?.highlights && (
+                <HighlightsSlider data={section?.highlights} />
+              )}
+              {/* Top Recruiters  */}
+              {section?.topRecruitersLogos && (
+                <CompaniesScrollSlideShow image={section?.topRecruitersLogos} />
+              )}
+              {/* Brochure Section  */}
+              {section?.brochureSection && (
+                <BrochureSection data={section?.brochureSection} />
+              )}
+              {/* Reviews  */}
+              {section?.individualReviews && (
+                <div className="HighlightsSlider relative w-full">
+                  <ReviewsSlider reviews={section?.individualReviews} />
+                </div>
+              )}
+              {/* Photo Gallery  */}
+              {section?.photoGallery && (
+                <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                  {section?.photoGallery?.map((d: any, i: number) => (
+                    <Image
+                      key={i}
+                      src={d.url}
+                      alt="gallery"
+                      className="h-full max-h-[200px] w-full flex-wrap rounded-lg object-cover"
+                    />
+                  ))}
+                </div>
+              )}
+              {/* Video Gallery  */}
+              {section?.videoGallery && (
+                <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                  {section?.videoGallery?.map((d: any, i: number) => (
+                    <YoutubeVideo
+                      videoId={d?.videoId}
+                      width={"100%"}
+                      height={"200"}
+                      key={i}
+                    />
+                  ))}
+                </div>
+              )}
+              
               {/* Article2 */}
               {section?.article2 && (
                 <>

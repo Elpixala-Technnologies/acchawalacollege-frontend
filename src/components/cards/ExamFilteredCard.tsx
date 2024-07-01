@@ -91,7 +91,7 @@ export default function ExamFilteredCard({ exam }: any) {
             </React.Fragment>
           ))}
           {exam.examDetails?.length > 5 && (
-            <Link href={`/exams/${exam?.slug}`}>
+            <Link href={`/exams/${exam?.slug}` || '#'}>
               <li className="cursor-pointer capitalize hover:underline">
                 more
               </li>

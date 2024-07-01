@@ -7,7 +7,10 @@ import Wrapper from "@/components/Wrapper";
 import Navbar from "./Navbar";
 import AbroadCollegeFilteredCard from "@/components/cards/AbroadCollegeFilteredCard";
 import CollegeFilters from "./CollegeFilters";
-export default function AbroadCollegeListSection({ collegeDataArray, filterBy }: any) {
+export default function AbroadCollegeListSection({
+  collegeDataArray,
+  filterBy,
+}: any) {
   const [MobileFilter, setMobileFilter] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
   const [filteredData, setFilteredData] = useState<any>(collegeDataArray);
@@ -36,7 +39,6 @@ export default function AbroadCollegeListSection({ collegeDataArray, filterBy }:
       setFilteredData(resetArray);
     }
   };
-
 
   return (
     <section id="collegeList" className="my-5 w-full pb-5">

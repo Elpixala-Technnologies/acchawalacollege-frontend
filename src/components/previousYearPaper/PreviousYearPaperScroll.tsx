@@ -121,7 +121,7 @@ export const PapersCardContent = function ({ paper }: any) {
       <div className="flex-center relative w-full flex-col bg-blue-950/10 p-5 text-center">
         <Image src={paper?.img} alt="paper" className="h-20 object-contain" />
         {paper?.title && (
-          <Link href={paper?.href}>
+          <Link href={paper?.href || "#"}>
             <h4 className="md:text-xl text-lg font-medium text-blue-950">
               {paper?.title}
             </h4>

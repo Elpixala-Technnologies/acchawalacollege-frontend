@@ -30,7 +30,7 @@ export default function BannerSection({ data }: any) {
             </p>
           )}
           {data?.button && <Link
-            href={data?.button?.href}
+            href={data?.button?.href || "#"}
             className="button4 w-max rounded-lg"
           >
             <button>{data?.button?.text}</button>
