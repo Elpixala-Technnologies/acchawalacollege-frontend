@@ -5,7 +5,7 @@ import { Student, building, community } from "@/asset";
 export default function Section3({ data }: any) {
   return (
     <section className="my-16 w-full">
-      <div className="flex w-full max-w-screen-2xl max-md:flex-col">
+      <div className="flex w-full  max-md:flex-col">
         <Card
           bgColor="bg-blue-950"
           title={data?.campusSize}

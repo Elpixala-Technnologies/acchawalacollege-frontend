@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Section6({ data }: any) {
   return (
     <section className="my-5 w-full">
-      <div className="relative mx-auto max-w-screen-2xl">
+      <div className="relative mx-auto w-full">
         <Image
           src={data?.bgImg}
           alt="bg"
