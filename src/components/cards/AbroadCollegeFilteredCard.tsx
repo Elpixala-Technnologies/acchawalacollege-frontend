@@ -176,7 +176,7 @@ export default function AbroadCollegeFilteredCard({ college }: any) {
               </React.Fragment>
             ))}
           {college.collegeDetails?.length > 5 && (
-            <Link href={`/study-abroad/colleges/${college?.slug}`}>
+            <Link href={`/study-abroad/colleges/${college?.slug} || '#'`}>
               <li className="cursor-pointer capitalize hover:underline">
                 more
               </li>

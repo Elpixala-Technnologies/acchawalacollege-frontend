@@ -128,7 +128,7 @@ function CoursesCardContent({ data }: any) {
         </div>
         {/* End line 3  */}
         {/* line 4  */}
-        <Link href={data?.button?.href}>
+        <Link href={data?.button?.href || "#"}>
           <button className="cardButton2">{data?.button?.text}</button>
         </Link>
       </div>

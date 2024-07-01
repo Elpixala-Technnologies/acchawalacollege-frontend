@@ -171,7 +171,7 @@ export function PackageCard({
         </ul>
 
         {data?.button && (
-          <Link href={data?.button?.href}>
+          <Link href={data?.button?.href || "#"}>
             <button className="button2 my-8">{data?.button?.text}</button>
           </Link>
         )}

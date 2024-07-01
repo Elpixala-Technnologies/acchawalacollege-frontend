@@ -41,7 +41,7 @@ export default function Footer({ footer }: any) {
               {footer?.list1?.links?.map((d: any, i: number) => (
                 <li key={i}>
                   <Link
-                    href={d?.href}
+                    href={d?.href || "#"}
                     className="hover:pl-2 hover:text-blue-500"
                   >
                     {d?.label}
@@ -56,7 +56,7 @@ export default function Footer({ footer }: any) {
               {footer?.list2?.links?.map((d: any, i: number) => (
                 <li key={i}>
                   <Link
-                    href={d?.href}
+                    href={d?.href || "#"}
                     className="hover:pl-2 hover:text-blue-500"
                   >
                     {d?.label}
@@ -71,7 +71,7 @@ export default function Footer({ footer }: any) {
               {footer?.list3?.links?.map((d: any, i: number) => (
                 <li key={i}>
                   <Link
-                    href={d?.href}
+                    href={d?.href || "#"}
                     className="hover:pl-2 hover:text-blue-500"
                   >
                     {d?.label}

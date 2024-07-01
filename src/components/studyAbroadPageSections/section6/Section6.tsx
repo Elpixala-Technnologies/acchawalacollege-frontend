@@ -27,7 +27,7 @@ export default function Section6({ data }: any) {
             <p className="text-wrap text-center text-white max-md:text-sm">
               <TextWithLineBreak text={data?.text1} />
             </p>
-            {data?.button && <Link href={data?.button?.href} className="button4 rounded-lg">
+            {data?.button && <Link href={data?.button?.href || "#"} className="button4 rounded-lg">
               <button>{data?.button?.text}</button>
             </Link>}
           </div>

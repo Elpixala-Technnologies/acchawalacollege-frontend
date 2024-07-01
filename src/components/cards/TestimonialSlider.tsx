@@ -84,7 +84,7 @@ function TestimonialSliderContent({ testimonial }: any) {
       <p className="mb-5 md:line-clamp-4 text-wrap font-medium text-zinc-800">{`"${testimonial?.comment}"`}</p>
       {testimonial?.storyVideoLink && (
         <div className="flex justify-end">
-          <Link href={testimonial?.storyVideoLink}>
+          <Link href={testimonial?.storyVideoLink || "#"}>
             <button className="flex items-center gap-x-2 rounded-lg bg-blue-500 p-3 text-xs text-white">
               <FaRegCirclePlay /> <p>Watch Now</p>
             </button>

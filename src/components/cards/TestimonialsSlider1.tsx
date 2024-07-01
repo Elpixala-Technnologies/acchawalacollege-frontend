@@ -80,7 +80,7 @@ function TestimonialsContent({ testimonial }: any) {
       <p className="mb-5 line-clamp-4 text-xs">{testimonial?.comment}</p>
       {testimonial?.button && (
         <div className="flex justify-center">
-          <Link href={testimonial?.button.href}>
+          <Link href={testimonial?.button.href || "#"}>
             <button className="flex items-center gap-x-2 rounded-lg bg-blue-500 p-3 text-xs text-white">
               <FaRegCirclePlay /> <p>{testimonial?.button.text}</p>
             </button>

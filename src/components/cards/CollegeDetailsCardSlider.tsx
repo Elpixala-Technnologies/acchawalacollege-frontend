@@ -71,7 +71,7 @@ export default function CollegeDetailsCardSlider({ course }: any) {
               {course?.buttons?.button1?.text && (
                 <Link
                   className="button6 flex-[1]"
-                  href={course?.buttons?.button1?.href}
+                  href={course?.buttons?.button1?.href || "#"}
                 >
                   {course?.buttons?.button1?.text}
                 </Link>
@@ -79,7 +79,7 @@ export default function CollegeDetailsCardSlider({ course }: any) {
               {course?.buttons?.button2?.text && (
                 <Link
                   className="button7 flex-[1]"
-                  href={course?.buttons?.button2?.href}
+                  href={course?.buttons?.button2?.href || "#"}
                 >
                   {course?.buttons?.button2?.text}
                 </Link>
