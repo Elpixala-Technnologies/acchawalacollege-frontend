@@ -10,10 +10,9 @@ export default function TopCourses({ data }: any) {
         <div className="mb-8 flex justify-between">
           {data.title && (
             <h1 className="title1 md:ml-8">
+              <span className="text-blue-950/70">{data.title.t1}</span>{" "}
               <span className="text-blue-950">{data.title.t2}</span>{" "}
-              <span className="text-blue-500">
-                {data.title.t3}
-              </span>
+              <span className="text-blue-500"> {data.title.t3} </span>
             </h1>
           )}
           {/* filter Button  */}
@@ -25,7 +24,7 @@ export default function TopCourses({ data }: any) {
         <div className="topColleges relative">
           <CoursesCard data={data?.courses} />
         </div>
-        <div className="flex-center p-5">
+        <div className="flex-center pt-5">
           <Link
             href={"/courses"}
             className="w-max font-medium hover:text-blue-500"

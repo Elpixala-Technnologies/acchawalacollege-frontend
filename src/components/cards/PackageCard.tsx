@@ -85,10 +85,10 @@ export function PackageCard({
   showAll,
   setShowAll,
 }: any) {
-  const displayedList = showAll ? data.list : data.list.slice(0, 4);
+  const displayedList = data?.lists?.data && (showAll ? data?.lists?.data : data?.lists?.data?.slice(0, 4));
   return (
     <div
-      className={`relative w-full rounded-lg border-2 ${isActive ? "scale-100 md:translate-y-4 md:scale-105 md:border-blue-500 md:shadow-lg md:shadow-blue-500" : data.styling.border} gap-1 transition-all duration-300 md:overflow-hidden  md:hover:translate-y-4 md:hover:scale-105 md:hover:shadow-lg md:hover:shadow-blue-500`}
+      className={`relative w-full rounded-lg border-2 ${isActive ? "scale-100 md:translate-y-4 md:scale-105 md:border-blue-500 md:shadow-lg md:shadow-blue-500" : "border-zinc-300"} gap-1 transition-all duration-300 md:overflow-hidden  md:hover:translate-y-4 md:hover:scale-105 md:hover:shadow-lg md:hover:shadow-blue-500`}
       onClick={onSelect}
     >
       {data?.isPopular && (
@@ -96,17 +96,17 @@ export function PackageCard({
           Most Popular
         </div>
       )}
-      <div className={`flex-center bg-gradient-to-r p-2 ${data.styling.tagBg}`}>
-        <Image src={data.icon} alt="icon" width={30} height={30} />
+      <div className={`flex-center bg-gradient-to-r p-2 ${data?.styling?.tagBg || "from-orange-400 to-white"}`}>
+        <Image src={data?.icon?.data?.[0]?.url} alt="icon" width={30} height={30} />
       </div>
       <div className="flex w-full flex-col items-center text-center">
         <h2 className="mt-2 font-semibold">
-          <TextWithLineBreak text={data.PackageName} />
+          <TextWithLineBreak text={data?.PackageName} />
         </h2>
 
         <p>
           <span className="text-2xl font-semibold">
-            {formatRupee(data.price)}
+            {formatRupee(data?.price)}
           </span>
           <span className="text-xs text-zinc-500">/year</span>
         </p>
@@ -121,8 +121,9 @@ export function PackageCard({
             </p>
           </>
         )}
+        {/* Desktop View  */}
         <ul className="w-full text-left leading-8 max-md:hidden md:pl-12">
-          {data.list.map(
+          {data?.lists?.data?.map(
             (d: any, i: number) =>
               d?.text && (
                 <li key={i} className="flex items-center gap-4 text-wrap">
@@ -159,7 +160,7 @@ export function PackageCard({
                 </li>
               ),
           )}
-          {data.list.length > 4 && (
+          {data?.lists?.data?.length > 4 && (
             <button
               onClick={() => setShowAll(!showAll)}
               className="w-full text-left text-blue-500 underline md:hidden"

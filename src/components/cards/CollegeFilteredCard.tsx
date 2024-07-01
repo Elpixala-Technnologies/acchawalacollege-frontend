@@ -45,7 +45,7 @@ export default function CollegeFilteredCard({ college }: any) {
             </div>
           </div>
           {/* Line 2  */}
-          <Link href={`/colleges/${college.slug}`}>
+          <Link href={`/colleges/${college?.slug || "#"}`}>
             <h1 className=" mb-3 text-wrap text-xl font-bold hover:text-blue-500">
               {college.name}
             </h1>
@@ -100,12 +100,12 @@ export default function CollegeFilteredCard({ college }: any) {
             <p className="line-clamp-2 text-wrap text-sm [flex:11]">
               <span className="line-clamp-2">{college.desc}</span>
               <span className="text-blue-500 hover:underline">
-                <Link href={`/colleges/{college.slug}`}>Read More</Link>
+                <Link href={`/colleges/{college?.slug || '#'}`}>Read More</Link>
               </span>
             </p>
             <div className="flex items-center gap-x-1 text-3xl [flex:1]">
               <CiHeart /> <span className="font-thin">|</span>{" "}
-              <Link href={`/colleges/{college.slug}`}>
+              <Link href={`/colleges/{college.slug || '#'}`}>
                 <CiMobile1 />
               </Link>
             </div>
@@ -127,7 +127,7 @@ export default function CollegeFilteredCard({ college }: any) {
             </React.Fragment>
           ))}
           {college?.navbar?.length > 5 && (
-            <Link href={`/colleges/${college?.slug}`}>
+            <Link href={`/colleges/${college?.slug || '#'}`}>
               <li className="cursor-pointer capitalize hover:underline">
                 more
               </li>

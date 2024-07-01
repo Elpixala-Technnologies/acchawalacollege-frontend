@@ -3,16 +3,16 @@ import Wrapper from "@/components/Wrapper";
 import PackageCardSlider from "@/components/cards/PackageCard";
 import React, { useState } from "react";
 
-export default function CounsellingPackages({ data }: any) {
+export default function CounsellingPackages({ data, sData }: any) {
   return (
     <section className="my-10 w-full">
       <Wrapper isMaxWidthChangeRequired="max-w-[1500px]">
-        {data?.title && (
+        {sData?.title && (
           <h1 className="title1 mb-8 text-center">{data?.title}</h1>
         )}
-        {data?.CounsellingPackagesCards && (
+        {sData?.CounsellingPackagesCards && (
           <div className="Package relative">
-            <PackageCardSlider data={data?.CounsellingPackagesCards} />
+            <PackageCardSlider data={sData?.CounsellingPackagesCards} />
           </div>
         )}
       </Wrapper>

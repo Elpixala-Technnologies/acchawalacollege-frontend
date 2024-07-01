@@ -6,13 +6,14 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import {global} from "@/data/globalData"
 import ReduxProvider from "@/Redux/provider";
+import { ApolloWrapper } from "@/lib/client";
 const inter = Inter({ subsets: ["latin"] });
 
-import setupLocatorUI from "@locator/runtime";
+// import setupLocatorUI from "@locator/runtime";
 
-if (process.env.NODE_ENV === "development") {
-  setupLocatorUI();
-}
+// if (process.env.NODE_ENV === "development") {
+//   setupLocatorUI();
+// }
 
 export const metadata: Metadata = {
   title: "Accha Wala College",
@@ -26,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-poppins relative">
+      <body className="text-primary-text font-poppins relative bg-gray-100">
       <ReduxProvider>
-        <Header header={global?.header} />
-        {children}
-        <Footer footer={global?.footer} />
+        <ApolloWrapper>
+          <Header  header={global?.header}  />
+          {children}
+          <Footer footer={global?.footer} />
+        </ApolloWrapper>
         </ReduxProvider>
       </body>
     </html>

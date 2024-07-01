@@ -87,9 +87,18 @@ import examPaper from "./exams/examPaper.png";
 
 // Scholarship
 import scholarship1 from "./scholarship/scholarship1.png";
+import scLogo from "./scholarship/scLogo.png";
 
 // Module
 import moduleBanner from "./moduleBanner.png";
+
+// Study Abroad
+import abroad1 from "./studyAbroad/abroad1.png";
+import abroad2 from "./studyAbroad/abroad2.png";
+import abroad3 from "./studyAbroad/abroad3.png";
+import abroad4 from "./studyAbroad/abroad4.png";
+import abroad5 from "./studyAbroad/abroad5.png";
+import abroad6 from "./studyAbroad/abroad6.png";
 
 export {
     logo, logoSmall,
@@ -119,7 +128,9 @@ export {
 
     examBg1, examBg2, examBg3, examBg4,exam1,examPaper,
 
-    scholarship1,
+    scholarship1, scLogo,
 
-    moduleBanner
+    moduleBanner,
+
+    abroad1, abroad2, abroad3, abroad4, abroad5, abroad6
 }

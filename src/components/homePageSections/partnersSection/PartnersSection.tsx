@@ -6,8 +6,8 @@ import useMeasure from "react-use-measure";
 import { s1, s2, s3, s4, s5, s6, s7, s8, s9, s10 } from "@/asset";
 import Wrapper from "@/components/Wrapper";
 
-export default function PartnersSection({data}:any) {
-  const images = [...data?.images];
+export default function PartnersSection({data, sData}:any) {
+  const images = sData?.images?.data && [...sData?.images?.data];
   const FAST_DURATION = 10;
   const SLOW_DURATION = 75;
 
@@ -46,13 +46,13 @@ export default function PartnersSection({data}:any) {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <section className="mx-auto my-5 w-full bg-white">
+    <section className="mx-auto my-5 w-full">
       <Wrapper className="relative overflow-x-hidden py-8">
         <h1 className="title1 mb-5 w-full text-center font-semibold">
-          {data?.title}
+          {sData?.title}
         </h1>
-        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
-        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-white"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-gray-100 to-transparent"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-transparent to-gray-100"></div>
         <motion.div
           className=" mx-auto flex max-w-[1440px] gap-4"
           style={{ x: xTranslation }}
@@ -66,8 +66,8 @@ export default function PartnersSection({data}:any) {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...images, ...images, ...images, ...images, ...images].map((item, idx) => (
-            <PartnersCard image={item} key={idx} />
+          {images && [...images, ...images, ...images, ...images, ...images,...images].map((item, idx) => (
+            <PartnersCard image={item?.url} key={item?.id} />
           ))}
         </motion.div>
       </Wrapper>

@@ -15,7 +15,7 @@ export default function HeroSection({ data }: any) {
   return (
     <section className="relative w-full border-b border-zinc-300">
       <Image
-        src={data?.bg}
+        src={data?.bgImage}
         alt="collegeBanner"
         className="h-[35rem] w-full object-cover sm:h-[32rem] md:h-[21.5rem]"
       />
@@ -98,11 +98,13 @@ export default function HeroSection({ data }: any) {
                 Ask
               </p>
               <div className="flex flex-wrap gap-2">
-                <Link href={data?.button?.button1?.href} className="button4 rounded-lg max-sm:w-full">
-                  {data?.button?.button1?.text}
+                {/* Register Now */}
+                <Link href={"#"} className="button4 rounded-lg max-sm:w-full">
+                Register Now
                 </Link>
-                <Link href={data?.button?.button2?.href} className="button8 rounded-lg  max-sm:w-full">
-                  {data?.button?.button2?.text}
+                {/* Brochure  */}
+                <Link href={data?.brochureSection?.buttons?.button1?.href || "#"} className="button8 rounded-lg  max-sm:w-full">
+                  {data?.brochureSection?.buttons?.button1?.text}
                 </Link>
               </div>
             </div>
