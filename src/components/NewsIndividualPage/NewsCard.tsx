@@ -34,7 +34,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ items }) => {
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="mx-auto max-w-[1300px] overflow-hidden p-3">
       <div className="relative">
         <Carousel>
           <CarouselContent>
