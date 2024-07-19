@@ -3,7 +3,7 @@ import Link from "next/link";
 import bgImage from "@/asset/latestUpdates/councelling.png";
 export default function ScheduleSection() {
   return (
-    <section className="my-5 w-full">
+    <section className="my-5 mt-8 w-full">
       <div className="relative mx-auto w-full">
         <Image
           src={bgImage}

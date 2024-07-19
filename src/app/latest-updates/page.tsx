@@ -9,14 +9,20 @@ import LatestNews from "@/components/latest-updates/latestNews/LatestNews";
 import FeaturedNews from "@/components/latest-updates/featuredNews/FeaturedNews";
 import SneakPeek from "@/components/latest-updates/sneakPeek/SneakPeek";
 import RecentNews from "@/components/latest-updates/recentNews/RecentNews";
+import NewsCard from "@/components/NewsIndividualPage/NewsCard";
+import MainImage from "@/asset/latestUpdates/councelling.png"
 
 export default function page() {
+
+
+  
   return (
     <div className="bg-white">
         <HeroSection/>
         <NewsUpdates/>
         <LatestNews/>
         <FeaturedNews/>
+        
         <SneakPeek/>
         <RecentNews/>
         <ScheduleSection/>

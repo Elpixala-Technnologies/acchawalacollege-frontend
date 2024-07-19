@@ -25,10 +25,11 @@ function LatestNews() {
         </div>
 
         {/* Content */}
-        <div>
-          <Card/>
-
-          
+        <div className='grid grid-cols-3 w-full'>
+          <div className='col-span-3'>
+            <Card/>
+          </div>
+        
         </div>
       </div>
     </Wrapper>

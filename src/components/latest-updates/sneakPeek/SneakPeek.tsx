@@ -2,7 +2,45 @@ import React from 'react'
 import { IoChevronForward } from 'react-icons/io5'
 import Link from 'next/link'
 import Wrapper from '@/components/Wrapper'
+import NewsCard from '@/components/NewsIndividualPage/NewsCard'
+import MainImage from "@/asset/latestUpdates/councelling.png"
+
+
 function RecentNews() {
+
+  const newsItems = [
+    {
+      id: 1,
+      date: "June 24, 2024 5:40 PM",
+      title:
+        "UN chief calls for 'dramatic shift' to transform education worldwide",
+      image: MainImage,
+    },
+    {
+      id: 2,
+      date: "June 24, 2024 5:40 PM",
+      title:
+        "UN chief calls for 'dramatic shift' to transform education worldwide",
+      image: MainImage,
+    },
+    {
+      id: 3,
+      date: "June 24, 2024 5:40 PM",
+      title:
+        "UN chief calls for 'dramatic shift' to transform education worldwide",
+      image: MainImage,
+    },
+    {
+      id: 4,
+      date: "June 24, 2024 5:40 PM",
+      title:
+        "UN chief calls for 'dramatic shift' to transform education worldwide",
+      image: MainImage,
+    },
+  ];
+
+
+
   return (
     <Wrapper>
       <div className='my-2'>
@@ -24,7 +62,7 @@ function RecentNews() {
 
         {/* Content */}
         <div>
-        
+        <NewsCard items={newsItems} />
         </div>
       </div>
     </Wrapper>
@@ -32,3 +70,6 @@ function RecentNews() {
 }
 
 export default RecentNews
+
+
+

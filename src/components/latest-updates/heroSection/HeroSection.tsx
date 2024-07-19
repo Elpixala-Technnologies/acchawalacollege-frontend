@@ -91,12 +91,12 @@ const HeroSection = () => {
                 Today's
               </h2>
               <div
-                className={`${inter.className} pl-4 my-5 text-sm md:text-3xl lg:text-custom   border-l-2 border-black px-3 py-1`}
+                className={`${inter.className} pl-4 my-5 text-sm md:text-3xl    border-l-2 border-black px-3 py-1`}
               >
-                <span className=" font-bold leading-custom text-[#2095F2]">
+                <span className=" font-bold text-[#2095F2]">
                   {newsItems[activeIndex].title1}
                 </span>
-                <span className=" font-bold leading-custom text-[#012148]">
+                <span className=" font-bold  text-[#012148]">
                   {" "}
                   {newsItems[activeIndex].title2}
                 </span>
