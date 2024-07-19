@@ -73,7 +73,7 @@ function CoursesCardContent({ data }: any) {
         <div className="absolute left-0 top-0 flex max-sm:flex-col h-full w-full gap-3 bg-black/50 p-3">
           <div className="flex flex-col justify-between text-white">
             {data?.button?.button1 && (
-              <Link href={data?.button?.button1?.href} className="mb-5">
+              <Link href={data?.button?.button1?.href || "#"} className="mb-5">
                 <button className="flex items-center gap-x-2 rounded-3xl border border-white bg-white p-2 text-xs text-black">
                   <FaRegCirclePlay /> <p>{data?.button?.button1?.text}</p>
                 </button>
@@ -110,7 +110,7 @@ function CoursesCardContent({ data }: any) {
           {data?.title}
         </h4>
         {/* line 4  */}
-        <Link href={data?.button?.button2?.href}>
+        <Link href={data?.button?.button2?.href || "#"}>
           <button className="cardButton2">{data?.button?.button2?.text}</button>
         </Link>
       </div>

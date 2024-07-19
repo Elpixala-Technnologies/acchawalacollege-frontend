@@ -11,7 +11,7 @@ export default function CounsellingPackages({ data, sData }: any) {
           <h1 className="title1 mb-8 text-center">{data?.title}</h1>
         )}
         {sData?.CounsellingPackagesCards && (
-          <div className="Package relative">
+          <div className="Package relative w-full">
             <PackageCardSlider data={sData?.CounsellingPackagesCards} />
           </div>
         )}

@@ -56,10 +56,10 @@ export default function HeroSection({ data }: any) {
             </button>
           </form>
           <div className="flex gap-2">
-            <Link href={data?.button1?.href} className="button2 max-sm:px-4">
+            <Link href={data?.button1?.href || "#"} className="button2 max-sm:px-4">
               {data?.button1?.text}
             </Link>
-            <Link href={data?.button2?.href} className="button1 max-sm:px-4">
+            <Link href={data?.button2?.href || "#"} className="button1 max-sm:px-4">
               {data?.button2?.text}
             </Link>
           </div>

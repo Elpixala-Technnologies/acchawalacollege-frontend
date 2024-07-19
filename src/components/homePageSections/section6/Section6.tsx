@@ -11,7 +11,7 @@ export default function Section6({ data, sData }: any) {
   const isMobile = useIsMobile(450);
   return (
     <section className="my-5 w-full">
-      <div className="relative mx-auto max-w-screen-2xl">
+      <div className="relative mx-auto w-full">
         {sData?.bgImg?.data?.[0]?.url && (
           <Image
             src={sData?.bgImg?.data?.[0]?.url}

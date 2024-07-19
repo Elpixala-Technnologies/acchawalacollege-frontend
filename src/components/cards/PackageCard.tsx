@@ -57,7 +57,7 @@ export default function PackageCardSlider({ data }: any) {
     <>
       <Swiper
         {...swiperOptions}
-        className={`mySwiper w-[95%] max-w-fit px-2 ${uniqueId}`}
+        className={`mySwiper w-[95%] px-2 ${uniqueId}`}
       >
         {data?.map((data: any, index: number) => (
           <SwiperSlide key={index} className="mb-3 w-full p-5 md:mb-10">
@@ -171,7 +171,7 @@ export function PackageCard({
         </ul>
 
         {data?.button && (
-          <Link href={data?.button?.href}>
+          <Link href={data?.button?.href || "#"}>
             <button className="button2 my-8">{data?.button?.text}</button>
           </Link>
         )}

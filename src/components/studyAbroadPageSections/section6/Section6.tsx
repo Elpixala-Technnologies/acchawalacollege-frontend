@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Section6({ data }: any) {
   return (
     <section className="my-5 w-full">
-      <div className="relative mx-auto max-w-screen-2xl">
+      <div className="relative mx-auto w-full">
         <Image
           src={data?.bgImg}
           alt="bg"
@@ -27,7 +27,7 @@ export default function Section6({ data }: any) {
             <p className="text-wrap text-center text-white max-md:text-sm">
               <TextWithLineBreak text={data?.text1} />
             </p>
-            {data?.button && <Link href={data?.button?.href} className="button4 rounded-lg">
+            {data?.button && <Link href={data?.button?.href || "#"} className="button4 rounded-lg">
               <button>{data?.button?.text}</button>
             </Link>}
           </div>
