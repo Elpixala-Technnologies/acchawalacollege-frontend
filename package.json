@@ -12,6 +12,9 @@
   "dependencies": {
     "@apollo/client": "^3.10.4",
     "@apollo/experimental-nextjs-app-support": "^0.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.16.4",
     "@reduxjs/toolkit": "^2.2.5",
     "@types/react-redux": "^7.1.33",
     "axios": "^1.7.1",
