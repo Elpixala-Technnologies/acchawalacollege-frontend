@@ -1,3 +1,4 @@
+"use client";
 import NewsCard from "@/components/NewsIndividualPage/NewsCard";
 import HeroSection from "@/components/newss/HeroSection";
 import LatestArticlesMain from "@/components/newss/LatestArticles/LatestArticlesMain";
@@ -40,7 +41,7 @@ function page() {
   ];
   return (
     <div>
-      <HeroSection />'
+      <HeroSection />
       <MostSearch />
       <LatestNewsMain />
       <MostViewedMain />
