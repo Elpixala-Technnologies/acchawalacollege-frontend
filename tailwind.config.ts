@@ -11,7 +11,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {},
+      fontSize: {
+        'custom': '40px', // Custom font size
+      },
+      lineHeight: {
+        'custom': '48px', // Custom line height
+      },
     },
+    fontFamily:{
+      body: ['Montserrat'],
+    }
   },
   plugins: [
     require('tailwind-scrollbar'),
