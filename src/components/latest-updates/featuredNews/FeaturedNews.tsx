@@ -14,34 +14,34 @@ function RecentNews() {
 
         {/* Title */}
         <div className='flex justify-between items-center py-2 px-2'>
-          <div className='text-4xl font-bold border-b-2 border-black w-fit pb-4'> 
+          <div className='xl:text-[2.625rem] lg:text-[2rem] text-lg font-bold border-b-2 border-black w-fit pb-1 lg:pb-2 xl:pb-4'> 
             <span className='text-[#2095F2]'>Featured</span> 
             {" "}
             <span className='text-[#012148]'>News</span>
           </div>
           <div className='w-fit h-fit'>
             <Link href="#" className='flex items-center space-x-3'>
-              <span className='text-[#020014B2]/70 text-sm'>Load More</span>
+              <span className='text-[#020014B2]/70 text-[0.625rem] sm:text-xs xl:text-sm'>Load More</span>
               <IoChevronForward className='h-4 w-4'/>
             </Link>
           </div>
         </div>
 
         {/* Content */}
-        <div className='w-full flex border border-[#0000001A] px-4 py-8 rounded-3xl'>
-          {/*  first 1/3rd section */}
-          <div className='w-1/3'>
+        <div className='w-full flex border border-[#0000001A] px-2 md:px-4 py-2 md:py-8 rounded-2xl xl:rounded-3xl mt-4 xl:mt-5'>
+          {/*  first  section */}
+          <div className='w-2/3 xl:w-1/3'>
             <div className='flex flex-col'>
                <Card1/>
                <Card2/>
             </div>
           </div>
 
-           {/* second 2/3rd section   */}
-          <div className='w-2/3 flex'>
+           {/* second  section   */}
+          <div className='w-1/3 xl:w-2/3 flex'>
 
             {/* 3/4th part  */}
-            <div className='w-3/4 flex flex-col '>
+            <div className='w-3/4 flex-col hidden sm:block '>
 
               <Card3/>
               <Card4/>
@@ -49,7 +49,7 @@ function RecentNews() {
             </div>
 
             {/* rest 1/4th part  */}
-            <div className='w-1/4 flex flex-col'>
+            <div className='w-full sm:w-1/4 flex flex-col'>
               <div>
                 <Card5/>
 

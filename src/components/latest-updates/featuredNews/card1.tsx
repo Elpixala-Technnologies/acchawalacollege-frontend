@@ -27,22 +27,22 @@ function Card() {
   return (
       <div className={`${inter.className}`}>
       {CardItems.map((item, index) => (
-        <div key={index} className="mx-2 overflow-hidden rounded-3xl border border-[#0000004D] mb-4">
+        <div key={index} className="mx-2 overflow-hidden xl:rounded-3xl border border-[#0000004D] mb-4">
           
 
           {/* profile  */}
-          <div className="flex w-full p-2 pt-8">
+          <div className="flex w-full xl:p-2 xl:pt-8">
             {/* pic  */}
             <div className="w-fit h-fit bg-white">
               <Image
                src={item.dp}
                alt="img"
-               className="w-[50px] h-[50px] rounded-full object-cover"
+               className="w-[33px] h-[33px] xl:w-[50px] xl:h-[50px] rounded-full object-cover"
              />
             </div>
             {/* content  */}
             <div className="flex flex-col ml-3">
-              <span className="text-xl text-[#2095F2] font-bold"> {item.pname}</span>
+              <span className=" text-[12.07px] xl:text-xl text-[#2095F2] font-bold"> {item.pname}</span>
               <span className="text-[#00000099] text-sm font-medium">{item.pcontent}</span>
             </div>
           </div>

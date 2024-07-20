@@ -12,14 +12,14 @@ function RecentNews() {
 
         {/* Title */}
         <div className='flex justify-between items-center py-2 px-2'>
-          <div className='text-4xl font-bold border-b-2 border-black w-fit px-4 pb-4'> 
+          <div className=' font-bold border-b-2 border-black w-fit xl:text-[2.625rem] lg:text-[2rem] text-lg pb-1 px-1 lg:px-2 lg:pb-3 xl:px-4 xl:pb-4'> 
             <span className='text-[#2095F2]'>Recent</span> 
             {" "}
             <span className='text-[#012148]'>News</span>
           </div>
           <div className='w-fit h-fit'>
             <Link href="#" className='flex items-center space-x-3'>
-              <span className='text-[#020014B2]/70 text-sm'>Load More</span>
+              <span className='text-[#020014B2]/70 text-[0.625rem] sm:text-xs xl:text-sm'>Load More</span>
               <IoChevronForward className='h-4 w-4'/>
             </Link>
           </div>

@@ -13,7 +13,7 @@ const SingleImageCard = () => {
 
   return (
     <div className="pt-0 p-2 mb-3">
-        <div className="relative h-72 overflow-hidden rounded-t-xl">
+        <div className="relative h-80 overflow-hidden rounded-t-xl">
           <Image
             src={imageData.src}
             alt={imageData.alt}

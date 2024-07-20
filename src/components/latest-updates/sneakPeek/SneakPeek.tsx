@@ -47,19 +47,19 @@ function RecentNews() {
 
         {/* Title */}
         <div className='flex justify-between items-center py-2 px-2 border-[#00000033] border-b '>
-          <div className='text-4xl font-bold  w-fit  pb-2'> 
+          <div className='xl:text-[2.625rem] lg:text-[2rem] text-lg font-bold  w-fit  pb-2'> 
             <span className='text-[#2095F2]'>Sneak</span> 
             {" "}
             <span className='text-[#012148]'>Peek</span>
           </div>
           <div className='w-fit h-fit'>
             <Link href="#" className='flex items-center space-x-3'>
-              <span className='text-[#020014B2]/70 text-sm'>Load More</span>
+              <span className='text-[#020014B2]/70 text-[0.625rem] sm:text-xs xl:text-sm'>Load More</span>
               <IoChevronForward className='h-4 w-4'/>
             </Link>
           </div>
         </div>
-
+ 
         {/* Content */}
         <div>
         <NewsCard items={newsItems} />

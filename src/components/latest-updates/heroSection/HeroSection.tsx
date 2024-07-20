@@ -58,32 +58,31 @@ const HeroSection = () => {
 
   const handlePrevClick = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? newsItems.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? newsItems.length - 1 : prevIndex - 1
     );
   };
 
   const handleNextClick = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   return (
     <section>
       <Wrapper>
-        <div className=" relative flex pb-12 mb-4 h-fit pt-5">
-
+        <div className="relative flex flex-col sm:flex-row pb-12 mb-4 h-fit pt-5">
           {/* Image */}
-          <div className="absolute z-10 left-[33%] h-[95%]">
+          <div className="sm:absolute z-10 sm:left-[33%] h-[95%]">
             <Image
               src={newsItems[activeIndex].imageUrl}
               alt="Education Image"
-              className="w-fit h-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* NewsDescription */}
-          <div className="z-20 mx-4 mt-5 w-1/2 pt-4 pl-4 rounded-md bg-white/90  ">
+          <div className="z-20 mx-4 mt-5 sm:w-1/2 w-full pt-4 pl-4 rounded-md bg-white/90">
             <div>
               <h2
                 className={`${montserrat.className} ml-1 w-fit text-base font-bold text-[#2095F2]`}
@@ -91,12 +90,12 @@ const HeroSection = () => {
                 Today's
               </h2>
               <div
-                className={`${inter.className} pl-4 my-5 text-sm md:text-3xl    border-l-2 border-black px-3 py-1`}
+                className={`${inter.className} pl-4 my-5 text-sm md:text-3xl border-l-2 border-black px-3 py-1`}
               >
-                <span className=" font-bold text-[#2095F2]">
+                <span className="font-bold text-[#2095F2]">
                   {newsItems[activeIndex].title1}
                 </span>
-                <span className=" font-bold  text-[#012148]">
+                <span className="font-bold text-[#012148]">
                   {" "}
                   {newsItems[activeIndex].title2}
                 </span>
@@ -109,7 +108,7 @@ const HeroSection = () => {
                   <span className="text-black">
                     <PiLineVertical />{" "}
                   </span>
-                  <span className="font-bold text-[#2095F2] ">
+                  <span className="font-bold text-[#2095F2]">
                     {newsItems[activeIndex].category}
                   </span>
                 </div>
@@ -125,30 +124,32 @@ const HeroSection = () => {
               </div>
 
               {/* Chevrons */}
-              <div className="my-5  flex items-center justify-center space-x-7">
-                  <div>
-                    <IoChevronBack
-                      className=" h-6 w-6 cursor-pointer text-[#11111166]"
-                      onClick={handlePrevClick}
-                    />
-                  </div>
-                  <div>
-                    <IoChevronForward
-                      className="h-6 w-6  cursor-pointer text-[#2095F2]"
-                      onClick={handleNextClick}
-                    />
-                  </div>
+              <div className="my-5 flex items-center justify-center space-x-7">
+                <div>
+                  <IoChevronBack
+                    className="h-6 w-6 cursor-pointer text-[#11111166]"
+                    onClick={handlePrevClick}
+                  />
                 </div>
+                <div>
+                  <IoChevronForward
+                    className="h-6 w-6 cursor-pointer text-[#2095F2]"
+                    onClick={handleNextClick}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        {/* Ellipses*/}
+        {/* Ellipses */}
         <div className="flex items-center justify-center">
-          <div className="flex space-x-2 ">
+          <div className="flex space-x-2">
             {newsItems.map((_, index) => (
               <IoEllipse
                 key={index}
-                className={`h-[11px] w-4 ${index === activeIndex ? "text-[#2095F2]" : "text-[#D9D9D9]"}`}
+                className={`h-[11px] w-4 ${
+                  index === activeIndex ? "text-[#2095F2]" : "text-[#D9D9D9]"
+                }`}
               />
             ))}
           </div>
