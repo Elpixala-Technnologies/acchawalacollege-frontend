@@ -12,6 +12,11 @@ import CompaniesScrollSlideShow from "./components/CompaniesScrollSlideShow";
 import BrochureSection from "./components/BrochureSection";
 import YoutubeVideo from "../youtubeVideo";
 import ReviewsSlider from "../cards/ReviewsSlider";
+import { IoIosSearch } from "react-icons/io";
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai"
+import { PiShareFat } from "react-icons/pi";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function Content({ selectedContent }: any) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -32,6 +37,21 @@ export default function Content({ selectedContent }: any) {
               key={index}
               className="mt-5 w-full border-b border-zinc-300 pb-5"
             >
+              {/*Three Colored Heading*/}
+              {section?.threeColorHeading && (
+                <>
+                  <span className="px-1 text-2xl font-bold text-[#5c5b8f] md:text-3xl">
+                    {section.threeColorHeading[0]}
+                  </span>
+                  <span className="px-1 text-2xl font-bold text-[#012148] md:text-3xl">
+                    {section.threeColorHeading[1]}
+                  </span>
+                  <span className="px-1 text-2xl font-bold text-[#2095f2] md:text-3xl">
+                    {section.threeColorHeading[2]}
+                  </span>
+                </>
+              )}
+
               {/* Title */}
               {section?.title && (
                 <h1 className="title1 mb-8">
@@ -74,7 +94,7 @@ export default function Content({ selectedContent }: any) {
               {section?.article && (
                 <>
                   <div
-                    className={`dangerouslySetInnerHTMLStyle mb-5 text-justify ${
+                    className={`dangerouslySetInnerHTMLStyle my-5 text-justify font-semibold ${
                       isExpanded ? "" : "line-clamp-4"
                     }`}
                     dangerouslySetInnerHTML={{ __html: section.article }}
@@ -89,6 +109,54 @@ export default function Content({ selectedContent }: any) {
                   )}
                 </>
               )}
+              {/* ImageText1 */}
+              {section?.imageText1 && (
+                <>
+                  {section.imageText1.map((obj: any) => {
+                    return (
+                      <>
+                        <hr className="border-gray-300" />
+                        <div className="my-4 grid-cols-4 md:grid">
+                          <div className="col-span-1">
+                            <Image
+                              src={obj.image}
+                              className="rounded-lg"
+                              alt="image"
+                            />
+                          </div>
+                          <div className="col-span-3 mx-4 my-4 font-semibold text-gray-500 md:my-0">
+                            <div className="flex flex-col">
+                              <p className="my-4 text-sm md:my-0">{obj.date}</p>
+                              <p className="text-xl font-bold text-black">
+                                {obj.heading}
+                              </p>
+                              <p className="my-4 text-sm lg:text-sm xl:text-base">
+                                {obj.data}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </>
+              )}
+
+              {/*Three Color Second Heading*/}
+              {section?.threeColorSubHeading && (
+                <div className="mt-20">
+                  <span className="px-1 text-3xl font-bold text-[#5c5b8f]">
+                    {section.threeColorSubHeading[0]}
+                  </span>
+                  <span className="px-1 text-3xl font-bold text-[#012148]">
+                    {section.threeColorSubHeading[1]}
+                  </span>
+                  <span className="px-1 text-3xl font-bold text-[#2095f2]">
+                    {section.threeColorSubHeading[2]}
+                  </span>
+                </div>
+              )}
+
               {/* Facilities */}
               {section?.facilities && (
                 <div className="mb-8 flex flex-wrap gap-5 rounded-lg bg-blue-100 p-5">
@@ -191,11 +259,24 @@ export default function Content({ selectedContent }: any) {
                   </p>
                 </div>
               )}
+
+              {/* Heading 1 */}
+              {section?.heading1 && (
+                <div className="my-4">
+                  <span className="px-1 text-3xl font-bold text-[#5c5b8f]">
+                    {section.heading1[0]}
+                  </span>
+                  <span className="px-1 text-3xl font-bold text-[#012148]">
+                    {section.heading1[1]}
+                  </span>
+                </div>
+              )}
+
               {/* Article1 */}
               {section?.article1 && (
                 <>
                   <div
-                    className={`dangerouslySetInnerHTMLStyle mb-5 text-justify ${
+                    className={`dangerouslySetInnerHTMLStyle my-5 text-justify ${
                       isExpanded ? "" : "line-clamp-4"
                     }`}
                     dangerouslySetInnerHTML={{ __html: section.article1 }}
@@ -210,6 +291,194 @@ export default function Content({ selectedContent }: any) {
                   )}
                 </>
               )}
+
+              {/* Heading 2 */}
+              {section?.heading2 && (
+                <div className="my-4">
+                  <span className="px-1 text-3xl font-bold text-[#5c5b8f]">
+                    {section.heading2[0]}
+                  </span>
+                  <span className="px-1 text-3xl font-bold text-[#012148]">
+                    {section.heading2[1]}
+                  </span>
+                </div>
+              )}
+
+              {/* Button Array */}
+              {section?.buttonArray && (
+                <div className="my-7 flex gap-4 overflow-auto justify-between no-scrollbar">
+                  {section.buttonArray.map((obj: any) => {
+                    return (
+                      <>
+                        <div>
+                          <button className="rounded-full border-2 border-[#6fbbfe] bg-[#dfefff] xl:px-8 px-4 text-sm   whitespace-nowrap py-1">
+                            {obj.data}
+                          </button>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/*Discussion */}
+              {section?.discussion && (
+                <>
+                  <div className="grid grid-cols-12 rounded-lg gap-4 xl:mr-0 lg:mr-8 mr-12 ">
+                    <div className="col-span-11">
+                      <div className="flex items-center gap-3 border-2 bg-white p-2">
+                        <IoIosSearch className="h-6  w-6 text-blue-500" />
+                        <input
+                          className="w-full text-lg font-semibold text-black"
+                          type="text"
+                          placeholder="Start a discussion"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-span-1">
+                      <button className="bg-[#2095f2] p-3 text-sm text-white">
+                        SUBMIT
+                      </button>
+                    </div>
+                  </div>
+                  {section.discussion.map((obj: any) => {
+                    return (
+                      <>
+                        <div className="my-4 grid-cols-5 rounded-2xl bg-[#dfefff] p-5 md:grid">
+                          <div className="col-span-1">
+                            <Image
+                              src={obj.image}
+                              className="rounded-lg"
+                              alt="image"
+                            />
+                          </div>
+                          <div className="col-span-4 mx-4 my-4 font-semibold text-gray-500 md:my-0">
+                            <div className="flex flex-col">
+                              <p className="text-xl font-bold text-black">
+                                {obj.heading}
+                              </p>
+                              <p className="my-2 text-sm md:my-0">{obj.date}</p>
+                              <p className="my-4 text-sm lg:text-sm xl:text-base">
+                                {obj.data}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+
+                  <div className="my-8 flex items-center gap-6 flex-row-reverse">
+                    <IoIosArrowForward />
+                    <p className="font-medium text-gray-500">Learn More</p>
+                  </div>
+
+                </>
+              )}
+
+              {/* Questions */}
+              {section?.questions && (
+                <>
+                  {section.questions.map((obj: any) => {
+                    return (
+                      <>
+                        <div className="my-8 p-8 bg-[#dfefff] rounded-2xl">
+                          <div>
+                            <div className="flex justify-between">
+                              <div>
+                                <p className="md:text-2xl text-lg font-bold">
+                                  {obj.question}
+                                </p>
+                                <p className="text-sm font-medium">
+                                  Asked by {obj.qname} | {obj.qdate}
+                                </p>
+                              </div>
+                              <div>
+                                <p className=" text-sm md:text-base whitespace-nowrap text-[#2095f2]">{obj.responses} responses</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-12 my-6 xl:mr-0 lg:mr-8 mr-14 rounded-lg gap-4">
+                            <div className="col-span-11">
+                              <div className="flex items-center gap-3 border-2 bg-white p-2">
+                                <IoIosSearch className="h-6  w-6 text-blue-500" />
+                                <input
+                                  className="w-full text-lg font-semibold text-black"
+                                  type="text"
+                                  placeholder="Start a discussion"
+                                />
+                              </div>
+                            </div>
+                            <div className="col-span-1">
+                              <button className="bg-[#2095f2] p-3 text-sm text-white">
+                                SUBMIT
+                              </button>
+                            </div>
+                          </div>
+                          <div className="flex">
+                            <Image
+                              src={obj.image}
+                              alt="profile"
+                              width={50}
+                              height={50}
+                              className="rounded-full"
+                            />
+                            <div className="mx-4">
+                              <p className="font-semibold text-xl">
+                                {obj.aname} <span className="text-sm mx-1 text-gray-500"> {obj.adesignation} </span>{" "}
+                              </p>
+                              <p className="text-sm">Answered on {obj.adate}</p>
+                            </div>
+                          </div>
+                          <div className="my-4">{obj.answer}</div>
+                          <div className="flex items-center gap-2">
+                          <AiOutlineLike />
+                          <p>2</p>
+                          <AiOutlineDislike />
+                          <p>2</p>
+                          <PiShareFat />
+                          <p>2</p>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </>
+              )}
+
+              {/* ImageText2 */}
+              {section?.imageText2 && (
+                <>
+                  {section.imageText2.map((obj: any) => {
+                    return (
+                      <>
+                        <hr className="mt-8 border-gray-300" />
+                        <div className="my-4 grid-cols-4 md:grid">
+                          <div className="col-span-1">
+                            <Image
+                              src={obj.image}
+                              className="rounded-lg"
+                              alt="image"
+                            />
+                          </div>
+                          <div className="col-span-3 mx-4 my-4 font-semibold text-gray-500 md:my-0">
+                            <div className="flex flex-col">
+                              <p className="my-4 text-sm md:my-0">{obj.date}</p>
+                              <p className="text-xl font-bold text-black">
+                                {obj.heading}
+                              </p>
+                              <p className="my-4 text-sm lg:text-sm xl:text-base ">
+                                {obj.data}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </>
+              )}
+
               {/* Table  */}
               {section?.table && (
                 <div
@@ -263,7 +532,7 @@ export default function Content({ selectedContent }: any) {
                   ))}
                 </div>
               )}
-              
+
               {/* Article2 */}
               {section?.article2 && (
                 <>

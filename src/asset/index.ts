@@ -100,7 +100,9 @@ import abroad4 from "./studyAbroad/abroad4.png";
 import abroad5 from "./studyAbroad/abroad5.png";
 import abroad6 from "./studyAbroad/abroad6.png";
 
+import profile from "./regsiterForms/profile.png"
 export {
+    profile,
     logo, logoSmall,
 
     section6Bg,

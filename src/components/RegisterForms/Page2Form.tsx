@@ -2,7 +2,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Page2Form() {
+interface Page2FormProps {
+  goToNextPage: () => void;
+  goToPreviousPage: () => void;
+}
+
+const Page2Form: React.FC<Page2FormProps> = ({ goToNextPage, goToPreviousPage }) => {
   const [courseSelected, setCourseSelected] = useState("");
   const [collegeSelected, setCollegeSelected] = useState("");
   const [percentage, setPercentage] = useState(0);
@@ -34,6 +39,7 @@ function Page2Form() {
     console.log(formData);
     setError(""); // Clear any previous error message
     //window.location.href = "/register-3"; // Change this to your next page URL
+    goToNextPage();
   };
 
   return (
@@ -187,6 +193,7 @@ function Page2Form() {
         <Link href="/register-1">
           <button
             type="button"
+            onClick={goToPreviousPage}
             className="rounded-lg border-2 border-[#2095f2] bg-white px-20 py-2 text-lg w-full font-medium text-[#2095f2]"
           >
             BACK

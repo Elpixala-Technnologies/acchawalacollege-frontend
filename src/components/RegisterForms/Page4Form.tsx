@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 
-function Page4Form() {
+interface Page4FormProps {
+  goToPreviousPage: () => void;
+}
+
+const Page4Form: React.FC<Page4FormProps> = ({goToPreviousPage }) => {
   const [userOtp, setUserOtp] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

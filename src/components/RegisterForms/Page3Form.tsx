@@ -2,7 +2,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Page3Form() {
+interface Page3FormProps {
+  goToNextPage: () => void;
+  goToPreviousPage: () => void;
+}
+
+
+const Page3Form: React.FC<Page3FormProps> = ({ goToNextPage, goToPreviousPage }) => {
   const [board10th, setBoard10th] = useState("");
   const [year10th, setYear10th] = useState("");
   const [percentage10th, setPercentage10th] = useState("");
@@ -27,7 +33,7 @@ function Page3Form() {
     };
     console.log(formData);
     // Redirect to the next page
-    window.location.href = "/register-4";
+    goToNextPage();
   };
 
   return (
@@ -177,6 +183,7 @@ function Page3Form() {
         <Link href="/register-2">
           <button
             type="button"
+            onClick={goToPreviousPage}
             className="rounded-lg border-2 border-[#2095f2] bg-white px-20 py-2 text-lg w-full font-medium text-[#2095f2]"
           >
             BACK

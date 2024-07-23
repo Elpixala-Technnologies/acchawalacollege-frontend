@@ -1,4 +1,5 @@
 import {
+  profile,
   au1,
   au2,
   au3,
@@ -547,105 +548,297 @@ export const courseDetailsPage = {
         navItem: "Course Details",
         sections: [
           {
-        article: "These are the details of the course.",
-      },
-    ],
+            article: "These are the details of the course.",
+          },
+        ],
       },
       {
         navItem: "Programme Offerings",
         sections: [
           {
-        article: "These are the details of the course.",
-        list: [
-          "UGC approved",
-          "Online classes on weekends",
-          "Expert Faculty",
-          "Mock test",
-          "Placements",
-          "Case Studies",
-          "Scholarships",
-          "Project work",
-          "Access to online lab and remote lab.",
+            article: "These are the details of the course.",
+            list: [
+              "UGC approved",
+              "Online classes on weekends",
+              "Expert Faculty",
+              "Mock test",
+              "Placements",
+              "Case Studies",
+              "Scholarships",
+              "Project work",
+              "Access to online lab and remote lab.",
+            ],
+          },
         ],
-      }]
       },
       {
         navItem: "Eligibility Criteria",
         sections: [
           {
-        article: "Eligibility criteria for the course.",
-          }]
+            article: "Eligibility criteria for the course.",
+          },
+        ],
       },
       {
         navItem: "Admission Details",
         sections: [
           {
-        article: "Details about the admission process.",
-          }]
+            article: "Details about the admission process.",
+          },
+        ],
       },
       {
         navItem: "Application Details",
         sections: [
           {
-        article: "How to apply for the course.",
-          }]
+            article: "How to apply for the course.",
+          },
+        ],
       },
       {
         navItem: "The Syllabus",
         sections: [
           {
-        article: "",
-        semesters: [
-          {
-            id: 1,
-            title: "Semester 1",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 2,
-            title: "Semester 2",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 3,
-            title: "Semester 3",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 4,
-            title: "Semester 4",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 5,
-            title: "Semester 5",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 6,
-            title: "Semester 6",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 7,
-            title: "Semester 7",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
-          },
-          {
-            id: 8,
-            title: "Semester 8",
-            text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+            article: "",
+            semesters: [
+              {
+                id: 1,
+                title: "Semester 1",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 2,
+                title: "Semester 2",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 3,
+                title: "Semester 3",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 4,
+                title: "Semester 4",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 5,
+                title: "Semester 5",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 6,
+                title: "Semester 6",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 7,
+                title: "Semester 7",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+              {
+                id: 8,
+                title: "Semester 8",
+                text: "<ul style='list-style-type: circle;'><li>Electrical & Electronics Technology</li><li>Communication Technology</li><li>Computer Technology</ul>",
+              },
+            ],
           },
         ],
-      }]
       },
       {
         navItem: "Evaluation Process",
         sections: [
           {
-        article: `<p>Evaluation process of the course.</p> <p>This is an overview of the course.</p> <p>The actual fees may vary.</p><p class="note">This is an overview of the course.</p>`,
-          }]
+            article: `<p>Evaluation process of the course.</p> <p>This is an overview of the course.</p> <p>The actual fees may vary.</p><p class="note">This is an overview of the course.</p>`,
+          },
+        ],
       },
+      {
+        navItem: "News and Updates",
+        sections: [
+          {
+            threeColorHeading: [
+              "BTech Engineering",
+              "Technology at BITS",
+              "Pilan News 2024",
+            ],
+            threeColorSubHeading: [
+              "BTech",
+              "Engineering",
+              "News",
+            ],
+            article:
+              "Welcome to IIT Madras News 2024, your ultimate source for the latest updates, achievements, and innovations from one of India's premier institutions. Stay informed about groundbreaking research, academic excellence, campus events, and the vibrant student life that defines IIT Madras. From pioneering technological advancements to notable faculty and student accomplishments, IIT Madras News 2024 brings you the stories that shape our dynamic and forward-thinking community.",
+
+            imageText1: [
+              {
+                index:1,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:2,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:3,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:4,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:5,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+            ],
+            imageText2: [
+              {
+                index:1,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:2,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },
+              {
+                index:3,
+                image: co1,
+                date: "June 24, 2024 5:50 PM",
+                heading:
+                  "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+              },             
+            ],
+            
+            article1: "Stay connected with the latest developments and noteworthy events beyond IIT Madras. Our Related News section brings you updates from other prestigious institutions, industry breakthroughs, and significant advancements in science and technology. Explore how these global trends intersect with the academic and research activities at IIT Madras, and stay informed about the broader landscape of education and innovation."
+          },
+        ],
+      },
+      {
+        navItem:"Discussion Forum",
+        sections:[
+          {
+            threeColorHeading: [
+              "BTech Engineering",
+              "Technology at BITS",
+              "Pilan News 2024",
+            ],
+            article:
+              "Welcome to IIT Madras News 2024, your ultimate source for the latest updates, achievements, and innovations from one of India's premier institutions. Stay informed about groundbreaking research, academic excellence, campus events, and the vibrant student life that defines IIT Madras. From pioneering technological advancements to notable faculty and student accomplishments, IIT Madras News 2024 brings you the stories that shape our dynamic and forward-thinking community.\n Welcome to the IIT Madras Discussion Forum, a vibrant online community dedicated to fostering collaboration, knowledge sharing, and meaningful conversations among students, faculty, alumni, and other members of the IIT Madras family. This forum serves as a platform for discussing academic topics, sharing research insights, exploring career opportunities, and engaging in various extracurricular activities. Whether you’re seeking advice, looking to connect with like-minded individuals, or wanting to stay updated on campus news, our discussion forum is the perfect place to engage and grow together. Join the conversation and become an active part of our dynamic community!",
+              heading1:["Ongoing" ,"Discussions"],
+              heading2:["Forum","Categories"],
+              article1:"Explore the latest conversations and join in on the topics that interest you. Here are some discussions that are currently active in our forum:",
+              buttonArray:[
+                {
+                  id:1,
+                  data:"abcde Discussions"
+                },
+                {
+                  id:2,
+                  data:"abcde Discussions"
+                },
+                {
+                  id:3,
+                  data:"abcde Discussions"
+                },
+                {
+                  id:4,
+                  data:"abcde Discussions"
+                },
+                {
+                  id:5,
+                  data:"abcde Discussions"
+                },
+                {
+                  id:6,
+                  data:"abcde Discussions"
+                },
+              ],
+              discussion:[
+                {
+                  index:1,
+                  image: co1,
+                  date: "June 24, 2024 5:50 PM",
+                  heading:
+                    "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                  data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+                },
+                {
+                  index:2,
+                  image: co1,
+                  date: "June 24, 2024 5:50 PM",
+                  heading:
+                    "JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Check Previous Years' Cutoff",
+                  data: `JEE Advanced Opening and Closing Ranks 2024 for Old IITs - Are you waiting for JoSAA to release the counselling results to figure out the IITs you are eligible for? Don't wait any longer and find out about the Indian Institutes of Technology and the courses you can get based on your rank in JEE Advanced 2024. Admission to IITs is done based on JEE Advanced rank and JEE Advanced seat allocation will be conducted through JoSAA counselling 2024... Read More`,
+                },
+              ],
+              questions:[
+                {
+                  question:"I need all the course list available in BITS.",
+                  qname:"Akshat",
+                  qdate:"March 25 2024",
+                  responses: 9,
+                  image:profile,
+                  aname:"Jonathan",
+                  adesignation:"student",
+                  adate:"March 25 2024",
+                  answer:"Dear Student,IIT, Madras offers a total of 92 courses in offers courses in engineering, humanities, and social sciences, sciences, management, and technology. You can check all the courses offered by IITM on IIT Chennai Course List. You can also fill the Common Application Form on our website for admission-related assistance"
+                },
+                {
+                  question:"I need all the course list available in BITS.",
+                  qname:"Akshat",
+                  qdate:"March 25 2024",
+                  responses: 9,
+                  image:profile,
+                  aname:"Jonathan",
+                  adesignation:"student",
+                  adate:"March 25 2024",
+                  answer:"Dear Student,IIT, Madras offers a total of 92 courses in offers courses in engineering, humanities, and social sciences, sciences, management, and technology. You can check all the courses offered by IITM on IIT Chennai Course List. You can also fill the Common Application Form on our website for admission-related assistance"
+                },
+                {
+                  question:"I need all the course list available in BITS.",
+                  qname:"Akshat",
+                  qdate:"March 25 2024",
+                  responses: 9,
+                  image:profile,
+                  aname:"Jonathan",
+                  adesignation:"student",
+                  adate:"March 25 2024",
+                  answer:"Dear Student,IIT, Madras offers a total of 92 courses in offers courses in engineering, humanities, and social sciences, sciences, management, and technology. You can check all the courses offered by IITM on IIT Chennai Course List. You can also fill the Common Application Form on our website for admission-related assistance"
+                },
+              ]
+          }
+        ]
+      }
     ],
     faqs: {
       title: {

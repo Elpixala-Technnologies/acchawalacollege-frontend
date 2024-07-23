@@ -5,7 +5,11 @@ import Image from "next/image";
 import Switch from "@mui/material/Switch";
 import Link from "next/link";
 
-const Page1Form: React.FC = () => {
+interface Page1FormProps {
+  goToNextPage: () => void;
+}
+
+const Page1Form: React.FC<Page1FormProps> = ({ goToNextPage }) => {
   const [optionSelected, setOptionSelected] = useState<string>("");
   const [citySelected, setCitySelected] = useState<string>("");
   const [name, setName] = useState<string>("");
@@ -65,7 +69,7 @@ const Page1Form: React.FC = () => {
       number,
     };
     console.log(formData);
-
+    goToNextPage();
     // If all fields are filled, redirect to the next page
     //window.location.href = "/register-2";
   };

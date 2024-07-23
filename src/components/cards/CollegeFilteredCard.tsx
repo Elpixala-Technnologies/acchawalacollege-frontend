@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import { CiHeart, CiLocationOn, CiMobile1 } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
 import { FaHandHoldingDollar } from "react-icons/fa6";
@@ -8,8 +9,10 @@ import { MdOutlineOutlinedFlag } from "react-icons/md";
 import { RiTodoLine } from "react-icons/ri";
 import { SlBadge } from "react-icons/sl";
 import { TbCoinRupee, TbTransactionRupee } from "react-icons/tb";
+import RegisterFormModal from "../RegisterForms/RegisterFormModal";
 
 export default function CollegeFilteredCard({ college }: any) {
+  const[ShowModal,setShowModal]=useState(false)
   return (
     <div className="relative mb-5 w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <Tag />
@@ -137,9 +140,10 @@ export default function CollegeFilteredCard({ college }: any) {
         {/* buttons  */}
         <div className="flex max-md:flex-col gap-2 max-md:w-full">
           <Link href="#" className="max-md:w-full">
-            <button className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500 max-md:w-full">
+            <button onClick={()=>setShowModal(true)} className="rounded-lg border-2 border-blue-700 bg-blue-700 px-4 py-2 text-white hover:bg-white  hover:text-blue-500 max-md:w-full">
               {college?.button1?.text}
             </button>
+            { ShowModal && <RegisterFormModal onClose={()=>setShowModal(false)}/>}
           </Link>
           <Link href="#" className="max-md:w-full">
             <button className="rounded-lg border-2 border-blue-700 px-2 py-2 text-blue-500 hover:bg-blue-700 hover:text-white max-md:w-full">
