@@ -13,17 +13,18 @@ const SingleImageCard = () => {
 
   return (
     <div className="pt-0 p-2 mb-3">
-        <div className="relative h-80 overflow-hidden rounded-t-xl">
+        <div className="relative md:h-60 xl:h-96 overflow-hidden rounded-t-xl">
           <Image
             src={imageData.src}
             alt={imageData.alt}
             className='object-cover w-full h-full'
           />
-          <div className="absolute bottom-0  bg-black bg-opacity-50 text-white p-4 w-full ">
-            <h1 className="text-3xl font-bold ">
+          <div className="text-center absolute bottom-0 h-fit  bg-black bg-opacity-50 text-white p-4 w-full ">
+            <h1 className="text-[17.56px] leading-[21.29px] md:text-[21.82px] xl:text-[30px] font-bold">
               {imageData.title}
             </h1>
-            <p className="text-sm mt-1">{imageData.date}</p>
+            <div className='flex items-center justify-center'><p className=" text-[8.52px] md:text-[8.73px] xl:text-[12px] mt-1">{imageData.date}</p></div>
+            
           </div>
         </div>
       

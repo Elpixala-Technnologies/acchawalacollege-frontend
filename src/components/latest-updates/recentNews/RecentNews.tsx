@@ -2,7 +2,7 @@ import React from 'react'
 import { IoChevronForward } from 'react-icons/io5'
 import Link from 'next/link'
 import Wrapper from '@/components/Wrapper'
-import Card from './card1'
+import Card1 from './card1'
 import Card2 from './card2'
 import ImagesWithTextList from './ImageWithText'
 function RecentNews() {
@@ -26,11 +26,11 @@ function RecentNews() {
         </div>
 
         {/* Content */}
-        <div className='flex w-full pt-6 px-2'>
-          <div className='w-1/3'>
-            <Card/>
+        <div className='sm:flex w-full xl:pt-6  h-fit space-x-1'>
+          <div className=' w-full sm:w-1/3 h-fit'>
+            <Card1/>
           </div>
-          <div className='w-2/3'>
+          <div className='w-full sm:w-2/3 h-fit'>
             <div className='h-1/3 w-full'> 
               <ImagesWithTextList/>  
             </div>
@@ -40,7 +40,6 @@ function RecentNews() {
                 </div>
             </div>
           </div>
-        
         </div>
       </div>
     </Wrapper>

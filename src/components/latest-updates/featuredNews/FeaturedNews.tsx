@@ -28,9 +28,9 @@ function RecentNews() {
         </div>
 
         {/* Content */}
-        <div className='w-full flex border border-[#0000001A] px-2 md:px-4 py-2 md:py-8 rounded-2xl xl:rounded-3xl mt-4 xl:mt-5'>
+        <div className='w-full h-fit flex border border-[#0000001A] md:px-2  py-2 md:py-8 rounded-2xl xl:rounded-3xl mt-4 xl:mt-5'>
           {/*  first  section */}
-          <div className='w-2/3 xl:w-1/3'>
+          <div className='w-2/3 sm:w-1/3'>
             <div className='flex flex-col'>
                <Card1/>
                <Card2/>
@@ -38,14 +38,12 @@ function RecentNews() {
           </div>
 
            {/* second  section   */}
-          <div className='w-1/3 xl:w-2/3 flex'>
+          <div className='w-1/3 sm:w-2/3 flex'>
 
             {/* 3/4th part  */}
-            <div className='w-3/4 flex-col hidden sm:block '>
-
+            <div className='w-3/4 flex-col hidden sm:block'>
               <Card3/>
               <Card4/>
-            
             </div>
 
             {/* rest 1/4th part  */}

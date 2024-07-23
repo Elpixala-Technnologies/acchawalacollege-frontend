@@ -30,7 +30,7 @@ function Card() {
       {CardItems.map((item, index) => (
         <div key={index} className="mx-2 overflow-hidden  rounded-3xl border border-[#00000033]">
           {/* image  */}
-          <div className="h-96 w-full p-6  relative">
+          <div className=" md:h-64 xl:h-96 w-full md:p-4 xl:p-5  relative">
             <Image
               src={item.img}
               alt="img"
@@ -45,22 +45,22 @@ function Card() {
               <Image
                src={item.dp}
                alt="img"
-               className="w-[50px] h-[50px] rounded-full object-cover"
+               className="md:w-[43.3px] md:h-[43.3px] xl:w-[50px] xl:h-[50px] rounded-full object-cover"
              />
             </div>
             <div className="flex flex-col ml-3">
-              <span className="text-xl text-[#2095F2] font-bold"> {item.pname}</span>
-              <span className="text-[#00000099] text-sm font-medium">{item.pcontent}</span>
+              <span className="md:text-[15.87px] xl:text-xl text-[#2095F2] font-bold"> {item.pname}</span>
+              <span className="text-[#00000099] md:text-[10.1px] xl:text-sm font-medium">{item.pcontent}</span>
             </div>
           </div>
           
             {/* description  */}
           <div className="p-4">
-            <div className="mb-2 text-base font-normal text-[#000000]">
+            <div className="mb-2 md:text-[11.54px] xl:text-base font-normal text-[#000000]">
               <span>{item.date}</span> - <span>{item.time}</span>
             </div>
-            <h2 className="mb-2 text-xl font-bold text-black">{item.title}</h2>
-            <p className="text-lg font-base text-black">{item.desc} <Link href={""} className="text-base underline underline-offset-4 text-[#2095F2]">Read More</Link> </p>
+            <h2 className="mb-2 md:text-[14.43px] md:leading-[21.64px] xl:leading-[28.67px] xl:text-xl font-bold text-black">{item.title}</h2>
+            <p className="md:text-[12.99px] md:leading-[21.64px] xl:leading-[28.67px] xl:text-lg font-base text-black">{item.desc} <Link href={""} className="md:text-[12.99px] xl:text-base underline underline-offset-4 text-[#2095F2]">Read More</Link> </p>
           </div>
         </div>
       ))}

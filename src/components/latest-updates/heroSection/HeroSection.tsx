@@ -58,68 +58,70 @@ const HeroSection = () => {
 
   const handlePrevClick = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? newsItems.length - 1 : prevIndex - 1
+      prevIndex === 0 ? newsItems.length - 1 : prevIndex - 1,
     );
   };
 
   const handleNextClick = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1
+      prevIndex === newsItems.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   return (
     <section>
       <Wrapper>
-        <div className="relative flex flex-col sm:flex-row pb-12 mb-4 h-fit pt-5">
+        <div className="relative mb-4 flex h-fit flex-col pb-12 pt-5 sm:flex-row">
           {/* Image */}
-          <div className="sm:absolute z-10 sm:left-[33%] h-[95%]">
+          <div className="z-10 h-[95%] absolute sm:left-[33%]">
             <Image
               src={newsItems[activeIndex].imageUrl}
               alt="Education Image"
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
 
           {/* NewsDescription */}
-          <div className="z-20 mx-4 mt-5 sm:w-1/2 w-full pt-4 pl-4 rounded-md bg-white/90">
+          <div className="z-20  mt-5 w-full rounded-md bg-white/90 pt-4 sm:w-1/2 md:pl-4">
             <div>
               <h2
                 className={`${montserrat.className} ml-1 w-fit text-base font-bold text-[#2095F2]`}
               >
                 Today's
               </h2>
-              <div
-                className={`${inter.className} pl-4 my-5 text-sm md:text-3xl border-l-2 border-black px-3 py-1`}
-              >
-                <span className="font-bold text-[#2095F2]">
-                  {newsItems[activeIndex].title1}
-                </span>
-                <span className="font-bold text-[#012148]">
-                  {" "}
-                  {newsItems[activeIndex].title2}
-                </span>
-              </div>
-              <div className={`${montserrat.className} ml-5`}>
-                <div className="flex items-center">
-                  <span className="text-base font-bold">
-                    {newsItems[activeIndex].date}
-                  </span>
-                  <span className="text-black">
-                    <PiLineVertical />{" "}
-                  </span>
+              <div className="border-l-2 border-black sm:border-0">
+                <div
+                  className={`${inter.className} my-5 py-1 pl-1 text-[18px] leading-[22px] sm:border-l-2 sm:border-black md:pl-2 md:text-[30.96px] md:leading-[35.38px] xl:px-3 xl:pl-4 xl:text-[42px] xl:leading-[48px]`}
+                >
                   <span className="font-bold text-[#2095F2]">
-                    {newsItems[activeIndex].category}
+                    {newsItems[activeIndex].title1}
+                  </span>
+                  <span className="font-bold text-[#012148]">
+                    {" "}
+                    {newsItems[activeIndex].title2}
                   </span>
                 </div>
-                <div className="text-sm font-normal leading-6">
-                  {newsItems[activeIndex].description}{" "}
-                  <a
-                    href="#"
-                    className="text-base font-semibold text-[#2095F2]"
-                  >
-                    Read More
-                  </a>
+                <div className={`${montserrat.className} ml-1 md:ml-3 xl:ml-5`}>
+                  <div className="flex items-center text-[9.13px] md:text-[13.27px] xl:text-[18px]">
+                    <span className="font-bold">
+                      {newsItems[activeIndex].date}
+                    </span>
+                    <span className="text-black">
+                      <PiLineVertical />{" "}
+                    </span>
+                    <span className="font-bold text-[#2095F2]">
+                      {newsItems[activeIndex].category}
+                    </span>
+                  </div>
+                  <div className="text-[9.13px] font-normal leading-[15px] xl:text-sm xl:leading-6">
+                    {newsItems[activeIndex].description}{" "}
+                    <a
+                      href="#"
+                      className="text-[9.13px] text-base font-semibold leading-[15px] text-[#2095F2] xl:text-sm"
+                    >
+                      Read More
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -127,13 +129,13 @@ const HeroSection = () => {
               <div className="my-5 flex items-center justify-center space-x-7">
                 <div>
                   <IoChevronBack
-                    className="h-6 w-6 cursor-pointer text-[#11111166]"
+                    className="h-3 w-3 cursor-pointer text-[#11111166]  md:h-5 md:w-5 xl:h-6 xl:w-6"
                     onClick={handlePrevClick}
                   />
                 </div>
                 <div>
                   <IoChevronForward
-                    className="h-6 w-6 cursor-pointer text-[#2095F2]"
+                    className="h-3 w-3 cursor-pointer text-[#2095F2] md:h-5 md:w-5 xl:h-6 xl:w-6"
                     onClick={handleNextClick}
                   />
                 </div>
