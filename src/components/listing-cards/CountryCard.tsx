@@ -1,0 +1,156 @@
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { FaHandHoldingDollar } from "react-icons/fa6";
+import { Inter } from "next/font/google";
+import { CiLocationOn } from "react-icons/ci";
+import { US } from "country-flag-icons/react/3x2";
+import { TbCurrencyDollar, TbWorld } from "react-icons/tb";
+import { PiRankingBold, PiRankingLight } from "react-icons/pi";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+interface countryProps {
+  img: StaticImageData;
+  flag: StaticImageData;
+  location: string;
+  name: string;
+  desc: string;
+  lang: string;
+  avgLivingCost: number[];
+  rank: string;
+  viewAll: string;
+  topUniversities: string[];
+  button: { text: string };
+}
+
+interface CountryCardProps {
+  country: countryProps;
+}
+
+const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
+  return (
+    <section className={`${inter.className}`}>
+      <div className="grid  w-full grid-cols-3  rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        {/* div 1 */}
+        <div className=" col-span-1  p-2">
+          <div className="relative overflow-hidden rounded-md ">
+            <Image
+              src={country.img}
+              alt="country"
+              className="h-fill w-fill object-cover"
+            />
+            <div className="absolute inset-0 bg-black opacity-55"></div>
+            <div className="absolute left-0 top-0 ml-3 mt-3 w-[80px] rounded-xl bg-white p-2 xl:w-[90px]">
+              <US title="United States" className=" rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        {/* Div 2*/}
+        <div className="col-span-2 p-2 ">
+          {/* line 1 */}
+          <div>
+            {/* title */}
+            <div>
+              <Link href={country.viewAll}>
+                <h1 className="text-wrap text-[20px] font-bold hover:text-blue-500 md:text-[24px] xl:text-[28px]">
+                  {country.name}
+                </h1>
+              </Link>
+            </div>
+            {/* location  */}
+            <div className="m-3 flex w-fit items-center gap-x-3">
+              <CiLocationOn className="text-blue-500" />
+              <span className="text-xs hover:cursor-pointer hover:text-blue-500">
+                Country in {country.location}
+              </span>
+            </div>
+          </div>
+
+          {/* Line 2 */}
+
+          <div className="mb-3 flex flex-wrap justify-between  px-3">
+            {/* item 1 */}
+            <div className="flex flex-col">
+              <div className="flex gap-x-2">
+                <div>
+                  <p className="text-[11px] font-semibold md:text-[11.82px] xl:text-[16px]">
+                    National Language
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-1">
+                    <TbWorld className="text-[20px] text-[#2095F2]" />
+                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                      ${country.lang}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* item 2  */}
+            <div className="flex flex-col">
+              <div className="flex gap-x-2">
+                <div>
+                  <p className="text-[11px] font-semibold md:text-[11.82px] xl:text-[16px]">
+                    Avg Living Cost
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-1">
+                    <TbCurrencyDollar className="text-[20px] text-[#2095F2]" />
+                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                      ${country.avgLivingCost[0]}
+                    </p>
+                    <span className="font-thin">-</span>{" "}
+                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                      ${country.avgLivingCost[1]}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* item 3  */}
+            <div className="flex flex-col">
+              <div className="flex gap-x-2">
+                <div>
+                  <p className="text-[11px] font-semibold md:text-[11.82px] xl:text-[16px]">
+                    Ranking
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-1">
+                    <PiRankingBold className="text-[20px] text-[#2095F2]" />
+                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                      {country.rank}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Line 3 */}
+          {/* Line 4 Desc */}
+          <div className="flex gap-x-1 text-zinc-600">
+            <p className="text-wrap text-[10px] xl:text-[14px] ">
+              <span>{country.desc}</span>
+            </p>
+          </div>
+
+          {/* button  */}
+          <div className="hidden sm:block bottom-0 mt-2">
+            <div className="flex items-center justify-center">
+              <Link href="#" className="max-md:w-full">
+                <button className="text-nowrap rounded-sm  bg-[#012148]  px-12 py-[2px] text-[14.24px] font-normal  text-white hover:bg-white hover:text-[#012148] max-md:w-full  xl:px-14 xl:text-[20px]">
+                  {country?.button?.text}
+                </button>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CountryCard;
