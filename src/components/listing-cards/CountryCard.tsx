@@ -12,6 +12,11 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+interface University {
+  img: StaticImageData;
+  title: string;
+}
+
 interface countryProps {
   img: StaticImageData;
   flag: StaticImageData;
@@ -22,7 +27,7 @@ interface countryProps {
   avgLivingCost: number[];
   rank: string;
   viewAll: string;
-  topUniversities: string[];
+  topUniversities: University[];
   button: { text: string };
 }
 
@@ -33,10 +38,10 @@ interface CountryCardProps {
 const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <section className={`${inter.className}`}>
-      <div className="grid  w-full grid-cols-3  rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div className="grid w-full grid-cols-3 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         {/* div 1 */}
-        <div className=" col-span-1  p-2">
-          <div className="relative overflow-hidden rounded-md ">
+        <div className="col-span-1 p-2">
+          <div className="relative overflow-hidden rounded-md">
             <Image
               src={country.img}
               alt="country"
@@ -44,13 +49,13 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
             />
             <div className="absolute inset-0 bg-black opacity-55"></div>
             <div className="absolute left-0 top-0 ml-3 mt-3 w-[80px] rounded-xl bg-white p-2 xl:w-[90px]">
-              <US title="United States" className=" rounded-lg" />
+              <US title="United States" className="rounded-lg" />
             </div>
           </div>
         </div>
 
         {/* Div 2*/}
-        <div className="col-span-2 p-2 ">
+        <div className="col-span-2 flex flex-col p-2">
           {/* line 1 */}
           <div>
             {/* title */}
@@ -72,7 +77,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
 
           {/* Line 2 */}
 
-          <div className="mb-3 flex flex-wrap justify-between  px-3">
+          <div className="mb-3 flex flex-wrap justify-between px-3">
             {/* item 1 */}
             <div className="flex flex-col">
               <div className="flex gap-x-2">
@@ -82,8 +87,8 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
                   </p>
                   <div className="flex flex-wrap items-center gap-x-1">
                     <TbWorld className="text-[20px] text-[#2095F2]" />
-                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
-                      ${country.lang}
+                    <p className="text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                      {country.lang}
                     </p>
                   </div>
                 </div>
@@ -99,11 +104,11 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
                   </p>
                   <div className="flex flex-wrap items-center gap-x-1">
                     <TbCurrencyDollar className="text-[20px] text-[#2095F2]" />
-                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                    <p className="text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
                       ${country.avgLivingCost[0]}
                     </p>
                     <span className="font-thin">-</span>{" "}
-                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                    <p className="text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
                       ${country.avgLivingCost[1]}
                     </p>
                   </div>
@@ -119,7 +124,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
                   </p>
                   <div className="flex flex-wrap items-center gap-x-1">
                     <PiRankingBold className="text-[20px] text-[#2095F2]" />
-                    <p className=" text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
+                    <p className="text-[9px] text-[#1A1718] md:text-[10.39px] xl:text-[14px]">
                       {country.rank}
                     </p>
                   </div>
@@ -129,24 +134,51 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
           </div>
 
           {/* Line 3 */}
+          <div className="p-2">
+            <p className="mb-3 font-bold xl:text-[15px]">Top Universities</p>
+            <ul className="flex-col">
+              {country?.topUniversities?.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Link href="#">
+                    <li key={index} className="mb-2 flex items-center gap-x-6">
+                      <Image
+                        src={item.img.src}
+                        alt={item.title}
+                        width={40}
+                        height={40}
+                        className=""
+                      />
+                      <span className="font-bold xl:text-[15px]">
+                        {item.title}
+                      </span>
+                    </li>
+                  </Link>
+                </React.Fragment>
+              ))}
+            </ul>
+            <Link
+              href={country.viewAll}
+              className="text-[13] text-[#428BC1] hover:underline hover:cursor-pointer"
+            >
+              View All
+            </Link>
+          </div>
+
           {/* Line 4 Desc */}
-          <div className="flex gap-x-1 text-zinc-600">
-            <p className="text-wrap text-[10px] xl:text-[14px] ">
+          <div className="my-2 px-4 text-zinc-600">
+            <p className="text-wrap text-[10px] xl:text-[14px]">
               <span>{country.desc}</span>
             </p>
           </div>
 
-          {/* button  */}
-          <div className="hidden sm:block bottom-0 mt-2">
-            <div className="flex items-center justify-center">
-              <Link href="#" className="max-md:w-full">
-                <button className="text-nowrap rounded-sm  bg-[#012148]  px-12 py-[2px] text-[14.24px] font-normal  text-white hover:bg-white hover:text-[#012148] max-md:w-full  xl:px-14 xl:text-[20px]">
-                  {country?.button?.text}
-                </button>
-              </Link>
-            </div>
+          {/* button */}
+          <div className="mt-auto flex items-center justify-center">
+            <Link href="#" className="">
+              <button className="text-nowrap w-full rounded-sm bg-[#012148] px-12 py-[2px] text-[14.24px] font-normal text-white hover:bg-white hover:text-[#012148] xl:px-14 xl:text-[20px]">
+                {country?.button?.text}
+              </button>
+            </Link>
           </div>
-
         </div>
       </div>
     </section>

@@ -7,7 +7,8 @@ import ScholarshipImg from "@/asset/listing/scholarshipImg.png"
 import CountryCard from "@/components/listing-cards/CountryCard";
 import CountryImg from "@/asset/listing/countryImg.jpeg"
 import FlagImg from "@/asset/listing/flag.png"
-
+import mit from "@/asset/listing/mit.jpeg"
+import mitt from "next/dist/shared/lib/mitt";
 const courseData = {
   img:CourseImg,
   rating: 4.5,
@@ -64,10 +65,16 @@ const countryData = {
   lang:"English",
   avgLivingCost: [40,60],
   rank:"QS Top 10",
-  viewAll: "#",
+  viewAll: "#",  //link
   topUniversities: [
-    "Massachusetts Institute of Technology (MIT)",
-    "Harvard University",
+    {
+      img: mit,
+      title: "Massachusetts Institute of Technology (MIT)"
+    },
+    {
+      img: mit,
+      title: "Harvard University"
+    }
   ],
   button: { text: "Explore Programs in USA" },
 };
