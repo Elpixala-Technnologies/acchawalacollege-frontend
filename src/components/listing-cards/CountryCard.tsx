@@ -1,7 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FaHandHoldingDollar } from "react-icons/fa6";
 import { Inter } from "next/font/google";
 import { CiLocationOn } from "react-icons/ci";
 import { US } from "country-flag-icons/react/3x2";
@@ -38,24 +37,25 @@ interface CountryCardProps {
 const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
   return (
     <section className={`${inter.className}`}>
-      <div className="grid w-full grid-cols-3 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div className="sm:grid w-full sm:grid-cols-3 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         {/* div 1 */}
-        <div className="col-span-1 p-2">
-          <div className="relative overflow-hidden rounded-md">
-            <Image
-              src={country.img}
-              alt="country"
-              className="h-fill w-fill object-cover"
-            />
-            <div className="absolute inset-0 bg-black opacity-55"></div>
-            <div className="absolute left-0 top-0 ml-3 mt-3 w-[80px] rounded-xl bg-white p-2 xl:w-[90px]">
-              <US title="United States" className="rounded-lg" />
-            </div>
-          </div>
-        </div>
+        <div className="sm:col-span-1 p-2">
+  <div className="relative overflow-hidden rounded-t-sm sm:rounded-md" style={{ height: '100%', width: '100%' }}>
+    <Image
+      src={country.img}
+      alt="country"
+      className="w-full h-60 sm:h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black opacity-55"></div>
+    <div className="absolute left-0 top-0 sm:ml-3 sm:mt-3 w-[80px] rounded-br-xl md:rounded-xl bg-white p-2 xl:w-[90px]">
+      <US title="United States" className="rounded-lg" />
+    </div>
+  </div>
+</div>
+
 
         {/* Div 2*/}
-        <div className="col-span-2 flex flex-col p-2">
+        <div className="sm:col-span-2 flex flex-col p-2">
           {/* line 1 */}
           <div>
             {/* title */}
@@ -135,7 +135,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
 
           {/* Line 3 */}
           <div className="p-2">
-            <p className="mb-3 font-bold xl:text-[15px]">Top Universities</p>
+            <p className="mb-3 font-bold text-[12px] md:text-[12.82px] xl:text-[15px]">Top Universities</p>
             <ul className="flex-col">
               {country?.topUniversities?.map((item, index) => (
                 <React.Fragment key={index}>
@@ -148,7 +148,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
                         height={40}
                         className=""
                       />
-                      <span className="font-bold xl:text-[15px]">
+                      <span className="font-bold text-[12px] md:text-[12.82px] xl:text-[15px]">
                         {item.title}
                       </span>
                     </li>
@@ -158,7 +158,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
             </ul>
             <Link
               href={country.viewAll}
-              className="text-[13] text-[#428BC1] hover:underline hover:cursor-pointer"
+              className="text-[#428BC1] text-[7px] md:text-[10px]  xl:text-[13] hover:cursor-pointer hover:underline"
             >
               View All
             </Link>
@@ -172,9 +172,9 @@ const CountryCard: React.FC<CountryCardProps> = ({ country }) => {
           </div>
 
           {/* button */}
-          <div className="mt-auto flex items-center justify-center">
+          <div className="mt-auto  hidden items-center justify-center sm:flex">
             <Link href="#" className="">
-              <button className="text-nowrap w-full rounded-sm bg-[#012148] px-12 py-[2px] text-[14.24px] font-normal text-white hover:bg-white hover:text-[#012148] xl:px-14 xl:text-[20px]">
+              <button className="w-full text-nowrap rounded-sm bg-[#012148] px-12 py-[2px] text-[12.24px] font-normal text-white hover:bg-white hover:text-[#012148]  xl:px-14 xl:text-[20px]">
                 {country?.button?.text}
               </button>
             </Link>
